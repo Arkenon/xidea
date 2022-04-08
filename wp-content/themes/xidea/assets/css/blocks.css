@@ -1,0 +1,56 @@
+/*
+!*--------------------------------------------------------------
+# Block Post Comments
+--------------------------------------------------------------*!
+.wp-block-post-comments .comment-meta {
+    margin-left: 0;
+
+}
+
+.wp-block-post-comments {
+    padding-top:0;
+}
+
+.wp-block-post-comments input[type=submit] {
+    width: 100%;
+}
+
+.wp-block-post-comments .commentlist .comment-content p {
+    color: var(--wp--preset--color--secondary);
+    font-family: var(--wp--preset--font-family--base);
+    font-size: var(--wp--preset--font-size--x-small);
+    margin-left: 10px;
+    border-bottom: 1px solid #d3d1d1;
+}
+
+.wp-block-post-comments .commentlist li{
+    background-color: var(--wp--preset--color--bglight);
+    padding: 10px!important;
+    margin-bottom: 10px;
+}
+!*--------------------------------------------------------------
+# Block Image
+--------------------------------------------------------------*!
+.wp-block-image {
+    left: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    margin-top: 20px !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    right: 50% !important;
+    width: 100vw !important;
+    text-align: center !important;
+}
+
+
+!*--------------------------------------------------------------
+# Block Post Content
+--------------------------------------------------------------*!
+.wp-block-post-content p{
+    font-family: var(--wp--preset--font-family--base);
+    font-size: 15px;
+    color: var(--wp--preset--color--secondary);
+    line-height: var(--wp--custom--typography--line-height--large);
+    margin-bottom: var(--wp--custom--spacing--large);
+}*/

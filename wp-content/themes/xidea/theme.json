@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "settings": {
+    "appearanceTools": true
+  },
+  "styles": {
+    "spacing": {
+      "blockGap": "0rem"
+    }
+  },
+  "customTemplates": [
+  ],
+  "templateParts": [
+  ]
+}
