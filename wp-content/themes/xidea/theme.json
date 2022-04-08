@@ -1,7 +1,11 @@
 {
   "version": 2,
   "settings": {
-    "appearanceTools": true
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "100%"
+    }
   },
   "styles": {
     "spacing": {

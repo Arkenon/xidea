@@ -10,7 +10,7 @@ if ( ! function_exists( 'xidea_enqueue_styles' ) ) :
 		wp_register_style( 'font-awesome', XIDEA_URI . '/assets/css/font-awesome.min.css', [], XIDEA_VERSION );
 		wp_register_style( 'flaticon', XIDEA_URI . '/assets/css/flaticon.css', [], XIDEA_VERSION );
 		wp_register_style( 'style', XIDEA_URI . '/assets/css/style.css', [], XIDEA_VERSION );
-		wp_register_style( 'xidea-blocks', XIDEA_URI . '/assets/css/blocks.css', [], XIDEA_VERSION );
+		wp_register_style( 'xidea-blocks', XIDEA_URI . '/assets/css/blocks.css', ['style'], XIDEA_VERSION );
 		wp_register_style( 'bootstrap', XIDEA_URI . '/assets/css/bootstrap.min.css', [], XIDEA_VERSION );
 
 		wp_enqueue_style( 'themify-icons' );
@@ -43,14 +43,9 @@ endif;
 if ( ! function_exists( 'xidea_editor_styles' ) ) :
 
 	function xidea_editor_styles() {
-
-		add_editor_style( array( './assets/css/blocks.css','./assets/css/themify-icons.css' ) );
-		add_editor_style( array( './assets/css/themify-icons.css' ) );
-		add_editor_style( array( './assets/css/font-awesome.min.css' ) );
-		add_editor_style( array( './assets/css/flaticon.css' ) );
+		add_editor_style( array( './assets/css/blocks.css' ) );
 		add_editor_style( array( './assets/css/style.css' ) );
 		add_editor_style( array( './assets/css/bootstrap.min.css' ) );
-		add_editor_style( array( './assets/sass/syle.scss' ) );
 	}
 
 	add_action( 'admin_init', 'xidea_editor_styles' );

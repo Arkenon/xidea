@@ -180,6 +180,7 @@ a {
   text-decoration: none!important;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  color: #bf692d!important;
 }
 
 a:hover {
@@ -7155,7 +7156,7 @@ input[type=radio]:checked + .topcoat-radio-button:after {
 .blog-single-section .post blockquote {
   background-color: #feebe4;
   padding: 40px 55px;
-  margin: 60px 0;
+  margin: 36px 0;
   border: 0;
   line-height: 1.9em;
   position: relative;
@@ -7495,7 +7496,7 @@ input[type=radio]:checked + .topcoat-radio-button:after {
 }
 
 .blog-single-section .comment-respond {
-  margin-top: 70px;
+  margin-top: 20px;
 }
 
 .blog-single-section .comment-respond .comment-reply-title {
