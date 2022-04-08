@@ -176,7 +176,7 @@ ul {
   margin: 0;
 }
 
-a {
+a:not(.wp-block-social-link-anchor) {
   text-decoration: none!important;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
