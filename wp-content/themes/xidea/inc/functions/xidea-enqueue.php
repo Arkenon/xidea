@@ -34,12 +34,9 @@ endif;
 if ( ! function_exists( 'xidea_editor_styles' ) ) :
 
 	function xidea_editor_styles() {
-		$request_uri     = stristr( $_SERVER['REQUEST_URI'], 'site-editor.php' );
-		if ( false !== $request_uri ) {
-			wp_add_inline_style( 'wp-block-library', xidea_get_custom_fonts() );
-			add_editor_style( array( './assets/css/style.css' ) );
-			add_editor_style( array( './assets/css/bootstrap.min.css' ) );;
-		}
+		wp_add_inline_style( 'wp-block-library', xidea_get_custom_fonts() );
+		add_editor_style( array( './assets/css/style.css' ) );
+		add_editor_style( array( './assets/css/bootstrap.min.css' ) );;
 	}
 
 	add_action( 'init', 'xidea_editor_styles' );
