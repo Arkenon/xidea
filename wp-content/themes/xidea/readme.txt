@@ -6,7 +6,7 @@ Tested up to: 5.9.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Theme URI: https://demo.xideathemes.com/
+Theme URI: https://xideathemes.com/
 Author URI: https://xideathemes.com/
 Author: xideathemes
 
