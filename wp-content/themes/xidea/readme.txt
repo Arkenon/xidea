@@ -6,7 +6,8 @@ Tested up to: 5.9
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Theme URI: https://xideathemes.com/
+Theme URI: https://demo.xideathemes.com/
+Author URI: https://xideathemes.com/
 Author: xideathemes
 
 Xidea Blocks is a block based Wordpress Theme.
@@ -27,9 +28,19 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.1 =
+* Provided a unique prefix for everything
+* xidea-enqueue.php and xidea-setup.php removed and all functions added into functions.php
+* bootstrap.bundle.js added
+* Hero image deleted and added new image from https://pxhere.com
+* Missing license information added for NunitoSans-Regular.ttf
+* block-patterns.php added into inc/ folder. New block patterns created.
+* Screenshot changed
+
 = 1.0 =
 * Initial release
 
 == Resources ==
 * bootstrap.min.css, Copyright (c) 2011-2021 Twitter, Inc. Copyright (c) 2011-2021 The Bootstrap Authors, The MIT License (MIT), https://getbootstrap.com
-* Hero Image, Copyright (c) 2014-2019 David Marby & Nijiko Yonskai, The MIT License (MIT), https://picsum.photos/
+* Hero Image, PxHere, licensed under the Creative Commons Zero (CC0) license, https://pxhere.com/tr/photo/1338795?utm_content=shareClip&utm_medium=referral&utm_source=pxhere
+* Copyright 2016 The Nunito Sans Project Authors (https://github.com/Fonthausen/NunitoSans), SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1, https://fonts.google.com/specimen/Nunito+Sans?query=nunito
