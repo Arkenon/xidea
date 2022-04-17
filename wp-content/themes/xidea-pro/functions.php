@@ -92,6 +92,7 @@ if ( ! function_exists( 'xidea_pro_editor_styles' ) ) :
 		wp_add_inline_style( 'wp-block-library', xidea_pro_get_custom_fonts() );
 		add_editor_style( array( './assets/css/style.css' ) );
 		add_editor_style( array( './assets/css/bootstrap.min.css' ) );;
+		add_editor_style( array( 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' ) );;
 	}
 
 	add_action( 'init', 'xidea_pro_editor_styles' );

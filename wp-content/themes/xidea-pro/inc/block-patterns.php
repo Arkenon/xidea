@@ -45,6 +45,9 @@ function xidea_pro_register_block_patterns() {
 	$block_patterns = array(
 		'footer-default',
 		'header-default',
+		'header-flat-with-top-bar',
+		'header-with-centered-logo',
+		'header-boxed-with-social-icons',
 		'section-hero'
 	);
 
