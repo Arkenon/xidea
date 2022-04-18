@@ -30,7 +30,9 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 = 1.0.2 =
 * Color optimizations made for blocks
+* assets/images folder deleted
 * Updated readme.txt (Resources section revised, Copyright section added)
+* Added text underline style to a:hover selector
 
 = 1.0.1 =
 * Provided a unique prefix for everything
