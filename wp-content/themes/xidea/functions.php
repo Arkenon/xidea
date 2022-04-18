@@ -64,12 +64,10 @@ if ( ! function_exists( 'xidea_enqueue_styles' ) ) :
 
 		wp_register_style( 'xidea-style', XIDEA_URI . '/assets/css/style.css', [], XIDEA_VERSION );
 		wp_register_style( 'bootstrap', XIDEA_URI . '/assets/css/bootstrap.min.css', [], XIDEA_VERSION );
-		wp_register_style( 'bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css', [], XIDEA_VERSION );
 		wp_add_inline_style( 'xidea-style', xidea_get_custom_fonts() );
 
 		wp_enqueue_style( 'xidea-style' );
 		wp_enqueue_style( 'bootstrap' );
-		wp_enqueue_style( 'bootstrap-icons' );
 
 		wp_register_script( 'bootstrap-bundle', XIDEA_URI . '/assets/js/bootstrap.bundle.min.js', [ 'jquery' ], XIDEA_VERSION, true );
 		wp_register_script( 'xidea-custom', XIDEA_URI . '/assets/js/custom.js', [ 'jquery' ], XIDEA_VERSION, true );
