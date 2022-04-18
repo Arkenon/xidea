@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+a:hover {
+  text-decoration: underline!important;
+}
 
 @media (min-width: 568px) {
   .wp-block-navigation ul li, .wp-block-navigation-item {

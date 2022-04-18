@@ -29,7 +29,8 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 == Changelog ==
 
 = 1.0.2 =
-* Color optimization
+* Color optimizations made for blocks
+* Updated readme.txt (Resources section revised, Copyright section added)
 
 = 1.0.1 =
 * Provided a unique prefix for everything
@@ -43,7 +44,37 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 = 1.0 =
 * Initial release
 
+== Copyright ==
+
+Xidea WordPress Theme, Copyright (c) 2022 by Xidea Themes.
+Xidea is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+
 == Resources ==
-* bootstrap.min.css, Copyright (c) 2011-2021 Twitter, Inc. Copyright (c) 2011-2021 The Bootstrap Authors, The MIT License (MIT), https://getbootstrap.com
-* Hero Image, PxHere, licensed under the Creative Commons Zero (CC0) license, https://pxhere.com/tr/photo/1338795?utm_content=shareClip&utm_medium=referral&utm_source=pxhere
-* Copyright 2016 The Nunito Sans Project Authors (https://github.com/Fonthausen/NunitoSans), SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1, https://fonts.google.com/specimen/Nunito+Sans?query=nunito
+
+# Nunito Sans Font
+Copyright 2016 The Nunito Sans Project Authors (https://github.com/Fonthausen/NunitoSans)
+License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
+Source: https://fonts.google.com/specimen/Nunito+Sans?query=nunito
+
+# Bootstrap 5
+Copyright (c) 2011-2021 Twitter, Inc. Copyright (c) 2011-2021 The Bootstrap Authors,
+License: The MIT License (MIT),
+Source : https://getbootstrap.com
+
+== Images used in theme screenshot ==
+
+Hero Image:
+Copyright Jason Blackeye
+License: Creative Commons Zero (CC0)
+Source: https://pxhere.com/tr/photo/1338795
