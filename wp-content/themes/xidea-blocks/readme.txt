@@ -6,7 +6,7 @@ Tested up to: 5.9
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Theme URI: https://demo.xideathemes.com/
+Theme URI: https://blocktheme.xideathemes.com/
 Author URI: https://xideathemes.com/
 Author: xideathemes
 
@@ -27,18 +27,6 @@ Xidea Blocks is designed with Bootstrap 5 and you can easily use Bootstrap class
 Yes, you can. The vision of Full Site Editing is to provide a collection of features that bring the familiar experience and extendability of blocks to all parts of your site rather than just post and pages.
 
 == Changelog ==
-
-= 1.0.2 =
-* Color optimization
-
-= 1.0.1 =
-* Provided a unique prefix for everything
-* xidea-enqueue.php and xidea-setup.php removed and all functions added into functions.php
-* bootstrap.bundle.js added
-* Hero image deleted and added new image from https://pxhere.com
-* Missing license information added for NunitoSans-Regular.ttf
-* block-patterns.php added into inc/ folder. New block patterns created.
-* Screenshot changed
 
 = 1.0 =
 * Initial release
