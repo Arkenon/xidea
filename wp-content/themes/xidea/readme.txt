@@ -28,6 +28,9 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.5 =
+* Text underline style added to comment-content, post-excerpt and post-content
+
 = 1.0.4 =
 * Back to top icon styles changed
 * Bootstrap Icons removed
