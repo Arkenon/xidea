@@ -5,7 +5,7 @@
         = BACK TO TOP BTN SETTING
     -------------------------------------------*/
 
-    $("body").append("<a href='#' class='back-to-top'><i class='bi bi-arrow-up-circle'></i></a>");
+    $("body").append("<a href='#' class='back-to-top'>&#8593;</a>");
 
     function toggleBackToTopBtn() {
         var amountScrolled = 1000;

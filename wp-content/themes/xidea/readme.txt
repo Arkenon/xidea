@@ -28,6 +28,11 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.6 =
+* Screenshot changed
+* License info of images used in theme screenshot are added
+* Style optimizations made for back to top icon
+
 = 1.0.5 =
 * Text underline style added to comment-content, post-excerpt and post-content
 
@@ -87,7 +92,22 @@ Source : https://getbootstrap.com
 
 == Images used in theme screenshot ==
 
-Hero Image:
-Copyright Jason Blackeye
-License: Creative Commons Zero (CC0)
-Source: https://pxhere.com/tr/photo/1338795
+* Hero Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/1338795
+
+* Blog Post Featured Images:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/36736
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/868964
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/878711
+
+
+
+
