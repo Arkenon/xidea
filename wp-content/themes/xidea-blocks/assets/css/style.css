@@ -4,6 +4,9 @@
 a:hover {
   text-decoration: underline!important;
 }
+.wp-block-post-content a, .comment-content a,.wp-block-post-excerpt a{
+  text-decoration: underline!important;
+}
 
 @media (min-width: 568px) {
   .wp-block-navigation ul li, .wp-block-navigation-item {
@@ -73,6 +76,7 @@ a:hover {
 --------------------------------------------------------------*/
 .back-to-top {
   background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--background);
   width: 45px;
   height: 45px;
   line-height: 45px;
