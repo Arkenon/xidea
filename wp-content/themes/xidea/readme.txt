@@ -27,6 +27,9 @@ Xidea Blocks is designed with Bootstrap 5 and you can easily use Bootstrap class
 Yes, you can. The vision of Full Site Editing is to provide a collection of features that bring the familiar experience and extendability of blocks to all parts of your site rather than just post and pages.
 
 == Changelog ==
+= 1.0.8 =
+* wp:pattern shortcode added into footer.html and header.html
+
 = 1.0.7 =
 * First tag of all templates changed as '<main>' for skip links
 
