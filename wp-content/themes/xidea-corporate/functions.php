@@ -20,7 +20,7 @@ if ( ! function_exists( 'xidea_blocks_enqueue_styles' ) ) :
 
 	function xidea_blocks_corporate_enqueue_styles() {
 
-		wp_add_inline_style( 'xidea-blocks-style', xidea_blocks_corporate_get_custom_fonts() );
+		wp_add_inline_style( 'xidea-pro-style', xidea_blocks_corporate_get_custom_fonts() );
 
 	}
 

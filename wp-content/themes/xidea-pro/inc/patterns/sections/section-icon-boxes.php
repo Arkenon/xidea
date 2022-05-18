@@ -3,7 +3,7 @@
  * Icon Boxes Section
  */
 return array(
-	'title'      => __( 'Icon Boxes Section', 'xidea-blocks' ),
+	'title'      => __( 'Icon Boxes Section', 'xidea-pro' ),
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:group -->
 					<div class="wp-block-group"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"50px","right":"50px","bottom":"50px","left":"50px"}}}} -->

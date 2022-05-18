@@ -3,7 +3,7 @@
  * Flat Header With Top Bar
  */
 return array(
-	'title'      => __( 'Flat Header With Top Bar', 'xidea-blocks' ),
+	'title'      => __( 'Flat Header With Top Bar', 'xidea-pro' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px","top":"0px","bottom":"20px"}}},"backgroundColor":"bglight","textColor":"text-regular","className":"border-bottom","layout":{"inherit":false}} -->

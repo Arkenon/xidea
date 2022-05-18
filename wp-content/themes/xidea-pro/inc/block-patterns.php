@@ -14,9 +14,9 @@
  */
 function xidea_blocks_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'xidea-blocks' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'xidea-blocks' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'xidea-blocks' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'xidea-pro' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'xidea-pro' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'xidea-pro' ) ),
 	);
 
 	/**
@@ -70,7 +70,7 @@ function xidea_blocks_register_block_patterns() {
 		$pattern_file          = get_theme_file_path( '/inc/patterns/' . $pattern_path . '/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'xidea-blocks/' . $block_pattern,
+			'xidea-pro/' . $block_pattern,
 			require $pattern_file
 		);
 	}

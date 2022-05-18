@@ -31,7 +31,7 @@ if ( ! function_exists( 'xidea_blocks_setup' ) ) :
 
 		register_nav_menus(
 			array(
-				'xidea-blocks-primary-menu' => esc_html__( 'Primary', 'xidea-blocks' ),
+				'xidea-propro-primary-menu' => esc_html__( 'Primary', 'xidea-pro' ),
 			)
 		);
 
@@ -49,7 +49,7 @@ if ( ! function_exists( 'xidea_blocks_setup' ) ) :
 		);
 
 		//Translations
-		load_theme_textdomain( 'xidea-blocks', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'xidea-pro', get_template_directory() . '/languages' );
 	}
 
 	add_action( 'after_setup_theme', 'xidea_blocks_setup' );
@@ -62,18 +62,18 @@ if ( ! function_exists( 'xidea_blocks_enqueue_styles' ) ) :
 
 	function xidea_blocks_enqueue_styles() {
 
-		wp_register_style( 'xidea-blocks-style', XIDEA_URI . '/assets/css/style.css', [], XIDEA_VERSION );
+		wp_register_style( 'xidea-pro-style', XIDEA_URI . '/assets/css/style.css', [], XIDEA_VERSION );
 		wp_register_style( 'bootstrap', XIDEA_URI . '/assets/css/bootstrap.min.css', [], XIDEA_VERSION );
-		wp_add_inline_style( 'xidea-blocks-style', xidea_blocks_get_custom_fonts() );
+		wp_add_inline_style( 'xidea-pro-style', xidea_blocks_get_custom_fonts() );
 
-		wp_enqueue_style( 'xidea-blocks-style' );
+		wp_enqueue_style( 'xidea-pro-style' );
 		wp_enqueue_style( 'bootstrap' );
 
 		wp_register_script( 'bootstrap-bundle', XIDEA_URI . '/assets/js/bootstrap.bundle.min.js', [ 'jquery' ], XIDEA_VERSION, true );
-		wp_register_script( 'xidea-blocks-custom', XIDEA_URI . '/assets/js/custom.js', [ 'jquery' ], XIDEA_VERSION, true );
+		wp_register_script( 'xidea-pro-custom', XIDEA_URI . '/assets/js/custom.js', [ 'jquery' ], XIDEA_VERSION, true );
 
 		wp_enqueue_script( 'bootstrap-bundle' );
-		wp_enqueue_script( 'xidea-blocks-custom' );
+		wp_enqueue_script( 'xidea-pro-custom' );
 
 	}
 

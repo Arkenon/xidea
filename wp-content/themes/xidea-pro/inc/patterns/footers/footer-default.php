@@ -3,7 +3,7 @@
  * Default Footer With Columns
  */
 return array(
-	'title'      => __( 'Default Footer With Columns', 'xidea' ),
+	'title'      => __( 'Default Footer With Columns', 'xidea-pro' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"15px","right":"15px","bottom":"15px","left":"15px"}}},"backgroundColor":"black","className":"tp-site-footer","layout":{"inherit":false,"contentSize":"1170px"}} -->
@@ -14,7 +14,7 @@ return array(
 					<div class="wp-block-group col col-lg-3 col-md-6 col-sm-12 col-12"><!-- wp:site-title {"style":{"spacing":{"margin":{"top":"20px","right":"0px","bottom":"0px","left":"0px"}}},"fontSize":"large"} /-->
 					
 					<!-- wp:paragraph {"align":"left","textColor":"light"} -->
-					<p class="has-text-align-left has-light-color has-text-color">Xidea is a block based Wordpress
+					<p class="has-text-align-left has-light-color has-text-color">Xidea Blocks is a block based Wordpress
 					                        Theme.</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group -->

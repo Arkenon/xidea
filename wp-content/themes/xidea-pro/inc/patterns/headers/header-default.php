@@ -1,14 +1,14 @@
 <?php
 /**
- * Boxed Header With Social Icons
+ * Default Header With Social Icons
  */
 return array(
-	'title'      => __( 'Boxed Header With Social Icons', 'xidea-blocks' ),
+	'title'      => __( 'Default Header With Social Icons', 'xidea-pro' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
-	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px","top":"20px","bottom":"20px"}}},"backgroundColor":"foreground","textColor":"text-regular","layout":{"inherit":false}} -->
-					<div id="header" class="wp-block-group has-text-regular-color has-foreground-background-color has-text-color has-background" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"25px","right":"25px","bottom":"25px","left":"25px"}}},"backgroundColor":"background","className":"container"} -->
-					<div class="wp-block-group container has-background-background-color has-background" style="padding-top:25px;padding-right:25px;padding-bottom:25px;padding-left:25px"><!-- wp:group {"className":"row"} -->
+	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px","top":"20px","bottom":"20px"}}},"backgroundColor":"background","textColor":"text-regular","className":"border-bottom","layout":{"inherit":false}} -->
+					<div id="header" class="wp-block-group border-bottom has-text-regular-color has-background-background-color has-text-color has-background" style="padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px"><!-- wp:group {"className":"container"} -->
+					<div class="wp-block-group container"><!-- wp:group {"className":"row"} -->
 					<div class="wp-block-group row"><!-- wp:group {"className":"col-10 col-sm-3 align-self-center mt-0"} -->
 					<div class="wp-block-group col-10 col-sm-3 align-self-center mt-0"><!-- wp:site-title {"level":4,"textAlign":"left"} /--></div>
 					<!-- /wp:group -->

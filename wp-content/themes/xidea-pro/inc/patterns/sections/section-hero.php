@@ -3,7 +3,7 @@
  * Hero Section
  */
 return array(
-	'title'      => __( 'Hero Section', 'xidea-blocks' ),
+	'title'      => __( 'Hero Section', 'xidea-pro' ),
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:group {"tagName":"section","style":{"color":{"background":"#fef5f0"}},"className":"mt-0","layout":{"inherit":false}} -->
 					<section id="hero-section" class="wp-block-group mt-0 has-background" style="background-color:#fef5f0"><!-- wp:group {"className":"container"} -->

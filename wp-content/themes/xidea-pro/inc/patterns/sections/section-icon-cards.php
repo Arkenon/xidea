@@ -3,7 +3,7 @@
  * Icon Cards Section
  */
 return array(
-	'title'      => __( 'Icon Cards Section ', 'xidea-blocks' ),
+	'title'      => __( 'Icon Cards Section ', 'xidea-pro' ),
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:group {"layout":{"contentSize":"1170px"}} -->
 					<div class="wp-block-group"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"50px","right":"50px","bottom":"50px","left":"50px"}}}} -->

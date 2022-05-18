@@ -2,37 +2,37 @@
 /**
  * Xidea: Block Patterns
  *
- * @since Xidea 1.0.1
+ * @since Xidea 1.0
  */
 
 /**
  * Registers block patterns and categories.
  *
- * @since Xidea 1.0.1
- *
  * @return void
+ * @since Xidea 1.0
+ *
  */
 function xidea_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'xidea' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'xidea' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'xidea' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'xidea-pro' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'xidea-pro' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'xidea-pro' ) ),
 	);
 
 	/**
 	 * Filters the theme block pattern categories.
 	 *
-	 * @since Xidea 1.0.1
-	 *
 	 * @param array[] $block_pattern_categories {
 	 *     An associative array of block pattern categories, keyed by category name.
 	 *
-	 *     @type array[] $properties {
+	 * @type array[] $properties {
 	 *         An array of block category properties.
 	 *
-	 *         @type string $label A human-readable label for the pattern category.
+	 * @type string $label A human-readable label for the pattern category.
 	 *     }
 	 * }
+	 * @since Xidea Blocks 1.0
+	 *
 	 */
 	$block_pattern_categories = apply_filters( 'xidea_block_pattern_categories', $block_pattern_categories );
 
@@ -45,20 +45,27 @@ function xidea_register_block_patterns() {
 	$block_patterns = array(
 		'footer-default',
 		'header-default',
-		'hero-section',
+		'header-flat-with-top-bar',
+		'header-with-centered-logo',
+		'header-boxed-with-social-icons',
+		'section-hero'
 	);
 
 	/**
 	 * Filters the theme block patterns.
 	 *
-	 * @since Xidea 1.0.1
-	 *
 	 * @param array $block_patterns List of block patterns by name.
+	 *
+	 * @since Xidea 1.0
+	 *
 	 */
 	$block_patterns = apply_filters( 'xidea_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
-		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
+
+		$explode_pattern_names = explode( '-', $block_pattern );
+		$pattern_path          = $explode_pattern_names[0] . 's';
+		$pattern_file          = get_theme_file_path( '/inc/patterns/' . $pattern_path . '/' . $block_pattern . '.php' );
 
 		register_block_pattern(
 			'xidea/' . $block_pattern,
@@ -66,4 +73,5 @@ function xidea_register_block_patterns() {
 		);
 	}
 }
+
 add_action( 'init', 'xidea_register_block_patterns', 9 );
