@@ -1,18 +1,18 @@
 <?php
 /**
- * Xidea Blocks: Block Patterns
+ * Xidea: Block Patterns
  *
- * @since Xidea Blocks 1.0
+ * @since Xidea 1.0
  */
 
 /**
  * Registers block patterns and categories.
  *
  * @return void
- * @since Xidea Blocks 1.0
+ * @since Xidea 1.0
  *
  */
-function xidea_blocks_register_block_patterns() {
+function xidea_register_block_patterns() {
 	$block_pattern_categories = array(
 		'featured' => array( 'label' => __( 'Featured', 'xidea-pro' ) ),
 		'footer'   => array( 'label' => __( 'Footers', 'xidea-pro' ) ),
@@ -34,7 +34,7 @@ function xidea_blocks_register_block_patterns() {
 	 * @since Xidea Blocks 1.0
 	 *
 	 */
-	$block_pattern_categories = apply_filters( 'xidea_blocks_block_pattern_categories', $block_pattern_categories );
+	$block_pattern_categories = apply_filters( 'xidea_block_pattern_categories', $block_pattern_categories );
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
@@ -48,9 +48,7 @@ function xidea_blocks_register_block_patterns() {
 		'header-flat-with-top-bar',
 		'header-with-centered-logo',
 		'header-boxed-with-social-icons',
-		'section-hero',
-		'section-icon-boxes',
-		'section-icon-cards',
+		'section-hero'
 	);
 
 	/**
@@ -58,10 +56,10 @@ function xidea_blocks_register_block_patterns() {
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 *
-	 * @since Xidea Blocks 1.0
+	 * @since Xidea 1.0
 	 *
 	 */
-	$block_patterns = apply_filters( 'xidea_blocks_block_patterns', $block_patterns );
+	$block_patterns = apply_filters( 'xidea_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
 
@@ -70,10 +68,10 @@ function xidea_blocks_register_block_patterns() {
 		$pattern_file          = get_theme_file_path( '/inc/patterns/' . $pattern_path . '/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'xidea-pro/' . $block_pattern,
+			'xidea/' . $block_pattern,
 			require $pattern_file
 		);
 	}
 }
 
-add_action( 'init', 'xidea_blocks_register_block_patterns', 9 );
+add_action( 'init', 'xidea_register_block_patterns', 9 );

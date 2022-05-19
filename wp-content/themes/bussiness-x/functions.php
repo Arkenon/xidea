@@ -4,8 +4,8 @@
  * @author     Xidea
  * @copyright  (c) Copyright by Xidea Themes
  * @link       https://xideathemes.com
- * @package     Xidea Blocks
- * @since         1.0
+ * @package     Xidea Block Theme
+ * @since         1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,8 +20,8 @@ define( 'XIDEA_URI', get_template_directory_uri() );
 /*--------------------------------------------------------------
 # Theme Supports
 --------------------------------------------------------------*/
-if ( ! function_exists( 'xidea_blocks_setup' ) ) :
-	function xidea_blocks_setup() {
+if ( ! function_exists( 'xidea_setup' ) ) :
+	function xidea_setup() {
 		add_theme_support( 'responsive-embeds' );
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'post-thumbnails' );
@@ -31,7 +31,7 @@ if ( ! function_exists( 'xidea_blocks_setup' ) ) :
 
 		register_nav_menus(
 			array(
-				'xidea-propro-primary-menu' => esc_html__( 'Primary', 'xidea-pro' ),
+				'xidea-primary-menu' => esc_html__( 'Primary', 'xidea' ),
 			)
 		);
 
@@ -49,64 +49,64 @@ if ( ! function_exists( 'xidea_blocks_setup' ) ) :
 		);
 
 		//Translations
-		load_theme_textdomain( 'xidea-pro', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'xidea', get_template_directory() . '/languages' );
 	}
 
-	add_action( 'after_setup_theme', 'xidea_blocks_setup' );
+	add_action( 'after_setup_theme', 'xidea_setup' );
 endif;
 
 /*--------------------------------------------------------------
 # Enqueue Styles
 --------------------------------------------------------------*/
-if ( ! function_exists( 'xidea_blocks_enqueue_styles' ) ) :
+if ( ! function_exists( 'xidea_enqueue_styles' ) ) :
 
-	function xidea_blocks_enqueue_styles() {
+	function xidea_enqueue_styles() {
 
-		wp_register_style( 'xidea-pro-style', XIDEA_URI . '/assets/css/style.css', [], XIDEA_VERSION );
+		wp_register_style( 'xidea-style', XIDEA_URI . '/assets/css/style.css', [], XIDEA_VERSION );
 		wp_register_style( 'bootstrap', XIDEA_URI . '/assets/css/bootstrap.min.css', [], XIDEA_VERSION );
-		wp_add_inline_style( 'xidea-pro-style', xidea_blocks_get_custom_fonts() );
+		wp_add_inline_style( 'xidea-style', xidea_get_custom_fonts() );
 
-		wp_enqueue_style( 'xidea-pro-style' );
+		wp_enqueue_style( 'xidea-style' );
 		wp_enqueue_style( 'bootstrap' );
 
 		wp_register_script( 'bootstrap-bundle', XIDEA_URI . '/assets/js/bootstrap.bundle.min.js', [ 'jquery' ], XIDEA_VERSION, true );
-		wp_register_script( 'xidea-pro-custom', XIDEA_URI . '/assets/js/custom.js', [ 'jquery' ], XIDEA_VERSION, true );
+		wp_register_script( 'xidea-custom', XIDEA_URI . '/assets/js/custom.js', [ 'jquery' ], XIDEA_VERSION, true );
 
 		wp_enqueue_script( 'bootstrap-bundle' );
-		wp_enqueue_script( 'xidea-pro-custom' );
+		wp_enqueue_script( 'xidea-custom' );
 
 	}
 
-	add_action( 'wp_enqueue_scripts', 'xidea_blocks_enqueue_styles' );
+	add_action( 'wp_enqueue_scripts', 'xidea_enqueue_styles' );
 
 endif;
 
 /*--------------------------------------------------------------
 # Enqueue Editor Styles
 --------------------------------------------------------------*/
-if ( ! function_exists( 'xidea_blocks_editor_styles' ) ) :
+if ( ! function_exists( 'xidea_editor_styles' ) ) :
 
-	function xidea_blocks_editor_styles() {
-		wp_add_inline_style( 'wp-block-library', xidea_blocks_get_custom_fonts() );
+	function xidea_editor_styles() {
+		wp_add_inline_style( 'wp-block-library', xidea_get_custom_fonts() );
 		add_editor_style( array( './assets/css/style.css' ) );
 		add_editor_style( array( './assets/css/bootstrap.min.css' ) );;
 	}
 
-	add_action( 'init', 'xidea_blocks_editor_styles' );
-	add_action( 'pre_get_posts', 'xidea_blocks_editor_styles' );
+	add_action( 'init', 'xidea_editor_styles' );
+	add_action( 'pre_get_posts', 'xidea_editor_styles' );
 
 endif;
 
 /*--------------------------------------------------------------
 # Custom Fonts
 --------------------------------------------------------------*/
-if ( ! function_exists( 'xidea_blocks_get_custom_fonts' ) ) :
+if ( ! function_exists( 'xidea_get_custom_fonts' ) ) :
 	/**
 	 * Get font face styles.
 	 *
 	 * @return string
 	 */
-	function xidea_blocks_get_custom_fonts() {
+	function xidea_get_custom_fonts() {
 		return "
 		@font-face{
 			font-family: 'Nunito Sans';
