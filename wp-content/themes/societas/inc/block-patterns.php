@@ -1,22 +1,22 @@
 <?php
 /**
- * Xidea: Block Patterns
+ * Societas: Block Patterns
  *
- * @since Xidea 1.0
+ * @since Societas 1.0
  */
 
 /**
  * Registers block patterns and categories.
  *
  * @return void
- * @since Xidea 1.0
+ * @since Societas 1.0
  *
  */
-function xidea_register_block_patterns() {
+function societas_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'xidea-pro' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'xidea-pro' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'xidea-pro' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'societas' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'societas' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'societas' ) ),
 	);
 
 	/**
@@ -31,10 +31,10 @@ function xidea_register_block_patterns() {
 	 * @type string $label A human-readable label for the pattern category.
 	 *     }
 	 * }
-	 * @since Xidea Blocks 1.0
+	 * @since Societas 1.0
 	 *
 	 */
-	$block_pattern_categories = apply_filters( 'xidea_block_pattern_categories', $block_pattern_categories );
+	$block_pattern_categories = apply_filters( 'societas_block_pattern_categories', $block_pattern_categories );
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
@@ -56,10 +56,10 @@ function xidea_register_block_patterns() {
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 *
-	 * @since Xidea 1.0
+	 * @since Societas 1.0
 	 *
 	 */
-	$block_patterns = apply_filters( 'xidea_block_patterns', $block_patterns );
+	$block_patterns = apply_filters( 'societas_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
 
@@ -68,10 +68,10 @@ function xidea_register_block_patterns() {
 		$pattern_file          = get_theme_file_path( '/inc/patterns/' . $pattern_path . '/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'xidea/' . $block_pattern,
+			'societas/' . $block_pattern,
 			require $pattern_file
 		);
 	}
 }
 
-add_action( 'init', 'xidea_register_block_patterns', 9 );
+add_action( 'init', 'societas_register_block_patterns', 9 );

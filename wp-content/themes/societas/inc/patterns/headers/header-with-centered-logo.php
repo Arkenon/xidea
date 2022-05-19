@@ -3,7 +3,7 @@
  * Header With Centered Logo
  */
 return array(
-	'title'      => __( 'Header With Centered Logo', 'xidea-pro' ),
+	'title'      => __( 'Header With Centered Logo', 'societas' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px","top":"20px","bottom":"20px"}}},"backgroundColor":"light","textColor":"text-regular","className":"border-bottom","layout":{"inherit":false}} -->

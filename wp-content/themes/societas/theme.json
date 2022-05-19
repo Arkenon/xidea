@@ -150,7 +150,7 @@
           "slug": "base"
         },
         {
-          "fontFamily": "\"Nunito Sans\", sans-serif",
+          "fontFamily": "'Nunito Sans', sans-serif",
           "name": "Nunito Sans",
           "slug": "nunito"
         }
@@ -208,7 +208,7 @@
       "h1": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "500",
+          "fontWeight": "300",
           "lineHeight": "1.2",
           "fontSize": "calc(1.375rem + 1.5vw)"
         },
@@ -219,7 +219,7 @@
       "h2": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "500",
+          "fontWeight": "300",
           "lineHeight": "1.2",
           "fontSize": "calc(1.325rem + 0.9vw)"
         },
@@ -230,7 +230,7 @@
       "h3": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "500",
+          "fontWeight": "300",
           "lineHeight": "1.2",
           "fontSize": "calc(1.3rem + 0.6vw)"
         },
@@ -241,7 +241,7 @@
       "h4": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "500",
+          "fontWeight": "300",
           "lineHeight": "1.2",
           "fontSize": "calc(1.275rem + 0.3vw)"
         },
@@ -252,7 +252,7 @@
       "h5": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "500",
+          "fontWeight": "300",
           "lineHeight": "1.2",
           "fontSize": "1.25rem"
         },

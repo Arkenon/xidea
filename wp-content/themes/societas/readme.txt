@@ -1,4 +1,4 @@
-=== Xidea Blocks ===
+=== Societas ===
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, sticky-post, threaded-comments
 Contributors: xideathemes
 Requires at least: 5.9
@@ -10,15 +10,15 @@ Theme URI: https://demo.xideathemes.com/
 Author URI: https://xideathemes.com/
 Author: xideathemes
 
-Xidea Blocks is a block based Wordpress Theme.
+Societas is a block based Wordpress Theme.
 
 == Description ==
 
-Xidea Blocks is a block based Wordpress Theme.
+Societas is a block based Wordpress Theme.
 
 With the new pattern of Wordpress named full site editing (fse) you can edit whole website from site editor tool.
 
-Xidea Blocks is designed with Bootstrap 5 and you can easily use Bootstrap classes when editing the website.
+Societas is designed with Bootstrap 5 and you can easily use Bootstrap classes when editing the website.
 
 == Frequently Asked Questions ==
 
@@ -62,7 +62,7 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 = 1.0.1 =
 * Provided a unique prefix for everything
-* xidea-enqueue.php and xidea-setup.php removed and all functions added into functions.php
+* societas-enqueue.php and societas-setup.php removed and all functions added into functions.php
 * bootstrap.bundle.js added
 * Hero image deleted and added new image from https://pxhere.com
 * Missing license information added for NunitoSans-Regular.ttf
@@ -74,8 +74,8 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Copyright ==
 
-Xidea WordPress Theme, Copyright (c) 2022 by Xidea Themes.
-Xidea is distributed under the terms of the GNU GPL.
+Societas WordPress Theme, Copyright (c) 2022 by Xidea Themes.
+Societas is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
