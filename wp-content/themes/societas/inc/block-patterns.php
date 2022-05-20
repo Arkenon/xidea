@@ -48,7 +48,10 @@ function societas_register_block_patterns() {
 		'header-flat-with-top-bar',
 		'header-with-centered-logo',
 		'header-boxed-with-social-icons',
-		'section-hero'
+		'section-hero',
+		'section-team',
+		'section-icon-boxes',
+		'section-icon-cards',
 	);
 
 	/**

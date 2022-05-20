@@ -6,16 +6,16 @@ return array(
 	'title'      => __( 'Default Footer With Columns', 'societas' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
-	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"15px","right":"15px","bottom":"15px","left":"15px"}}},"backgroundColor":"black","className":"tp-site-footer","layout":{"inherit":false,"contentSize":"1170px"}} -->
-					<div id="footer" class="wp-block-group tp-site-footer has-black-background-color has-background" style="padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px"><!-- wp:group {"className":"tp-upper-footer"} -->
+	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"15px","right":"15px","bottom":"15px","left":"15px"}}},"backgroundColor":"lighter","className":"tp-site-footer","layout":{"inherit":false,"contentSize":"1170px"}} -->
+					<div id="footer" class="wp-block-group tp-site-footer has-lighter-background-color has-background" style="padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px"><!-- wp:group {"className":"tp-upper-footer"} -->
 					<div id="upper-footer" class="wp-block-group tp-upper-footer"><!-- wp:group {"className":"container"} -->
 					<div class="wp-block-group container"><!-- wp:group {"className":"row"} -->
 					<div class="wp-block-group row"><!-- wp:group {"className":"col col-lg-3 col-md-6 col-sm-12 col-12"} -->
 					<div class="wp-block-group col col-lg-3 col-md-6 col-sm-12 col-12"><!-- wp:site-title {"style":{"spacing":{"margin":{"top":"20px","right":"0px","bottom":"0px","left":"0px"}}},"fontSize":"large"} /-->
 					
-					<!-- wp:paragraph {"align":"left","textColor":"light"} -->
-					<p class="has-text-align-left has-light-color has-text-color">Societas is a block based Wordpress
-					                        Theme.</p>
+					<!-- wp:paragraph {"align":"left","textColor":"tertiary"} -->
+					<p class="has-text-align-left has-tertiary-color has-text-color">Societas is a block based Wordpress
+															                        Theme.</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group -->
 					
@@ -40,13 +40,13 @@ return array(
 					<!-- /wp:group --></div>
 					<!-- /wp:group -->
 					
-					<!-- wp:group {"backgroundColor":"black","className":"tp-lower-footer"} -->
-					<div id="lower-footer" class="wp-block-group tp-lower-footer has-black-background-color has-background"><!-- wp:group {"className":"container"} -->
+					<!-- wp:group {"backgroundColor":"lighter","className":"tp-lower-footer"} -->
+					<div id="lower-footer" class="wp-block-group tp-lower-footer has-lighter-background-color has-background"><!-- wp:group {"className":"container"} -->
 					<div class="wp-block-group container"><!-- wp:group {"className":"row"} -->
 					<div class="wp-block-group row"><!-- wp:group {"className":"col col-xs-12"} -->
-					<div class="wp-block-group col col-xs-12"><!-- wp:paragraph {"align":"center","textColor":"white","className":"copyright","fontSize":"small"} -->
-					<p class="has-text-align-center copyright has-white-color has-text-color has-small-font-size">
-					                        Copyright © 2022 Xidea Themes</p>
+					<div class="wp-block-group col col-xs-12"><!-- wp:paragraph {"align":"center","textColor":"tertiary","className":"copyright","fontSize":"small"} -->
+					<p class="has-text-align-center copyright has-tertiary-color has-text-color has-small-font-size">
+															                        Copyright © 2022 Xidea Themes</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>

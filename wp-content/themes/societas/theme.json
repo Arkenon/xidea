@@ -108,23 +108,28 @@
         },
         {
           "slug": "primary",
-          "color": "#bf692d",
+          "color": "#003459",
           "name": "Primary"
         },
         {
           "slug": "secondary",
-          "color": "#30180d",
+          "color": "#044761",
           "name": "Secondary"
         },
         {
           "slug": "tertiary",
-          "color": "#6c757d",
+          "color": "#5D5F60",
           "name": "Tertiary"
         },
         {
           "slug": "light",
           "color": "#f8f9fa",
           "name": "Light"
+        },
+        {
+          "slug": "lighter",
+          "color": "#f4f4f4",
+          "name": "Lighter"
         }
       ]
     },
@@ -252,7 +257,7 @@
       "h5": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "300",
+          "fontWeight": "500",
           "lineHeight": "1.2",
           "fontSize": "1.25rem"
         },
