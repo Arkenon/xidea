@@ -51,9 +51,7 @@ function societas_register_block_patterns() {
 		'section-hero',
 		'section-team',
 		'section-icon-boxes',
-		'section-icon-cards',
-		'menu-left',
-		'menu-right',
+		'section-icon-cards'
 	);
 
 	/**
