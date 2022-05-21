@@ -14,8 +14,7 @@ return array(
 					<div class="wp-block-group col col-lg-3 col-md-6 col-sm-12 col-12"><!-- wp:site-title {"style":{"spacing":{"margin":{"top":"20px","right":"0px","bottom":"0px","left":"0px"}}},"fontSize":"large"} /-->
 					
 					<!-- wp:paragraph {"align":"left","textColor":"tertiary"} -->
-					<p class="has-text-align-left has-tertiary-color has-text-color">Societas is a block based Wordpress
-															                        Theme.</p>
+					<p class="has-text-align-left has-tertiary-color has-text-color">Societas is a block based Wordpress Theme.</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group -->
 					
@@ -30,11 +29,11 @@ return array(
 					<!-- /wp:group -->
 					
 					<!-- wp:group {"className":"col col-lg-3 col-md-6 col-sm-12 col-12"} -->
-					<div class="wp-block-group col col-lg-3 col-md-6 col-sm-12 col-12"><!-- wp:archives {"showPostCounts":true} /--></div>
+					<div class="wp-block-group col col-lg-3 col-md-6 col-sm-12 col-12"><!-- wp:archives {"showPostCounts":true,"className":"list-inline"} /--></div>
 					<!-- /wp:group -->
 					
-					<!-- wp:group {"className":"col col-lg-2 col-md-6 col-sm-12 col-12"} -->
-					<div class="wp-block-group col col-lg-2 col-md-6 col-sm-12 col-12"><!-- wp:page-list /--></div>
+					<!-- wp:group {"style":{"spacing":{"padding":{"top":"10px","right":"0px","bottom":"0px","left":"0px"}}},"className":"col col-lg-2 col-md-6 col-sm-12 col-12"} -->
+					<div class="wp-block-group col col-lg-2 col-md-6 col-sm-12 col-12" style="padding-top:10px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:navigation {"ref":1943,"textColor":"primary","layout":{"type":"flex","orientation":"vertical"},"style":{"typography":{"lineHeight":"0","fontSize":"15px"}}} /--></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>
@@ -45,8 +44,7 @@ return array(
 					<div class="wp-block-group container"><!-- wp:group {"className":"row"} -->
 					<div class="wp-block-group row"><!-- wp:group {"className":"col col-xs-12"} -->
 					<div class="wp-block-group col col-xs-12"><!-- wp:paragraph {"align":"center","textColor":"tertiary","className":"copyright","fontSize":"small"} -->
-					<p class="has-text-align-center copyright has-tertiary-color has-text-color has-small-font-size">
-															                        Copyright © 2022 Xidea Themes</p>
+					<p class="has-text-align-center copyright has-tertiary-color has-text-color has-small-font-size">                         Copyright © 2022 <a href="https://xideathemes.com" target="_blank" rel="noreferrer noopener">Xidea Themes</a></p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>

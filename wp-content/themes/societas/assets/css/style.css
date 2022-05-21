@@ -30,7 +30,9 @@ a:hover {
 .section-no-block-space {
     margin-top: 0 !important;
 }
-
+.slick-slide{
+    height: auto!important;
+}
 /*--------------------------------------------------------------
 # Post Comments
 --------------------------------------------------------------*/

@@ -31,7 +31,12 @@ if ( ! function_exists( 'societas_setup' ) ) :
 
 		register_nav_menus(
 			array(
-				'societas-primary-menu' => esc_html__( 'Primary', 'societas' ),
+				'societas-primary-menu'   => esc_html__( 'Societas Primary Menu', 'societas' ),
+				'societas-footer-menu'    => esc_html__( 'Societas Footer Menu', 'societas' ),
+				'societas-top-left-menu'  => esc_html__( 'Societas Top Left Menu', 'societas' ),
+				'societas-top-right-menu' => esc_html__( 'Societas Top Right Menu', 'societas' ),
+				'societas-mobile-menu-1'  => esc_html__( 'Societas Mobile Menu 1', 'societas' ),
+				'societas-mobile-menu-2'  => esc_html__( 'Societas Mobile Menu 2', 'societas' ),
 			)
 		);
 
@@ -53,6 +58,22 @@ if ( ! function_exists( 'societas_setup' ) ) :
 	}
 
 	add_action( 'after_setup_theme', 'societas_setup' );
+endif;
+
+/*--------------------------------------------------------------
+# Disable Gutenberg for Custom Post Types
+--------------------------------------------------------------*/
+if ( ! function_exists( 'societas_disable_gutenberg' ) ) :
+	add_filter( 'use_block_editor_for_post_type', 'societas_disable_gutenberg', 10, 2 );
+
+	function societas_disable_gutenberg( $gutenberg_filter, $post_type ) {
+		if ( $post_type === 'services' )
+			return false;
+		if ( $post_type === 'team' )
+			return false;
+
+		return $gutenberg_filter;
+	}
 endif;
 
 /*--------------------------------------------------------------
@@ -118,6 +139,9 @@ if ( ! function_exists( 'societas_get_custom_fonts' ) ) :
 		";
 	}
 endif;
+
+// Add Post Types
+require get_template_directory() . '/inc/post_types.php';
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
