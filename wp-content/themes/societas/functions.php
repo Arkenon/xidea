@@ -121,3 +121,6 @@ endif;
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
+
+// Add TGMPA
+require get_template_directory() . '/inc/tgmpa.php';

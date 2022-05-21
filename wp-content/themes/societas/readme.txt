@@ -105,7 +105,7 @@ Source : https://getbootstrap.com
 * Hero Image:
 
 License : Creative Commons Zero (CC0)
-Source : https://pxhere.com/tr/photo/1338795
+Source : https://pxhere.com/tr/photo/686805
 
 * Blog Post Featured Images:
 
