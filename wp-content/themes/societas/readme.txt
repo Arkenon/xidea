@@ -28,6 +28,9 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.1 =
+* Fix: Homepage services and team section button width (converted fixed to auto)
+
 = 1.0 =
 * Initial release
 
