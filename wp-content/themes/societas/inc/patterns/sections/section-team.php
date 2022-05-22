@@ -5,39 +5,23 @@
 return array(
 	'title'      => __( 'Team Section', 'societas' ),
 	'categories' => array( 'featured' ),
-	'content'    => '<!-- wp:getwid/section {"align":"full","skipLayout":true,"contentMaxWidthPreset":"custom","contentMaxWidth":1140,"customBackgroundColor":"#f4f4f4","paddingLeft":"medium","paddingRight":"medium","className":"alignfull"} -->
-					<div class="wp-block-getwid-section alignfull alignfull getwid-section-content-custom-width"><div class="wp-block-getwid-section__wrapper getwid-padding-left-medium getwid-padding-right-medium"><div class="wp-block-getwid-section__inner-wrapper" style="max-width:1140px"><div class="wp-block-getwid-section__background-holder"><div class="wp-block-getwid-section__background has-background" style="background-color:#f4f4f4"></div><div class="wp-block-getwid-section__foreground"></div></div><div class="wp-block-getwid-section__content"><div class="wp-block-getwid-section__inner-content"><!-- wp:getwid/advanced-heading {"titleTag":"h2","fontWeight":"","textAlignment":"center","marginTop":"10px","marginBottom":"30px"} -->
-					<div class="wp-block-getwid-advanced-heading" style="margin-bottom:30px;margin-top:10px"><h2 class="wp-block-getwid-advanced-heading__content" style="text-align:center">Meet Our Team</h2></div>
-					<!-- /wp:getwid/advanced-heading -->
+	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"50px","right":"0px","bottom":"50px","left":"0px"}}},"backgroundColor":"lighter","layout":{"inherit":false}} -->
+					<div class="wp-block-group alignfull has-lighter-background-color has-background" id="team-section" style="padding-top:50px;padding-right:0px;padding-bottom:50px;padding-left:0px"><!-- wp:heading {"textAlign":"center"} -->
+					<h2 class="has-text-align-center">Our Team</h2>
+					<!-- /wp:heading -->
 					
 					<!-- wp:paragraph {"align":"center"} -->
 					<p class="has-text-align-center">Dignissim diam quis enim lobortis scelerisque et molestie ac feugiat<br> sed lectus vestibulum mattis ullamcorper</p>
 					<!-- /wp:paragraph -->
 					
-					<!-- wp:getwid/advanced-spacer {"height":"40px"} -->
-					<div class="wp-block-getwid-advanced-spacer" style="height:40px" aria-hidden="true"></div>
-					<!-- /wp:getwid/advanced-spacer -->
+					<!-- wp:group {"className":"container wow zoomIn"} -->
+					<div id="team-slider-animated" class="wp-block-group container wow zoomIn"><!-- wp:kadence/posts {"uniqueID":"_7ebb9a-7c","postsToShow":3,"postType":"team","categories":[],"meta":false,"readmore":false} /-->
 					
-					<!-- wp:columns {"className":"has-3-columns"} -->
-					<div class="wp-block-columns has-3-columns"><!-- wp:column -->
-					<div class="wp-block-column"><!-- wp:getwid/banner {"verticalAlign":"bottom","blockAnimation":"style1","textAnimation":"none"} -->
-					<div class="wp-block-getwid-banner has-animation-style1 has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper"><img src="https://cgw.motopress.com/wp-content/uploads/2019/11/person-12.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source "/><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><span class="wp-block-getwid-banner__title">John Doe</span><p class="wp-block-getwid-banner__text">Founder/CEO</p></div></div></div></a></div>
-					<!-- /wp:getwid/banner --></div>
-					<!-- /wp:column -->
-					
-					<!-- wp:column -->
-					<div class="wp-block-column"><!-- wp:getwid/banner {"verticalAlign":"bottom","blockAnimation":"style1","textAnimation":"none"} -->
-					<div class="wp-block-getwid-banner has-animation-style1 has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper"><img src="https://cgw.motopress.com/wp-content/uploads/2019/11/person-13.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source "/><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><span class="wp-block-getwid-banner__title">Ann Black</span><p class="wp-block-getwid-banner__text">HR Director</p></div></div></div></a></div>
-					<!-- /wp:getwid/banner --></div>
-					<!-- /wp:column -->
-					
-					<!-- wp:column -->
-					<div class="wp-block-column"><!-- wp:getwid/banner {"verticalAlign":"bottom","blockAnimation":"style1","textAnimation":"none"} -->
-					<div class="wp-block-getwid-banner has-animation-style1 has-vertical-alignment-bottom"><a href="#" class="wp-block-getwid-banner__link"><div class="wp-block-getwid-banner__wrapper"><img src="https://cgw.motopress.com/wp-content/uploads/2019/11/person-14.jpg" alt="" class="wp-block-getwid-banner__image wp-block-getwid-banner__source "/><div class="wp-block-getwid-banner__caption"><div class="wp-block-getwid-banner__caption-wrapper"><span class="wp-block-getwid-banner__title">Tony Stone</span><p class="wp-block-getwid-banner__text">Lead Developer</p></div></div></div></a></div>
-					<!-- /wp:getwid/banner --></div>
-					<!-- /wp:column --></div>
-					<!-- /wp:columns --></div></div></div></div></div>
-					<!-- /wp:getwid/section -->',
+					<!-- wp:kadence/advancedbtn {"uniqueID":"_e9c7c3-b5","btns":[{"text":"Show All Team","link":"#","target":"_self","size":"","paddingBT":"","paddingLR":"","color":"","background":"","border":"","backgroundOpacity":1,"borderOpacity":1,"borderRadius":7,"borderWidth":"","colorHover":"","backgroundHover":"","borderHover":"","backgroundHoverOpacity":1,"borderHoverOpacity":1,"icon":"","iconSide":"right","iconHover":false,"cssClass":"","noFollow":false,"gap":5,"responsiveSize":["",""],"gradient":["#999999",1,0,100,"linear",180,"center center"],"gradientHover":["#777777",1,0,100,"linear",180,"center center"],"btnStyle":"basic","btnSize":"large","backgroundType":"solid","backgroundHoverType":"solid","width":[380,"",""],"responsivePaddingBT":["",""],"responsivePaddingLR":["",""],"boxShadow":[false,"#000000",0.2,1,1,2,0,false],"boxShadowHover":[false,"#000000",0.4,2,2,3,0,false],"sponsored":false,"download":false,"tabletGap":"","mobileGap":"","inheritStyles":"inherit","iconSize":["","",""],"iconPadding":["","","",""],"iconTabletPadding":["","","",""],"iconMobilePadding":["","","",""],"onlyIcon":[false,"",""],"iconColor":"","iconColorHover":"","sizeType":"px","iconSizeType":"px","label":"","marginUnit":"px","margin":["","","",""],"tabletMargin":["","","",""],"mobileMargin":["","","",""],"anchor":"","borderStyle":""}],"widthType":"fixed"} -->
+					<div class="wp-block-kadence-advancedbtn kt-btn-align-center kt-btn-tablet-align-inherit kt-btn-mobile-align-inherit kt-btns-wrap kt-btns_e9c7c3-b5"><div class="kt-btn-wrap kt-btn-wrap-0"><a class="kt-button button kt-btn-0-action kt-btn-size-large kt-btn-style-basic kt-btn-svg-show-always kt-btn-has-text-true kt-btn-has-svg-false kb-btn-global-inherit wp-block-button__link" href="#" style="border-radius:7px"><span class="kt-btn-inner-text">Show All Team</span></a></div></div>
+					<!-- /wp:kadence/advancedbtn --></div>
+					<!-- /wp:group --></div>
+					<!-- /wp:group -->',
 );
 
 

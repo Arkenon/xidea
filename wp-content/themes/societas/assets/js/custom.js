@@ -35,5 +35,5 @@
 
         toggleBackToTopBtn();
     });
-
+    new WOW().init();
 })(window.jQuery);

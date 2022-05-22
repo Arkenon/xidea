@@ -1,12 +1,12 @@
 === Societas ===
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, sticky-post, threaded-comments
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, sticky-post, threaded-comments, business, corporate
 Contributors: xideathemes
 Requires at least: 5.9
 Tested up to: 5.9
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Theme URI: https://demo.xideathemes.com/
+Theme URI: https://societas.xideathemes.com/
 Author URI: https://xideathemes.com/
 Author: xideathemes
 
@@ -14,7 +14,7 @@ Societas is a block based Wordpress Theme.
 
 == Description ==
 
-Societas is a block based Wordpress Theme.
+Societas is a block based Wordpress Theme for corporaitons, agencies, finacial organizations and more...
 
 With the new pattern of Wordpress named full site editing (fse) you can edit whole website from site editor tool.
 
@@ -27,47 +27,6 @@ Societas is designed with Bootstrap 5 and you can easily use Bootstrap classes w
 Yes, you can. The vision of Full Site Editing is to provide a collection of features that bring the familiar experience and extendability of blocks to all parts of your site rather than just post and pages.
 
 == Changelog ==
-= 1.0.9 =
-* Folder structures of block patterns changed
-* block-patterns.php updated
-* New header block patterns added
-
-= 1.0.8 =
-* wp:pattern shortcode added into footer.html and header.html
-
-= 1.0.7 =
-* First tag of all templates changed as '<main>' for skip links
-
-= 1.0.6 =
-* Screenshot changed
-* License info of images used in theme screenshot are added
-* Style optimizations made for back to top icon
-
-= 1.0.5 =
-* Text underline style added to comment-content, post-excerpt and post-content
-
-= 1.0.4 =
-* Back to top icon styles changed
-* Bootstrap Icons removed
-
-
-= 1.0.3 =
-* Unused patterns deleted.
-
-= 1.0.2 =
-* Color optimizations made for blocks
-* assets/images folder deleted
-* Updated readme.txt (Resources section revised, Copyright section added)
-* Added text underline style to a:hover selector
-
-= 1.0.1 =
-* Provided a unique prefix for everything
-* societas-enqueue.php and societas-setup.php removed and all functions added into functions.php
-* bootstrap.bundle.js added
-* Hero image deleted and added new image from https://pxhere.com
-* Missing license information added for NunitoSans-Regular.ttf
-* block-patterns.php added into inc/ folder. New block patterns created.
-* Screenshot changed
 
 = 1.0 =
 * Initial release
@@ -75,18 +34,8 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 == Copyright ==
 
 Societas WordPress Theme, Copyright (c) 2022 by Xidea Themes.
-Societas is distributed under the terms of the GNU GPL.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Resources ==
 
@@ -96,27 +45,33 @@ License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
 Source: https://fonts.google.com/specimen/Nunito+Sans?query=nunito
 
 # Bootstrap 5
-Copyright (c) 2011-2021 Twitter, Inc. Copyright (c) 2011-2021 The Bootstrap Authors,
+Copyright (c) 2011-2021 Twitter, Inc. Copyright (c) 2011-2021 The Bootstrap Authors
 License: The MIT License (MIT),
 Source : https://getbootstrap.com
 
+# Animate Css
+Copyright 2021 Daniel Eden (“Licensor”)
+License: Animate.css is licensed under the Hippocratic License Version Number: 2.1
+Source : https://animate.style/
+
+# Wow Js
+Developed by Matt Aussaguel – Forked to remain under the MIT license by Thomas Grainger – Initiated & Designed by Webalys
+License: The MIT License (MIT)
+Source : https://wowjs.uk/
+
+# Kadence Blocks – Gutenberg Blocks for Page Builder Features
+Copyright 2022 Kadence WP
+License: GPLv2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
+Source : https://www.kadencewp.com/
+
 == Images used in theme screenshot ==
 
-* Hero Image:
+* Logo:
+Created by Xidea Themes and released under same license as theme.
 
+* Hero Image:
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/686805
-
-* Blog Post Featured Images:
-
-License : Creative Commons Zero (CC0)
-Source : https://pxhere.com/tr/photo/36736
-
-License : Creative Commons Zero (CC0)
-Source : https://pxhere.com/tr/photo/868964
-
-License : Creative Commons Zero (CC0)
-Source : https://pxhere.com/tr/photo/878711
 
 
 

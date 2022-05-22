@@ -45,13 +45,18 @@ function societas_register_block_patterns() {
 	$block_patterns = array(
 		'footer-default',
 		'header-default',
-		'header-flat-with-top-bar',
-		'header-with-centered-logo',
-		'header-boxed-with-social-icons',
 		'section-hero',
 		'section-team',
 		'section-icon-boxes',
-		'section-icon-cards'
+		'section-services',
+		'section-why-us',
+		'section-team',
+		'section-call-to-action',
+		'section-icon-cards',
+		'section-testimonial',
+		'section-faq',
+		'section-latest-posts',
+		'section-map'
 	);
 
 	/**

@@ -67,10 +67,12 @@ if ( ! function_exists( 'societas_disable_gutenberg' ) ) :
 	add_filter( 'use_block_editor_for_post_type', 'societas_disable_gutenberg', 10, 2 );
 
 	function societas_disable_gutenberg( $gutenberg_filter, $post_type ) {
-		if ( $post_type === 'services' )
+		if ( $post_type === 'services' ) {
 			return false;
-		if ( $post_type === 'team' )
+		}
+		if ( $post_type === 'team' ) {
 			return false;
+		}
 
 		return $gutenberg_filter;
 	}
@@ -85,15 +87,20 @@ if ( ! function_exists( 'societas_enqueue_styles' ) ) :
 
 		wp_register_style( 'societas-style', BUSINESS_X_URI . '/assets/css/style.css', [], BUSINESS_X_VERSION );
 		wp_register_style( 'bootstrap', BUSINESS_X_URI . '/assets/css/bootstrap.min.css', [], BUSINESS_X_VERSION );
+		wp_register_style( 'animate', BUSINESS_X_URI . '/assets/css/animate.min.css', [], BUSINESS_X_VERSION );
 		wp_add_inline_style( 'societas-style', societas_get_custom_fonts() );
 
 		wp_enqueue_style( 'societas-style' );
 		wp_enqueue_style( 'bootstrap' );
+		wp_enqueue_style( 'animate' );
 
 		wp_register_script( 'bootstrap-bundle', BUSINESS_X_URI . '/assets/js/bootstrap.bundle.min.js', [ 'jquery' ], BUSINESS_X_VERSION, true );
+		wp_register_script( 'wow', BUSINESS_X_URI . '/assets/js/wow.min.js', [ 'jquery' ], BUSINESS_X_VERSION, true );
 		wp_register_script( 'societas-custom', BUSINESS_X_URI . '/assets/js/custom.js', [ 'jquery' ], BUSINESS_X_VERSION, true );
 
+
 		wp_enqueue_script( 'bootstrap-bundle' );
+		wp_enqueue_script( 'wow' );
 		wp_enqueue_script( 'societas-custom' );
 
 	}
@@ -110,7 +117,8 @@ if ( ! function_exists( 'societas_editor_styles' ) ) :
 	function societas_editor_styles() {
 		wp_add_inline_style( 'wp-block-library', societas_get_custom_fonts() );
 		add_editor_style( array( './assets/css/style.css' ) );
-		add_editor_style( array( './assets/css/bootstrap.min.css' ) );;
+		add_editor_style( array( './assets/css/bootstrap.min.css' ) );
+		add_editor_style( array( './assets/css/animate.min.css' ) );
 	}
 
 	add_action( 'init', 'societas_editor_styles' );

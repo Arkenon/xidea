@@ -5,66 +5,48 @@
 return array(
 	'title'      => __( 'Icon Cards Section ', 'societas' ),
 	'categories' => array( 'featured' ),
-	'content'    => '<!-- wp:group {"layout":{"contentSize":"1170px"}} -->
+	'content'    => '<!-- wp:group -->
 					<div class="wp-block-group"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"50px","right":"50px","bottom":"50px","left":"50px"}}}} -->
-					<div class="wp-block-columns" style="padding-top:50px;padding-right:50px;padding-bottom:50px;padding-left:50px"><!-- wp:column {"style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"className":"mb-2 card border-light"} -->
-					<div class="wp-block-column mb-2 card border-light" style="padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px"><!-- wp:outermost/icon-block {"iconName":"wordpress-wordpress","itemsJustification":"center","width":72,"style":{"border":{"radius":"33px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}}} -->
-					<div class="wp-block-outermost-icon-block items-justified-center"><div class="icon-container" style="border-radius:33px;padding:10px 10px 10px 10px;width:72px"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" role="img" aria-hidden="true"><path d="M12.158,12.786L9.46,20.625c0.806,0.237,1.657,0.366,2.54,0.366c1.047,0,2.051-0.181,2.986-0.51 c-0.024-0.038-0.046-0.079-0.065-0.124L12.158,12.786z M3.009,12c0,3.559,2.068,6.634,5.067,8.092L3.788,8.341 C3.289,9.459,3.009,10.696,3.009,12z M18.069,11.546c0-1.112-0.399-1.881-0.741-2.48c-0.456-0.741-0.883-1.368-0.883-2.109 c0-0.826,0.627-1.596,1.51-1.596c0.04,0,0.078,0.005,0.116,0.007C16.472,3.904,14.34,3.009,12,3.009 c-3.141,0-5.904,1.612-7.512,4.052c0.211,0.007,0.41,0.011,0.579,0.011c0.94,0,2.396-0.114,2.396-0.114 C7.947,6.93,8.004,7.642,7.52,7.699c0,0-0.487,0.057-1.029,0.085l3.274,9.739l1.968-5.901l-1.401-3.838 C9.848,7.756,9.389,7.699,9.389,7.699C8.904,7.67,8.961,6.93,9.446,6.958c0,0,1.484,0.114,2.368,0.114 c0.94,0,2.397-0.114,2.397-0.114c0.485-0.028,0.542,0.684,0.057,0.741c0,0-0.488,0.057-1.029,0.085l3.249,9.665l0.897-2.996 C17.841,13.284,18.069,12.316,18.069,11.546z M19.889,7.686c0.039,0.286,0.06,0.593,0.06,0.924c0,0.912-0.171,1.938-0.684,3.22 l-2.746,7.94c2.673-1.558,4.47-4.454,4.47-7.771C20.991,10.436,20.591,8.967,19.889,7.686z M12,22C6.486,22,2,17.514,2,12 C2,6.486,6.486,2,12,2c5.514,0,10,4.486,10,10C22,17.514,17.514,22,12,22z"></path></svg></div></div>
-					<!-- /wp:outermost/icon-block -->
+					<div class="wp-block-columns" style="padding-top:50px;padding-right:50px;padding-bottom:50px;padding-left:50px"><!-- wp:column {"style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"backgroundColor":"light","className":"mb-4 wow bounceIn"} -->
+					<div class="wp-block-column mb-4 wow bounceIn has-light-background-color has-background" style="padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px" id="animated-5"><!-- wp:kadence/icon {"icons":[{"icon":"fa_wordpress","link":"","target":"_self","size":125,"width":2,"title":"","color":"#000000","background":"transparent","border":"#444444","borderRadius":0,"borderWidth":2,"padding":20,"style":"default","marginTop":0,"marginRight":0,"marginBottom":0,"marginLeft":0,"hColor":"","hBackground":"","hBorder":"","linkTitle":""}],"uniqueID":"_a7c2a9-76"} -->
+					<div class="wp-block-kadence-icon kt-svg-icons kt-svg-icons_a7c2a9-76 alignnone" style="text-align:center"><div class="kt-svg-style-default kt-svg-icon-wrap kt-svg-item-0"><div style="display:inline-flex;justify-content:center;align-items:center;color:#000000" class="kt-svg-icon kt-svg-icon-fa_wordpress"><svg style="display:inline-block;vertical-align:middle" viewbox="0 0 512 512" height="125" width="125" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M61.7 169.4l101.5 278C92.2 413 43.3 340.2 43.3 256c0-30.9 6.6-60.1 18.4-86.6zm337.9 75.9c0-26.3-9.4-44.5-17.5-58.7-10.8-17.5-20.9-32.4-20.9-49.9 0-19.6 14.8-37.8 35.7-37.8.9 0 1.8.1 2.8.2-37.9-34.7-88.3-55.9-143.7-55.9-74.3 0-139.7 38.1-177.8 95.9 5 .2 9.7.3 13.7.3 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l77.5 230.4L249.8 247l-33.1-90.8c-11.5-.7-22.3-2-22.3-2-11.5-.7-10.1-18.2 1.3-17.5 0 0 35.1 2.7 56 2.7 22.2 0 56.7-2.7 56.7-2.7 11.5-.7 12.8 16.2 1.4 17.5 0 0-11.5 1.3-24.3 2l76.9 228.7 21.2-70.9c9-29.4 16-50.5 16-68.7zm-139.9 29.3l-63.8 185.5c19.1 5.6 39.2 8.7 60.1 8.7 24.8 0 48.5-4.3 70.6-12.1-.6-.9-1.1-1.9-1.5-2.9l-65.4-179.2zm183-120.7c.9 6.8 1.4 14 1.4 21.9 0 21.6-4 45.8-16.2 76.2l-65 187.9C426.2 403 468.7 334.5 468.7 256c0-37-9.4-71.8-26-102.1zM504 256c0 136.8-111.3 248-248 248C119.2 504 8 392.7 8 256 8 119.2 119.2 8 256 8c136.7 0 248 111.2 248 248zm-11.4 0c0-130.5-106.2-236.6-236.6-236.6C125.5 19.4 19.4 125.5 19.4 256S125.6 492.6 256 492.6c130.5 0 236.6-106.1 236.6-236.6z"></path></svg></div></div></div>
+					<!-- /wp:kadence/icon -->
 					
-					<!-- wp:heading {"textAlign":"center","level":3,"textColor":"foreground"} -->
-					<h3 class="has-text-align-center has-foreground-color has-text-color"><strong>Powered by Wordpress</strong></h3>
+					<!-- wp:heading {"textAlign":"center"} -->
+					<h2 class="has-text-align-center">Powered by Wordpress</h2>
 					<!-- /wp:heading -->
 					
 					<!-- wp:paragraph {"align":"center"} -->
-					<p class="has-text-align-center">lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar</p>
-					<!-- /wp:paragraph -->
-					
-					<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-					<div class="wp-block-buttons"><!-- wp:button {"width":50,"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"className":"mt-3","fontSize":"small"} -->
-					<div class="wp-block-button has-custom-width wp-block-button__width-50 has-custom-font-size mt-3 has-small-font-size"><a class="wp-block-button__link" style="border-radius:0px;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px">Read More...</a></div>
-					<!-- /wp:button --></div>
-					<!-- /wp:buttons --></div>
+					<p class="has-text-align-center">Neque volutpat ac tincidunt vitae semper quis lectus nulla at. Nibh nisl id venenatis a condimentum. Libero justo laoreet sit amet. Nisl nisi scelerisque eu ultrices vitae. Dolor sit amet consectetur adipiscing elit pellentesque.&nbsp;</p>
+					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 					
-					<!-- wp:column {"style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"className":"mb-2 card border-light"} -->
-					<div class="wp-block-column mb-2 card border-light" style="padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px"><!-- wp:outermost/icon-block {"iconName":"wordpress-archive","itemsJustification":"center","width":72,"style":{"border":{"radius":"33px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}}} -->
-					<div class="wp-block-outermost-icon-block items-justified-center"><div class="icon-container" style="border-radius:33px;padding:10px 10px 10px 10px;width:72px"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true"><path d="M19 6.2h-5.9l-.6-1.1c-.3-.7-1-1.1-1.8-1.1H5c-1.1 0-2 .9-2 2v11.8c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8.2c0-1.1-.9-2-2-2zm.5 11.6c0 .3-.2.5-.5.5H5c-.3 0-.5-.2-.5-.5V6c0-.3.2-.5.5-.5h5.8c.2 0 .4.1.4.3l1 2H19c.3 0 .5.2.5.5v9.5zM8 12.8h8v-1.5H8v1.5zm0 3h8v-1.5H8v1.5z"></path></svg></div></div>
-					<!-- /wp:outermost/icon-block -->
+					<!-- wp:column {"style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"backgroundColor":"primary","textColor":"background","className":"mb-4 wow bounceIn"} -->
+					<div class="wp-block-column mb-4 wow bounceIn has-background-color has-primary-background-color has-text-color has-background" style="padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px" id="animated-6"><!-- wp:kadence/icon {"icons":[{"icon":"ic_task","link":"","target":"_self","size":125,"width":2,"title":"","color":"#ffffff","background":"transparent","border":"#444444","borderRadius":0,"borderWidth":2,"padding":20,"style":"default","marginTop":0,"marginRight":0,"marginBottom":0,"marginLeft":0,"hColor":"","hBackground":"","hBorder":"","linkTitle":""}],"uniqueID":"_b7ad89-0e"} -->
+					<div class="wp-block-kadence-icon kt-svg-icons kt-svg-icons_b7ad89-0e alignnone" style="text-align:center"><div class="kt-svg-style-default kt-svg-icon-wrap kt-svg-item-0"><div style="display:inline-flex;justify-content:center;align-items:center;color:#ffffff" class="kt-svg-icon kt-svg-icon-ic_task"><svg style="display:inline-block;vertical-align:middle" viewbox="0 0 8 8" height="125" width="125" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M0 0v7h7v-3.59l-1 1v1.59h-5v-5h3.59l1-1h-5.59zm7 0l-3 3-1-1-1 1 2 2 4-4-1-1z"></path></svg></div></div></div>
+					<!-- /wp:kadence/icon -->
 					
-					<!-- wp:heading {"textAlign":"center","level":3,"textColor":"foreground"} -->
-					<h3 class="has-text-align-center has-foreground-color has-text-color"><strong>Powered by Wordpress</strong></h3>
+					<!-- wp:heading {"textAlign":"center","textColor":"background"} -->
+					<h2 class="has-text-align-center has-background-color has-text-color">Best Experience</h2>
 					<!-- /wp:heading -->
 					
 					<!-- wp:paragraph {"align":"center"} -->
-					<p class="has-text-align-center">lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar</p>
-					<!-- /wp:paragraph -->
-					
-					<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-					<div class="wp-block-buttons"><!-- wp:button {"width":50,"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"className":"mt-3","fontSize":"small"} -->
-					<div class="wp-block-button has-custom-width wp-block-button__width-50 has-custom-font-size mt-3 has-small-font-size"><a class="wp-block-button__link" style="border-radius:0px;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px">Read More...</a></div>
-					<!-- /wp:button --></div>
-					<!-- /wp:buttons --></div>
+					<p class="has-text-align-center">Neque volutpat ac tincidunt vitae semper quis lectus nulla at. Nibh nisl id venenatis a condimentum. Libero justo laoreet sit amet. Nisl nisi scelerisque eu ultrices vitae. Dolor sit amet consectetur adipiscing elit pellentesque.&nbsp;</p>
+					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 					
-					<!-- wp:column {"style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"className":"mb-2 card border-light"} -->
-					<div class="wp-block-column mb-2 card border-light" style="padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px"><!-- wp:outermost/icon-block {"iconName":"wordpress-chain","itemsJustification":"center","width":72,"style":{"border":{"radius":"33px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}}} -->
-					<div class="wp-block-outermost-icon-block items-justified-center"><div class="icon-container" style="border-radius:33px;padding:10px 10px 10px 10px;width:72px"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" role="img" aria-hidden="true"><path d="M19.647,16.706a1.134,1.134,0,0,0-.343-.833l-2.549-2.549a1.134,1.134,0,0,0-.833-.343,1.168,1.168,0,0,0-.883.392l.233.226q.2.189.264.264a2.922,2.922,0,0,1,.184.233.986.986,0,0,1,.159.312,1.242,1.242,0,0,1,.043.337,1.172,1.172,0,0,1-1.176,1.176,1.237,1.237,0,0,1-.337-.043,1,1,0,0,1-.312-.159,2.76,2.76,0,0,1-.233-.184q-.073-.068-.264-.264l-.226-.233a1.19,1.19,0,0,0-.4.895,1.134,1.134,0,0,0,.343.833L15.837,19.3a1.13,1.13,0,0,0,.833.331,1.18,1.18,0,0,0,.833-.318l1.8-1.789a1.12,1.12,0,0,0,.343-.821Zm-8.615-8.64a1.134,1.134,0,0,0-.343-.833L8.163,4.7a1.134,1.134,0,0,0-.833-.343,1.184,1.184,0,0,0-.833.331L4.7,6.473a1.12,1.12,0,0,0-.343.821,1.134,1.134,0,0,0,.343.833l2.549,2.549a1.13,1.13,0,0,0,.833.331,1.184,1.184,0,0,0,.883-.38L8.728,10.4q-.2-.189-.264-.264A2.922,2.922,0,0,1,8.28,9.9a.986.986,0,0,1-.159-.312,1.242,1.242,0,0,1-.043-.337A1.172,1.172,0,0,1,9.254,8.079a1.237,1.237,0,0,1,.337.043,1,1,0,0,1,.312.159,2.761,2.761,0,0,1,.233.184q.073.068.264.264l.226.233a1.19,1.19,0,0,0,.4-.895ZM22,16.706a3.343,3.343,0,0,1-1.042,2.488l-1.8,1.789a3.536,3.536,0,0,1-4.988-.025l-2.525-2.537a3.384,3.384,0,0,1-1.017-2.488,3.448,3.448,0,0,1,1.078-2.561l-1.078-1.078a3.434,3.434,0,0,1-2.549,1.078,3.4,3.4,0,0,1-2.5-1.029L3.029,9.794A3.4,3.4,0,0,1,2,7.294,3.343,3.343,0,0,1,3.042,4.806l1.8-1.789A3.384,3.384,0,0,1,7.331,2a3.357,3.357,0,0,1,2.5,1.042l2.525,2.537a3.384,3.384,0,0,1,1.017,2.488,3.448,3.448,0,0,1-1.078,2.561l1.078,1.078a3.551,3.551,0,0,1,5.049-.049l2.549,2.549A3.4,3.4,0,0,1,22,16.706Z"></path></svg></div></div>
-					<!-- /wp:outermost/icon-block -->
+					<!-- wp:column {"style":{"spacing":{"padding":{"top":"20px","right":"20px","bottom":"20px","left":"20px"}}},"backgroundColor":"light","className":"mb-4 wow bounceIn"} -->
+					<div class="wp-block-column mb-4 wow bounceIn has-light-background-color has-background" style="padding-top:20px;padding-right:20px;padding-bottom:20px;padding-left:20px" id="animated-7"><!-- wp:kadence/icon {"icons":[{"icon":"fas_cube","link":"","target":"_self","size":125,"width":2,"title":"","color":"#000000","background":"transparent","border":"#444444","borderRadius":0,"borderWidth":2,"padding":20,"style":"default","marginTop":0,"marginRight":0,"marginBottom":0,"marginLeft":0,"hColor":"","hBackground":"","hBorder":"","linkTitle":""}],"uniqueID":"_359ae0-bc"} -->
+					<div class="wp-block-kadence-icon kt-svg-icons kt-svg-icons_359ae0-bc alignnone" style="text-align:center"><div class="kt-svg-style-default kt-svg-icon-wrap kt-svg-item-0"><div style="display:inline-flex;justify-content:center;align-items:center;color:#000000" class="kt-svg-icon kt-svg-icon-fas_cube"><svg style="display:inline-block;vertical-align:middle" viewbox="0 0 512 512" height="125" width="125" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M239.1 6.3l-208 78c-18.7 7-31.1 25-31.1 45v225.1c0 18.2 10.3 34.8 26.5 42.9l208 104c13.5 6.8 29.4 6.8 42.9 0l208-104c16.3-8.1 26.5-24.8 26.5-42.9V129.3c0-20-12.4-37.9-31.1-44.9l-208-78C262 2.2 250 2.2 239.1 6.3zM256 68.4l192 72v1.1l-192 78-192-78v-1.1l192-72zm32 356V275.5l160-65v133.9l-160 80z"></path></svg></div></div></div>
+					<!-- /wp:kadence/icon -->
 					
-					<!-- wp:heading {"textAlign":"center","level":3,"textColor":"foreground"} -->
-					<h3 class="has-text-align-center has-foreground-color has-text-color"><strong>Powered by Wordpress</strong></h3>
+					<!-- wp:heading {"textAlign":"center"} -->
+					<h2 class="has-text-align-center">Block Theme</h2>
 					<!-- /wp:heading -->
 					
 					<!-- wp:paragraph {"align":"center"} -->
-					<p class="has-text-align-center">lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar lorem ipsum dolor site amar</p>
-					<!-- /wp:paragraph -->
-					
-					<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-					<div class="wp-block-buttons"><!-- wp:button {"width":50,"style":{"border":{"radius":"0px"},"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"className":"mt-3","fontSize":"small"} -->
-					<div class="wp-block-button has-custom-width wp-block-button__width-50 has-custom-font-size mt-3 has-small-font-size"><a class="wp-block-button__link" style="border-radius:0px;padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px">Read More...</a></div>
-					<!-- /wp:button --></div>
-					<!-- /wp:buttons --></div>
+					<p class="has-text-align-center">Neque volutpat ac tincidunt vitae semper quis lectus nulla at. Nibh nisl id venenatis a condimentum. Libero justo laoreet sit amet. Nisl nisi scelerisque eu ultrices vitae. Dolor sit amet consectetur adipiscing elit pellentesque.&nbsp;</p>
+					<!-- /wp:paragraph --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns --></div>
 					<!-- /wp:group -->',

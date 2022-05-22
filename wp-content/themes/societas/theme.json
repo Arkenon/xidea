@@ -320,6 +320,13 @@
       "postTypes": [
         "page"
       ]
+    },
+    {
+      "name": "page-blog",
+      "title": "Blog Page",
+      "postTypes": [
+        "page"
+      ]
     }
   ],
   "templateParts": [
