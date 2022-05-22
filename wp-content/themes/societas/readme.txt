@@ -69,10 +69,25 @@ Source : https://www.kadencewp.com/
 * Logo:
 Created by Xidea Themes and released under same license as theme.
 
-* Hero Image:
+* Hero Image / About Us Page Template Image:
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/686805
 
+* Why Us Section Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/714525
+
+
+* Faq Section Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/1379771
+
+* Testimonial Section Images:
+This-Person-Does-not-Exist.com, 2022.
+All information about the game is taken from open sources. Source code from open sources. Not copyrighted.
+Source : https://this-person-does-not-exist.com
 
 
 

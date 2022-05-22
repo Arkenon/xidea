@@ -17,7 +17,7 @@ return array(
 					<!-- wp:columns -->
 					<div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
 					<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":2064,"sizeSlug":"full","linkDestination":"none"} -->
-					<figure class="wp-block-image size-full"><img src="http://localhost/xidea/wp-content/uploads/2022/05/societas_faq.jpg" alt="" class="wp-image-2064"/></figure>
+					<figure class="wp-block-image size-full"><img src="https://societas.xideathemes.com/wp-content/uploads/2022/05/societas_faq.jpg" alt="" class="wp-image-2064"/></figure>
 					<!-- /wp:image --></div>
 					<!-- /wp:column -->
 					

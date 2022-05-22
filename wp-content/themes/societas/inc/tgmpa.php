@@ -62,6 +62,11 @@ function societas_register_required_plugins() {
 		array(
 			'name'      => 'Gutenberg Blocks by Kadence Blocks – Page Builder Features',
 			'slug'      => 'kadence-blocks',
+			'required'  => true,
+		),
+		array(
+			'name'      => 'One Click Demo Import',
+			'slug'      => 'one-click-demo-import',
 			'required'  => false,
 		)
 	);

@@ -301,6 +301,20 @@
       ]
     },
     {
+      "name": "single-team",
+      "title": "Single Team",
+      "postTypes": [
+        "team"
+      ]
+    },
+    {
+      "name": "single-services",
+      "title": "Single Service",
+      "postTypes": [
+        "team"
+      ]
+    },
+    {
       "name": "page-about-us",
       "title": "About Us Page",
       "postTypes": [
