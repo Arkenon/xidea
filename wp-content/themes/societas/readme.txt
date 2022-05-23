@@ -28,9 +28,6 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
-= 1.0.1 =
-* Fix: Homepage services and team section button width (converted fixed to auto)
-
 = 1.0 =
 * Initial release
 
@@ -86,11 +83,6 @@ Source : https://pxhere.com/tr/photo/714525
 
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/1379771
-
-* Testimonial Section Images:
-This-Person-Does-not-Exist.com, 2022.
-All information about the game is taken from open sources. Source code from open sources. Not copyrighted.
-Source : https://this-person-does-not-exist.com
 
 
 

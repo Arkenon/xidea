@@ -53,7 +53,6 @@ function societas_register_block_patterns() {
 		'section-team',
 		'section-call-to-action',
 		'section-icon-cards',
-		'section-testimonial',
 		'section-faq',
 		'section-latest-posts',
 		'section-map'
