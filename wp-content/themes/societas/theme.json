@@ -108,34 +108,34 @@
         },
         {
           "slug": "primary",
-          "color": "#003459",
+          "color": "#e74c3c",
           "name": "Primary"
         },
         {
-          "slug": "secondary",
+          "slug": "blue",
           "color": "#044761",
+          "name": "Blue"
+        },
+        {
+          "slug": "secondary",
+          "color": "#333333",
           "name": "Secondary"
         },
         {
           "slug": "tertiary",
-          "color": "#5D5F60",
+          "color": "#1f2021",
           "name": "Tertiary"
         },
         {
           "slug": "light",
-          "color": "#f8f9fa",
+          "color": "#EFEFEF",
           "name": "Light"
-        },
-        {
-          "slug": "lighter",
-          "color": "#f4f4f4",
-          "name": "Lighter"
         }
       ]
     },
     "layout": {
-      "contentSize": "720px",
-      "wideSize": "100%"
+      "contentSize": "1140px",
+      "wideSize": "1140px"
     },
     "spacing": {
       "units": [
@@ -155,9 +155,9 @@
           "slug": "base"
         },
         {
-          "fontFamily": "'Nunito Sans', sans-serif",
-          "name": "Nunito Sans",
-          "slug": "nunito"
+          "fontFamily": "'Poppins', sans-serif",
+          "name": "Poppins",
+          "slug": "poppins"
         }
       ],
       "fontSizes": [
@@ -166,16 +166,28 @@
           "slug": "small"
         },
         {
-          "size": "1.125rem",
+          "size": "1.25rem",
           "slug": "medium"
         },
         {
-          "size": "1.75rem",
+          "size": "1.5rem",
           "slug": "large"
         },
         {
-          "size": "clamp(1.75rem, 3vw, 2.25rem)",
+          "size": "1.75rem",
+          "slug": "large-2"
+        },
+        {
+          "size": "2rem",
           "slug": "x-large"
+        },
+        {
+          "size": "2.25rem",
+          "slug": "x-large-2"
+        },
+        {
+          "size": "2.75rem",
+          "slug": "x-large-3"
         }
       ]
     }
@@ -192,9 +204,20 @@
           "text": "var(--wp--preset--color--secondary)"
         }
       },
+      "core/paragraph": {
+        "color": {
+          "text": "var(--wp--preset--color--secondary)"
+        },
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--small)",
+          "fontFamily": "var(--wp--preset--font-family--poppins)",
+          "fontWeight": "400",
+          "lineHeight": "1.8"
+        }
+      },
       "core/button": {
         "border": {
-          "radius": "9999px"
+          "radius": "25px"
         },
         "color": {
           "background": "var(--wp--preset--color--primary)",
@@ -207,15 +230,15 @@
     },
     "color": {
       "background": "var(--wp--preset--color--background)",
-      "text": "var(--wp--preset--color--tertiary)"
+      "text": "var(--wp--preset--color--secondary)"
     },
     "elements": {
       "h1": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "300",
+          "fontFamily": "var(--wp--preset--font-family--poppins)",
+          "fontWeight": "600",
           "lineHeight": "1.2",
-          "fontSize": "calc(1.375rem + 1.5vw)"
+          "fontSize": "var(--wp--preset--font-size--x-large-3)"
         },
         "color": {
           "text": "var(--wp--preset--color--secondary)"
@@ -223,10 +246,10 @@
       },
       "h2": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "300",
+          "fontFamily": "var(--wp--preset--font-family--poppins)",
+          "fontWeight": "600",
           "lineHeight": "1.2",
-          "fontSize": "calc(1.325rem + 0.9vw)"
+          "fontSize": "var(--wp--preset--font-size--x-large-2)"
         },
         "color": {
           "text": "var(--wp--preset--color--secondary)"
@@ -234,10 +257,10 @@
       },
       "h3": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "300",
+          "fontFamily": "var(--wp--preset--font-family--poppins)",
+          "fontWeight": "600",
           "lineHeight": "1.2",
-          "fontSize": "calc(1.3rem + 0.6vw)"
+          "fontSize": "var(--wp--preset--font-size--x-large)"
         },
         "color": {
           "text": "var(--wp--preset--color--secondary)"
@@ -245,10 +268,10 @@
       },
       "h4": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "300",
+          "fontFamily": "var(--wp--preset--font-family--poppins)",
+          "fontWeight": "600",
           "lineHeight": "1.2",
-          "fontSize": "calc(1.275rem + 0.3vw)"
+          "fontSize": "var(--wp--preset--font-size--large-2)"
         },
         "color": {
           "text": "var(--wp--preset--color--secondary)"
@@ -256,10 +279,10 @@
       },
       "h5": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "500",
+          "fontFamily": "var(--wp--preset--font-family--poppins)",
+          "fontWeight": "600",
           "lineHeight": "1.2",
-          "fontSize": "1.25rem"
+          "fontSize": "var(--wp--preset--font-size--large)"
         },
         "color": {
           "text": "var(--wp--preset--color--secondary)"
@@ -267,10 +290,10 @@
       },
       "h6": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--base)",
-          "fontWeight": "500",
+          "fontFamily": "var(--wp--preset--font-family--poppins)",
+          "fontWeight": "600",
           "lineHeight": "1.2",
-          "fontSize": "1rem"
+          "fontSize": "var(--wp--preset--font-size--medium)"
         },
         "color": {
           "text": "var(--wp--preset--color--secondary)"
@@ -286,7 +309,7 @@
       "blockGap": "1.5rem"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--base)",
+      "fontFamily": "var(--wp--preset--font-family--poppins)",
       "fontWeight": "400",
       "lineHeight": "1.5",
       "fontSize": "1rem"

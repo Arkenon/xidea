@@ -137,13 +137,7 @@ if ( ! function_exists( 'societas_get_custom_fonts' ) ) :
 	 */
 	function societas_get_custom_fonts() {
 		return "
-		@font-face{
-			font-family: 'Nunito Sans';
-			font-weight: 700;
-			font-style: normal;
-			font-stretch: normal;
-			src: url('" . get_theme_file_uri( 'assets/fonts/NunitoSans-Regular.ttf' ) . "') format('ttf');
-		}
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 		";
 	}
 endif;

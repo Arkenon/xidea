@@ -73,6 +73,11 @@ Created by Xidea Themes and released under same license as theme.
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/686805
 
+* Counter Section Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/730866
+
 * Why Us Section Image:
 
 License : Creative Commons Zero (CC0)

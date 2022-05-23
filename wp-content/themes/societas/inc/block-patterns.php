@@ -45,6 +45,7 @@ function societas_register_block_patterns() {
 	$block_patterns = array(
 		'footer-default',
 		'header-default',
+		'header-flat-with-top-bar',
 		'section-hero',
 		'section-team',
 		'section-icon-boxes',
