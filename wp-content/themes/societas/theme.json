@@ -224,7 +224,7 @@
           "text": "var(--wp--preset--color--background)"
         },
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--medium)"
+          "fontSize": "var(--wp--preset--font-size--small)"
         }
       }
     },
@@ -317,13 +317,6 @@
   },
   "customTemplates": [
     {
-      "name": "post-with-sidebar",
-      "title": "Post With Sidebar",
-      "postTypes": [
-        "post"
-      ]
-    },
-    {
       "name": "single-team",
       "title": "Single Team",
       "postTypes": [
@@ -370,6 +363,11 @@
     {
       "name": "header",
       "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "header-dark",
+      "title": "Header Dark",
       "area": "header"
     },
     {

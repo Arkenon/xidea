@@ -24,18 +24,54 @@ a:hover {
     font-weight: bolder;
 }
 
+.sc-box-shadow:after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #e74c3c;
+    height: 100%;
+    margin-left: 15px;
+    margin-top: 15px;
+    z-index: -2;
+}
+
+.entry-title a {
+    color: #333333;
+}
+
+body.logged-in > .wp-site-blocks > header > #header,
+body.logged-in > .wp-site-blocks > header > #header-dark {
+    padding-top: 32px !important;
+}
+
+#page-container {
+    padding-top: 150px !important;
+}
+
+.wp-block-search__button {
+    background: #e74c3c;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+    margin-left: 0.625em;
+    word-break: normal;
+    font-size: 12px;
+    font-family: inherit;
+    line-height: inherit;
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
 .section-no-block-space {
     margin-top: 0 !important;
 }
-.slick-slide{
-    height: auto!important;
+
+.slick-slide {
+    height: auto !important;
 }
-.entry-title a{
-    color:#333333;
-}
+
 /*--------------------------------------------------------------
 # Post Comments
 --------------------------------------------------------------*/
@@ -57,6 +93,10 @@ a:hover {
     margin-top: 0 !important;
 }
 
+.wp-block-post-comments > h3, #respond > h3 {
+    font-size: 16px !important;
+}
+
 .blog-single-section .comment-respond form textarea {
     border: 1px solid darkgray !important;
 }
@@ -76,6 +116,10 @@ a:hover {
 
 .wp-block-post-comments .comment-area {
     max-width: 720px !important;
+}
+
+.fn, .comment-metadata, .logged-in-as {
+    font-size: 12px !important;
 }
 
 /*--------------------------------------------------------------

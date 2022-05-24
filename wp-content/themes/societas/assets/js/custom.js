@@ -28,9 +28,11 @@
      WHEN WINDOW SCROLL
      ==========================================================================*/
     $(window).on("scroll", function () {
-
-        if ($(".site-header").length) {
-            stickyMenu($('.site-header .navigation'), "sticky-on");
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > 200) {
+            $("#header").removeClass("bg-transparent").css("background-color", "#333333");
+        } else {
+            $("#header").addClass("bg-transparent");
         }
 
         toggleBackToTopBtn();
