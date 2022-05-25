@@ -14,7 +14,7 @@ Societas is a block based Wordpress Theme.
 
 == Description ==
 
-Societas is a block based Wordpress Theme for corporaitons, agencies, finacial organizations and more...
+Societas is a block based Wordpress Theme for corporations, agencies, finacial organizations, startups and more...
 
 With the new pattern of Wordpress named full site editing (fse) you can edit whole website from site editor tool.
 
@@ -39,10 +39,10 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Resources ==
 
-# Nunito Sans Font
-Copyright 2016 The Nunito Sans Project Authors (https://github.com/Fonthausen/NunitoSans)
+# Poppins Font
+Copyright Indian Type Foundry, Jonny Pinhorn (https://github.com/itfoundry/poppins)
 License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://fonts.google.com/specimen/Nunito+Sans?query=nunito
+Source: https://fonts.googleapis.com/css2?family=Poppins
 
 # Bootstrap 5
 Copyright (c) 2011-2021 Twitter, Inc. Copyright (c) 2011-2021 The Bootstrap Authors
@@ -69,14 +69,16 @@ Source : https://www.kadencewp.com/
 * Logo:
 Created by Xidea Themes and released under same license as theme.
 
-* Hero Image / About Us Page Template Image:
+* Hero Image:
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/686805
+
+== Images used in theme pages and sections ==
 
 * Counter Section Image:
 
 License : Creative Commons Zero (CC0)
-Source : https://pxhere.com/tr/photo/730866
+Source : https://pxhere.com/tr/photo/1575607
 
 * Why Us Section Image:
 
