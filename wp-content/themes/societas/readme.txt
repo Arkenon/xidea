@@ -89,5 +89,11 @@ Source : https://pxhere.com/tr/photo/714525
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/1379771
 
+* About Us Page Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/764658
+
+
 
 

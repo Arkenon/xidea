@@ -60,7 +60,9 @@ body.logged-in > .wp-site-blocks > header > #header-dark {
     font-family: inherit;
     line-height: inherit;
 }
-
+.single-team-excerpt{
+    font-size: 10px!important;
+}
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/

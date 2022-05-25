@@ -61,24 +61,6 @@ if ( ! function_exists( 'societas_setup' ) ) :
 endif;
 
 /*--------------------------------------------------------------
-# Disable Gutenberg for Custom Post Types
---------------------------------------------------------------*/
-if ( ! function_exists( 'societas_disable_gutenberg' ) ) :
-	add_filter( 'use_block_editor_for_post_type', 'societas_disable_gutenberg', 10, 2 );
-
-	function societas_disable_gutenberg( $gutenberg_filter, $post_type ) {
-		if ( $post_type === 'services' ) {
-			return false;
-		}
-		if ( $post_type === 'team' ) {
-			return false;
-		}
-
-		return $gutenberg_filter;
-	}
-endif;
-
-/*--------------------------------------------------------------
 # Enqueue Styles
 --------------------------------------------------------------*/
 if ( ! function_exists( 'societas_enqueue_styles' ) ) :
