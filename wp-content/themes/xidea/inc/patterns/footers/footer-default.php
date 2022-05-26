@@ -3,7 +3,7 @@
  * Default Footer With Columns
  */
 return array(
-	'title'      => __( 'Default Footer With Columns', 'xidea-pro' ),
+	'title'      => __( 'Default Footer With Columns', 'xidea' ),
 	'categories' => array( 'footer' ),
 	'blockTypes' => array( 'core/template-part/footer' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"15px","right":"15px","bottom":"15px","left":"15px"}}},"backgroundColor":"black","className":"tp-site-footer","layout":{"inherit":false,"contentSize":"1170px"}} -->

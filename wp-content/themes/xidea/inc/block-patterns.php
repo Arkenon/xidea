@@ -14,9 +14,9 @@
  */
 function xidea_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'xidea-pro' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'xidea-pro' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'xidea-pro' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'xidea' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'xidea' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'xidea' ) ),
 	);
 
 	/**

@@ -3,7 +3,7 @@
  * Boxed Header With Social Icons
  */
 return array(
-	'title'      => __( 'Boxed Header With Social Icons', 'xidea-pro' ),
+	'title'      => __( 'Boxed Header With Social Icons', 'xidea' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px","top":"20px","bottom":"20px"}}},"backgroundColor":"foreground","textColor":"text-regular","layout":{"inherit":false}} -->
