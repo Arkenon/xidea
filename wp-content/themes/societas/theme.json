@@ -317,17 +317,17 @@
   },
   "customTemplates": [
     {
-      "name": "single-team",
-      "title": "Single Team",
+      "name": "post-team",
+      "title": "Team Category Template",
       "postTypes": [
-        "team"
+        "post"
       ]
     },
     {
-      "name": "single-services",
-      "title": "Single Service",
+      "name": "post-services",
+      "title": "Services Category Template",
       "postTypes": [
-        "team"
+        "post"
       ]
     },
     {

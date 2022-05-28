@@ -124,15 +124,12 @@ if ( ! function_exists( 'societas_get_custom_fonts' ) ) :
 	}
 endif;
 
-// Add Post Types
-require get_template_directory() . '/inc/post-types.php';
 
 // Add block patterns
 require get_template_directory() . '/inc/block-patterns.php';
 
 // Add TGMPA
 require get_template_directory() . '/inc/tgmpa.php';
-
 
 // Add One Click Demo Import
 require get_template_directory() . '/inc/demo-import.php';
