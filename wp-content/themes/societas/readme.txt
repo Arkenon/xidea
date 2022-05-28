@@ -89,12 +89,7 @@ Source : https://pxhere.com/tr/photo/714525
 * Faq Section Image:
 
 License : Creative Commons Zero (CC0)
-Source : https://pxhere.com/tr/photo/1379771
-
-* About Us Page Image:
-
-License : Creative Commons Zero (CC0)
-Source : https://pxhere.com/tr/photo/764658
+Source : https://mystock.themeisle.com/photo/flatiron-2
 
 
 

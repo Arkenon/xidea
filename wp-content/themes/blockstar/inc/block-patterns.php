@@ -1,22 +1,22 @@
 <?php
 /**
- * BlockStar: Block Patterns
+ * Societas: Block Patterns
  *
- * @since BlockStar 1.0
+ * @since Societas 1.0
  */
 
 /**
  * Registers block patterns and categories.
  *
  * @return void
- * @since BlockStar 1.0
+ * @since Societas 1.0
  *
  */
-function blockstar_register_block_patterns() {
+function societas_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'blockstar-pro' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'blockstar-pro' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'blockstar-pro' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'societas' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'societas' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'societas' ) ),
 	);
 
 	/**
@@ -31,10 +31,10 @@ function blockstar_register_block_patterns() {
 	 * @type string $label A human-readable label for the pattern category.
 	 *     }
 	 * }
-	 * @since BlockStar 1.0
+	 * @since Societas 1.0
 	 *
 	 */
-	$block_pattern_categories = apply_filters( 'blockstar_block_pattern_categories', $block_pattern_categories );
+	$block_pattern_categories = apply_filters( 'societas_block_pattern_categories', $block_pattern_categories );
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
@@ -45,10 +45,18 @@ function blockstar_register_block_patterns() {
 	$block_patterns = array(
 		'footer-default',
 		'header-default',
-		'header-flat-with-top-bar',
-		'header-with-centered-logo',
-		'header-boxed-with-social-icons',
-		'section-hero'
+		'header-dark',
+		'section-hero',
+		'section-team',
+		'section-icon-boxes',
+		'section-services',
+		'section-counter',
+		'section-why-us',
+		'section-team',
+		'section-call-to-action',
+		'section-icon-cards',
+		'section-faq',
+		'section-latest-posts'
 	);
 
 	/**
@@ -56,10 +64,10 @@ function blockstar_register_block_patterns() {
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 *
-	 * @since BlockStar 1.0
+	 * @since Societas 1.0
 	 *
 	 */
-	$block_patterns = apply_filters( 'blockstar_block_patterns', $block_patterns );
+	$block_patterns = apply_filters( 'societas_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
 
@@ -68,10 +76,10 @@ function blockstar_register_block_patterns() {
 		$pattern_file          = get_theme_file_path( '/inc/patterns/' . $pattern_path . '/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'xidea/' . $block_pattern,
+			'societas/' . $block_pattern,
 			require $pattern_file
 		);
 	}
 }
 
-add_action( 'init', 'blockstar_register_block_patterns', 9 );
+add_action( 'init', 'societas_register_block_patterns', 9 );

@@ -6,9 +6,9 @@ return array(
 	'title'      => __( 'Dark Header', 'societas' ),
 	'categories' => array( 'header' ),
 	'blockTypes' => array( 'core/template-part/header' ),
-	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"right":"0px","left":"0px","top":"0px","bottom":"0px"}}},"backgroundColor":"tertiary","textColor":"text-regular","className":"fixed-top","layout":{"inherit":true}} -->
-					<div id="header-dark" class="wp-block-group fixed-top has-text-regular-color has-tertiary-background-color has-text-color has-background" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"20px","right":"10px","bottom":"20px","left":"10px"}}},"className":"container","layout":{"inherit":false,"contentSize":""}} -->
-					<div class="wp-block-group container" style="padding-top:20px;padding-right:10px;padding-bottom:20px;padding-left:10px"><!-- wp:group {"className":"row"} -->
+	'content'    => '<!-- wp:group {"backgroundColor":"secondary","textColor":"text-regular","className":"fixed-top","layout":{"inherit":true}} -->
+					<div id="header-dark" class="wp-block-group fixed-top has-text-regular-color has-secondary-background-color has-text-color has-background"><!-- wp:group {"style":{"spacing":{"padding":{"top":"23px","right":"10px","bottom":"0px","left":"10px"}}},"className":"container","layout":{"inherit":false,"contentSize":""}} -->
+					<div class="wp-block-group container" style="padding-top:23px;padding-right:10px;padding-bottom:0px;padding-left:10px"><!-- wp:group {"className":"row"} -->
 					<div class="wp-block-group row"><!-- wp:group {"className":"col-10 col-sm-3 align-self-center mt-0"} -->
 					<div class="wp-block-group col-10 col-sm-3 align-self-center mt-0"><!-- wp:site-logo {"width":150,"className":"is-style-default"} /--></div>
 					<!-- /wp:group -->

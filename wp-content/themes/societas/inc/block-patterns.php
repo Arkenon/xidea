@@ -50,13 +50,13 @@ function societas_register_block_patterns() {
 		'section-team',
 		'section-icon-boxes',
 		'section-services',
+		'section-counter',
 		'section-why-us',
 		'section-team',
 		'section-call-to-action',
 		'section-icon-cards',
 		'section-faq',
-		'section-latest-posts',
-		'section-map'
+		'section-latest-posts'
 	);
 
 	/**
