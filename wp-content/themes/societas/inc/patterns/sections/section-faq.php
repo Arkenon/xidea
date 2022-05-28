@@ -6,7 +6,7 @@ return array(
 	'title'      => __( 'FAQ Section', 'societas' ),
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:group {"style":{"spacing":{"padding":{"top":"50px","right":"10px","bottom":"50px","left":"10px"}}},"className":"container","layout":{"inherit":true}} -->
-					<div class="wp-block-group container" style="padding-top:50px;padding-right:10px;padding-bottom:50px;padding-left:10px"><!-- wp:heading {"textAlign":"center","textColor":"secondary"} -->
+					<div id="faq-section" class="wp-block-group container" style="padding-top:50px;padding-right:10px;padding-bottom:50px;padding-left:10px"><!-- wp:heading {"textAlign":"center","textColor":"secondary"} -->
 					<h2 class="has-text-align-center has-secondary-color has-text-color">FAQ</h2>
 					<!-- /wp:heading -->
 					
@@ -16,8 +16,8 @@ return array(
 					
 					<!-- wp:columns -->
 					<div class="wp-block-columns"><!-- wp:column {"width":"33.33%"} -->
-					<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"id":2064,"sizeSlug":"full","linkDestination":"none"} -->
-					<figure class="wp-block-image size-full"><img src="https://societas.xideathemes.com/wp-content/uploads/2022/05/societas_faq.jpg" alt="" class="wp-image-2064"/></figure>
+					<div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+					<figure class="wp-block-image size-full"><img src="https://s26049.pcdn.co/wp-content/uploads/2018/03/31529250012_bb95e42126_b_yjjzvp.jpg" alt=""/></figure>
 					<!-- /wp:image --></div>
 					<!-- /wp:column -->
 					

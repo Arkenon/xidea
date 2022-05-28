@@ -11,7 +11,7 @@ return array(
 					<div class="wp-block-group"><!-- wp:group {"className":"container"} -->
 					<div class="wp-block-group container"><!-- wp:group {"className":"row"} -->
 					<div class="wp-block-group row"><!-- wp:group {"className":"col-lg-2  col-md-6 col-12"} -->
-					<div class="wp-block-group col-lg-2  col-md-6 col-12"><!-- wp:site-title {"level":6,"style":{"spacing":{"margin":{"top":"20px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
+					<div class="wp-block-group col-lg-2 col-md-6 col-12"><!-- wp:site-title {"level":6,"style":{"spacing":{"margin":{"top":"20px","right":"0px","bottom":"0px","left":"0px"}}}} /-->
 					
 					<!-- wp:paragraph {"align":"left","textColor":"tertiary"} -->
 					<p class="has-text-align-left has-tertiary-color has-text-color">Societas is a block based Wordpress Theme.</p>
@@ -19,7 +19,7 @@ return array(
 					<!-- /wp:group -->
 					
 					<!-- wp:group {"className":"col-lg-4 col-md-6 col-12"} -->
-					<div class="wp-block-group col-lg-4 col-md-6 col-12"><!-- wp:query {"queryId":44,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+					<div class="wp-block-group col-lg-4 col-md-6 col-12"><!-- wp:query {"queryId":44,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"category":[2]}},"displayLayout":{"type":"list"}} -->
 					<div class="wp-block-query"><!-- wp:post-template -->
 					<!-- wp:post-title {"level":6,"isLink":true,"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"5px","left":"0px"}},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"14px"}},"textColor":"secondary"} /-->
 					
@@ -29,7 +29,7 @@ return array(
 					<!-- /wp:group -->
 					
 					<!-- wp:group {"style":{"elements":{"link":{"color":{"text":"var:preset|color|tertiary"}}}},"textColor":"tertiary","className":"col-lg-4 col-md-6 col-12"} -->
-					<div class="wp-block-group col-lg-4 col-md-6 col-12 has-tertiary-color has-text-color has-link-color"><!-- wp:query {"queryId":44,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
+					<div class="wp-block-group col-lg-4 col-md-6 col-12 has-tertiary-color has-text-color has-link-color"><!-- wp:query {"queryId":44,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"category":[16]}},"displayLayout":{"type":"list"}} -->
 					<div class="wp-block-query"><!-- wp:post-template -->
 					<!-- wp:post-title {"level":6,"isLink":true,"style":{"spacing":{"margin":{"top":"0px","right":"0px","bottom":"5px","left":"0px"}},"elements":{"link":{"color":{"text":"var:preset|color|secondary"}}},"typography":{"fontSize":"14px"}},"textColor":"secondary"} /-->
 					
@@ -39,7 +39,7 @@ return array(
 					<!-- /wp:group -->
 					
 					<!-- wp:group {"style":{"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"className":"col-lg-2 col-md-6 col-12"} -->
-					<div class="wp-block-group col-lg-2 col-md-6 col-12" style="padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:navigation {"ref":1860,"textColor":"secondary","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"style":{"typography":{"lineHeight":"0","fontSize":"14px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
+					<div class="wp-block-group col-lg-2 col-md-6 col-12" style="padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:navigation {"ref":208,"textColor":"secondary","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"style":{"typography":{"lineHeight":"0","fontSize":"14px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>

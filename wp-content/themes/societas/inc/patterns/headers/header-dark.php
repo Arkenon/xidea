@@ -14,7 +14,7 @@ return array(
 					<!-- /wp:group -->
 					
 					<!-- wp:group {"className":"col-2 col-sm-9 mt-0  align-self-center","layout":{"inherit":true}} -->
-					<div class="wp-block-group col-2 col-sm-9 mt-0  align-self-center"><!-- wp:navigation {"ref":1805,"textColor":"background","layout":{"type":"flex","justifyContent":"right"},"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}}} /--></div>
+					<div class="wp-block-group col-2 col-sm-9 mt-0 align-self-center"><!-- wp:navigation {"ref":210,"textColor":"background","layout":{"type":"flex","justifyContent":"right"},"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}}} /--></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></div>

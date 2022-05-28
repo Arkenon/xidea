@@ -6,7 +6,7 @@ return array(
 	'title'      => __( 'Call to Action', 'societas' ),
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:group {"backgroundColor":"secondary","className":"container-fluid section-no-block-space"} -->
-					<div class="wp-block-group container-fluid section-no-block-space has-secondary-background-color has-background"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"className":"container"} -->
+					<div id="call-to-action-section" class="wp-block-group container-fluid section-no-block-space has-secondary-background-color has-background"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","right":"0px","bottom":"0px","left":"0px"}}},"className":"container"} -->
 					<div class="wp-block-group container" style="padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px"><!-- wp:columns -->
 					<div class="wp-block-columns"><!-- wp:column {"width":"66.66%"} -->
 					<div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:heading {"textAlign":"center","textColor":"light"} -->
