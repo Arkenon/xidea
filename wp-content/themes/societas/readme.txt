@@ -75,6 +75,28 @@ Source : https://pxhere.com/tr/photo/686805
 
 == Images used in theme pages and sections ==
 
+* Services Section Images:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/730863
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/948715
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/1325858
+
+* Team Section Images:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/764654
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/1456591
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/599421
+
 * Counter Section Image:
 
 License : Creative Commons Zero (CC0)
