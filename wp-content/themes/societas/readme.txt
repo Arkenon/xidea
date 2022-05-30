@@ -28,6 +28,9 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.1 =
+* Site title block added to Header and Header Dark templates.
+
 = 1.0 =
 * Initial release
 
