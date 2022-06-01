@@ -28,6 +28,13 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.2 =
+* Fixed: More than one text-domain is being used in this theme
+* Updated: screenshot.jpg size changed to 1200x900
+* Tested: With WP 6.0
+* Updated: Constant names are changed in function.php
+* Update: Functions php - has been revised it generally
+
 = 1.0.1 =
 * Site title block added to Header and Header Dark templates.
 
