@@ -6,7 +6,7 @@ return array(
 	'title'      => __( 'Hero Section', 'societas' ),
 	'categories' => array( 'featured' ),
 	'content'    => '<!-- wp:cover {"url":"https://c.pxhere.com/photos/74/7c/entrepreneur_business_corporate_office_business_professional_meeting_professional_business_group-686805.jpg!d","hasParallax":true,"dimRatio":75,"overlayColor":"foreground","minHeight":800,"className":"section-no-block-space","style":{"color":[]}} -->
-					<div class="wp-block-cover has-parallax section-no-block-space" style="background-image:url(https://c.pxhere.com/photos/74/7c/entrepreneur_business_corporate_office_business_professional_meeting_professional_business_group-686805.jpg!d);min-height:800px" id="hero-section"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-80 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"wow fadeInLeft"} -->
+					<div id="hero-section" class="wp-block-cover has-parallax section-no-block-space" style="background-image:url(https://c.pxhere.com/photos/74/7c/entrepreneur_business_corporate_office_business_professional_meeting_professional_business_group-686805.jpg!d);min-height:800px"><span aria-hidden="true" class="wp-block-cover__background has-foreground-background-color has-background-dim-80 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"className":"wow fadeInLeft"} -->
 					<div id="animated-1" class="wp-block-group wow fadeInLeft"><!-- wp:heading {"textAlign":"center","level":1,"textColor":"background"} -->
 					<h1 class="has-text-align-center has-background-color has-text-color">Societas Business Block Theme</h1>
 					<!-- /wp:heading -->

@@ -28,6 +28,10 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.3 =
+* Updated: Homepage sections (design changes)
+* Updated: Block patterns (design changes)
+
 = 1.0.2 =
 * Fixed: More than one text-domain is being used in this theme
 * Updated: screenshot.jpg size changed to 1200x900

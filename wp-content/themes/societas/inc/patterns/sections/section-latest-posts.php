@@ -15,7 +15,23 @@ return array(
 					<p class="has-text-align-center">Neque volutpat ac tincidunt vitae semper quis lectus nulla at. </p>
 					<!-- /wp:paragraph -->
 					
-					<!-- wp:kadence/posts {"uniqueID":"_51bc05-ea","categories":[{"value":2,"label":"Blog"}],"authorImage":true,"authorLink":true,"authorEnabledLabel":false,"excerpt":false,"excerptLength":1,"readmore":false,"titleFont":[{"level":6,"size":["","",""],"sizeType":"px","lineHeight":["","",""],"lineType":"px","letterSpacing":["","",""],"letterType":"px","textTransform":""}],"className":"wow fadeIn"} /--></div>
+					<!-- wp:query {"queryId":18,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
+					<div class="wp-block-query"><!-- wp:post-template -->
+					<!-- wp:post-featured-image {"isLink":true,"align":"wide","className":"mb-0"} /-->
+					
+					<!-- wp:group {"backgroundColor":"background"} -->
+					<div class="wp-block-group has-background-background-color has-background"><!-- wp:post-terms {"term":"category","style":{"typography":{"fontSize":"12px"}},"className":"fw-bold text-uppercase"} /-->
+					
+					<!-- wp:post-title {"level":6,"isLink":true,"style":{"elements":{"link":{"color":{"text":"var:preset|color|foreground"}}}}} /-->
+					
+					<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+					<div class="wp-block-group"><!-- wp:post-author {"showAvatar":false,"fontSize":"small"} /-->
+					
+					<!-- wp:post-date {"style":{"typography":{"fontSize":"12px"}}} /--></div>
+					<!-- /wp:group --></div>
+					<!-- /wp:group -->
+					<!-- /wp:post-template --></div>
+					<!-- /wp:query --></div>
 					<!-- /wp:group --></div>
 					<!-- /wp:group --></main>
 					<!-- /wp:group -->',
