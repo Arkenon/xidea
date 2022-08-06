@@ -118,6 +118,3 @@ if ( ! function_exists( 'xidea_get_custom_fonts' ) ) :
 		";
 	}
 endif;
-
-// Add block patterns
-require get_template_directory() . '/inc/block-patterns.php';
