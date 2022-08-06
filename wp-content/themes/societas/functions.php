@@ -125,10 +125,6 @@ if ( ! function_exists( 'societas_get_custom_fonts' ) ) :
 	}
 endif;
 
-
-// Add block patterns
-require get_template_directory() . '/inc/block-patterns.php';
-
 // Add TGMPA
 require get_template_directory() . '/inc/tgmpa.php';
 
