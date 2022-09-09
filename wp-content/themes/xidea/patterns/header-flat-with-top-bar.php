@@ -50,7 +50,7 @@
 
             <!-- wp:group {"className":"col-2 col-sm-9 mt-0  align-self-center","layout":{"inherit":true}} -->
             <div class="wp-block-group col-2 col-sm-9 mt-0  align-self-center">
-                <!-- wp:navigation {"ref":1506,"textColor":"foreground","align":"full","layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"},"style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
+                <!-- wp:navigation {"textColor":"foreground","align":"full","layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"},"style":{"typography":{"fontSize":"16px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
             <!-- /wp:group --></div>
         <!-- /wp:group --></div>
     <!-- /wp:group --></div>

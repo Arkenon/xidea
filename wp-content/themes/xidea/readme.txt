@@ -27,6 +27,12 @@ Xidea Blocks is designed with Bootstrap 5 and you can easily use Bootstrap class
 Yes, you can. The vision of Full Site Editing is to provide a collection of features that bring the familiar experience and extendability of blocks to all parts of your site rather than just post and pages.
 
 == Changelog ==
+= 1.1.2 =
+* New pattern added, section-artbox
+* Header navigation blocks revised
+* Section Hero redesigned
+* Default header pattern changed with "header-with-centered-logo" pattern
+
 = 1.1.1 =
 * All patterns moved into 'patterns' folder
 
@@ -112,6 +118,11 @@ Source : https://getbootstrap.com
 
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/1338795
+
+* Art Box Section Images:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/822612
 
 * Blog Post Featured Images:
 
