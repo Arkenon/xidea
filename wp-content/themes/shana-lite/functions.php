@@ -79,7 +79,7 @@ if ( ! function_exists( 'shana_lite_enqueue_styles' ) ) :
 
 		wp_register_script( 'bootstrap-bundle', SHANA_LITE_URI . '/assets/js/bootstrap.bundle.min.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
 		wp_register_script( 'wow', SHANA_LITE_URI . '/assets/js/wow.min.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
-		wp_register_script( 'shana-lite-custom', SHANA_LITE_URI . '/assets/js/shana.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
+		wp_register_script( 'shana-lite-custom', SHANA_LITE_URI . '/assets/js/iscope.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
 
 
 		wp_enqueue_script( 'bootstrap-bundle' );
