@@ -135,7 +135,7 @@
 		"blocks": {
 			"core/button": {
 				"color": {
-					"background": "var(--wp--preset--color--primary)",
+					"background": "var(--wp--preset--color--secondary)",
 					"text": "var(--wp--preset--color--background)"
 				},
 				"typography": {
