@@ -247,13 +247,8 @@
 	"templateParts": [
 		{
 			"area": "header",
-			"name": "header",
-			"title": "Header"
-		},
-		{
-			"area": "header",
-			"name": "header-dark",
-			"title": "Header Dark"
+			"name": "header-with-cover-image",
+			"title": "Header With Cover Image"
 		},
 		{
 			"area": "footer",
