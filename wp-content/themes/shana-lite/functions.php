@@ -68,22 +68,11 @@ if ( ! function_exists( 'shana_lite_enqueue_styles' ) ) :
 
 	function shana_lite_enqueue_styles() {
 
-		wp_register_style( 'shana-lite-style', SHANA_LITE_URI . '/assets/css/style.css', [], SHANA_LITE_VERSION );
-		wp_register_style( 'bootstrap', SHANA_LITE_URI . '/assets/css/bootstrap.min.css', [], SHANA_LITE_VERSION );
-		wp_register_style( 'animate', SHANA_LITE_URI . '/assets/css/animate.min.css', [], SHANA_LITE_VERSION );
+		wp_register_style( 'shana-lite-style', SHANA_LITE_URI . '/assets/css/shana-lite.css', [], SHANA_LITE_VERSION );
 		wp_add_inline_style( 'shana-lite-style', shana_lite_get_custom_fonts() );
-
 		wp_enqueue_style( 'shana-lite-style' );
-		wp_enqueue_style( 'bootstrap' );
-		wp_enqueue_style( 'animate' );
 
-		wp_register_script( 'bootstrap-bundle', SHANA_LITE_URI . '/assets/js/bootstrap.bundle.min.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
-		wp_register_script( 'wow', SHANA_LITE_URI . '/assets/js/wow.min.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
-		wp_register_script( 'shana-lite-custom', SHANA_LITE_URI . '/assets/js/iscope.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
-
-
-		wp_enqueue_script( 'bootstrap-bundle' );
-		wp_enqueue_script( 'wow' );
+		wp_register_script( 'shana-lite-custom', SHANA_LITE_URI . '/assets/js/shana-lite.js', [ 'jquery' ], SHANA_LITE_VERSION, true );
 		wp_enqueue_script( 'shana-lite-custom' );
 
 	}
@@ -99,9 +88,7 @@ if ( ! function_exists( 'shana_lite_editor_styles' ) ) :
 
 	function shana_lite_editor_styles() {
 		wp_add_inline_style( 'wp-block-library', shana_lite_get_custom_fonts() );
-		add_editor_style( array( './assets/css/style.css' ) );
-		add_editor_style( array( './assets/css/bootstrap.min.css' ) );
-		add_editor_style( array( './assets/css/animate.min.css' ) );
+		add_editor_style( array( './assets/css/shana-lite.css' ) );
 	}
 
 endif;
