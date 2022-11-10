@@ -23,7 +23,7 @@
         <div class="wp-block-columns"><!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="https://c.pxhere.com/photos/08/eb/social_media_twitter_facebook_iphone_mobile_seo_media_design-730863.jpg!d"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/services-1.jpg' ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 
@@ -38,7 +38,7 @@
             <!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="https://c.pxhere.com/photos/06/c2/ipad_online_tablet_internet_screen_digital_technology_business-948715.jpg!d"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/services-2.jpg' ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 
@@ -53,7 +53,7 @@
             <!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="https://c.pxhere.com/photos/2b/8a/ux_design_webdesign_app_mobile_business_interface_flat-1325858.jpg!d"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/services-3.jpg' ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 

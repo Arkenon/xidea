@@ -23,7 +23,7 @@
         <div class="wp-block-columns"><!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="https://c.pxhere.com/photos/06/07/entrepreneur_startup_start_up_man_planing_business_office_businessman-764654.jpg!d"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/team-1.jpg' ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 
@@ -42,7 +42,7 @@
             <!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="https://c.pxhere.com/images/19/7c/46618cb85d2260545156f0ffa683-1456591.jpg!d" alt=""/>
+                            src="<?php echo get_template_directory_uri() . '/assets/img/team-2.jpg' ?>" alt=""/>
                 </figure>
                 <!-- /wp:image -->
 
@@ -61,7 +61,7 @@
             <!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="https://c.pxhere.com/photos/15/87/man_male_adult_person_caucasian_portrait_businessman_people-599421.jpg!d"
+                            src="<?php echo get_template_directory_uri() . '/assets/img/team-3.jpg' ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 

@@ -22,7 +22,7 @@
         <div class="wp-block-column" style="flex-basis:33.33%">
             <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
             <figure class="wp-block-image size-full"><img
-                        src="https://s26049.pcdn.co/wp-content/uploads/2018/03/31529250012_bb95e42126_b_yjjzvp.jpg"
+                        src="<?php echo get_template_directory_uri() . '/assets/img/faq.jpg' ?>"
                         alt=""/></figure>
             <!-- /wp:image --></div>
         <!-- /wp:column -->
