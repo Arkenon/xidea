@@ -14,7 +14,7 @@ Xidea Blocks is a block based Wordpress Theme.
 
 == Description ==
 
-Xidea Blocks is a block based Wordpress Theme.
+Xidea is a very simple block based Wordpress Theme.
 
 With the new pattern of Wordpress named full site editing (fse) you can edit whole website from site editor tool.
 
@@ -27,6 +27,12 @@ Xidea Blocks is designed with Bootstrap 5 and you can easily use Bootstrap class
 Yes, you can. The vision of Full Site Editing is to provide a collection of features that bring the familiar experience and extendability of blocks to all parts of your site rather than just post and pages.
 
 == Changelog ==
+= 1.1.3 =
+* Added: New template part : latest-posts
+* General UI revisions (patterns and index.html)
+* Images uploaded into assets/img folder
+* post-with-sidebar.html revised
+
 = 1.1.2 =
 * New pattern added, section-artbox
 * Header navigation blocks revised

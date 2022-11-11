@@ -24,8 +24,8 @@
                 <!-- /wp:column -->
 
                 <!-- wp:column -->
-                <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"p-2 m-2 border border-dark border-5"} -->
-                    <figure class="wp-block-image size-large p-2 m-2 border border-dark border-5"><img src="https://c.pxhere.com/photos/7d/92/macbook_notebook_home_office_workstation_office_blogging_writing_author-1338795.jpg!d" alt=""/></figure>
+                <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large","linkDestination":"none","className":"p-2 m-2"} -->
+                    <figure class="wp-block-image size-large p-2 m-2"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/hero_image.jpg')?>" alt=""/></figure>
                     <!-- /wp:image --></div>
                 <!-- /wp:column --></div>
             <!-- /wp:columns --></div>
