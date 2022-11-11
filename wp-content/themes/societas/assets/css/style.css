@@ -124,6 +124,14 @@ body.logged-in > .wp-site-blocks > header > #header-dark {
     font-size: 12px !important;
 }
 
+.comment-form-comment label,.comment-form-email label,.comment-form-author label,.comment-form-url label {
+    display: block!important;
+}
+
+.comment-form-comment textarea,.comment-form-email input,.comment-form-author input,.comment-form-url input {
+    width: 100%!important;
+}
+
 /*--------------------------------------------------------------
 # Block Post Content
 --------------------------------------------------------------*/

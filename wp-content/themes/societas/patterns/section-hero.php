@@ -6,9 +6,9 @@
  */
 ?>
 
-<!-- wp:cover {"url":"<?php echo get_template_directory_uri() . '/assets/img/hero-image.jpg' ?>","hasParallax":true,"dimRatio":75,"overlayColor":"foreground","minHeight":800,"className":"section-no-block-space","style":{"color":[]}} -->
+<!-- wp:cover {"url":"<?php echo esc_url(get_template_directory_uri() . '/assets/img/hero-image.jpg') ?>","hasParallax":true,"dimRatio":75,"overlayColor":"foreground","minHeight":800,"className":"section-no-block-space","style":{"color":[]}} -->
 <div id="hero-section" class="wp-block-cover has-parallax section-no-block-space"
-     style="background-image:url(<?php echo get_template_directory_uri() . '/assets/img/hero-image.jpg' ?>);min-height:800px">
+     style="background-image:url(<?php echo esc_url(get_template_directory_uri() . '/assets/img/hero-image.jpg') ?>);min-height:800px">
     <span aria-hidden="true"
           class="wp-block-cover__background has-foreground-background-color has-background-dim-80 has-background-dim"></span>
     <div class="wp-block-cover__inner-container"><!-- wp:group {"className":"wow fadeInLeft"} -->
@@ -29,7 +29,7 @@
                 <!-- wp:button {"backgroundColor":"primary","style":{"border":{"radius":"25px"}}} -->
                 <div class="wp-block-button"><a
                             class="wp-block-button__link has-primary-background-color has-background"
-                            style="border-radius:25px">Let\'s Start</a>
+                            style="border-radius:25px">Let's Start</a>
                 </div>
                 <!-- /wp:button -->
             </div>

@@ -10,7 +10,7 @@
 <div id="why-us-section" class="wp-block-group container" style="padding-top:50px;padding-right:10px;padding-bottom:50px;padding-left:10px"><!-- wp:columns -->
 	<div class="wp-block-columns"><!-- wp:column {"className":"wow fadeInLeft"} -->
 		<div class="wp-block-column wow fadeInLeft" id="animated-3"><!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-			<figure class="wp-block-image size-large"><img src="<?php echo get_template_directory_uri() . '/assets/img/why-us.jpg' ?>" alt=""/></figure>
+			<figure class="wp-block-image size-large"><img src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/why-us.jpg') ?>" alt=""/></figure>
 			<!-- /wp:image --></div>
 		<!-- /wp:column -->
 

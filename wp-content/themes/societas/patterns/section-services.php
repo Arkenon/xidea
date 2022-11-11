@@ -23,7 +23,7 @@
         <div class="wp-block-columns"><!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="<?php echo get_template_directory_uri() . '/assets/img/services-1.jpg' ?>"
+                            src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/services-1.jpg') ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 
@@ -38,7 +38,7 @@
             <!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="<?php echo get_template_directory_uri() . '/assets/img/services-2.jpg' ?>"
+                            src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/services-2.jpg') ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 
@@ -53,7 +53,7 @@
             <!-- wp:column -->
             <div class="wp-block-column"><!-- wp:image {"sizeSlug":"large"} -->
                 <figure class="wp-block-image size-large"><img
-                            src="<?php echo get_template_directory_uri() . '/assets/img/services-3.jpg' ?>"
+                            src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/services-3.jpg') ?>"
                             alt=""/></figure>
                 <!-- /wp:image -->
 
