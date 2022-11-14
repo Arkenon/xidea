@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "marenda/slick-slider",
+	"version": "0.1.0",
+	"title": "Slick Slider",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Slick slider block.",
+	"supports": {
+		"html": false
+	},
+  "attributes": {
+	"sliderOptions": {
+	  "type": "object",
+	  "default": {
+		"dots": true,
+		"infinite": true,
+		"speed": 500,
+		"slidesToShow": 2,
+		"slidesToScroll": 1
+	  }
+	}
+  },
+	"textdomain": "marenda",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
