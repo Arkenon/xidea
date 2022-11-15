@@ -79,18 +79,27 @@ endif;
 
 
 function marenda_slick_slider_render_callback( $attributes, $content ) {
-	$options = $attributes['sliderOptions'];
-	$html = '<div class="your-class">
-			<div>your content</div>
-			<div>your content</div>
-			<div>your content</div>
+	$options  = [
+		"dots"           => true,
+		"infinite"       => true,
+		"speed"          => 500,
+		"slidesToShow"   => 2,
+		"slidesToScroll" => 1
+	];
+	$sliderId = $attributes['sliderId'];
+	$html     = '<div id="' . $sliderId . '">
+					' . $content . '
 			</div>
 			<script type="text/javascript">
-
 				(function ($) {
-					$(".your-class").slick({
-						options
-					});
+					$("#' . $sliderId . '").find(".wp-block-columns").addClass("' . $sliderId . '")
+					$(".' . $sliderId . '").slick({
+						dots: ' . $options["dots"] . ',
+						infinite: ' . $options["infinite"] . ',
+						speed: ' . $options["speed"] . ',
+						slidesToShow: ' . $options["slidesToShow"] . ',
+						slidesToScroll: ' . $options["slidesToScroll"] . '
+					})
 				})(window.jQuery);
 			</script>';
 

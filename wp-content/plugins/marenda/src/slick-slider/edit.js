@@ -1,11 +1,19 @@
 import React from "react";
 import Slider from "react-slick";
-import { useBlockProps } from '@wordpress/block-editor';
+import {InnerBlocks, useBlockProps} from '@wordpress/block-editor';
 import './editor.scss';
+import {
+	Card,
+	CardHeader,
+	CardBody,
+	CardFooter,
+	__experimentalText as Text,
+	__experimentalHeading as Heading,
+} from '@wordpress/components';
 
+export default function Edit(attributes, setAttributes) {
 
-export default function Edit(attributes, setAttributes ) {
-
+	const numberOfSliderItems = 5;
 
 	var options = {
 		dots: true,
@@ -15,22 +23,23 @@ export default function Edit(attributes, setAttributes ) {
 		slidesToScroll: 1
 	};
 
+	const template = (
+		<div className="marenda-slick-item">
+			<img src="http://localhost/xidea/wp-content/themes/societas/assets/img/services-3.jpg" alt=""/>
+		</div>
+	);
+
+	const ALLOWED_BLOCKS = [ 'core/columns' ];
+
 	return (
-		<div { ...useBlockProps() }>
+		<div {...useBlockProps()}>
 			<Slider {...options}>
-				<div className="marenda-slick-item">
-					<img src="http://localhost/xidea/wp-content/themes/societas/assets/img/services-3.jpg" alt=""/>
-				</div>
-				<div className="marenda-slick-item">
-					<img src="http://localhost/xidea/wp-content/themes/societas/assets/img/services-1.jpg" alt=""/>
-				</div>
-				<div className="marenda-slick-item">
-					<img src="http://localhost/xidea/wp-content/themes/societas/assets/img/services-2.jpg" alt=""/>
-				</div>
-				<div className="marenda-slick-item">
-					<img src="http://localhost/xidea/wp-content/themes/societas/assets/img/why-us.jpg" alt=""/>
-				</div>
+				{template}
+				{template}
+				{template}
+				{template}
 			</Slider>
+			<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
 		</div>
 	);
 }

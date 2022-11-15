@@ -5,12 +5,16 @@
   "version": "0.1.0",
   "title": "Slick Slider",
   "category": "widgets",
-  "icon": "smiley",
+  "icon": "admin-page",
   "description": "Slick slider block.",
   "supports": {
     "html": false
   },
   "attributes": {
+    "sliderId": {
+      "type": "string",
+      "default": "my-slider-1"
+    },
     "sliderOptions": {
       "type": "object",
       "default": {

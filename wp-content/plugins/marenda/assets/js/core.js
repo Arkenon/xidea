@@ -1,6 +1,6 @@
-/*
+
 (function ($) {
-	$('.your-class').slick({
+	$('.wp-container-18').slick({
 		dots: true,
 		infinite: true,
 		speed: 500,
@@ -8,4 +8,4 @@
 		slidesToScroll: 1
 	});
 })(window.jQuery);
-*/
+
