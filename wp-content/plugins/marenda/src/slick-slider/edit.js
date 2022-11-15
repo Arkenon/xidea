@@ -29,17 +29,20 @@ export default function Edit(attributes, setAttributes) {
 		</div>
 	);
 
-	const ALLOWED_BLOCKS = [ 'core/columns' ];
+	const slider = (
+		<Slider {...options}>
+			{template}
+			{template}
+			{template}
+			{template}
+		</Slider>
+	);
+
+	const ALLOWED_BLOCKS = ['core/columns'];
 
 	return (
 		<div {...useBlockProps()}>
-			<Slider {...options}>
-				{template}
-				{template}
-				{template}
-				{template}
-			</Slider>
-			<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+			<InnerBlocks allowedBlocks={ALLOWED_BLOCKS}/>
 		</div>
 	);
 }

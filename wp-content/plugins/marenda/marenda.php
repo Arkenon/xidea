@@ -83,7 +83,8 @@ function marenda_slick_slider_render_callback( $attributes, $content ) {
 		"dots"           => true,
 		"infinite"       => true,
 		"speed"          => 500,
-		"slidesToShow"   => 2,
+		"autoplay"       => true,
+		"slidesToShow"   => 3,
 		"slidesToScroll" => 1
 	];
 	$sliderId = $attributes['sliderId'];
@@ -95,10 +96,35 @@ function marenda_slick_slider_render_callback( $attributes, $content ) {
 					$("#' . $sliderId . '").find(".wp-block-columns").addClass("' . $sliderId . '")
 					$(".' . $sliderId . '").slick({
 						dots: ' . $options["dots"] . ',
+						arrows: true,
 						infinite: ' . $options["infinite"] . ',
 						speed: ' . $options["speed"] . ',
 						slidesToShow: ' . $options["slidesToShow"] . ',
-						slidesToScroll: ' . $options["slidesToScroll"] . '
+						autoplay: ' . $options["autoplay"] . ',
+						slidesToScroll: ' . $options["slidesToScroll"] . ',
+						responsive: [
+								    {
+								      breakpoint: 1920,
+								      settings: {
+								        slidesToShow: 3,
+								        slidesToScroll: 3,
+								      }
+								    },
+								    {
+								      breakpoint: 600,
+								      settings: {
+								        slidesToShow: 2,
+								        slidesToScroll: 2
+								      }
+								    },
+								    {
+								      breakpoint: 480,
+								      settings: {
+								        slidesToShow: 1,
+								        slidesToScroll: 1
+								      }
+								    }
+								  ]
 					})
 				})(window.jQuery);
 			</script>';

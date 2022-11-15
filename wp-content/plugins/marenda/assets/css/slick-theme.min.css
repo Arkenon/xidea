@@ -52,7 +52,8 @@
 }
 
 .slick-prev {
-	left: -35px
+	left: 0;
+	z-index: 999;
 }
 
 [dir=rtl] .slick-prev {
@@ -69,7 +70,8 @@
 }
 
 .slick-next {
-	right: -25px
+	right: 8px;
+	z-index: 999;
 }
 
 [dir=rtl] .slick-next {
@@ -126,7 +128,7 @@
 }
 
 .slick-dots li button:before {
-	font-size: 6px;
+	font-size: 60px;
 	line-height: 20px;
 	position: absolute;
 	top: 0;
@@ -141,7 +143,7 @@
 
 .slick-dots li.slick-active button:before {
 	opacity: .75;
-	color: #000
+	color: white;
 }
 
 /*# sourceMappingURL=slick-theme.min.css.map */
