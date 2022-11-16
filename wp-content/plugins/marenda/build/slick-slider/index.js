@@ -19,17 +19,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./editor.scss */ "./src/slick-slider/editor.scss");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editor.scss */ "./src/slick-slider/editor.scss");
 
 
 
 
 
 
-function Edit(attributes, setAttributes) {
+function Edit(props) {
   const numberOfSliderItems = 5;
+  const {
+    attributes: {
+      sliderId
+    },
+    setAttributes
+  } = props;
   var options = {
     dots: true,
     infinite: true,
@@ -47,7 +53,13 @@ function Edit(attributes, setAttributes) {
   const ALLOWED_BLOCKS = ['core/columns'];
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InnerBlocks, {
     allowedBlocks: ALLOWED_BLOCKS
-  }));
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.TextControl, {
+    label: "Slider Id (exp: 'my-slider-1')",
+    value: sliderId,
+    onChange: newSliderId => setAttributes({
+      sliderId: newSliderId
+    })
+  })))));
 }
 
 /***/ }),
@@ -1574,7 +1586,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
-function _XclassCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
@@ -1604,7 +1616,7 @@ var InnerSlider = /*#__PURE__*/function (_React$Component) {
   function InnerSlider(props) {
     var _this;
 
-    _XclassCallCheck(this, InnerSlider);
+    _classCallCheck(this, InnerSlider);
 
     _this = _super.call(this, props);
 
@@ -2409,7 +2421,6 @@ var InnerSlider = /*#__PURE__*/function (_React$Component) {
 }(_react["default"].Component);
 
 exports.InnerSlider = InnerSlider;
-
 
 /***/ }),
 
@@ -4994,7 +5005,7 @@ module.exports = window["wp"]["element"];
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"marenda/slick-slider","version":"0.1.0","title":"Slick Slider","category":"widgets","icon":"admin-page","description":"Slick slider block.","supports":{"html":false},"attributes":{"sliderId":{"type":"string","default":"my-slider-1"},"sliderOptions":{"type":"object","default":{"dots":true,"infinite":true,"speed":500,"slidesToShow":2,"slidesToScroll":1}}},"textdomain":"marenda","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"marenda/slick-slider","version":"0.1.0","title":"Slick Slider","category":"widgets","icon":"admin-page","description":"Slick slider block converts core columns block into slick slider. Preview is avaliable only front-end. It is created for Marenda Theme.","supports":{"html":false},"attributes":{"sliderId":{"type":"string","default":"my-slider-1"},"sliderOptions":{"type":"object","default":{"dots":true,"infinite":true,"speed":500,"slidesToShow":2,"slidesToScroll":1}}},"textdomain":"marenda","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

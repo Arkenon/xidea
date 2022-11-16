@@ -34,7 +34,9 @@ if ( ! function_exists( 'marenda_enque_styles' ) ) :
 	function marenda_enque_styles() {
 		wp_register_style( 'slick', CORE_URL . '/assets/css/slick.min.css', [] );
 		wp_register_style( 'slick-theme', CORE_URL . '/assets/css/slick-theme.min.css', [] );
+		wp_register_style( 'marenda', CORE_URL . '/assets/css/marenda.css', [] );
 
+		wp_enqueue_style( 'marenda' );
 		wp_enqueue_style( 'slick' );
 		wp_enqueue_style( 'slick-theme' );
 

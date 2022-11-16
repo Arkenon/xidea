@@ -11,10 +11,6 @@
 	-moz-osx-font-smoothing: grayscale
 }
 
-.slick-loading .slick-list {
-	background: url(ajax-loader.gif) center center no-repeat #fff
-}
-
 .slick-next, .slick-prev {
 	font-size: 0;
 	line-height: 0;
@@ -52,7 +48,7 @@
 }
 
 .slick-prev {
-	left: 0;
+	left: 10px;
 	z-index: 999;
 }
 
@@ -70,7 +66,7 @@
 }
 
 .slick-next {
-	right: 8px;
+	right: 20px;
 	z-index: 999;
 }
 

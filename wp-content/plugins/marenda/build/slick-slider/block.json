@@ -6,7 +6,7 @@
   "title": "Slick Slider",
   "category": "widgets",
   "icon": "admin-page",
-  "description": "Slick slider block.",
+  "description": "Slick slider block converts core columns block into slick slider. Preview is avaliable only front-end. It is created for Marenda Theme.",
   "supports": {
     "html": false
   },

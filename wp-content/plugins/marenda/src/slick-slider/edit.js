@@ -1,19 +1,17 @@
 import React from "react";
 import Slider from "react-slick";
-import {InnerBlocks, useBlockProps} from '@wordpress/block-editor';
-import './editor.scss';
+import {InnerBlocks,InspectorControls, useBlockProps} from '@wordpress/block-editor';
 import {
-	Card,
-	CardHeader,
-	CardBody,
-	CardFooter,
-	__experimentalText as Text,
-	__experimentalHeading as Heading,
+	PanelBody,
+	PanelRow,
+	TextControl
 } from '@wordpress/components';
+import './editor.scss';
 
-export default function Edit(attributes, setAttributes) {
+export default function Edit(props) {
 
 	const numberOfSliderItems = 5;
+	const {attributes: {sliderId}, setAttributes} = props;
 
 	var options = {
 		dots: true,
@@ -43,6 +41,18 @@ export default function Edit(attributes, setAttributes) {
 	return (
 		<div {...useBlockProps()}>
 			<InnerBlocks allowedBlocks={ALLOWED_BLOCKS}/>
+
+			<InspectorControls>
+				<PanelBody>
+					<PanelRow>
+						<TextControl
+							label="Slider Id (exp: 'my-slider-1')"
+							value={ sliderId }
+							onChange={ ( newSliderId ) => setAttributes({sliderId: newSliderId}) }
+						/>
+					</PanelRow>
+				</PanelBody>
+			</InspectorControls>
 		</div>
 	);
 }
