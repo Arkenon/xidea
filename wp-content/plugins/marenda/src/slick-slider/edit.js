@@ -1,27 +1,16 @@
-import React from "react";
 import Slider from "react-slick";
 import {InnerBlocks,InspectorControls, useBlockProps} from '@wordpress/block-editor';
 import {
 	PanelBody,
 	PanelRow,
-	TextControl
+	TextControl,
+	__experimentalNumberControl as NumberControl
 } from '@wordpress/components';
 import './editor.scss';
 
 export default function Edit(props) {
 
-	const numberOfSliderItems = 5;
-	const {attributes: {sliderId}, setAttributes} = props;
-
-	var options = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 2,
-		slidesToScroll: 1
-	};
-
-	const template = (
+	/*	const template = (
 		<div className="marenda-slick-item">
 			<img src="http://localhost/xidea/wp-content/themes/societas/assets/img/services-3.jpg" alt=""/>
 		</div>
@@ -34,12 +23,14 @@ export default function Edit(props) {
 			{template}
 			{template}
 		</Slider>
-	);
+	);*/
 
+	const {attributes: {sliderId,slidesToShow,slidesToScroll}, setAttributes} = props;
 	const ALLOWED_BLOCKS = ['core/columns'];
 
 	return (
 		<div {...useBlockProps()}>
+
 			<InnerBlocks allowedBlocks={ALLOWED_BLOCKS}/>
 
 			<InspectorControls>
@@ -51,8 +42,23 @@ export default function Edit(props) {
 							onChange={ ( newSliderId ) => setAttributes({sliderId: newSliderId}) }
 						/>
 					</PanelRow>
+					<PanelRow>
+						<NumberControl
+							label="Slides to show "
+							value={ slidesToShow }
+							onChange={ ( newSlidesToShow ) => setAttributes({slidesToShow: newSlidesToShow}) }
+						/>
+					</PanelRow>
+					<PanelRow>
+						<NumberControl
+							label="Slides to scroll "
+							value={ slidesToScroll }
+							onChange={ ( newSlidesToScroll ) => setAttributes({slidesToScroll: newSlidesToScroll}) }
+						/>
+					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
+
 		</div>
 	);
 }

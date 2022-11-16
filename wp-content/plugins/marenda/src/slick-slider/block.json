@@ -15,15 +15,13 @@
 	  "type": "string",
 	  "default": "my-slider-1"
 	},
-	"sliderOptions": {
-	  "type": "object",
-	  "default": {
-		"dots": true,
-		"infinite": true,
-		"speed": 500,
-		"slidesToShow": 2,
-		"slidesToScroll": 1
-	  }
+	"slidesToShow": {
+	  "type": "number",
+	  "default": 2
+	},
+	"slidesToScroll": {
+	  "type": "number",
+	  "default": 1
 	}
   },
   "textdomain": "marenda",

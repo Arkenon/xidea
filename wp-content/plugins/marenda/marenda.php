@@ -81,35 +81,26 @@ endif;
 
 
 function marenda_slick_slider_render_callback( $attributes, $content ) {
-	$options  = [
-		"dots"           => true,
-		"infinite"       => true,
-		"speed"          => 500,
-		"autoplay"       => true,
-		"slidesToShow"   => 3,
-		"slidesToScroll" => 1
-	];
-	$sliderId = $attributes['sliderId'];
-	$html     = '<div id="' . $sliderId . '">
+
+	$html = '<div id="' . $attributes['sliderId'] . '">
 					' . $content . '
 			</div>
 			<script type="text/javascript">
 				(function ($) {
-					$("#' . $sliderId . '").find(".wp-block-columns").addClass("' . $sliderId . '")
-					$(".' . $sliderId . '").slick({
-						dots: ' . $options["dots"] . ',
-						arrows: true,
-						infinite: ' . $options["infinite"] . ',
-						speed: ' . $options["speed"] . ',
-						slidesToShow: ' . $options["slidesToShow"] . ',
-						autoplay: ' . $options["autoplay"] . ',
-						slidesToScroll: ' . $options["slidesToScroll"] . ',
+					$("#' . $attributes['sliderId'] . '").find(".wp-block-columns").addClass("' . $attributes['sliderId'] . '")
+					$(".' . $attributes['sliderId'] . '").slick({
+						dots          : false,
+						infinite       : true,
+						speed         : 500,
+						autoplay      : true,
+						slidesToShow   : ' . $attributes['slidesToShow'] . ',
+						slidesToScroll : ' . $attributes['slidesToScroll'] . ',
 						responsive: [
 								    {
 								      breakpoint: 1920,
 								      settings: {
-								        slidesToShow: 3,
-								        slidesToScroll: 3,
+								        slidesToShow: ' . $attributes['slidesToShow'] . ',
+								        slidesToScroll: ' . $attributes['slidesToScroll'] . ',
 								      }
 								    },
 								    {

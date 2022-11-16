@@ -9,3 +9,7 @@
 .has-icon-color > svg{
 	fill: #ffffff;
 }
+
+body > div.wp-site-blocks > footer{
+	margin-block-start: 0!important;
+}
