@@ -79,7 +79,7 @@ if ( ! function_exists( 'marenda_block_init' ) ) :
 	add_action( 'init', 'marenda_block_init' );
 endif;
 
-
+if ( ! function_exists( 'marenda_slick_slider_render_callback' ) ) :
 function marenda_slick_slider_render_callback( $attributes, $content ) {
 
 	$html = '<div id="' . $attributes['sliderId'] . '">
@@ -124,3 +124,4 @@ function marenda_slick_slider_render_callback( $attributes, $content ) {
 
 	return $html;
 }
+endif;
