@@ -10,9 +10,10 @@
 	fill: #ffffff;
 }
 
-body > div.wp-site-blocks > footer{
+.wp-site-blocks > * + * {
 	margin-block-start: 0!important;
 }
+
 .comment-reply-title{
 	color:var(--wp--preset--color--secondary)
 }

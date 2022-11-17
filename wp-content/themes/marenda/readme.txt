@@ -29,3 +29,42 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
+
+
+== Images used in theme screenshot ==
+
+* Hero Image
+Created by Xidea Themes and released under same license as theme.
+Used an image in hero image from pxhere.com:
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/1573331
+
+* Team Section Images:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/764654
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/1456591
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/599421
+
+License : Creative Commons Zero (CC0)
+Source : https://stocksnap.io/photo/smiling-woman-KS92MVGSXY
+
+* Featured Section Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/980004
+
+* Products Section Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/971381
+
+* About Us Section Image:
+
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/1447017
+
