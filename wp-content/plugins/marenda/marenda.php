@@ -29,24 +29,24 @@ define( 'CORE_URL', plugin_dir_url( __FILE__ ) );
 /*--------------------------------------------------------------
 # Enqueue Styles
 --------------------------------------------------------------*/
-if ( ! function_exists( 'marenda_enque_styles' ) ) :
+if ( ! function_exists( 'marenda_enque_styles_and_scripts' ) ) :
 
-	function marenda_enque_styles() {
-		wp_register_style( 'slick', CORE_URL . '/assets/css/slick.min.css', [] );
-		wp_register_style( 'slick-theme', CORE_URL . '/assets/css/slick-theme.min.css', [] );
+	function marenda_enque_styles_and_scripts() {
+		wp_register_style( 'slick', CORE_URL . '/assets/slick/slick/slick.css', [] );
+		wp_register_style( 'slick-theme', CORE_URL . '/assets/slick/slick/slick-theme.css', [] );
 		wp_register_style( 'marenda', CORE_URL . '/assets/css/marenda.css', [] );
 
 		wp_enqueue_style( 'marenda' );
 		wp_enqueue_style( 'slick' );
 		wp_enqueue_style( 'slick-theme' );
 
-		wp_register_script( 'slick-js', CORE_URL . '/assets/js/slick.min.js', [ 'jquery' ], "", false );
-		wp_register_script( 'core-js', CORE_URL . '/assets/js/core.js', [ 'jquery', 'slick-js' ], "", false );
+		wp_register_script( 'slick-js', CORE_URL . '/assets/slick/slick/slick.min.js', [ 'jquery' ], "", false );
+		wp_register_script( 'core-js', CORE_URL . '/assets/js/core.js', ['slick-js'],true );
 		wp_enqueue_script( 'slick-js' );
 		wp_enqueue_script( 'core-js' );
 	}
 
-	add_action( 'wp_enqueue_scripts', 'marenda_enque_styles' );
+	add_action( 'wp_enqueue_scripts', 'marenda_enque_styles_and_scripts' );
 
 endif;
 
@@ -56,13 +56,29 @@ endif;
 if ( ! function_exists( 'marenda_editor_styles' ) ) :
 
 	function marenda_editor_styles() {
-		add_editor_style( array( CORE_URL . '/assets/css/slick.min.css' ) );
-		add_editor_style( array( CORE_URL . '/assets/css/slick-theme.min.css' ) );
+		add_editor_style( array( CORE_URL . '/assets/slick/slick/slick.css' ) );
+		add_editor_style( array( CORE_URL . '/assets/slick/slick/slick-theme.css' ) );
 	}
 
 endif;
 
 add_action( 'init', 'marenda_editor_styles' );
+add_action( 'pre_get_posts', 'marenda_editor_styles' );
+
+/*--------------------------------------------------------------
+# Enqueue Editor Scripts
+--------------------------------------------------------------*/
+if ( ! function_exists( 'marenda_editor_scripts' ) ) :
+function marenda_editor_scripts() {
+
+	wp_register_script( 'slick-js', CORE_URL . '/assets/slick/slick/slick.min.js', [ 'jquery' ], "" );
+	wp_register_script( 'core-js', CORE_URL . '/assets/js/core.js', ['slick-js'], "", true );
+	wp_enqueue_script( 'slick-js' );
+	wp_enqueue_script( 'core-js' );
+
+}
+add_action( 'enqueue_block_editor_assets', 'marenda_editor_scripts' );
+endif;
 
 /*--------------------------------------------------------------
 # Register Blocks
@@ -73,6 +89,8 @@ if ( ! function_exists( 'marenda_block_init' ) ) :
 			[
 				'render_callback' => 'marenda_slick_slider_render_callback'
 			]
+		);
+		register_block_type( __DIR__ . '/build/test-slider'
 		);
 	}
 
