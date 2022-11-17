@@ -182,8 +182,39 @@
 	"styles": {
 		"blocks": {
 			"core/post-title": {
-				"color": {
-					"text": "var(--wp--preset--color--secondary)"
+				"elements": {
+					"link": {
+						":active": {
+							"color": {
+								"text": "var(--wp--preset--color--secondary)"
+							},
+							"typography": {
+								"textDecoration": "none"
+							}
+						},
+						":focus": {
+							"typography": {
+								"textDecoration": "underline dashed"
+							}
+						},
+						":hover": {
+							"typography": {
+								"textDecoration": "underline"
+							}
+						},
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
+				},
+				"spacing": {
+					"margin": {
+						"bottom": "1.25rem",
+						"top": "1.25rem"
+					}
+				},
+				"typography": {
+					"fontWeight": "400"
 				}
 			},
 			"core/query-title": {
@@ -193,7 +224,7 @@
 			},
 			"core/paragraph": {
 				"color": {
-					"text": "var(--wp--preset--color--background)"
+					"text": "var(--wp--preset--color--foreground)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",
@@ -212,6 +243,40 @@
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)"
+				}
+			},
+			"core/post-content": {
+				"elements": {
+					"h1": {
+						"color": {
+							"text": "var(--wp--preset--color--secondary)"
+						}
+					},
+					"h2": {
+						"color": {
+							"text": "var(--wp--preset--color--secondary)"
+						}
+					},
+					"h3": {
+						"color": {
+							"text": "var(--wp--preset--color--secondary)"
+						}
+					},
+					"h4": {
+						"color": {
+							"text": "var(--wp--preset--color--secondary)"
+						}
+					},
+					"h5": {
+						"color": {
+							"text": "var(--wp--preset--color--secondary)"
+						}
+					},
+					"h6": {
+						"color": {
+							"text": "var(--wp--preset--color--secondary)"
+						}
+					}
 				}
 			}
 		},
@@ -288,7 +353,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--wp--preset--color--background)"
+					"text": "var(--wp--preset--color--primary)"
 				}
 			}
 		},
@@ -302,6 +367,15 @@
 			"fontSize": "1rem"
 		}
 	},
+	"customTemplates": [
+		{
+			"name": "blank",
+			"title": "Blank",
+			"postTypes": [
+				"page"
+			]
+		}
+	],
 	"templateParts": [
 		{
 			"area": "header",

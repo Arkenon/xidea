@@ -13,3 +13,6 @@
 body > div.wp-site-blocks > footer{
 	margin-block-start: 0!important;
 }
+.comment-reply-title{
+	color:var(--wp--preset--color--secondary)
+}
