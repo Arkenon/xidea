@@ -40,8 +40,8 @@ if ( ! function_exists( 'marenda_enque_styles_and_scripts' ) ) :
 		wp_enqueue_style( 'slick' );
 		wp_enqueue_style( 'slick-theme' );
 
-		wp_register_script( 'slick-js', CORE_URL . '/assets/slick/slick/slick.min.js', [ 'jquery' ], "", false );
-		wp_register_script( 'core-js', CORE_URL . '/assets/js/core.js', ['slick-js'],true );
+		wp_register_script( 'slick-js', CORE_URL . '/assets/slick/slick/slick.min.js', [ 'jquery' ], "" ,false);
+		wp_register_script( 'core-js', CORE_URL . '/assets/js/core.js', ['jquery','slick-js'], "", true );
 		wp_enqueue_script( 'slick-js' );
 		wp_enqueue_script( 'core-js' );
 	}
@@ -68,11 +68,15 @@ add_action( 'pre_get_posts', 'marenda_editor_styles' );
 /*--------------------------------------------------------------
 # Enqueue Editor Scripts
 --------------------------------------------------------------*/
-if ( ! function_exists( 'marenda_editor_scripts' ) ) :
+if ( ! function_exists( 'marenda_
+editor_scripts' ) ) :
 function marenda_editor_scripts() {
 
-	wp_register_script( 'slick-js', CORE_URL . '/assets/slick/slick/slick.min.js', [ 'jquery' ], "" );
-	wp_register_script( 'core-js', CORE_URL . '/assets/js/core.js', ['slick-js'], "", true );
+	wp_enqueue_script('jquery','https://code.jquery.com/jquery-3.6.1.min.js');
+
+	wp_register_script( 'slick-js', CORE_URL . '/assets/slick/slick/slick.min.js', [ 'jquery' ], "" ,false);
+	wp_register_script( 'core-js', CORE_URL . '/assets/js/core.js', ['jquery','slick-js'], "", true );
+
 	wp_enqueue_script( 'slick-js' );
 	wp_enqueue_script( 'core-js' );
 
