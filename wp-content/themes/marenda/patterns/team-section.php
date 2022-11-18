@@ -15,8 +15,8 @@
 					<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(MARENDA_URI.'/assets/img/team-1.jpg'); ?>" alt="" class="wp-image-2576" width="120" height="120"/></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">Joh Doe</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Joh Doe</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"background"} -->
@@ -31,8 +31,8 @@
 					<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(MARENDA_URI.'/assets/img/team-2.jpg'); ?>" alt="" class="wp-image-2578" width="120" height="120"/></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">Mary Heilton</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Mary Heilton</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"background"} -->
@@ -47,8 +47,8 @@
 					<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(MARENDA_URI.'/assets/img/team-3.jpg'); ?>" alt="" class="wp-image-2579" width="120" height="120"/></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">Eric Neily</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Eric Neily</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"background"} -->
@@ -63,8 +63,8 @@
 					<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(MARENDA_URI.'/assets/img/team-4.jpg'); ?>" alt="" class="wp-image-2577" width="120" height="120"/></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">Jasmine Gui</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Jasmine Gui</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","textColor":"background"} -->
@@ -83,8 +83,8 @@
 					<h1 class="has-text-align-center has-primary-color has-text-color"><strong>400</strong></h1>
 					<!-- /wp:heading -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">​Customers</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Customers</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"}},"textColor":"background"} -->
@@ -103,8 +103,8 @@
 					<h1 class="has-text-align-center has-primary-color has-text-color"><strong>30</strong></h1>
 					<!-- /wp:heading -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">Events</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Events</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"}},"textColor":"background"} -->
@@ -125,8 +125,8 @@
 					<h1 class="has-text-align-center has-primary-color has-text-color"><strong>125</strong></h1>
 					<!-- /wp:heading -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">Projects</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Projects</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"}},"textColor":"background"} -->
@@ -145,8 +145,8 @@
 					<h1 class="has-text-align-center has-primary-color has-text-color"><strong>10</strong></h1>
 					<!-- /wp:heading -->
 
-					<!-- wp:heading {"textAlign":"center","level":5} -->
-					<h5 class="has-text-align-center">​Awards</h5>
+					<!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
+					<h5 class="has-text-align-center has-background-color has-text-color">Awards</h5>
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"14px"}},"textColor":"background"} -->

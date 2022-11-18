@@ -18,8 +18,9 @@
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"30%"} -->
-            <div class="wp-block-column" style="flex-basis:30%"><!-- wp:heading {"level":6} -->
-                <h6>Contact Us</h6>
+            <div class="wp-block-column" style="flex-basis:30%">
+                <!-- wp:heading {"level":6,"textColor":"background"} -->
+                <h6 class="has-background-color has-text-color">Contact Us</h6>
                 <!-- /wp:heading -->
 
                 <!-- wp:paragraph {"textColor":"background"} -->
@@ -32,16 +33,18 @@
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"15%"} -->
-            <div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":6} -->
-                <h6>Menu</h6>
+            <div class="wp-block-column" style="flex-basis:15%">
+                <!-- wp:heading {"level":6,"textColor":"background"} -->
+                <h6 class="has-background-color has-text-color">Menu</h6>
                 <!-- /wp:heading -->
 
                 <!-- wp:navigation {"ref":1,"textColor":"background","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"style":{"typography":{"lineHeight":"0","fontSize":"14px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"15%"} -->
-            <div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":6} -->
-                <h6>Social</h6>
+            <div class="wp-block-column" style="flex-basis:15%">
+                <!-- wp:heading {"level":6,"textColor":"background"} -->
+                <h6 class="has-background-color has-text-color">Social</h6>
                 <!-- /wp:heading -->
 
                 <!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#000000","iconBackgroundColor":"primary","iconBackgroundColorValue":"#94d0e1"} -->

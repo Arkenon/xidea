@@ -14,9 +14,9 @@
 				<div class="wp-block-outermost-icon-block aligncenter items-justified-center"><div class="icon-container has-border-color has-primary-border-color has-icon-color" style="padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-width:2px;border-radius:100px;color:#ffffff;width:85px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.2 9h1.5V5.8H9V4.2H4.2V9zm14 9.2H15v1.5h4.8V15h-1.5v3.2zM15 4.2v1.5h3.2V9h1.5V4.2H15zM5.8 15H4.2v4.8H9v-1.5H5.8V15z"></path></svg></div></div>
 				<!-- /wp:outermost/icon-block -->
 
-				<!-- wp:heading {"textAlign":"center","level":4} -->
-				<h4 class="has-text-align-center">Full</h4>
-				<!-- /wp:heading -->
+                <!-- wp:heading {"textAlign":"center","level":4,"textColor":"background"} -->
+                <h4 class="has-text-align-center has-background-color has-text-color">Full</h4>
+                <!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"background"} -->
 				<p class="has-text-align-center has-background-color has-text-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pulvinar massa sed turpis dapibus sollicitudin. </p>
@@ -34,8 +34,8 @@
 				<div class="wp-block-outermost-icon-block aligncenter items-justified-center"><div class="icon-container has-border-color has-primary-border-color has-icon-color" style="padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-width:2px;border-radius:100px;color:#ffffff;width:85px"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5 5.5h14a.5.5 0 01.5.5v1.5a.5.5 0 01-.5.5H5a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5zM4 9.232A2 2 0 013 7.5V6a2 2 0 012-2h14a2 2 0 012 2v1.5a2 2 0 01-1 1.732V18a2 2 0 01-2 2H6a2 2 0 01-2-2V9.232zm1.5.268V18a.5.5 0 00.5.5h12a.5.5 0 00.5-.5V9.5h-13z" clip-rule="evenodd"></path></svg></div></div>
 				<!-- /wp:outermost/icon-block -->
 
-				<!-- wp:heading {"textAlign":"center","level":4} -->
-				<h4 class="has-text-align-center">Site</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"background"} -->
+				<h4 class="has-text-align-center has-background-color has-text-color">Site</h4>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"background"} -->
@@ -54,8 +54,8 @@
 				<div class="wp-block-outermost-icon-block aligncenter items-justified-center"><div class="icon-container has-border-color has-primary-border-color has-icon-color" style="padding-top:15px;padding-right:15px;padding-bottom:15px;padding-left:15px;border-width:2px;border-radius:100px;color:#ffffff;width:85px"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6 5.5h3a.5.5 0 01.5.5v3a.5.5 0 01-.5.5H6a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5zM4 6a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm11-.5h3a.5.5 0 01.5.5v3a.5.5 0 01-.5.5h-3a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5zM13 6a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2h-3a2 2 0 01-2-2V6zm5 8.5h-3a.5.5 0 00-.5.5v3a.5.5 0 00.5.5h3a.5.5 0 00.5-.5v-3a.5.5 0 00-.5-.5zM15 13a2 2 0 00-2 2v3a2 2 0 002 2h3a2 2 0 002-2v-3a2 2 0 00-2-2h-3zm-9 1.5h3a.5.5 0 01.5.5v3a.5.5 0 01-.5.5H6a.5.5 0 01-.5-.5v-3a.5.5 0 01.5-.5zM4 15a2 2 0 012-2h3a2 2 0 012 2v3a2 2 0 01-2 2H6a2 2 0 01-2-2v-3z" fill-rule="evenodd" clip-rule="evenodd"></path></svg></div></div>
 				<!-- /wp:outermost/icon-block -->
 
-				<!-- wp:heading {"textAlign":"center","level":4} -->
-				<h4 class="has-text-align-center">​Editing</h4>
+				<!-- wp:heading {"textAlign":"center","level":4,"textColor":"background"} -->
+				<h4 class="has-text-align-center has-background-color has-text-color">Editing</h4>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"background"} -->
