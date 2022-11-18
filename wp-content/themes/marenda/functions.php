@@ -34,5 +34,7 @@ if ( ! function_exists( 'marenda_enqueue_styles' ) ) :
 
 endif;
 
-// Add TGMPA
-//require get_template_directory() . '/inc/tgmpa.php';
+/*--------------------------------------------------------------
+# Add TGMPA
+--------------------------------------------------------------*/
+require get_template_directory() . '/inc/tgmpa.php';

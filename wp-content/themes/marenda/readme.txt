@@ -8,17 +8,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Marenda is a block based theme.
+This is a very useful and modern theme from Xidea Themes. Marenda is a block theme developed with Gutenberg Editor. With the full site editing approach, you can easily customize your web site. .
 
 == Changelog ==
 
-= 0.0.1 =
+= 1.0.0 =
 * Initial release
 
 == Copyright ==
 
 Marenda WordPress Theme, (C) 2022 Xidea Themes
 Marenda is distributed under the terms of the GNU GPL.
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -32,6 +34,8 @@ GNU General Public License for more details.
 
 
 == Images used in theme screenshot ==
+* Logo:
+Created by Xidea Themes and released under same license as theme.
 
 * Hero Image
 Created by Xidea Themes and released under same license as theme.
