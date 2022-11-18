@@ -107,7 +107,3 @@ if ( ! function_exists( 'slick_slider_block_init' ) ) :
 	add_action( 'init', 'slick_slider_block_init' );
 
 endif;
-
-/*--------------------------------------------------------------
-# Register Blocks Callback Functions
---------------------------------------------------------------*/

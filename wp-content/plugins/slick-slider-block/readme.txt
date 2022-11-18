@@ -26,8 +26,8 @@ You can convert your blocks to a slider with Slick Slider Block Plugin. Just add
 3. Search for the block within the Block Editor (Gutenberg) and begin using.
 
 == Changelog ==
-= 1.0.0 =
 
+= 1.0.0 =
 * Initial release
 
 == Resources ==
