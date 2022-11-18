@@ -1,15 +1,18 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "create-block/slick-slider-block",
-  "version": "0.1.0",
-  "title": "Slick Slider Block",
+  "name": "slick-slider-block/slick-slider-item",
+  "version": "1.0.0",
+  "title": "Slick Slider Item",
   "category": "widgets",
-  "icon": "smiley",
-  "description": "Example block scaffolded with Create Block tool.",
+  "icon": "welcome-add-page",
+  "description": "Slick Slider Block item. This is an inner block. Add core blocks in it.",
   "supports": {
     "html": false
   },
+  "parent": [
+    "slick-slider-block/slick-slider"
+  ],
   "textdomain": "slick-slider-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

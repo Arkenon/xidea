@@ -1,9 +1,24 @@
-import { useBlockProps, useInnerBlocksProps } from '@wordpress/block-editor';
-
+import {useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
+import './style.scss';
 
 export default function save(props) {
-	const blockProps = useBlockProps.save( );
-	const innerBlocksProps = useInnerBlocksProps.save( props );
 
-	return <section class='slick-slider-block' data-slick='{"dots":true,"arrows":true,"slidesToShow": 2, "slidesToScroll": 1}' {...innerBlocksProps} />
+	const innerBlocksProps = useInnerBlocksProps.save(props);
+
+	const attr = props.attributes;
+
+	const options = `{"dots":${attr.dots},` +
+		`"arrows":${attr.arrows},` +
+		`"slidesToShow":${attr.slidesToShow},` +
+		`"slidesToScroll":${attr.slidesToScroll},` +
+		`"infinite":${attr.infinite},` +
+		`"adaptiveHeight":${attr.adaptiveHeight},` +
+		`"autoplay":${attr.autoplay},` +
+		`"autoplaySpeed":${attr.autoplaySpeed},` +
+		`"fade":${attr.fade},` +
+		`"speed":${attr.speed},` +
+		`"centerMode":${attr.infinite}}`;
+	return <section class='slick-slider-block'
+					data-slick={options}
+					{...innerBlocksProps} />
 }

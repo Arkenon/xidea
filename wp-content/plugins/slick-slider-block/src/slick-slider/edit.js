@@ -1,9 +1,8 @@
-import {useBlockProps,InspectorControls, useInnerBlocksProps} from '@wordpress/block-editor';
+import {useBlockProps, InspectorControls, useInnerBlocksProps} from '@wordpress/block-editor';
 import {
 	ToggleControl,
 	PanelBody,
 	PanelRow,
-	TextControl,
 	__experimentalNumberControl as NumberControl
 } from '@wordpress/components';
 import './editor.scss';
@@ -14,32 +13,95 @@ export default function Edit(props) {
 
 	const innerBlocksProps = useInnerBlocksProps(
 		blockProps,
-		{ allowedBlocks: [ 'slick-slider-block/slick-slider-item' ] }
+		{
+			allowedBlocks: ['slick-slider-block/slick-slider-item'],
+			orientation: "horizontal"
+		}
 	);
 
-	const {attributes: {sliderId, slidesToShow, slidesToScroll, dots, arrows}, setAttributes} = props;
+	const {
+		attributes: {
+			slidesToShow,
+			slidesToScroll,
+			speed,
+			dots,
+			arrows,
+			infinite,
+			autoplay,
+			autoplaySpeed,
+			centerMode,
+			adaptiveHeight,
+			fade,
+		}, setAttributes
+	} = props;
 
-	const options = {
-		dots: true,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 2,
-		slidesToScroll: 1
-	};
-
-	// {`"dots":${dots},"arrows":true,"slidesToShow": 2, "slidesToScroll": 1`}
 
 	return (
 		<>
-			<section className='slick-slider-block'
-					 data-slick='{"dots":true,"arrows":true,"slidesToShow": 2, "slidesToScroll": 1}' {...innerBlocksProps} />
+			<section className='slick-slider-block' {...innerBlocksProps} />
 			<InspectorControls>
 				<PanelBody>
 					<PanelRow>
-						<TextControl
-							label="Slider Id (exp: 'my-slider-1')"
-							value={sliderId}
-							onChange={(newSliderId) => setAttributes({sliderId: newSliderId})}
+						<NumberControl
+							label="Slides to show "
+							value={slidesToShow}
+							onChange={(val) => setAttributes({slidesToShow: val})}
+						/>
+					</PanelRow>
+					{slidesToShow <= 1 &&
+						<PanelRow>
+							<ToggleControl
+								label="Fade"
+								help={
+									fade
+										? 'Yes'
+										: 'No'
+								}
+								checked={fade}
+								onChange={(val) => setAttributes({fade: val})}
+							/>
+						</PanelRow>
+					}
+					{slidesToShow>1&&
+						<PanelRow>
+							<ToggleControl
+								label="Center Mode"
+								help={
+									centerMode
+										? 'Yes'
+										: 'No'
+								}
+								checked={centerMode}
+								onChange={(val) => setAttributes({centerMode: val})}
+							/>
+						</PanelRow>
+					}
+					{centerMode && slidesToShow >1 &&
+						<PanelRow>
+							<ToggleControl
+								label="Infinite loop"
+								help={
+									infinite
+										? 'Yes'
+										: 'No'
+								}
+								checked={infinite}
+								onChange={(val) => setAttributes({infinite: val})}
+							/>
+						</PanelRow>
+					}
+					<PanelRow>
+						<NumberControl
+							label="Slides to scroll "
+							value={slidesToScroll}
+							onChange={(val) => setAttributes({slidesToScroll: val})}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<NumberControl
+							label="Slide speed"
+							value={speed}
+							onChange={(val) => setAttributes({speed: val})}
 						/>
 					</PanelRow>
 					<PanelRow>
@@ -47,11 +109,11 @@ export default function Edit(props) {
 							label="Show Dots"
 							help={
 								dots
-									? 'Shot dots'
+									? 'Show dots'
 									: 'Hide dots'
 							}
-							checked={ dots }
-							onChange={(newDots) => setAttributes({dots: newDots})}
+							checked={dots}
+							onChange={(val) => setAttributes({dots: val})}
 						/>
 					</PanelRow>
 					<PanelRow>
@@ -59,30 +121,49 @@ export default function Edit(props) {
 							label="Show Arrows"
 							help={
 								arrows
-									? 'Shot arrows'
+									? 'Show arrows'
 									: 'Hide arrows'
 							}
-							checked={ dots }
-							onChange={(newArrows) => setAttributes({arrows: newArrows})}
+							checked={arrows}
+							onChange={(val) => setAttributes({arrows: val})}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<ToggleControl
+							label="Autoplay"
+							help={
+								autoplay
+									? 'Yes'
+									: 'No'
+							}
+							checked={autoplay}
+							onChange={(val) => setAttributes({autoplay: val})}
 						/>
 					</PanelRow>
 					<PanelRow>
 						<NumberControl
-							label="Slides to show "
-							value={slidesToShow}
-							onChange={(newSlidesToShow) => setAttributes({slidesToShow: newSlidesToShow})}
+							label="Autoplay speed "
+							value={autoplaySpeed}
+							onChange={(val) => setAttributes({autoplaySpeed: val})}
 						/>
 					</PanelRow>
+
 					<PanelRow>
-						<NumberControl
-							label="Slides to scroll "
-							value={slidesToScroll}
-							onChange={(newSlidesToScroll) => setAttributes({slidesToScroll: newSlidesToScroll})}
+						<ToggleControl
+							label="Adaptive Height"
+							help={
+								adaptiveHeight
+									? 'Yes'
+									: 'No'
+							}
+							checked={adaptiveHeight}
+							onChange={(val) => setAttributes({adaptiveHeight: val})}
 						/>
 					</PanelRow>
 				</PanelBody>
 			</InspectorControls>
 		</>
-	);
+	)
+		;
 }
 

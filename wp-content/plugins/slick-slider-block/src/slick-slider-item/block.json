@@ -10,6 +10,7 @@
   "supports": {
 	"html": false
   },
+  "parent": [ "slick-slider-block/slick-slider" ],
   "textdomain": "slick-slider-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
