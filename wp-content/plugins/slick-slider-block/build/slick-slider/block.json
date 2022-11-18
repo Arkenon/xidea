@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "slick-slider-block/slick-slider",
+  "version": "1.0.0",
+  "title": "Slick Slider",
+  "category": "widgets",
+  "icon": "admin-page",
+  "description": "Slick Slider Block wrapper.",
+  "supports": {
+    "html": false
+  },
+  "attributes": {
+    "sliderId": {
+      "type": "string",
+      "default": "my-slider-1"
+    },
+    "dots": {
+      "type": "boolean",
+      "default": false
+    },
+    "arrows": {
+      "type": "boolean",
+      "default": true
+    },
+    "slidesToShow": {
+      "type": "number",
+      "default": 2
+    },
+    "slidesToScroll": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "textdomain": "slick-slider-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
