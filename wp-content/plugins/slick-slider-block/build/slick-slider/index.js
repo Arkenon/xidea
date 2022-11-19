@@ -28,7 +28,7 @@ __webpack_require__.r(__webpack_exports__);
 function Edit(props) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
   const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useInnerBlocksProps)(blockProps, {
-    allowedBlocks: ['slick-slider-block/slick-slider-item'],
+    allowedBlocks: ['gb-for-slick-slider/slick-slider-item'],
     orientation: "horizontal"
   });
   const {
@@ -48,7 +48,7 @@ function Edit(props) {
     setAttributes
   } = props;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("section", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: "slick-slider-block"
+    className: "gb-for-slick-slider"
   }, innerBlocksProps)), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalNumberControl, {
     label: "Slides to show ",
     value: slidesToShow,
@@ -109,7 +109,7 @@ function Edit(props) {
     onChange: val => setAttributes({
       autoplay: val
     })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalNumberControl, {
+  })), autoplay && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalNumberControl, {
     label: "Autoplay speed ",
     value: autoplaySpeed,
     onChange: val => setAttributes({
@@ -206,7 +206,7 @@ function save(props) {
   const attr = props.attributes;
   const options = `{"dots":${attr.dots},` + `"arrows":${attr.arrows},` + `"slidesToShow":${attr.slidesToShow},` + `"slidesToScroll":${attr.slidesToScroll},` + `"infinite":${attr.infinite},` + `"adaptiveHeight":${attr.adaptiveHeight},` + `"autoplay":${attr.autoplay},` + `"autoplaySpeed":${attr.autoplaySpeed},` + `"fade":${attr.fade},` + `"speed":${attr.speed},` + `"centerMode":${attr.infinite}}`;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("section", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    class: "slick-slider-block",
+    class: "gb-for-slick-slider",
     "data-slick": options
   }, innerBlocksProps));
 }
@@ -310,7 +310,7 @@ function _extends() {
   \*************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"slick-slider-block/slick-slider","version":"1.0.0","title":"Slick Slider","category":"widgets","icon":"admin-page","description":"Slick Slider Block wrapper.","supports":{"html":false},"attributes":{"dots":{"type":"boolean","default":false},"arrows":{"type":"boolean","default":true},"infinite":{"type":"boolean","default":false},"centerMode":{"type":"boolean","default":false},"adaptiveHeight":{"type":"boolean","default":false},"autoplay":{"type":"boolean","default":false},"autoplaySpeed":{"type":"number","default":1500},"fade":{"type":"boolean","default":false},"slidesToShow":{"type":"number","default":2},"speed":{"type":"number","default":500},"slidesToScroll":{"type":"number","default":1}},"textdomain":"slick-slider-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gb-for-slick-slider/slick-slider","version":"1.0.0","title":"Slick Slider","category":"widgets","icon":"admin-page","description":"Slick Slider Block wrapper.","supports":{"html":false},"attributes":{"dots":{"type":"boolean","default":false},"arrows":{"type":"boolean","default":true},"infinite":{"type":"boolean","default":false},"centerMode":{"type":"boolean","default":false},"adaptiveHeight":{"type":"boolean","default":false},"autoplay":{"type":"boolean","default":false},"autoplaySpeed":{"type":"number","default":1500},"fade":{"type":"boolean","default":false},"slidesToShow":{"type":"number","default":2},"speed":{"type":"number","default":500},"slidesToScroll":{"type":"number","default":1}},"textdomain":"gb-for-slick-slider","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
@@ -469,7 +469,7 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkslick_slider_block"] = self["webpackChunkslick_slider_block"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkgb_for_slick_slider"] = self["webpackChunkgb_for_slick_slider"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	}();

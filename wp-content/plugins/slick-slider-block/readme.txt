@@ -1,4 +1,4 @@
-=== Slick Slider Block ===
+=== Gutenberg Block for Slick Slider  ===
 Contributors:      xideathemes
 Tags:              block, slider, slider block, slick slider, carousel
 Requires at least: 5.9
@@ -13,15 +13,15 @@ Create sliders from core blocks.
 
 == Description ==
 
-Slick Slider Block Plugin uses Slick Slider to create sliders from core blocks.
-You can convert your blocks to a slider with Slick Slider Block Plugin. Just add Slick Slider Block and start create your own designs.
+Gutenberg Block for Slick Slider Plugin uses Slick Slider to create sliders from core blocks.
+You can convert your blocks to a slider with Gutenberg Block for Slick Slider Plugin. Just add a new Slick Slider Block and start create your own designs.
 
 == Installation ==
 
 1. You have a couple options:
-	* Go to Plugins &rarr; Add New and search for "Slick Slider Block". Once found, click "Install".
-	* Download the Slick Slider Block from wordpress.org and make sure the folder us zipped. Then upload via Plugins &rarr; Add New &rarr; Upload.
-    * Open the block inserter within the Block Editor (Gutenberg) and search for "icon". The plugin should appear and allow you to it install directly. Skip steps 2 and 3.
+	* Go to Plugins &rarr; Add New and search for "Gutenberg Block for Slick Slider". Once found, click "Install".
+	* Download the Gutenberg Block for Slick Slider from wordpress.org and make sure the folder us zipped. Then upload via Plugins &rarr; Add New &rarr; Upload.
+      * Open the block inserter within the Block Editor (Gutenberg) and search for "slick slider". The plugin should appear and allow you to it install directly. Skip steps 2 and 3.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Search for the block within the Block Editor (Gutenberg) and begin using.
 

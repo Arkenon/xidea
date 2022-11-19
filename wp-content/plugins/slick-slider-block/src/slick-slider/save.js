@@ -18,7 +18,7 @@ export default function save(props) {
 		`"fade":${attr.fade},` +
 		`"speed":${attr.speed},` +
 		`"centerMode":${attr.infinite}}`;
-	return <section class='slick-slider-block'
+	return <section class='gb-for-slick-slider'
 					data-slick={options}
 					{...innerBlocksProps} />
 }

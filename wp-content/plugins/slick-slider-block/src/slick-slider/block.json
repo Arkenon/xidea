@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "slick-slider-block/slick-slider",
+  "name": "gb-for-slick-slider/slick-slider",
   "version": "1.0.0",
   "title": "Slick Slider",
   "category": "widgets",
@@ -56,7 +56,7 @@
 	  "default": 1
 	}
   },
-  "textdomain": "slick-slider-block",
+  "textdomain": "gb-for-slick-slider",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"

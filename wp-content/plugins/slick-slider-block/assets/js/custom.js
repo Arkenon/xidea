@@ -6,7 +6,7 @@
 		slidesToShow: 2,
 		slidesToScroll: 1
 	});
-	$(".slick-slider-block").slick();
+	$(".gb-for-slick-slider").slick();
 	$(".wp-block-marenda-test-slider").slick();
 })(window.jQuery);
 

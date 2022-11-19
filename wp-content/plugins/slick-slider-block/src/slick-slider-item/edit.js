@@ -12,7 +12,7 @@ export default function Edit(props) {
 
 	_blockTypes.forEach( function ( blockType ) {
 
-		if ( blockType.name !== "slick-slider-block/slick-slider" && blockType.name !== "slick-slider-block/slick-slider-item" ) {
+		if ( blockType.name !== "gb-for-slick-slider/slick-slider" && blockType.name !== "gb-for-slick-slider/slick-slider-item" ) {
 			ALLOWED_BLOCKS.push( blockType.name);
 		}
 

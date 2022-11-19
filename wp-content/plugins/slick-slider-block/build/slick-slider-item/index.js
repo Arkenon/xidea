@@ -28,7 +28,7 @@ function Edit(props) {
   const _blockTypes = (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.getBlockTypes)();
   const ALLOWED_BLOCKS = [''];
   _blockTypes.forEach(function (blockType) {
-    if (blockType.name !== "slick-slider-block/slick-slider" && blockType.name !== "slick-slider-block/slick-slider-item") {
+    if (blockType.name !== "gb-for-slick-slider/slick-slider" && blockType.name !== "gb-for-slick-slider/slick-slider-item") {
       ALLOWED_BLOCKS.push(blockType.name);
     }
   });
@@ -178,7 +178,7 @@ module.exports = window["wp"]["element"];
   \******************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"slick-slider-block/slick-slider-item","version":"1.0.0","title":"Slick Slider Item","category":"widgets","icon":"welcome-add-page","description":"Slick Slider Block item. This is an inner block. Add core blocks in it.","supports":{"html":false},"parent":["slick-slider-block/slick-slider"],"textdomain":"slick-slider-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gb-for-slick-slider/slick-slider-item","version":"1.0.0","title":"Slick Slider Item","category":"widgets","icon":"welcome-add-page","description":"Slick Slider Block item. This is an inner block. Add core blocks in it.","supports":{"html":false},"parent":["gb-for-slick-slider/slick-slider"],"textdomain":"gb-for-slick-slider","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
@@ -337,7 +337,7 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkslick_slider_block"] = self["webpackChunkslick_slider_block"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkgb_for_slick_slider"] = self["webpackChunkgb_for_slick_slider"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	}();

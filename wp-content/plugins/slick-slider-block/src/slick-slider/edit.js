@@ -14,7 +14,7 @@ export default function Edit(props) {
 	const innerBlocksProps = useInnerBlocksProps(
 		blockProps,
 		{
-			allowedBlocks: ['slick-slider-block/slick-slider-item'],
+			allowedBlocks: ['gb-for-slick-slider/slick-slider-item'],
 			orientation: "horizontal"
 		}
 	);
@@ -38,7 +38,7 @@ export default function Edit(props) {
 
 	return (
 		<>
-			<section className='slick-slider-block' {...innerBlocksProps} />
+			<section className='gb-for-slick-slider' {...innerBlocksProps} />
 			<InspectorControls>
 				<PanelBody>
 					<PanelRow>
@@ -62,7 +62,7 @@ export default function Edit(props) {
 							/>
 						</PanelRow>
 					}
-					{slidesToShow>1&&
+					{slidesToShow > 1 &&
 						<PanelRow>
 							<ToggleControl
 								label="Center Mode"
@@ -76,7 +76,7 @@ export default function Edit(props) {
 							/>
 						</PanelRow>
 					}
-					{centerMode && slidesToShow >1 &&
+					{centerMode && slidesToShow > 1 &&
 						<PanelRow>
 							<ToggleControl
 								label="Infinite loop"
@@ -140,14 +140,15 @@ export default function Edit(props) {
 							onChange={(val) => setAttributes({autoplay: val})}
 						/>
 					</PanelRow>
-					<PanelRow>
-						<NumberControl
-							label="Autoplay speed "
-							value={autoplaySpeed}
-							onChange={(val) => setAttributes({autoplaySpeed: val})}
-						/>
-					</PanelRow>
-
+					{autoplay &&
+						<PanelRow>
+							<NumberControl
+								label="Autoplay speed "
+								value={autoplaySpeed}
+								onChange={(val) => setAttributes({autoplaySpeed: val})}
+							/>
+						</PanelRow>
+					}
 					<PanelRow>
 						<ToggleControl
 							label="Adaptive Height"
