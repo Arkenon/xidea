@@ -11,6 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 This is a very useful and modern theme from Xidea Themes. Marenda is a block theme developed with Gutenberg Editor. With the full site editing approach, you can easily customize your web site. .
 
 == Changelog ==
+
+= 1.0.3 =
+* TGMPA updated
+
 = 1.0.2 =
 * Heading blocks color variation changed
 

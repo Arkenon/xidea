@@ -62,7 +62,7 @@ function marenda_register_required_plugins() {
 		array(
 			'name'      => 'The Icon Block',
 			'slug'      => 'icon-block',
-			'required'  => true,
+			'required'  => false,
 		)
 	);
 
