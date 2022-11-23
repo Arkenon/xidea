@@ -1,6 +1,6 @@
 === Gutenberg Block for Slick Slider  ===
 Contributors:      xideathemes
-Tags:              block, slider, slider block, slick slider, carousel
+Tags:              block, slider, slider block, slick slider, carousel, carousel block, gutenberg, full site editing
 Requires at least: 5.9
 Tested up to:      6.1
 Requires PHP:      7.0
