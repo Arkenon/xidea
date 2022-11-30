@@ -38,7 +38,7 @@
                 <h6 class="has-background-color has-text-color">Menu</h6>
                 <!-- /wp:heading -->
 
-                <!-- wp:navigation {"ref":1,"textColor":"background","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"style":{"typography":{"lineHeight":"0","fontSize":"14px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
+                <!-- wp:navigation {"textColor":"background","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"style":{"typography":{"lineHeight":"0","fontSize":"14px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"15%"} -->
