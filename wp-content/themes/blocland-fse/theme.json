@@ -2,6 +2,18 @@
 	"settings": {
 		"appearanceTools": true,
 		"color": {
+			"duotone": [
+				{
+					"colors": [ "#478ac9", "#f0edff" ],
+					"slug": "default-duotone",
+					"name": "Default Duotone"
+				},
+				{
+					"colors": [ "#654aff", "#f0edff" ],
+					"slug": "secondary-duotone",
+					"name": "Secondary Duotone"
+				}
+			],
 			"gradients": [
 				{
 					"slug": "default-gradient",
@@ -22,12 +34,12 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#654aff",
+					"color": "#25afb4",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#478ac9",
+					"color": "#166669",
 					"name": "Secondary"
 				},
 				{
