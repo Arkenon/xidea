@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-This is a very useful and modern theme from Xidea Themes. Blocland FSE is a block theme developed with Gutenberg Editor. With the full site editing approach, you can easily customize your web site. .
+Blocland FSE is a block theme developed with the Gutenberg Editor. It is the classic template of the Blocland theme series. You can easily customize your website with the full site editing approach of Blocland FSE.
 
 == Changelog ==
 
@@ -34,13 +34,23 @@ GNU General Public License for more details.
 
 
 == Images used in theme screenshot ==
-* Logo:
-Created by Xidea Themes and released under same license as theme.
 
 * Hero Image
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/18
+
+* Featured Section Image
 Created by Xidea Themes and released under same license as theme.
-Used an image in hero image from pxhere.com:
+Used an image in featured section image from pxhere.com:
 License : Creative Commons Zero (CC0)
 Source : https://pxhere.com/tr/photo/1573331
+
+* Call To Action Section Image
+License : Creative Commons Zero (CC0)
+Source : https://stocksnap.io/photo/travel-map-0JXPKD87MQ
+
+* Info Box Section Image
+License : Creative Commons Zero (CC0)
+Source : https://pxhere.com/tr/photo/980004
 
 

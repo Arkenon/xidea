@@ -7,7 +7,7 @@
 }
 
 .has-icon-color > svg{
-    fill: #ffffff;
+    fill: var(--wp--preset--color--tertiary);
 }
 
 .wp-site-blocks > * + * {

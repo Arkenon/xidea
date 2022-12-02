@@ -4,20 +4,15 @@
 		"color": {
 			"duotone": [
 				{
-					"colors": [ "#478ac9", "#f0edff" ],
+					"colors": [ "#464E2E", "#ACB992" ],
 					"slug": "default-duotone",
 					"name": "Default Duotone"
-				},
-				{
-					"colors": [ "#654aff", "#f0edff" ],
-					"slug": "secondary-duotone",
-					"name": "Secondary Duotone"
 				}
 			],
 			"gradients": [
 				{
 					"slug": "default-gradient",
-					"gradient": "linear-gradient(135deg,rgb(87,100,56) 0%,rgb(100,111,87) 100%)",
+					"gradient": "linear-gradient(135deg,var(--wp--preset--color--primary) 0%,var(--wp--preset--color--tertiary) 100%)",
 					"name": "Default Gradient"
 				}
 			],
@@ -34,17 +29,22 @@
 				},
 				{
 					"slug": "primary",
-					"color": "#646109",
+					"color": "#464E2E",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#7e3b10",
+					"color": "#362706",
 					"name": "Secondary"
 				},
 				{
+					"slug": "tertiary",
+					"color": "#ACB992",
+					"name": "Tertiary"
+				},
+				{
 					"slug": "light",
-					"color": "#e9e6dd",
+					"color": "#E9E5D6",
 					"name": "Light"
 				}
 			]
@@ -461,12 +461,17 @@
 		{
 			"area": "header",
 			"name": "header",
-			"title": "Header"
+			"title": "Header Default"
+		},
+		{
+			"area": "header",
+			"name": "header-with-bg-color",
+			"title": "Header With Background Color"
 		},
 		{
 			"area": "footer",
 			"name": "footer",
-			"title": "Footer"
+			"title": "Footer Default"
 		}
 	],
 	"version": 2
