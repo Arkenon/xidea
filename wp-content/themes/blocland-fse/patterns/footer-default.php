@@ -19,7 +19,9 @@
 
             <!-- wp:column {"width":"30%"} -->
             <div class="wp-block-column" style="flex-basis:30%"><!-- wp:heading {"level":6,"textColor":"background"} -->
-                <h6 class="has-background-color has-text-color">Contact Us</h6>
+                <h6 class="has-background-color has-text-color">
+	                <?php echo esc_html_x("Contact Us","Footer text 1","blocland-fse") ?>
+                </h6>
                 <!-- /wp:heading -->
 
                 <!-- wp:paragraph {"textColor":"background"} -->
@@ -33,7 +35,9 @@
 
             <!-- wp:column {"width":"15%"} -->
             <div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":6,"textColor":"background"} -->
-                <h6 class="has-background-color has-text-color">Menu</h6>
+                <h6 class="has-background-color has-text-color">
+	                <?php echo esc_html_x("Menu","Footer text 2","blocland-fse") ?>
+                </h6>
                 <!-- /wp:heading -->
 
                 <!-- wp:navigation {"textColor":"background","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"style":{"typography":{"lineHeight":"0","fontSize":"14px","fontStyle":"normal","fontWeight":"700"}}} /--></div>
@@ -41,7 +45,9 @@
 
             <!-- wp:column {"width":"15%"} -->
             <div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":6,"textColor":"background"} -->
-                <h6 class="has-background-color has-text-color">Social</h6>
+                <h6 class="has-background-color has-text-color">
+	                <?php echo esc_html_x("Social","Footer text 3","blocland-fse") ?>
+                </h6>
                 <!-- /wp:heading -->
 
                 <!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#000000","iconBackgroundColor":"light","iconBackgroundColorValue":"#E9E5D6"} -->
@@ -57,7 +63,7 @@
 
     <!-- wp:group {"align":"wide","style":{"border":{"top":{"color":"var:preset|color|secondary","width":"1px"}}},"layout":{"type":"constrained"}} -->
     <div class="wp-block-group alignwide" id="lower-footer" style="border-top-color:var(--wp--preset--color--secondary);border-top-width:1px"><!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"var:preset|spacing|30","right":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"elements":{"link":{"color":{"text":"var:preset|color|tertiary"}}}},"textColor":"background","className":"copyright","fontSize":"small"} -->
-        <p class="has-text-align-center copyright has-background-color has-text-color has-link-color has-small-font-size" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">             Copyright © 2022 <a rel="noreferrer noopener" href="https://xideathemes.com" target="_blank">Xidea Themes</a></p>
+        <p class="has-text-align-center copyright has-background-color has-text-color has-link-color has-small-font-size" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">Copyright © 2022 <a rel="noreferrer noopener" href="https://xideathemes.com" target="_blank">Xidea Themes</a></p>
         <!-- /wp:paragraph --></div>
     <!-- /wp:group --></footer>
 <!-- /wp:group -->

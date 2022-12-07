@@ -15,7 +15,9 @@
         <div class="wp-block-cover__inner-container">
 
             <!-- wp:heading {"textAlign":"center","level":1,"textColor":"background"} -->
-			<h1 class="has-text-align-center has-background-color has-text-color">Call to Action</h1>
+			<h1 class="has-text-align-center has-background-color has-text-color">
+				<?php echo esc_html_x( ' Call to Action', 'Call to action section title', 'blocland-fse' ); ?>
+            </h1>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center","textColor":"background","fontSize":"medium"} -->
@@ -25,7 +27,11 @@
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons">
                 <!-- wp:button {"backgroundColor":"light","textColor":"foreground","fontSize":"medium"} -->
-				<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-foreground-color has-light-background-color has-text-color has-background wp-element-button">Contact Now</a></div>
+				<div class="wp-block-button has-custom-font-size has-medium-font-size">
+                    <a class="wp-block-button__link has-foreground-color has-light-background-color has-text-color has-background wp-element-button">
+	                    <?php echo esc_html_x( ' Contact Now', 'Call to action section button text', 'blocland-fse' ); ?>
+                    </a>
+                </div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

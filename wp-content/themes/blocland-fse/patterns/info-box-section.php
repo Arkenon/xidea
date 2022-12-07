@@ -25,7 +25,9 @@
 			<!-- /wp:outermost/icon-block -->
 
 			<!-- wp:heading {"textAlign":"left","level":3,"textColor":"foreground","fontFamily":"montserrat"} -->
-			<h3 class="has-text-align-left has-foreground-color has-text-color has-montserrat-font-family">Is Gutenberg Great?</h3>
+			<h3 class="has-text-align-left has-foreground-color has-text-color has-montserrat-font-family">
+				<?php echo esc_html_x("Is Gutenberg Great?","Info box section title","blocland-fse") ?>
+            </h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"left","textColor":"foreground","fontSize":"small"} -->
@@ -40,7 +42,11 @@
 			<div class="wp-block-buttons">
 
                 <!-- wp:button {"textColor":"primary","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
-				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px">See More...</a></div>
+				<div class="wp-block-button is-style-outline">
+                    <a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px">
+						<?php echo esc_html_x("See More...","See more text","blocland-fse") ?>
+                    </a>
+                </div>
 				<!-- /wp:button -->
 
             </div>

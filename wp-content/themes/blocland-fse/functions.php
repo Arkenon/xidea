@@ -33,7 +33,12 @@ if ( ! function_exists( 'blocland_fse_enqueue_styles' ) ) :
 	add_action( 'wp_enqueue_scripts', 'blocland_fse_enqueue_styles' );
 
 endif;
-
+if ( function_exists( 'register_block_style_category' ) ) {
+	register_block_style_category(
+		'blocland-shadows',
+		array( 'label' => __( 'Shadows', 'blocland-fse' ) ),
+	);
+}
 if ( function_exists( 'register_block_style' ) ) {
 	register_block_style(
 		'core/group',
@@ -68,6 +73,7 @@ if ( function_exists( 'register_block_style' ) ) {
 			'name'         => 'blocland-box-shadow',
 			'label'        => __( 'Box Shadow', 'blocland-fse' ),
 			'is_default'   => false,
+			'category'   => 'blocland-shadows',
 			'inline_style' => '.is-style-blocland-box-shadow {box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}',
 		)
 	);

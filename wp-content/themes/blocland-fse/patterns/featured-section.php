@@ -18,7 +18,9 @@
 			<div class="wp-block-group has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)">
 
                 <!-- wp:heading {"textAlign":"center","level":1,"fontSize":"x-large-3"} -->
-				<h1 class="has-text-align-center has-x-large-3-font-size">Future of Web</h1>
+				<h1 class="has-text-align-center has-x-large-3-font-size">
+					<?php echo esc_html_x("Future of Web","Featured section title","blocland-fse") ?>
+                </h1>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","textColor":"foreground"} -->
@@ -28,7 +30,11 @@
 				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 				<div class="wp-block-buttons">
                     <!-- wp:button {"textColor":"background","style":{"border":{"radius":"0px"}},"className":"is-style-fill"} -->
-					<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-background-color has-text-color wp-element-button" style="border-radius:0px">See More...</a></div>
+					<div class="wp-block-button is-style-fill">
+                        <a class="wp-block-button__link has-background-color has-text-color wp-element-button" style="border-radius:0px">
+	                        <?php echo esc_html_x("See More...","See more text","blocland-fse") ?>
+                        </a>
+                    </div>
 					<!-- /wp:button -->
                 </div>
 				<!-- /wp:buttons -->

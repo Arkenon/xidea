@@ -10,7 +10,9 @@
 <div id="icon-cards-section" class="wp-block-group has-light-background-color has-background" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
     <!-- wp:heading {"textAlign":"center","level":1} -->
-	<h1 class="has-text-align-center">We create block themes</h1>
+	<h1 class="has-text-align-center">
+		<?php echo esc_html_x("Read More","Header button text","blocland-fse") ?>
+        We create block themes</h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"foreground","fontSize":"medium"} -->
@@ -32,7 +34,9 @@
 			<!-- /wp:outermost/icon-block -->
 
 			<!-- wp:heading {"textAlign":"center","textColor":"foreground"} -->
-			<h2 class="has-text-align-center has-foreground-color has-text-color">Full</h2>
+			<h2 class="has-text-align-center has-foreground-color has-text-color">
+				<?php echo esc_html_x("Full","Icon cards 1 title","blocland-fse") ?>
+            </h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -41,7 +45,7 @@
 
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons"><!-- wp:button {"textColor":"primary","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
-				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px">more...</a></div>
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px"><?php echo esc_html_x("More...","Card box button text","blocland-fse") ?></a></div>
 				<!-- /wp:button -->
             </div>
 			<!-- /wp:buttons -->
@@ -62,7 +66,9 @@
 			<!-- /wp:outermost/icon-block -->
 
 			<!-- wp:heading {"textAlign":"center","textColor":"foreground"} -->
-			<h2 class="has-text-align-center has-foreground-color has-text-color">Site</h2>
+			<h2 class="has-text-align-center has-foreground-color has-text-color">
+				<?php echo esc_html_x("Site","Icon cards 2 title","blocland-fse") ?>
+            </h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -72,7 +78,7 @@
 			<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 			<div class="wp-block-buttons">
                 <!-- wp:button {"textColor":"primary","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
-				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px">more...</a></div>
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px"><?php echo esc_html_x("More...","Card box button text","blocland-fse") ?></a></div>
 				<!-- /wp:button -->
             </div>
 			<!-- /wp:buttons -->
@@ -93,7 +99,9 @@
 			<!-- /wp:outermost/icon-block -->
 
 			<!-- wp:heading {"textAlign":"center","textColor":"foreground"} -->
-			<h2 class="has-text-align-center has-foreground-color has-text-color">Editing</h2>
+			<h2 class="has-text-align-center has-foreground-color has-text-color">
+				<?php echo esc_html_x("Editing","Icon cards 3 title","blocland-fse") ?>
+            </h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -104,7 +112,7 @@
 			<div class="wp-block-buttons">
                 <!-- wp:button {"textColor":"primary","style":{"border":{"radius":"0px"}},"className":"is-style-outline"} -->
 				<div class="wp-block-button is-style-outline">
-                    <a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px">more...</a>
+                    <a class="wp-block-button__link has-primary-color has-text-color wp-element-button" style="border-radius:0px"><?php echo esc_html_x("More...","Card box button text","blocland-fse") ?></a>
                 </div>
 				<!-- /wp:button -->
             </div>
