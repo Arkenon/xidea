@@ -11,8 +11,8 @@
 
     <!-- wp:heading {"textAlign":"center","level":1} -->
 	<h1 class="has-text-align-center">
-		<?php echo esc_html_x("Read More","Header button text","blocland-fse") ?>
-        We create block themes</h1>
+		<?php echo esc_html_x("We create block themes","Header button text","blocland-fse") ?>
+    </h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"foreground","fontSize":"medium"} -->
