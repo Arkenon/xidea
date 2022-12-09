@@ -47,13 +47,17 @@
                 <h6 class="has-background-color has-text-color">Social</h6>
                 <!-- /wp:heading -->
 
-                <!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#000000","iconBackgroundColor":"primary","iconBackgroundColorValue":"#94d0e1"} -->
-                <ul class="wp-block-social-links has-icon-color has-icon-background-color"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
+                <!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#000000","iconBackgroundColor":"light","iconBackgroundColorValue":"#f8f9fa"} -->
+                <ul class="wp-block-social-links has-icon-color has-icon-background-color">
+                    <!-- wp:social-link {"url":"#","service":"facebook"} /-->
 
                     <!-- wp:social-link {"url":"#","service":"instagram"} /-->
 
-                    <!-- wp:social-link {"url":"#","service":"twitter"} /--></ul>
-                <!-- /wp:social-links --></div>
+                    <!-- wp:social-link {"url":"#","service":"twitter"} /-->
+                </ul>
+                <!-- /wp:social-links -->
+
+            </div>
             <!-- /wp:column --></div>
         <!-- /wp:columns --></div>
     <!-- /wp:group -->
