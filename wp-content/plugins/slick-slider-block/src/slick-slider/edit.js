@@ -45,7 +45,7 @@ export default function Edit(props) {
 						<NumberControl
 							label="Slides to show "
 							value={slidesToShow}
-							onChange={(val) => setAttributes({slidesToShow: val})}
+							onChange={(val) => setAttributes({slidesToShow: Number(val)})}
 						/>
 					</PanelRow>
 					{slidesToShow <= 1 &&
@@ -94,7 +94,7 @@ export default function Edit(props) {
 						<NumberControl
 							label="Slides to scroll "
 							value={slidesToScroll}
-							onChange={(val) => setAttributes({slidesToScroll: val})}
+							onChange={(val) => setAttributes({slidesToScroll: Number(val)})}
 						/>
 					</PanelRow>
 					<PanelRow>
