@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+input:not([type=checkbox]), textarea{
+  width: 100% !important;
+}
 a:hover {
   text-decoration: underline!important;
 }
@@ -63,6 +66,9 @@ a:hover {
   max-width: 720px !important;
 }
 
+.comment-form p:not(.comment-form-cookies-consent) label {
+  display:block;
+}
 /*--------------------------------------------------------------
 # Block Post Content
 --------------------------------------------------------------*/
