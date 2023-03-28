@@ -12,6 +12,12 @@ This is a very useful and modern theme from Xidea Themes. Marenda is a block the
 
 == Changelog ==
 
+= 1.0.7 =
+* Style combinations deleted
+* Color palette changed
+* All patterns revised
+* Screenshot changed
+
 = 1.0.6 =
 * New color variatons added
 * Screenshot changed

@@ -10,7 +10,7 @@
 <footer id="footer-default" class="wp-block-group has-foreground-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:0;padding-left:var(--wp--preset--spacing--30)"><!-- wp:group {"style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"className":"border-top","layout":{"type":"default"}} -->
     <div id="upper-footer" class="wp-block-group border-top" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|30","left":"var:preset|spacing|30"}}}} -->
         <div class="wp-block-columns"><!-- wp:column {"width":"30%","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->
-            <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:30%"><!-- wp:site-title {"level":6,"textAlign":"left","style":{"spacing":{"margin":{"right":"0px","bottom":"0px","left":"0px"}}}} /-->
+            <div class="wp-block-column" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:30%"><!-- wp:site-title {"level":6,"textAlign":"left","style":{"spacing":{"margin":{"right":"0px","bottom":"0px","left":"0px"}}},"textColor":"lightbg"} /-->
 
                 <!-- wp:paragraph {"align":"left","textColor":"background"} -->
                 <p class="has-text-align-left has-background-color has-text-color">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -18,8 +18,7 @@
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"30%"} -->
-            <div class="wp-block-column" style="flex-basis:30%">
-                <!-- wp:heading {"level":6,"textColor":"background"} -->
+            <div class="wp-block-column" style="flex-basis:30%"><!-- wp:heading {"level":6,"textColor":"background"} -->
                 <h6 class="has-background-color has-text-color">Contact Us</h6>
                 <!-- /wp:heading -->
 
@@ -28,13 +27,12 @@
                 <!-- /wp:paragraph -->
 
                 <!-- wp:paragraph {"textColor":"background"} -->
-                <p class="has-background-color has-text-color">Tel: <strong>(111) 360 360 360</strong></p>
+                <p class="has-background-color has-text-color">Tel:&nbsp;<strong>(111) 360 360 360</strong></p>
                 <!-- /wp:paragraph --></div>
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"15%"} -->
-            <div class="wp-block-column" style="flex-basis:15%">
-                <!-- wp:heading {"level":6,"textColor":"background"} -->
+            <div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":6,"textColor":"background"} -->
                 <h6 class="has-background-color has-text-color">Menu</h6>
                 <!-- /wp:heading -->
 
@@ -42,22 +40,17 @@
             <!-- /wp:column -->
 
             <!-- wp:column {"width":"15%"} -->
-            <div class="wp-block-column" style="flex-basis:15%">
-                <!-- wp:heading {"level":6,"textColor":"background"} -->
+            <div class="wp-block-column" style="flex-basis:15%"><!-- wp:heading {"level":6,"textColor":"background"} -->
                 <h6 class="has-background-color has-text-color">Social</h6>
                 <!-- /wp:heading -->
 
                 <!-- wp:social-links {"iconColor":"foreground","iconColorValue":"#000000","iconBackgroundColor":"light","iconBackgroundColorValue":"#f8f9fa"} -->
-                <ul class="wp-block-social-links has-icon-color has-icon-background-color">
-                    <!-- wp:social-link {"url":"#","service":"facebook"} /-->
+                <ul class="wp-block-social-links has-icon-color has-icon-background-color"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
 
                     <!-- wp:social-link {"url":"#","service":"instagram"} /-->
 
-                    <!-- wp:social-link {"url":"#","service":"twitter"} /-->
-                </ul>
-                <!-- /wp:social-links -->
-
-            </div>
+                    <!-- wp:social-link {"url":"#","service":"twitter"} /--></ul>
+                <!-- /wp:social-links --></div>
             <!-- /wp:column --></div>
         <!-- /wp:columns --></div>
     <!-- /wp:group -->
