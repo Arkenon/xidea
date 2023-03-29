@@ -12,7 +12,7 @@
         <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"layout":{"type":"default"}} -->
             <div class="wp-block-column is-vertically-aligned-center" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","right":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"border":{"radius":{"topRight":"50px","bottomRight":"50px"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
                 <div class="wp-block-group" style="border-top-right-radius:50px;border-bottom-right-radius:50px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":2576,"width":120,"height":120,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team-1.jpg" alt="" class="wp-image-2576" width="120" height="120"/></figure>
+                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/team-1.jpg'); ?>" alt="" class="wp-image-2576" width="120" height="120"/></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
@@ -28,7 +28,7 @@
             <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"layout":{"type":"default"}} -->
             <div class="wp-block-column is-vertically-aligned-center" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","right":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"border":{"radius":{"topRight":"50px","bottomRight":"50px"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
                 <div class="wp-block-group" style="border-top-right-radius:50px;border-bottom-right-radius:50px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":2578,"width":120,"height":120,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team-2.jpg" alt="" class="wp-image-2578" width="120" height="120"/></figure>
+                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/team-2.jpg'); ?>" alt="" class="wp-image-2578" width="120" height="120"/></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
@@ -44,7 +44,7 @@
             <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"layout":{"type":"default"}} -->
             <div class="wp-block-column is-vertically-aligned-center" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","right":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"border":{"radius":{"topRight":"50px","bottomRight":"50px"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
                 <div class="wp-block-group" style="border-top-right-radius:50px;border-bottom-right-radius:50px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":2579,"width":120,"height":120,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team-3.jpg" alt="" class="wp-image-2579" width="120" height="120"/></figure>
+                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/team-3.jpg'); ?>" alt="" class="wp-image-2579" width="120" height="120"/></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->
@@ -60,7 +60,7 @@
             <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"layout":{"type":"default"}} -->
             <div class="wp-block-column is-vertically-aligned-center" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","right":"var:preset|spacing|30","left":"var:preset|spacing|30"}},"border":{"radius":{"topRight":"50px","bottomRight":"50px"}}},"layout":{"type":"constrained","justifyContent":"center"}} -->
                 <div class="wp-block-group" style="border-top-right-radius:50px;border-bottom-right-radius:50px;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--30)"><!-- wp:image {"align":"center","id":2577,"width":120,"height":120,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/team-4.jpg" alt="" class="wp-image-2577" width="120" height="120"/></figure>
+                    <figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/team-4.jpg'); ?>" alt="" class="wp-image-2577" width="120" height="120"/></figure>
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"textAlign":"center","level":5,"textColor":"background"} -->

@@ -10,7 +10,7 @@
 <section id="featured-services-section" class="wp-block-group has-lightbg-background-color has-background" style="margin-top:0px;padding-top:var(--wp--preset--spacing--40);padding-right:0;padding-bottom:var(--wp--preset--spacing--40);padding-left:0"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"top":"0","right":"var:preset|spacing|30","bottom":"0","left":"var:preset|spacing|30"}}}} -->
     <div class="wp-block-columns alignwide" style="padding-top:0;padding-right:var(--wp--preset--spacing--30);padding-bottom:0;padding-left:var(--wp--preset--spacing--30)"><!-- wp:column {"width":"60%"} -->
         <div class="wp-block-column" style="flex-basis:60%"><!-- wp:image {"align":"center","id":2585,"width":504,"height":759,"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":{"topRight":"50px","bottomRight":"50px"}}}} -->
-            <figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/featured-1.jpg" alt="" class="wp-image-2585" style="border-top-right-radius:50px;border-bottom-right-radius:50px" width="504" height="759"/></figure>
+            <figure class="wp-block-image aligncenter size-large is-resized has-custom-border"><img src="<?php echo esc_url(get_template_directory_uri().'/assets/img/featured-1.jpg'); ?>" alt="" class="wp-image-2585" style="border-top-right-radius:50px;border-bottom-right-radius:50px" width="504" height="759"/></figure>
             <!-- /wp:image --></div>
         <!-- /wp:column -->
 
