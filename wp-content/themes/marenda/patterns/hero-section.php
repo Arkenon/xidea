@@ -28,7 +28,7 @@
 
                     <!-- wp:column {"verticalAlignment":"center","width":"66.66%","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"},"blockGap":"0"}}} -->
                     <div class="wp-block-column is-vertically-aligned-center" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;flex-basis:66.66%"><!-- wp:image {"align":"right","id":2530,"sizeSlug":"large","linkDestination":"none"} -->
-                        <figure class="wp-block-image alignright size-large"><img src="http://localhost/xidea/wp-content/themes/marenda/assets/img/heroimage_1.png" alt="" class="wp-image-2530"/></figure>
+                        <figure class="wp-block-image alignright size-large"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/heroimage_1.png" alt="" class="wp-image-2530"/></figure>
                         <!-- /wp:image --></div>
                     <!-- /wp:column --></div>
                 <!-- /wp:columns --></div>

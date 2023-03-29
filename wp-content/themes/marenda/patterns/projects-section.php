@@ -83,31 +83,31 @@
     <div class="wp-block-group alignfull" style="padding-top:0;padding-right:10px;padding-bottom:0;padding-left:10px"><!-- wp:columns -->
         <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}},"layout":{"type":"default"}} -->
             <div class="wp-block-column is-vertically-aligned-center" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:image {"id":2588,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#8c00b7","#fcff41"]}}} -->
-                <figure class="wp-block-image size-full"><img src="http://localhost/xidea/wp-content/themes/marenda/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
+                <figure class="wp-block-image size-full"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
                 <!-- /wp:image --></div>
             <!-- /wp:column -->
 
             <!-- wp:column {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}}} -->
             <div class="wp-block-column" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:image {"id":2588,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#a60072","#67ff66"]}}} -->
-                <figure class="wp-block-image size-full"><img src="http://localhost/xidea/wp-content/themes/marenda/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
+                <figure class="wp-block-image size-full"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
                 <!-- /wp:image --></div>
             <!-- /wp:column -->
 
             <!-- wp:column {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}}} -->
             <div class="wp-block-column" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:image {"id":2588,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#000000","#94d0e1"]}}} -->
-                <figure class="wp-block-image size-full"><img src="http://localhost/xidea/wp-content/themes/marenda/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
+                <figure class="wp-block-image size-full"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
                 <!-- /wp:image --></div>
             <!-- /wp:column -->
 
             <!-- wp:column {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}}} -->
             <div class="wp-block-column" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:image {"id":2588,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#1900d8","#ffa96b"]}}} -->
-                <figure class="wp-block-image size-full"><img src="http://localhost/xidea/wp-content/themes/marenda/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
+                <figure class="wp-block-image size-full"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
                 <!-- /wp:image --></div>
             <!-- /wp:column -->
 
             <!-- wp:column {"style":{"spacing":{"padding":{"top":"5px","right":"5px","bottom":"5px","left":"5px"}}}} -->
             <div class="wp-block-column" style="padding-top:5px;padding-right:5px;padding-bottom:5px;padding-left:5px"><!-- wp:image {"id":2588,"sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":["#f78da7","#f8f9fa"]}}} -->
-                <figure class="wp-block-image size-full"><img src="http://localhost/xidea/wp-content/themes/marenda/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
+                <figure class="wp-block-image size-full"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/product.jpg" alt="" class="wp-image-2588"/></figure>
                 <!-- /wp:image --></div>
             <!-- /wp:column --></div>
         <!-- /wp:columns --></div>

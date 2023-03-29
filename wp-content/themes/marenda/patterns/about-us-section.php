@@ -24,7 +24,7 @@
 
         <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}},"layout":{"type":"default"}} -->
         <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40)"><!-- wp:image {"id":2592,"sizeSlug":"large","linkDestination":"none","style":{"color":{"duotone":["#000000","#ffffff"]}}} -->
-            <figure class="wp-block-image size-large"><img src="http://localhost/xidea/wp-content/themes/marenda/assets/img/about-us.jpg" alt="" class="wp-image-2592"/></figure>
+            <figure class="wp-block-image size-large"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/about-us.jpg" alt="" class="wp-image-2592"/></figure>
             <!-- /wp:image --></div>
         <!-- /wp:group -->
 
