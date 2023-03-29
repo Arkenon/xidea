@@ -25,3 +25,22 @@
         display: none!important;
     }
 }
+
+.back-to-top {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--background);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border: 2px solid var(--wp--preset--color--background);
+    border-radius: 45px;
+    text-align: center;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    right: 15px;
+    bottom: 15px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    text-decoration: none;
+}

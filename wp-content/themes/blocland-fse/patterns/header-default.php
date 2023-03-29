@@ -14,11 +14,11 @@
         <!-- wp:navigation {"layout":{"type":"flex","justifyContent":"center"},"style":{"typography":{"fontStyle":"normal","fontWeight":"700"},"spacing":{"blockGap":"var:preset|spacing|40"}},"fontSize":"medium"} /-->
 
         <!-- wp:social-links {"iconColor":"secondary","iconColorValue":"#362706","iconBackgroundColor":"light","iconBackgroundColorValue":"#E9E5D6","size":"has-normal-icon-size","className":"blocland-hide-small-devices","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-        <ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color blocland-hide-small-devices"><!-- wp:social-link {"url":"#","service":"facebook"} /-->
+        <ul class="wp-block-social-links has-normal-icon-size has-icon-color has-icon-background-color blocland-hide-small-devices"><!-- wp:social-link {"url":"javascript:void(0)","service":"facebook"} /-->
 
-            <!-- wp:social-link {"url":"#","service":"instagram"} /-->
+            <!-- wp:social-link {"url":"javascript:void(0)","service":"instagram"} /-->
 
-            <!-- wp:social-link {"url":"#","service":"twitter"} /--></ul>
+            <!-- wp:social-link {"url":"javascript:void(0)","service":"twitter"} /--></ul>
         <!-- /wp:social-links --></div>
     <!-- /wp:group --></header>
 <!-- /wp:group -->

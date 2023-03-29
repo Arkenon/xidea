@@ -12,6 +12,10 @@ Blocland FSE is a block theme developed with the Gutenberg Editor. It is the cla
 
 == Changelog ==
 
+= 1.0.7 =
+* Back to top button added
+* White spaces cleaned at patterns
+
 = 1.0.6 =
 * Header menu ref cleaned
 

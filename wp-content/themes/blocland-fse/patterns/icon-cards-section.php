@@ -34,9 +34,7 @@
 			<!-- /wp:outermost/icon-block -->
 
 			<!-- wp:heading {"textAlign":"center","textColor":"foreground"} -->
-			<h2 class="has-text-align-center has-foreground-color has-text-color">
-				<?php echo esc_html_x("Full","Icon cards 1 title","blocland-fse") ?>
-            </h2>
+			<h2 class="has-text-align-center has-foreground-color has-text-color"><?php echo esc_html_x("Full","Icon cards 1 title","blocland-fse") ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -66,9 +64,7 @@
 			<!-- /wp:outermost/icon-block -->
 
 			<!-- wp:heading {"textAlign":"center","textColor":"foreground"} -->
-			<h2 class="has-text-align-center has-foreground-color has-text-color">
-				<?php echo esc_html_x("Site","Icon cards 2 title","blocland-fse") ?>
-            </h2>
+			<h2 class="has-text-align-center has-foreground-color has-text-color"><?php echo esc_html_x("Site","Icon cards 2 title","blocland-fse") ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->
@@ -99,9 +95,7 @@
 			<!-- /wp:outermost/icon-block -->
 
 			<!-- wp:heading {"textAlign":"center","textColor":"foreground"} -->
-			<h2 class="has-text-align-center has-foreground-color has-text-color">
-				<?php echo esc_html_x("Editing","Icon cards 3 title","blocland-fse") ?>
-            </h2>
+			<h2 class="has-text-align-center has-foreground-color has-text-color"><?php echo esc_html_x("Editing","Icon cards 3 title","blocland-fse") ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"center"} -->

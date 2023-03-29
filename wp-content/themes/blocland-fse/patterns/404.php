@@ -17,21 +17,15 @@
 		<!-- /wp:heading -->
 
 		<!-- wp:heading {"textAlign":"center","textColor":"primary"} -->
-		<h2 class="has-text-align-center has-primary-color has-text-color">
-			<?php echo esc_html_x( 'Oops! Page Not Found!', 'Error code for 404 page.', 'blocland-fse' ); ?>
-		</h2>
+		<h2 class="has-text-align-center has-primary-color has-text-color"><?php echo esc_html_x( 'Oops! Page Not Found!', 'Error code for 404 page.', 'blocland-fse' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center">
-			<?php echo esc_html_x( 'This might be because you have typed the web address incorrectly.', 'Error code for 404 page.', 'blocland-fse' ); ?>
-		</p>
+		<p class="has-text-align-center"><?php echo esc_html_x( 'This might be because you have typed the web address incorrectly.', 'Error code for 404 page.', 'blocland-fse' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center">
-			<?php echo esc_html_x( 'We’re sorry but we can’t seem to find the page you requested.', 'Error code for 404 page.', 'blocland-fse' ); ?>
-		</p>
+		<p class="has-text-align-center"><?php echo esc_html_x( 'We’re sorry but we can’t seem to find the page you requested.', 'Error code for 404 page.', 'blocland-fse' ); ?></p>
 		<!-- /wp:paragraph -->
 
 	</div>

@@ -40,9 +40,7 @@
 
                 <!-- wp:button {"style":{"border":{"radius":"0px"}},"fontSize":"medium"} -->
                 <div class="wp-block-button has-custom-font-size has-medium-font-size">
-                    <a class="wp-block-button__link wp-element-button" style="border-radius:0px">
-		                <?php echo esc_html_x("Read More","Header button text","blocland-fse") ?>
-                    </a>
+                    <a class="wp-block-button__link wp-element-button" style="border-radius:0px"><?php echo esc_html_x("Read More","Header button text","blocland-fse") ?></a>
                 </div>
                 <!-- /wp:button -->
 

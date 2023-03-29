@@ -19,11 +19,14 @@ define( 'BLOCLAND_FSE_URI', get_template_directory_uri() );
 
 
 /*--------------------------------------------------------------
-# Enqueue Styles
+# Enqueue Styles and Scripts
 --------------------------------------------------------------*/
 if ( ! function_exists( 'blocland_fse_enqueue_styles' ) ) :
 
 	function blocland_fse_enqueue_styles() {
+
+		wp_register_script( 'blocland-fse-js', BLOCLAND_FSE_URI . '/assets/js/blocland-fse.js', [ 'jquery' ], BLOCLAND_FSE_VERSION, true );
+		wp_enqueue_script( 'blocland-fse-js' );
 
 		wp_register_style( 'blocland-fse-custom', BLOCLAND_FSE_URI . '/assets/css/blocland_fse.css', [], BLOCLAND_FSE_VERSION);
 		wp_enqueue_style( 'blocland-fse-custom' );

@@ -10,9 +10,7 @@
 <div id="faq-section" class="wp-block-group has-background" style="background-color:#e5e5e5;padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 
     <!-- wp:heading {"textAlign":"center","level":1} -->
-	<h1 class="has-text-align-center">
-        <?php echo esc_html_x("Frequently Asked Questions","Faq section title","blocland-fse") ?>
-    </h1>
+	<h1 class="has-text-align-center"><?php echo esc_html_x("Frequently Asked Questions","Faq section title","blocland-fse") ?></h1>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","textColor":"foreground","fontSize":"medium"} -->
