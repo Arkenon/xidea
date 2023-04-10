@@ -17,12 +17,14 @@ export default function save(props) {
 		`"autoplaySpeed":${attr.autoplaySpeed},` +
 		`"fade":${attr.fade},` +
 		`"speed":${attr.speed},` +
-		`"centerMode":${attr.infinite},`+
-		`"responsive": [ {"breakpoint": 1920, "settings": {"slidesToShow": ${attr.slidesToShow}, "slidesToScroll": ${attr.slidesToScroll}}}, {"breakpoint": 768, "settings": {"slidesToShow": 2, "slidesToScroll": 1}}, {"breakpoint": 600, "settings": {"slidesToShow": 1, "slidesToScroll": 1,"arrows":false,"dots":true}}]`+
+		`"centerMode":${attr.infinite},` +
+		`"responsive": [ {"breakpoint": 1920, "settings": {"slidesToShow": ${attr.slidesToShow}, "slidesToScroll": ${attr.slidesToScroll}}}, {"breakpoint": 768, "settings": {"slidesToShow": 2, "slidesToScroll": 1}}, {"breakpoint": 600, "settings": {"slidesToShow": 1, "slidesToScroll": 1,"arrows":false,"dots":true}}]` +
 		`}`;
 
 
-	return <section class='gb-for-slick-slider'
-					data-slick={options}
-					{...innerBlocksProps} />
+	return <section
+		className='gb-for-slick-slider'
+		data-slick={options}
+		{...innerBlocksProps}
+	/>
 }

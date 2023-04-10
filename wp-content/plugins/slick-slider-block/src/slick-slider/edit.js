@@ -9,16 +9,6 @@ import './editor.scss';
 
 export default function Edit(props) {
 
-	const blockProps = useBlockProps();
-
-	const innerBlocksProps = useInnerBlocksProps(
-		blockProps,
-		{
-			allowedBlocks: ['gb-for-slick-slider/slick-slider-item'],
-			orientation: "horizontal"
-		}
-	);
-
 	const {
 		attributes: {
 			slidesToShow,
@@ -35,10 +25,19 @@ export default function Edit(props) {
 		}, setAttributes
 	} = props;
 
+	const blockProps = useBlockProps(props);
 
+	const innerBlocksProps = useInnerBlocksProps(
+		blockProps,
+		{
+			allowedBlocks: ['gb-for-slick-slider/slick-slider-item'],
+			orientation: "horizontal"
+		}
+	);
 	return (
 		<>
-			<section className='gb-for-slick-slider' {...innerBlocksProps} />
+			<section {...innerBlocksProps} />
+
 			<InspectorControls>
 				<PanelBody>
 					<PanelRow>
@@ -164,7 +163,6 @@ export default function Edit(props) {
 				</PanelBody>
 			</InspectorControls>
 		</>
-	)
-		;
+	);
 }
 

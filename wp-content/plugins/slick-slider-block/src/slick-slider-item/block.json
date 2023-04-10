@@ -10,6 +10,7 @@
   "supports": {
 	"html": false
   },
+  "usesContext": ["gb-for-slick-slider/context"],
   "parent": [ "gb-for-slick-slider/slick-slider" ],
   "textdomain": "gb-for-slick-slider",
   "editorScript": "file:./index.js",

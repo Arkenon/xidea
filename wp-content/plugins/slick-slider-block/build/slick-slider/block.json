@@ -10,6 +10,9 @@
   "supports": {
     "html": false
   },
+  "providesContext": {
+    "gb-for-slick-slider/context": "slidesToShow"
+  },
   "attributes": {
     "dots": {
       "type": "boolean",

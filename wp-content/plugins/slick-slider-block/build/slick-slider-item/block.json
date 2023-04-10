@@ -10,6 +10,9 @@
   "supports": {
     "html": false
   },
+  "usesContext": [
+    "gb-for-slick-slider/context"
+  ],
   "parent": [
     "gb-for-slick-slider/slick-slider"
   ],
