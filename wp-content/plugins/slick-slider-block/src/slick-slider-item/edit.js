@@ -1,17 +1,28 @@
-import {useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
+import {useBlockProps, useInnerBlocksProps, useEffect} from '@wordpress/block-editor';
 import {getBlockTypes} from '@wordpress/blocks';
-
 import './editor.scss';
 
-export default function Edit({context}) {
+export default function Edit(props) {
 
-	const slidesToShow = context["gb-for-slick-slider/context"];
+	const { attributes, setAttributes } = props;
+	const { slideMargin } = attributes;
+
+	const {context} = props;
+
+	const _slideMargin = context["gb-for-slick-slider/slideMargin"];
+	const _slidesToShow = context["gb-for-slick-slider/slidesToShow"];
 
 	const blockStyles = {
-		minWidth: (100 / slidesToShow) +'%'
+		minWidth: (100 / _slidesToShow) + '%',
+		marginRight: _slideMargin + 'px',
+		marginLeft: _slideMargin + 'px',
 	}
 
-	const blockProps = useBlockProps({style: blockStyles});
+	setAttributes({slideMargin: _slideMargin})
+
+	const blockProps = useBlockProps({
+		style: blockStyles
+	});
 
 	const _blockTypes = getBlockTypes();
 

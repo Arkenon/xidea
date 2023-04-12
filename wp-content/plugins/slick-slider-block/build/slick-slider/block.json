@@ -11,7 +11,8 @@
     "html": false
   },
   "providesContext": {
-    "gb-for-slick-slider/context": "slidesToShow"
+    "gb-for-slick-slider/slidesToShow": "slidesToShow",
+    "gb-for-slick-slider/slideMargin": "slideMargin"
   },
   "attributes": {
     "dots": {
@@ -57,6 +58,10 @@
     "slidesToScroll": {
       "type": "number",
       "default": 1
+    },
+    "slideMargin": {
+      "type": "number",
+      "default": 0
     }
   },
   "textdomain": "gb-for-slick-slider",

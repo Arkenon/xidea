@@ -27,6 +27,7 @@ function Edit(props) {
   const {
     attributes: {
       slidesToShow,
+      slideMargin,
       slidesToScroll,
       speed,
       dots,
@@ -46,6 +47,12 @@ function Edit(props) {
     orientation: "horizontal"
   });
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", innerBlocksProps), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalNumberControl, {
+    label: "Gap between slides ",
+    value: slideMargin,
+    onChange: val => setAttributes({
+      slideMargin: Number(val)
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalNumberControl, {
     label: "Slides to show ",
     value: slidesToShow,
     onChange: val => setAttributes({
@@ -306,7 +313,7 @@ function _extends() {
   \*************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gb-for-slick-slider/slick-slider","version":"1.0.0","title":"Slick Slider","category":"widgets","icon":"admin-page","description":"Slick Slider Block wrapper.","supports":{"html":false},"providesContext":{"gb-for-slick-slider/context":"slidesToShow"},"attributes":{"dots":{"type":"boolean","default":false},"arrows":{"type":"boolean","default":true},"infinite":{"type":"boolean","default":false},"centerMode":{"type":"boolean","default":false},"adaptiveHeight":{"type":"boolean","default":false},"autoplay":{"type":"boolean","default":false},"autoplaySpeed":{"type":"number","default":1500},"fade":{"type":"boolean","default":false},"slidesToShow":{"type":"number","default":2},"speed":{"type":"number","default":500},"slidesToScroll":{"type":"number","default":1}},"textdomain":"gb-for-slick-slider","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"gb-for-slick-slider/slick-slider","version":"1.0.0","title":"Slick Slider","category":"widgets","icon":"admin-page","description":"Slick Slider Block wrapper.","supports":{"html":false},"providesContext":{"gb-for-slick-slider/slidesToShow":"slidesToShow","gb-for-slick-slider/slideMargin":"slideMargin"},"attributes":{"dots":{"type":"boolean","default":false},"arrows":{"type":"boolean","default":true},"infinite":{"type":"boolean","default":false},"centerMode":{"type":"boolean","default":false},"adaptiveHeight":{"type":"boolean","default":false},"autoplay":{"type":"boolean","default":false},"autoplaySpeed":{"type":"number","default":1500},"fade":{"type":"boolean","default":false},"slidesToShow":{"type":"number","default":2},"speed":{"type":"number","default":500},"slidesToScroll":{"type":"number","default":1},"slideMargin":{"type":"number","default":0}},"textdomain":"gb-for-slick-slider","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

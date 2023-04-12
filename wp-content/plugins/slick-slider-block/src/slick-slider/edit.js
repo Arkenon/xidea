@@ -12,6 +12,7 @@ export default function Edit(props) {
 	const {
 		attributes: {
 			slidesToShow,
+			slideMargin,
 			slidesToScroll,
 			speed,
 			dots,
@@ -40,6 +41,13 @@ export default function Edit(props) {
 
 			<InspectorControls>
 				<PanelBody>
+					<PanelRow>
+						<NumberControl
+							label="Gap between slides "
+							value={slideMargin}
+							onChange={(val) => setAttributes({slideMargin: Number(val)})}
+						/>
+					</PanelRow>
 					<PanelRow>
 						<NumberControl
 							label="Slides to show "
