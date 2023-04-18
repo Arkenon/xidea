@@ -8,19 +8,21 @@
   "icon": "welcome-add-page",
   "description": "Slick Slider Block item. This is an inner block. Add core blocks in it.",
   "supports": {
-	"html": false
+    "html": false
   },
   "usesContext": [
-	"gb-for-slick-slider/slidesToShow",
-	"gb-for-slick-slider/slideMargin"
+    "gb-for-slick-slider/slidesToShow",
+    "gb-for-slick-slider/slideMargin"
   ],
   "attributes": {
-	"slideMargin": {
-	  "type": "number",
-	  "default": 0
-	}
+    "slideMargin": {
+      "type": "number",
+      "default": 0
+    }
   },
-  "parent": [ "gb-for-slick-slider/slick-slider" ],
+  "parent": [
+    "gb-for-slick-slider/slick-slider"
+  ],
   "textdomain": "gb-for-slick-slider",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
