@@ -14,7 +14,7 @@ export default function Edit(props) {
 			slidesToShow,
 			slideMargin,
 			slidesToScroll,
-			speed,
+			slideSpeed,
 			dots,
 			arrows,
 			infinite,
@@ -107,8 +107,8 @@ export default function Edit(props) {
 					<PanelRow>
 						<NumberControl
 							label="Slide speed"
-							value={speed}
-							onChange={(val) => setAttributes({speed: val})}
+							value={slideSpeed}
+							onChange={(val) => setAttributes({slideSpeed: Number(val)})}
 						/>
 					</PanelRow>
 					<PanelRow>
@@ -152,7 +152,7 @@ export default function Edit(props) {
 							<NumberControl
 								label="Autoplay speed "
 								value={autoplaySpeed}
-								onChange={(val) => setAttributes({autoplaySpeed: val})}
+								onChange={(val) => setAttributes({autoplaySpeed: Number(val)})}
 							/>
 						</PanelRow>
 					}

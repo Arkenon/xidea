@@ -51,9 +51,9 @@
 	  "type": "number",
 	  "default": 2
 	},
-	"speed": {
+	"slideSpeed": {
 	  "type": "number",
-	  "default": 500
+	  "default": 1000
 	},
 	"slidesToScroll": {
 	  "type": "number",
