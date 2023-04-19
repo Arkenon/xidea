@@ -3,7 +3,8 @@ import {useBlockProps, useInnerBlocksProps} from '@wordpress/block-editor';
 
 export default function save(props) {
 
-	const innerBlocksProps = useInnerBlocksProps.save(props);
+	const blockProps = useBlockProps.save(props);
+	const innerBlocksProps = useInnerBlocksProps.save(blockProps);
 
 	const attr = props.attributes;
 
