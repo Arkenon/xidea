@@ -4,7 +4,7 @@ Tags:              block, slider, slider block, slick slider, carousel, carousel
 Requires at least: 5.9
 Tested up to:      6.2
 Requires PHP:      7.0
-Stable tag:        1.0.2
+Stable tag:        1.0.3
 Donate link: https://xideathemes.com
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -26,6 +26,9 @@ You can convert your blocks to a slider with Gutenberg Block for Slick Slider Pl
 3. Search for the block within the Block Editor (Gutenberg) and begin using.
 
 == Changelog ==
+
+= 1.0.3 =
+* Error fixed: When calling init twice
 
 = 1.0.2 =
 * Error fixed: Block validation error
