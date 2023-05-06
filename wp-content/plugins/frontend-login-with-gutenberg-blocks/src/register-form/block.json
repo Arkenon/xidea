@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "vizyon-sigorta-forms/register-form",
+  "version": "0.1.0",
+  "title": "Kayıt Formu",
+  "category": "theme",
+  "icon": "format-aside",
+  "description": "Kayıt Formunu Gösterir",
+  "supports": {
+	"html": false
+  },
+  "textdomain": "register-form",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

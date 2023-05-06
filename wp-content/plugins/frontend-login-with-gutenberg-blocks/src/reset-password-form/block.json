@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "vizyon-sigorta-forms/reset-password-form",
+  "version": "0.1.0",
+  "title": "Şifremi Unuttum Formu",
+  "category": "theme",
+  "icon": "format-aside",
+  "description": "Şifremi Unuttum Formunu Gösterir",
+  "supports": {
+	"html": false
+  },
+  "textdomain": "reset-password-form",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
