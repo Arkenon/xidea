@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name:       Frontend Login With Gutenberg Blocks
+ * Plugin URI:        https://xideathemes.com/frontend-login-with-gutenberg-blocks
  * Description:       Do login, register and lost password operations from frontend.
  * Requires at least: 5.9
  * Requires PHP:      7.0
@@ -8,10 +9,73 @@
  * Author:            Xidea Themes
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       frontend-login-with-gutenberg-blocks
- * Domain Path: /languages
- * @package           Frontend Login With Gutenberg Blocks
+ * Text Domain:       flwgb
+ * Domain Path:       /languages
+ * @package           Frontend_Login_With_Gutenberg_Blocks
  */
+
+// Exit if accessed directly.
+defined('ABSPATH') or die;
+
+// Get plugin data
+$plugin_data = get_file_data(
+	__FILE__,
+	array(
+		'version' => 'Version',
+		'plugin_name' => 'Text Domain'
+	)
+);
+
+
+//Constants
+define( 'FLWGB_VERSION', $plugin_data['version'] );
+define( 'FLWGB_PLUGIN_NAME', $plugin_data['text_domain'] );
+
+//Include classes and functions
+require plugin_dir_path( __FILE__ ) . 'inc/Options.php';
+require plugin_dir_path( __FILE__ ) . 'inc/simple_login.php';
+
+/**
+ * The code that runs during plugin activation.
+ * This action is documented in includes/class-plugin-name-activator.php
+ */
+function activate_flwgb() {
+	require_once plugin_dir_path( __FILE__ ) . 'inc/Activator.php';
+	\FLWGB\Activator::activate();
+}
+
+/**
+ * The code that runs during plugin deactivation.
+ * This action is documented in includes/class-plugin-name-deactivator.php
+ */
+function deactivate_flwgb() {
+	require_once plugin_dir_path( __FILE__ ) . 'inc/Deactivator.php';
+	\FLWGB\Deactivator::deactivate();
+}
+
+register_activation_hook( __FILE__, 'activate_flwgb' );
+register_deactivation_hook( __FILE__, 'deactivate_flwgb' );
+
+/**
+ * The core plugin class that is used to define internationalization,
+ * admin-specific hooks, and public-facing site hooks.
+ */
+require plugin_dir_path( __FILE__ ) . 'inc/Flwgb.php';
+
+/**
+ * Begins execution of the plugin.
+ *
+ * Since everything within the plugin is registered via hooks,
+ * then kicking off the plugin from this point in the file does
+ * not affect the page life cycle.
+ *
+ * @since    1.0.0
+ */
+$plugin = new \FLWGB\Flwgb();
+$plugin->run();
+
+
+
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
@@ -20,17 +84,6 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-
-// Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-
-require( "inc/Options.php" );
-require( "inc/simple_login.php" );
-
-
 function frontend_login_with_gutenberg_blocks_init() {
 	register_block_type( __DIR__ . '/build/login-form',
 		[

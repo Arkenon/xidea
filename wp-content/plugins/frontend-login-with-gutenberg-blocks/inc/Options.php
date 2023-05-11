@@ -5,16 +5,19 @@ namespace FLWGB;
 class Options {
 // Add the options page to the admin menu
 
-	public function __construct() {
+	public function load_flwgb_options() {
+
+		// Register the options menu page
 		add_action( 'admin_menu', [ $this, 'flwgb_options_page' ] );
 
-
-// Register the options with their default values
+		// Register the options with their default values
 		add_action( 'admin_init', [ $this, 'flwgb_register_settings' ] );
 
 	}
 
 	public function flwgb_options_page() {
+
+		// Add the options menu page
 		add_menu_page(
 				'Frontend Login with Gutenberg Blocks',
 				'Frontend Login',
@@ -32,28 +35,11 @@ class Options {
 
 // Define the options page markup
 	public function flwgb_settings_page_html() {
-		?>
-		<div class="wrap">
-			<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
-			<form method="post" action="options.php">
-				<?php settings_fields( 'flwgb-settings-group' ); ?>
-				<?php do_settings_sections( 'flwgb-settings-group' ); ?>
-				<table class="form-table">
-					<tr valign="top">
-						<th scope="row"><?php esc_html_x( 'Redirect After Logout', 'flwgb', 'frontend-login-with-gutenberg-blocks' ); ?></th>
-						<td><input type="text" name="flwgb_redirect_after_logout"
-								   value="<?php echo esc_attr( get_option( 'flwgb_redirect_after_logout' ) ); ?>"/></td>
-					</tr>
-					<tr valign="top">
-						<th scope="row"><?php esc_html_x( 'Redirect After Login', 'flwgb', 'frontend-login-with-gutenberg-blocks' ); ?></th>
-						<td><input type="text" name="flwgb_redirect_after_login"
-								   value="<?php echo esc_attr( get_option( 'flwgb_redirect_after_login' ) ); ?>"/></td>
-					</tr>
-				</table>
-				<?php submit_button(); ?>
-			</form>
-		</div>
-		<?php
+
+		require_once plugin_dir_path( __FILE__ ) . '../admin/Backend.php';
+		$backend = new \FLWGB\Backend();
+
+		$backend->get_options_page();
 	}
 
 }
