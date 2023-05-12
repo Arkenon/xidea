@@ -41,6 +41,7 @@ class Flwgb {
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->set_options();
+		$this->set_block_types();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 
@@ -68,52 +69,45 @@ class Flwgb {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/Loader.php';
+		using('inc/Loader.php');
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/I18n.php';
+		using('inc/I18n.php');
 
 		/**
 		 * The class responsible for registering block types
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/Blocks.php';
-
-		/**
-		 * The class provides helper functions.
-		 * side of the site.
-		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/Helpers.php';
+		using('inc/Blocks.php');
 
 		/**
 		 * The class responsible for admin options.
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/Options.php';
+		using('inc/Options.php');
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/Backend.php';
+		using('admin/Backend.php');
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/Frontend.php';
+		using('public/Frontend.php');
 
 		$this->loader = new \FLWGB\Loader();
 
 	}
 
 	/**
-	 * Define the locale for this plugin for internationalization.
+	 * Get admin dashboard options page
 	 *
-	 * Uses the Plugin_Name_i18n class in order to set the domain and to register the hook
-	 * with WordPress.
+	 * Creates a menu item in admin dashboard and prints an options page
 	 *
 	 * @since    1.0.0
 	 * @access   private
@@ -123,6 +117,22 @@ class Flwgb {
 		$plugin_options = new \FLWGB\Options();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_options' );
+
+	}
+
+	/**
+	 * Get block types
+	 *
+	 * Block types registered at class \FLWGB\Blocks
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_block_types() {
+
+		$plugin_options = new \FLWGB\Blocks();
+
+		$this->loader->add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_blocks' );
 
 	}
 
@@ -184,13 +194,4 @@ class Flwgb {
 		$this->loader->run();
 	}
 
-	/**
-	 * The reference to the class that orchestrates the hooks with the plugin.
-	 *
-	 * @return    \FLWGB\Loader    Orchestrates the hooks of the plugin.
-	 * @since     1.0.0
-	 */
-	public function get_loader() {
-		return $this->loader;
-	}
 }

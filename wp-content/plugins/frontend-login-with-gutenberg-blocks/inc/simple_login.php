@@ -12,41 +12,6 @@ define( "ERROR_MESSAGE_TR", "Bir hata oluştu. Daha sonra tekrar deneyin..." );
 define( "ERROR_MESSAGE_EN", "An error occured. Please try again later..." );
 /**/
 
-/*Filter String for $_POST $_GET and $_REQUEST*/
-function filter_request_string( $str ) {
-	return is_array( $str ) ? array_map( 'filter_request_string', $str ) : htmlspecialchars( trim( $str ) );
-}
-
-/*Secure $_POST*/
-function post( $name ) {
-	$_POST = array_map( 'filter_request_string', $_POST );
-	if ( isset( $_POST[ $name ] ) ) {
-		return $_POST[ $name ];
-	}else  {
-		return null;
-	}
-}
-
-/*Secure $_GET*/
-function get( $name ) {
-	$_GET = array_map( 'filter_request_string', $_GET );
-	if ( isset( $_GET[ $name ] ) ) {
-		return $_GET[ $name ];
-	} else  {
-		return null;
-	}
-}
-
-/*Secure $_REQUEST*/
-function request( $name ) {
-	$_REQUEST = array_map( 'filter_request_string', $_REQUEST );
-	if ( isset( $_REQUEST[ $name ] ) ) {
-		return $_REQUEST[ $name ];
-	} else {
-		return null;
-	}
-}
-
 
 /*Redirect after login*/
 function sl_redirect_after_login() {

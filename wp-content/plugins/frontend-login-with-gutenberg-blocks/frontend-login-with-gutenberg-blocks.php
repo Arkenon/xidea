@@ -15,52 +15,64 @@
  */
 
 // Exit if accessed directly.
-defined('ABSPATH') or die;
+defined( 'ABSPATH' ) or die;
+
+
+//Get helper functions at first.
+require plugin_dir_path( __FILE__ ) . 'inc/helpers.php';
+require plugin_dir_path( __FILE__ ) . 'inc/simple_login.php';
 
 // Get plugin data
 $plugin_data = get_file_data(
 	__FILE__,
 	array(
-		'version' => 'Version',
+		'version'     => 'Version',
 		'plugin_name' => 'Text Domain'
 	)
 );
-
 
 //Constants
 define( 'FLWGB_VERSION', $plugin_data['version'] );
 define( 'FLWGB_PLUGIN_NAME', $plugin_data['text_domain'] );
 
-//Include classes and functions
-require plugin_dir_path( __FILE__ ) . 'inc/Options.php';
-require plugin_dir_path( __FILE__ ) . 'inc/simple_login.php';
-
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
+ * This action is documented in inc/Activator.php
+ * @since    1.0.0
  */
 function activate_flwgb() {
-	require_once plugin_dir_path( __FILE__ ) . 'inc/Activator.php';
+
+	using('inc/Activator.php');
+
 	\FLWGB\Activator::activate();
+
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
+ * This action is documented in inc/Deactivator.php
+ * @since    1.0.0
  */
 function deactivate_flwgb() {
-	require_once plugin_dir_path( __FILE__ ) . 'inc/Deactivator.php';
+
+	using('inc/Deactivator.php');
+
 	\FLWGB\Deactivator::deactivate();
+
 }
 
+/**
+ * Register activation and deactivation hooks
+ * @since    1.0.0
+ */
 register_activation_hook( __FILE__, 'activate_flwgb' );
 register_deactivation_hook( __FILE__, 'deactivate_flwgb' );
 
 /**
  * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
+ * admin-specific hooks, public-facing site hooks and more...
  */
-require plugin_dir_path( __FILE__ ) . 'inc/Flwgb.php';
+using('inc/Flwgb.php');
 
 /**
  * Begins execution of the plugin.
@@ -72,45 +84,5 @@ require plugin_dir_path( __FILE__ ) . 'inc/Flwgb.php';
  * @since    1.0.0
  */
 $plugin = new \FLWGB\Flwgb();
+
 $plugin->run();
-
-
-
-
-/**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
- */
-function frontend_login_with_gutenberg_blocks_init() {
-	register_block_type( __DIR__ . '/build/login-form',
-		[
-			'render_callback' => 'login_form_render_callback'
-		] );
-	register_block_type( __DIR__ . '/build/register-form',
-		[
-			'render_callback' => 'register_form_render_callback'
-		] );
-	register_block_type( __DIR__ . '/build/reset-password-form',
-		[
-			'render_callback' => 'reset_password_form_render_callback'
-		] );
-}
-add_action( 'init', 'frontend_login_with_gutenberg_blocks_init' );
-
-
-function login_form_render_callback() {
-	return sl_login_form( site_url( 'kayit-ol' ), site_url( 'sifremi-unuttum' ), site_url( 'hesabim?sayfa=cikis' ), $lang = 'tr' );
-}
-
-function register_form_render_callback() {
-	return sl_registeration_form( site_url( 'sartlar-ve-kosullar' ), site_url( 'gizlilik-politikasi' ) );
-}
-
-function reset_password_form_render_callback() {
-	return sl_lost_password_form( site_url( 'sifremi-unuttum' ) );
-}
-
-new \FLWGB\Options();

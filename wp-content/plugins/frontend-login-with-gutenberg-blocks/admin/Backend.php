@@ -14,38 +14,6 @@ namespace FLWGB;
 
 class Backend {
 	/**
-	 * The ID of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
-	 */
-	private $plugin_name;
-
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
-
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of this plugin.
-	 * @param      string    $version    The version of this plugin.
-	 */
-	public function __construct() {
-
-		$this->plugin_name = FLWGB_PLUGIN_NAME;
-		$this->version = FLWGB_VERSION;
-
-	}
-
-	/**
 	 * Register the stylesheets for the admin area.
 	 *
 	 * @since    1.0.0
@@ -64,7 +32,7 @@ class Backend {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/flwgb-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'css/flwgb-admin.css', array(), FLWGB_VERSION, 'all' );
 
 	}
 
@@ -87,19 +55,19 @@ class Backend {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/flwgb-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'js/flwgb-admin.js', array( 'jquery' ), FLWGB_VERSION, false );
 
 	}
 
 	/**
-	 * Returns admin panel options page's html.
+	 * Print admin panel options page.
 	 *
 	 * @since    1.0.0
 	 */
-	public function get_options_page(){
+	public function get_options_page()  {
 
 		//Include options page html template from options_page.php
-		include_once plugin_dir_path(__FILE__). '/partials/options_page.php';
+		return_view('admin/partials/options_page.php');
 
 	}
 }

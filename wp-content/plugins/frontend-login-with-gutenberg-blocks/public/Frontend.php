@@ -9,40 +9,10 @@
  * @package    Frontend_Login_With_Gutenberg_Blocks
  * @subpackage Frontend_Login_With_Gutenberg_Blocks/public
  */
+
 namespace FLWGB;
 
 class Frontend {
-	/**
-	 * The ID of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
-	 */
-	private $plugin_name;
-
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
-
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of the plugin.
-	 * @param      string    $version    The version of this plugin.
-	 */
-	public function __construct( ) {
-
-		$this->plugin_name = FLWGB_PLUGIN_NAME;
-		$this->version = FLWGB_VERSION;
-
-	}
 
 	/**
 	 * Register the stylesheets for the public-facing side of the site.
@@ -63,7 +33,7 @@ class Frontend {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/flwgb-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'css/flwgb-public.css', array(), FLWGB_VERSION, 'all' );
 
 	}
 
@@ -86,7 +56,7 @@ class Frontend {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/flwgb-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'js/flwgb-public.js', array( 'jquery' ), FLWGB_VERSION, false );
 
 	}
 }

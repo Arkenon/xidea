@@ -15,8 +15,8 @@ namespace FLWGB;
 
 class Blocks {
 
-	public function __construct() {
-		add_action( 'init', [ $this, 'flwgb_blocks_init' ] );
+	public function load_flwgb_blocks() {
+		add_action( 'init', [ $this, 'register_flwgb_blocks' ] );
 	}
 
 	/**
@@ -24,22 +24,22 @@ class Blocks {
 	 *
 	 * @since    1.0.0
 	 */
-	public function flwgb_blocks_init() {
+	public function register_flwgb_blocks() {
 
 		//Login Form Block
-		register_block_type( __DIR__ . '/build/login-form',
+		register_block_type( plugin_dir_path( dirname( __FILE__ ) ). '/build/login-form',
 			[
 				'render_callback' => [ $this, 'login_form_render_callback' ]
 			] );
 
 		//Register Form Block
-		register_block_type( __DIR__ . '/build/register-form',
+		register_block_type( plugin_dir_path( dirname( __FILE__ ) ) . '/build/register-form',
 			[
 				'render_callback' => [ $this, 'register_form_render_callback' ]
 			] );
 
 		//Lost Password Form Block
-		register_block_type( __DIR__ . '/build/reset-password-form',
+		register_block_type( plugin_dir_path( dirname( __FILE__ ) ) . '/build/reset-password-form',
 			[
 				'render_callback' => [ $this, 'reset_password_form_render_callback' ]
 			] );
@@ -49,18 +49,20 @@ class Blocks {
 	/**
 	 * Callback function for login form block
 	 *
+	 * @return string Login form template html
 	 * @since    1.0.0
 	 */
-	public function login_form_render_callback() {
+	public function login_form_render_callback(): string {
 		return sl_login_form( site_url( 'kayit-ol' ), site_url( 'sifremi-unuttum' ), site_url( 'hesabim?sayfa=cikis' ), $lang = 'tr' );
 	}
 
 	/**
 	 * Callback function for register form block
 	 *
+	 * @return string Login form template html
 	 * @since    1.0.0
 	 */
-	public function register_form_render_callback() {
+	public function register_form_render_callback(): string {
 		return sl_registeration_form( site_url( 'sartlar-ve-kosullar' ), site_url( 'gizlilik-politikasi' ) );
 	}
 
@@ -69,7 +71,7 @@ class Blocks {
 	 *
 	 * @since    1.0.0
 	 */
-	public function reset_password_form_render_callback() {
+	public function reset_password_form_render_callback(): string {
 		return sl_lost_password_form( site_url( 'sifremi-unuttum' ) );
 	}
 }

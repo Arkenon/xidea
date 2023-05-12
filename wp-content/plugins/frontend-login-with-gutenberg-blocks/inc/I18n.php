@@ -22,7 +22,7 @@ class I18n {
 	public function load_flwgb_textdomain() {
 
 		load_plugin_textdomain(
-			'plugin-name',
+			FLWGB_PLUGIN_NAME,
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
