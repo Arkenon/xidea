@@ -13,7 +13,7 @@ namespace FLWGB;
  * @package    Frontend_Login_With_Gutenberg_Blocks
  * @subpackage Frontend_Login_With_Gutenberg_Blocks/inc
  */
-class Loader {
+abstract class Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
@@ -106,7 +106,7 @@ class Loader {
 	 *
 	 * @since    1.0.0
 	 */
-	public function run() {
+	public function run_plugin() {
 
 		foreach ( $this->filters as $hook ) {
 			add_filter( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );

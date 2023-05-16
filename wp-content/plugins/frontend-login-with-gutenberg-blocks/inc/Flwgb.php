@@ -14,18 +14,9 @@
  */
 
 namespace FLWGB;
+using('inc/Loader.php');
 
-class Flwgb {
-
-	/**
-	 * The loader that's responsible for maintaining and registering all hooks that power
-	 * the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      \FLWGB\Loader $loader Maintains and registers all hooks for the plugin.
-	 */
-	protected $loader;
+class Flwgb extends Loader {
 
 	/**
 	 * Define the core functionality of the plugin.
@@ -38,12 +29,26 @@ class Flwgb {
 	 */
 	public function __construct( ) {
 
-		$this->load_dependencies();
-		$this->set_locale();
-		$this->set_options();
-		$this->set_block_types();
-		$this->define_admin_hooks();
-		$this->define_public_hooks();
+		/** Run the constructor of parent class (Loader) **/
+		parent::__construct();
+
+		//Include required files (required)
+		self::load_required_dependencies();
+
+		//Load block types (required)
+		self::set_block_types();
+
+		//Load admin options functionality (optional)
+		self::set_options();
+
+		//Load internationalization functionality (optional)
+		self::set_locale();
+
+		//Defines all hooks for the admin area (optional)
+		self::define_admin_hooks();
+
+		//Defines all hooks for the public area (optional)
+		self::define_public_hooks();
 
 	}
 
@@ -52,10 +57,7 @@ class Flwgb {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-	 * - Plugin_Name_i18n. Defines internationalization functionality.
-	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
-	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
+	 * - \PLUGIN_NAMESPACE\Blocks. Load block types
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -63,44 +65,13 @@ class Flwgb {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function load_dependencies() {
-
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		using('inc/Loader.php');
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		using('inc/I18n.php');
+	private function load_required_dependencies() {
 
 		/**
 		 * The class responsible for registering block types
 		 * side of the site.
 		 */
 		using('inc/Blocks.php');
-
-		/**
-		 * The class responsible for admin options.
-		 * side of the site.
-		 */
-		using('inc/Options.php');
-
-		/**
-		 * The class responsible for defining all actions that occur in the admin area.
-		 */
-		using('admin/Backend.php');
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		using('public/Frontend.php');
-
-		$this->loader = new \FLWGB\Loader();
 
 	}
 
@@ -114,9 +85,14 @@ class Flwgb {
 	 */
 	private function set_options() {
 
+		/**
+		 * The class responsible for admin options.
+		 */
+		using('inc/Options.php');
+
 		$plugin_options = new \FLWGB\Options();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_options' );
+		self::add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_options' );
 
 	}
 
@@ -132,7 +108,7 @@ class Flwgb {
 
 		$plugin_options = new \FLWGB\Blocks();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_blocks' );
+		self::add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_blocks' );
 
 	}
 
@@ -147,9 +123,14 @@ class Flwgb {
 	 */
 	private function set_locale() {
 
+		/**
+		 * The class responsible for defining internationalization functionality
+		 */
+		using('inc/I18n.php');
+
 		$plugin_i18n = new \FLWGB\I18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_flwgb_textdomain' );
+		self::add_action( 'plugins_loaded', $plugin_i18n, 'load_flwgb_textdomain' );
 
 	}
 
@@ -162,10 +143,15 @@ class Flwgb {
 	 */
 	private function define_admin_hooks() {
 
+		/**
+		 * The class responsible for defining all actions that occur in the admin area.
+		 */
+		using('admin/Backend.php');
+
 		$plugin_admin = new \FLWGB\Backend();
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		self::add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+		self::add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 	}
 
@@ -178,10 +164,15 @@ class Flwgb {
 	 */
 	private function define_public_hooks() {
 
+		/**
+		 * The class responsible for defining all actions that occur in the public-facing
+		 */
+		using('public/Frontend.php');
+
 		$plugin_public = new \FLWGB\Frontend();
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		self::add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+		self::add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
 	}
 
@@ -191,7 +182,9 @@ class Flwgb {
 	 * @since    1.0.0
 	 */
 	public function run() {
-		$this->loader->run();
+
+		self::run_plugin();
+
 	}
 
 }
