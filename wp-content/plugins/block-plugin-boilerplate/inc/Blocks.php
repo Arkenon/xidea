@@ -13,10 +13,20 @@
 
 namespace PLUGIN_NAME;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 class Blocks {
 
+	/**
+	 * Loader function for blocks
+	 *
+	 * @since    1.0.0
+	 */
 	public function load_plugin_name_blocks() {
+
 		add_action( 'init', [ $this, 'register_plugin_name_blocks' ] );
+
 	}
 
 	/**

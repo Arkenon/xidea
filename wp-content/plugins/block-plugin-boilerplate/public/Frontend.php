@@ -12,6 +12,9 @@
 
 namespace PLUGIN_NAME;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 class Frontend {
 
 	/**
@@ -33,7 +36,7 @@ class Frontend {
 		 * class.
 		 */
 
-		wp_enqueue_style( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'css/plugin-name-public.css', array(), PLUGIN_NAME_VERSION, 'all' );
+		wp_enqueue_style( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'css/public.css', array(), PLUGIN_NAME_VERSION, 'all' );
 
 	}
 
@@ -56,7 +59,7 @@ class Frontend {
 		 * class.
 		 */
 
-		wp_enqueue_script( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'js/plugin-name-public.js', array( 'jquery' ), PLUGIN_NAME_VERSION, false );
+		wp_enqueue_script( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'js/public.js', array( 'jquery' ), PLUGIN_NAME_VERSION, false );
 
 	}
 }

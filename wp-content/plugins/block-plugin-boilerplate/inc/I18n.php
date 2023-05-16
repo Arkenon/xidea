@@ -1,6 +1,10 @@
 <?php
 
 namespace PLUGIN_NAME;
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 /**
  * Define the internationalization functionality.
  *

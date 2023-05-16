@@ -11,6 +11,9 @@
 
 namespace PLUGIN_NAME;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 class Activator {
 
 	/**

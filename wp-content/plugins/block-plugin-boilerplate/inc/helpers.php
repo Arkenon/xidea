@@ -7,6 +7,8 @@
  * @subpackage Plugin_Name/inc
  */
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
 
 /**
  * Filters string for $_POST, $_GET or $_REQUEST operations

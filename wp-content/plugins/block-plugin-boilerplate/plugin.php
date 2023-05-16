@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Plugin Name
+ * Plugin Name:       Block Plugin Boilerplate
  * Plugin URI:        https://#
  * Description:       Plugin description.
  * Requires at least: 5.9
