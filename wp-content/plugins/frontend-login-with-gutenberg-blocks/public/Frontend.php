@@ -59,4 +59,30 @@ class Frontend {
 		wp_enqueue_script( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'js/flwgb-public.js', array( 'jquery' ), FLWGB_VERSION, false );
 
 	}
+
+	/**
+	 * Return login form
+	 *
+	 * @return string Login form html
+	 * @since    1.0.0
+	 */
+	public function get_login_form() : string  {
+
+		//Return login form html output
+		return view( 'public/partials/login/login-form.php' );
+
+	}
+
+	/**
+	 * Return register form
+	 *
+	 * @return string Register form html
+	 * @since    1.0.0
+	 */
+	public function get_register_form() : string  {
+
+		//Return register form html output
+		return view( 'public/partials/register/register-form.php' );
+
+	}
 }

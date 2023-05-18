@@ -73,6 +73,11 @@ class Flwgb extends Loader {
 		 */
 		using('inc/Blocks.php');
 
+		/**
+		 * The class responsible for defining internationalization functionality
+		 */
+		using('inc/I18n.php');
+
 	}
 
 	/**
@@ -122,11 +127,6 @@ class Flwgb extends Loader {
 	 * @access   private
 	 */
 	private function set_locale() {
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 */
-		using('inc/I18n.php');
 
 		$plugin_i18n = new \FLWGB\I18n();
 

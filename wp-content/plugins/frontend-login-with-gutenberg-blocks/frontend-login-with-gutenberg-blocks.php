@@ -17,10 +17,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
+use FLWGB\Flwgb;
 
 //Get helper functions at first.
 require plugin_dir_path( __FILE__ ) . 'inc/helpers.php';
-require plugin_dir_path( __FILE__ ) . 'inc/simple_login.php';
 
 // Get plugin data
 $plugin_data = get_file_data(
@@ -83,6 +83,6 @@ using('inc/Flwgb.php');
  *
  * @since    1.0.0
  */
-$plugin = new \FLWGB\Flwgb();
+$plugin = new Flwgb();
 
 $plugin->run();

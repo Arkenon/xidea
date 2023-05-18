@@ -49,11 +49,17 @@ class Blocks {
 	/**
 	 * Callback function for login form block
 	 *
-	 * @return string Login form template html
+	 * @return string Login form html template
 	 * @since    1.0.0
 	 */
 	public function login_form_render_callback(): string {
-		return sl_login_form( site_url( 'kayit-ol' ), site_url( 'sifremi-unuttum' ), site_url( 'hesabim?sayfa=cikis' ), $lang = 'tr' );
+
+		using('inc/Login.php');
+
+		$login = new Login();
+
+		return $login->login_form();
+
 	}
 
 	/**
@@ -63,15 +69,30 @@ class Blocks {
 	 * @since    1.0.0
 	 */
 	public function register_form_render_callback(): string {
-		return sl_registeration_form( site_url( 'sartlar-ve-kosullar' ), site_url( 'gizlilik-politikasi' ) );
+
+		using('inc/Register.php');
+
+		$register = new Register();
+
+		return $register->register_form();
+
+
 	}
 
 	/**
 	 * Callback function for lost password form block
 	 *
+	 * @return string Lost password form template html
 	 * @since    1.0.0
 	 */
 	public function reset_password_form_render_callback(): string {
-		return sl_lost_password_form( site_url( 'sifremi-unuttum' ) );
+
+		using('inc/LostPassword.php');
+
+		$register = new LostPassword();
+
+		return $register->lost_password_form();
+
 	}
+
 }
