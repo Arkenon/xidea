@@ -27,7 +27,7 @@ $plugin_data = get_file_data(
 	__FILE__,
 	array(
 		'version'     => 'Version',
-		'plugin_name' => 'Text Domain'
+		'text_domain' => 'Text Domain'
 	)
 );
 

@@ -3,7 +3,7 @@
   "apiVersion": 2,
   "name": "plugin-name/first-block",
   "version": "1.0.0",
-  "title": "First block title",
+  "title": "First block",
   "category": "theme",
   "icon": "format-aside",
   "description": "First block description",

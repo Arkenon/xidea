@@ -5,8 +5,6 @@
  * This is used to define internationalization, admin-specific hooks, and
  * public-facing site hooks and more.
  *
- * Also maintains the unique identifier of this plugin as well as the current
- * version of the plugin.
  *
  * @since      1.0.0
  * @package    Plugin_Name
@@ -14,6 +12,10 @@
  */
 
 namespace PLUGIN_NAME;
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 using('inc/Loader.php');
 
 class Core extends Loader {
@@ -54,13 +56,6 @@ class Core extends Loader {
 
 	/**
 	 * Load the required dependencies for this plugin.
-	 *
-	 * Include the following files that make up the plugin:
-	 *
-	 * - \PLUGIN_NAMESPACE\Blocks. Load block types
-	 *
-	 * Create an instance of the loader which will be used to register the hooks
-	 * with WordPress.
 	 *
 	 * @since    1.0.0
 	 * @access   private

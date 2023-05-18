@@ -12,6 +12,9 @@
 
 namespace PLUGIN_NAME;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 class Backend {
 	/**
 	 * Register the stylesheets for the admin area.
@@ -32,7 +35,7 @@ class Backend {
 		 * class.
 		 */
 
-		wp_enqueue_style( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'css/plugin-name-admin.css', array(), PLUGIN_NAME_VERSION, 'all' );
+		wp_enqueue_style( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'css/admin.css', array(), PLUGIN_NAME_VERSION, 'all' );
 
 	}
 
@@ -55,7 +58,7 @@ class Backend {
 		 * class.
 		 */
 
-		wp_enqueue_script( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin.js', array( 'jquery' ), PLUGIN_NAME_VERSION, false );
+		wp_enqueue_script( PLUGIN_NAME_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'js/admin.js', array( 'jquery' ), PLUGIN_NAME_VERSION, false );
 
 	}
 
@@ -67,7 +70,7 @@ class Backend {
 	public function get_options_page()  {
 
 		//Include options page html template from options_page.php
-		return_view('admin/partials/options_page.php');
+		return_view('admin/partials/options-page.php');
 
 	}
 }

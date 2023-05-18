@@ -11,6 +11,9 @@
 
 namespace PLUGIN_NAME;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 class Options {
 
 	/**
@@ -36,10 +39,10 @@ class Options {
 	public function plugin_name_options_page() {
 
 		add_menu_page(
-				'Frontend Login with Gutenberg Blocks',
-				'Frontend Login',
+				'Block plugin boilerplate options',
+				'Block plugin boilerplate',
 				'manage_options',
-				'frontend-login-with-gutenber-blocks-settings',
+				'block-plugin-boilerplate',
 				[ $this, 'plugin_name_settings_page_html' ],
 				'dashicons-admin-generic'
 		);
@@ -53,10 +56,10 @@ class Options {
 	public function plugin_name_register_settings() {
 
 		// Register settings group for Logout operation
-		register_setting( 'plugin-name-settings-group', 'plugin_name_redirect_after_logout', 'sanitize_text_field' );
+		register_setting( 'plugin-name-settings-group', 'plugin_name_settings_one', 'sanitize_text_field' );
 
 		// Register settings group for Login operation
-		register_setting( 'plugin-name-settings-group', 'plugin_name_redirect_after_login', 'sanitize_text_field' );
+		register_setting( 'plugin-name-settings-group', 'plugin_name_settings_two', 'sanitize_text_field' );
 
 	}
 
