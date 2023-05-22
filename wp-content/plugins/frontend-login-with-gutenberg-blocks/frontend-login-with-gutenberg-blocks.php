@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Frontend Login With Gutenberg Blocks
  * Plugin URI:        https://xideathemes.com/frontend-login-with-gutenberg-blocks
- * Description:       Do login, register and lost password operations from frontend.
+ * Description:       Do login, register and lost password operations from frontend with Gutenberg blocks.
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           1.0.0

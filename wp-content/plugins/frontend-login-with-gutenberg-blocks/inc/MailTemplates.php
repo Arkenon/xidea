@@ -4,7 +4,7 @@ namespace FLWGB;
 
 class MailTemplates {
 	/*Member activation mail*/
-	public function sl_activation_mail_template( $to, $mail, $url = "", $logo_url = "", $lang = "tr" ) {
+	public function flwgb_activation_mail_template( $to, $mail, $url = "", $logo_url = "", $lang = "tr" ) {
 		$hello      = $lang == 'tr' ? 'Merhaba' : 'Hello';
 		$mail_title = $lang == 'tr' ? 'Üyelik işleminiz başarıyla tamamlandı. Üyeliğinizi aktifleştirmek için aşağıdaki bağlantıya tıklamanız gerekiyor.' : 'Your account has been created. To activate your account, please clikc the activation link below.';
 		$subject    = $lang == 'tr' ? 'Üyelik Aktivasyonu' : 'Membership Activation';
@@ -22,7 +22,7 @@ class MailTemplates {
 		wp_mail( $mail, $subject, $body );
 	}
 
-	public function sl_new_member_mail_admin_template( $to, $mail, $username, $url = "", $logo_url = "", $lang = "tr" ) {
+	public function flwgb_new_member_mail_admin_template( $to, $mail, $username, $url = "", $logo_url = "", $lang = "tr" ) {
 		$hello      = $lang == 'tr' ? 'Merhaba' : 'Hello';
 		$mail_title = $lang == 'tr' ? 'Yeni bir üye kaydoldu. Üye adı: ' . $username : 'New member. Member name: ' . $username;
 		$subject    = $lang == 'tr' ? 'Yeni Üye' : 'New Member';
@@ -40,7 +40,7 @@ class MailTemplates {
 		wp_mail( $mail, $subject, $body );
 	}
 
-	public function sl_new_member_mail_user_template( $username, $mail, $logo_url = "", $lang = "tr" ) {
+	public function flwgb_new_member_mail_user_template( $username, $mail, $logo_url = "", $lang = "tr" ) {
 		$hello      = $lang == 'tr' ? 'Merhaba' : 'Hello';
 		$mail_title = $lang == 'tr' ? 'Hoşgeldin, ' . $username . ' Üyelik işlemin başarıyla gerçekleşti. Siteye kullanıcı adın ve şifrenle giriş yapabilirsin.' : 'Welcome, ' . $username . 'Your account has been created successfuly. You can sign in with your username and password.';
 		$subject    = $lang == 'tr' ? 'Hoşgeldiniz' : 'Welcome';
@@ -59,7 +59,7 @@ class MailTemplates {
 	}
 
 	/*Send lost password mail*/
-	public function sl_lost_password_mail( $lost_password_url, $lang = 'tr' ) {
+	public function flwgb_lost_password_mail( $lost_password_url, $lang = 'tr' ) {
 		if ( get('reset') == 'request' ) {
 			$mail          = $_POST['resetmail'];
 			$user          = get_user_by( 'email', $mail );
@@ -67,7 +67,7 @@ class MailTemplates {
 			$username      = $user->user_login;
 			$code          = sha1( $user_id . time() );
 			$reset_link    = $lost_password_url . '/?reset=ok&key=' . $code . '&user=' . $user_id;
-			$mailsend      = sl_reset_password_mail_template( $username, $mail, $reset_link, $lang );
+			$mailsend      = flwgb_reset_password_mail_template( $username, $mail, $reset_link, $lang );
 			$error_message = $lang == 'tr' ? ERROR_MESSAGE_TR : ERROR_MESSAGE_EN;
 			$reset_message = $lang == 'tr' ? 'Şifreni yenilemen için sana bir e-posta gönderdik. Lütfen e-posta kutunu kontrol et...' : 'We have sent you an e-mail. Please check your inbox...';
 			if ( ! is_wp_error( $mailsend ) ) {
@@ -80,7 +80,7 @@ class MailTemplates {
 	}
 
 	/*Lost password mail template*/
-	public function sl_reset_password_mail_template( $to, $mail, $url = '', $lang = 'tr' ) {
+	public function flwgb_reset_password_mail_template( $to, $mail, $url = '', $lang = 'tr' ) {
 		$mail_head  = $lang == 'tr' ? 'Şifrenizi değiştirmek için aşağıdaki bağlantıya tıklayınız...' : 'To change your password, please click link below...';
 		$mail_title = $lang == 'tr' ? 'Şifre Değişikliği' : 'Reset Password';
 		$hello      = $lang == 'tr' ? 'Merhaba' : 'Hello';

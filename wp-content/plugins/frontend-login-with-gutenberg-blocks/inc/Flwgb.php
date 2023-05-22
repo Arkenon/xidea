@@ -102,6 +102,27 @@ class Flwgb extends Loader {
 	}
 
 	/**
+	 * Get register form ajax actions.
+	 *
+	 * Get ajax handle action from Register.php
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_register_form_actions() {
+
+		/**
+		 * The class responsible for registeration operations.
+		 */
+		using('inc/Register.php');
+
+		$plugin_options = new \FLWGB\Options();
+
+		self::add_action( 'plugins_loaded', $plugin_options, 'load_register_actions' );
+
+	}
+
+	/**
 	 * Get block types
 	 *
 	 * Block types registered at class \FLWGB\Blocks
