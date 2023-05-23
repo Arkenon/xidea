@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "vizyon-sigorta-forms/register-form",
+  "name": "frontend-login-with-gutenberg-blocks/register-form",
   "version": "0.1.0",
-  "title": "Kayıt Formu",
+  "title": "Registration Form",
   "category": "theme",
   "icon": "format-aside",
-  "description": "Kayıt Formunu Gösterir",
+  "description": "Display registration form",
   "supports": {
 	"html": false
   },

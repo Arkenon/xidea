@@ -89,9 +89,9 @@ class Blocks {
 
 		using('inc/LostPassword.php');
 
-		$register = new LostPassword();
+		$lost_password = new LostPassword();
 
-		return $register->lost_password_form();
+		return "";
 
 	}
 

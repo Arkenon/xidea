@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "vizyon-sigorta-forms/login-form",
+  "name": "frontend-login-with-gutenberg-blocks/login-form",
   "version": "0.1.0",
-  "title": "Giriş Formu",
+  "title": "Login Form",
   "category": "theme",
   "icon": "format-aside",
-  "description": "Giriş Formunu Gösterir",
+  "description": "Display login form",
   "supports": {
 	"html": false
   },

@@ -45,7 +45,7 @@ class Register {
 	 */
 	public function flwgb_register_handle_ajax_callback() {
 
-		using("inc/MailTemplates.php");
+		using( "inc/MailTemplates.php" );
 		$mail = new MailTemplates();
 
 		$message    = esc_html_x( I18n::$register_succession, 'Registration success message', FLWGB_PLUGIN_NAME );
@@ -59,7 +59,7 @@ class Register {
 
 		if ( ( ! empty( post( 'user_pass' ) ) && ! empty( post( 'user_pass_repeat' ) ) ) && ( post( 'user_pass' ) != post( 'user_pass_repeat' ) ) ) {
 
-			$message = I18n::$password_match_error;
+			$message = esc_html_x( I18n::$password_match_error, 'Reset password matching error', FLWGB_PLUGIN_NAME );
 
 		} else {
 
@@ -82,6 +82,7 @@ class Register {
 					$code = sha1( $newuser . time() );
 
 					global $wpdb;
+
 					$update = $wpdb->update( $wpdb->prefix . '_users', array(
 						'ID'                  => $newuser,
 						'user_activation_key' => $code
@@ -93,35 +94,39 @@ class Register {
 
 							$activation_link = get_option( "flwgb_activation_page" ) . '/activation?key=' . $code . '&user=' . $newuser;
 
-							$mail->flwgb_activation_mail_template($username, $email, $activation_link, "", "");
+							//$mail->flwgb_activation_mail_template( $username, $email, $activation_link, "", "" );
 
 
 						} else {
 
-							$mail->flwgb_new_member_mail_user_template( $username, $email, "", "" );
+							//$mail->flwgb_new_member_mail_user_template( $username, $email, "", "" );
 
 						}
 
-						$mail->flwgb_new_member_mail_admin_template( 'Admin', get_option( 'admin_email' ), $username, admin_url( 'users.php' ), "", "" );
+						//$mail->flwgb_new_member_mail_admin_template( 'Admin', get_option( 'admin_email' ), $username, admin_url( 'users.php' ), "", "" );
 
 
 					} else {
 
-						$message = I18n::$general_error_message;
+						$message = esc_html_x(I18n::$general_error_message,'General error message',FLWGB_PLUGIN_NAME);
 
 					}
+
 				}
 			} else {
+
 				if ( username_exists( $username ) ) {
 
-					$message = I18n::$username_exist_error;
+					$message = esc_html_x(I18n::$username_exist_error,'General error message',FLWGB_PLUGIN_NAME);
 
 				}
+
 				if ( email_exists( $email ) ) {
 
-					$message = I18n::$user_exist_error;
+					$message = esc_html_x(I18n::$user_exist_error,'General error message',FLWGB_PLUGIN_NAME);
 
 				}
+
 			}
 		}
 

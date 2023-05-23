@@ -29,7 +29,6 @@ class I18n {
 
 	/*Translatable texts for login operations*/
 	public static $login_fail_message = 'Your username or password is wrong. Please try again...';
-
 	public static $login_button_text = 'Login';
 	public static $already_logged_in_message = 'You have already logged in.';
 

@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "vizyon-sigorta-forms/reset-password-form",
+  "name": "frontend-login-with-gutenberg-blocks/reset-password-form",
   "version": "0.1.0",
-  "title": "Şifremi Unuttum Formu",
+  "title": "Reset (Lost) Password Form",
   "category": "theme",
   "icon": "format-aside",
-  "description": "Şifremi Unuttum Formunu Gösterir",
+  "description": "Display reset password form",
   "supports": {
 	"html": false
   },

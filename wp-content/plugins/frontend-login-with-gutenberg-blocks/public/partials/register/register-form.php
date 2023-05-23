@@ -4,11 +4,11 @@ use FLWGB\I18n;
 
 if ( isset( $_POST ) ) {
 
-	sl_registeration_control( $activate, $activation_url, $logo_url );
+	//sl_registeration_control( $activate, $activation_url, $logo_url );
 
 }
 
-$form = '<div class="border p-2 bg-white">
+$view = '<div class="border p-2 bg-white">
 		<div class="flwgb-register-result"></div>
         <form name="flwgb-register-form" id="flwgb-register-form" action="" method="post">
             <div class="form-row">
@@ -76,4 +76,3 @@ $form = '<div class="border p-2 bg-white">
         </form>
     </div>';
 
-return $form;

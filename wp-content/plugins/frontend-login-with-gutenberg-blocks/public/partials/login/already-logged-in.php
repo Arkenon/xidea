@@ -2,25 +2,19 @@
 
 use FLWGB\I18n;
 
-if ( is_user_logged_in() ):
+global $user_login;
 
-	global $user_login;
-
-	$logged_in_alert = '<div class="text-center">
+$view = '<div class="text-center">
 							<div class="alert alert-warning">
-								' . I18n::$hello . ' ' . $user_login . ',
+								' . esc_html_x( I18n::$hello, 'Hello text', FLWGB_PLUGIN_NAME ) . ' ' . $user_login . ',
 					            <br>
-					            <p>' . I18n::$already_logged_in_message . '</p>
+					            <p>' . esc_html_x( I18n::$already_logged_in_message, 'Hello text', FLWGB_PLUGIN_NAME ) . '</p>
 					            <br>
 					            <a class="sl-btn btn btn-dark fw-bold" href="' . site_url( get_option( 'flwgb_user_dashboard_page' ) ) . '">
-					              <i class="bi bi-person-circle"></i>' . I18n::$go_to_user_dashboard . '</a>
+					              <i class="bi bi-person-circle"></i>' . esc_html_x( I18n::$go_to_user_dashboard, 'Go to user dashboard text', FLWGB_PLUGIN_NAME ) . '</a>
 					            <br>
-								<a class="sl-btn btn btn-primary mt-2" href="' . wp_logout_url() . '">
-									<i class="bi bi-box-arrow-right"></i> ' . I18n::$log_out . '
+								<a class="sl-btn btn btn-primary mt-2" href="' . wp_logout_url( site_url( get_option( 'flwgb_redirect_page_after_logout' ) ) ?: home_url() ) . '">
+									<i class="bi bi-box-arrow-right"></i> ' . esc_html_x( I18n::$log_out, 'Log out button text', FLWGB_PLUGIN_NAME ) . '
 					            </a>
 					        </div>
 					     </div>';
-
-	return $logged_in_alert;
-
-endif;
