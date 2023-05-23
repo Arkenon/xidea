@@ -91,7 +91,7 @@ class Blocks {
 
 		$lost_password = new LostPassword();
 
-		return "";
+		return $lost_password->lost_password_form();
 
 	}
 

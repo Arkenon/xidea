@@ -19,6 +19,7 @@ class I18n {
 	public static $general_error_message = 'Something went wrong. Please try again later.';
 	public static $general_success_message = 'Operation has completed successfully.';
 	public static $log_out = 'Logout';
+	public static $submit = 'Submit';
 	public static $go_to_user_dashboard = 'Go to User Dashboard';
 	public static $email_input_text = 'E-mail or username';
 	public static $password_input_text = 'Password';
@@ -44,6 +45,11 @@ class I18n {
 
 	/*Translatable texts for reset password operations*/
 	public static $reset_password_button_text = 'Lost Password';
+	public static $submit_reset_password_button_text = 'Change Password';
+	public static $wrong_reset_password_link = 'Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.';
+	public static $reset_password_request_confirmation = 'We have successfully get your request. We have sent you an e-mail. Please check your inbox...';
+	public static $password_changed = 'Your password has been changed. Please sign in...';
+	public static $reset_password_request_input_text = 'Please sumbit your e-mail to get reset password link.';
 
 	/**
 	 * Load the plugin text domain for translation.

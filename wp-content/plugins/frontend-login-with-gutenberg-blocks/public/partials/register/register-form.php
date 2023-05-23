@@ -2,14 +2,8 @@
 
 use FLWGB\I18n;
 
-if ( isset( $_POST ) ) {
-
-	//sl_registeration_control( $activate, $activation_url, $logo_url );
-
-}
-
 $view = '<div class="border p-2 bg-white">
-		<div class="flwgb-register-result"></div>
+		<div class="flwgb-form-result"></div>
         <form name="flwgb-register-form" id="flwgb-register-form" action="" method="post">
             <div class="form-row">
                 <div class="col-12 mb-3">

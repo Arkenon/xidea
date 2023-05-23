@@ -41,7 +41,7 @@ class Flwgb extends Loader {
 		//Load admin options functionality (optional)
 		self::set_options();
 
-		//Load internationalization functionality (optional)
+		//Load internationalization functionality
 		self::set_locale();
 
 		//Defines all hooks for the admin area (optional)
@@ -49,6 +49,12 @@ class Flwgb extends Loader {
 
 		//Defines all hooks for the public area (optional)
 		self::define_public_hooks();
+
+		//Load reset password actions
+		self::set_register_form_actions();
+
+		//Load reset password actions
+		self::set_reset_password_form_actions();
 
 	}
 
@@ -116,9 +122,30 @@ class Flwgb extends Loader {
 		 */
 		using('inc/Register.php');
 
-		$plugin_options = new \FLWGB\Options();
+		$register = new \FLWGB\Register();
 
-		self::add_action( 'plugins_loaded', $plugin_options, 'load_register_actions' );
+		self::add_action( 'plugins_loaded', $register, 'load_register_actions' );
+
+	}
+
+	/**
+	 * Get lost password form ajax actions.
+	 *
+	 * Get ajax handle action from Register.php
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_reset_password_form_actions() {
+
+		/**
+		 * The class responsible for registeration operations.
+		 */
+		using('inc/LostPassword.php');
+
+		$lost_password = new \FLWGB\LostPassword();
+
+		self::add_action( 'plugins_loaded', $lost_password, 'load_reset_password_actions' );
 
 	}
 

@@ -85,4 +85,18 @@ class Frontend {
 		return view( 'public/partials/register/register-form.php' );
 
 	}
+
+	/**
+	 * Return reset password form
+	 *
+	 * @return string Reset password  form html
+	 * @since    1.0.0
+	 */
+	public function get_lost_password_form() : string  {
+
+		//Return reset password  form html output
+		return view( 'public/partials/reset-password/reset-password-form.php' );
+
+	}
+
 }

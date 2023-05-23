@@ -2,20 +2,14 @@
 
 use FLWGB\I18n;
 
-//Get already logged in alert message
-$logged_in_alert = view( 'public/partials/login/already-logged-in.php' );
-
-//Get login fail message
-$login_fail_message = view( 'public/partials/login/login-fail.php' );
-
 //Login Form
 if ( is_user_logged_in() ) {
 
-	$view = $logged_in_alert;
+	$view = view( 'public/partials/login/already-logged-in.php' );
 
 } else {
 
-	$view = $login_fail_message;
+	$view = view( 'public/partials/login/login-fail.php' );
 	$view .= '<div class="border p-2 bg-white">
         <form name="loginform" id="loginform" action="' . wp_login_url( home_url() ) . '" method="post">
             <div class="form-row">

@@ -58,27 +58,6 @@ class MailTemplates {
 		wp_mail( $mail, $subject, $body );
 	}
 
-	/*Send lost password mail*/
-	public function flwgb_lost_password_mail( $lost_password_url, $lang = 'tr' ) {
-		if ( get('reset') == 'request' ) {
-			$mail          = $_POST['resetmail'];
-			$user          = get_user_by( 'email', $mail );
-			$user_id       = $user->ID;
-			$username      = $user->user_login;
-			$code          = sha1( $user_id . time() );
-			$reset_link    = $lost_password_url . '/?reset=ok&key=' . $code . '&user=' . $user_id;
-			$mailsend      = flwgb_reset_password_mail_template( $username, $mail, $reset_link, $lang );
-			$error_message = $lang == 'tr' ? ERROR_MESSAGE_TR : ERROR_MESSAGE_EN;
-			$reset_message = $lang == 'tr' ? 'Şifreni yenilemen için sana bir e-posta gönderdik. Lütfen e-posta kutunu kontrol et...' : 'We have sent you an e-mail. Please check your inbox...';
-			if ( ! is_wp_error( $mailsend ) ) {
-				update_user_meta( $user_id, 'sifremi-unuttum', $code );
-				echo '<p class="alert alert-info">' . $reset_message . '</p>';
-			} else {
-				echo '<p class="alert alert-danger"><strong class="font-s-14">' . $error_message . '</strong></p>';
-			}
-		}
-	}
-
 	/*Lost password mail template*/
 	public function flwgb_reset_password_mail_template( $to, $mail, $url = '', $lang = 'tr' ) {
 		$mail_head  = $lang == 'tr' ? 'Şifrenizi değiştirmek için aşağıdaki bağlantıya tıklayınız...' : 'To change your password, please click link below...';
@@ -92,7 +71,7 @@ class MailTemplates {
 	<p>' . get_option( 'admin_email' ) . ' | <a href="' . site_url() . '">' . get_option( 'blogname' ) . '</a></p>
 	</div>
 	';
-		wp_mail( $mail, $mail_title, $body );
+		return wp_mail( $mail, $mail_title, $body );
 	}
 
 }
