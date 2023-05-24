@@ -86,7 +86,7 @@ class LostPassword {
 
 		if ( get( 'reset' ) == 'request' ) {
 
-			$mail       = post( 'resetmail' );
+			$mail       = post( 'flwgb-reset-mail' );
 			$user       = get_user_by( 'email', $mail );
 			$user_id    = $user->ID;
 			$username   = $user->user_login;

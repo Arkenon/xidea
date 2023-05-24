@@ -4,7 +4,7 @@ use FLWGB\I18n;
 
 $view = '<div class="border p-2 bg-white">
 		<div class="flwgb-form-result"></div>
-        <form name="flwgb-register-form" id="flwgb-register-form" action="" method="post">
+        <form name="flwgb-register-form" id="flwgb-register-form" method="post">
             <div class="form-row">
                 <div class="col-12 mb-3">
                     <div class="input-group">

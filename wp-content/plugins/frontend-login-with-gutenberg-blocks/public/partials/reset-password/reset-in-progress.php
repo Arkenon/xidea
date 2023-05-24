@@ -5,8 +5,7 @@ use FLWGB\I18n;
 
 $view = '<div class="border p-2">
 		<div class="flwgb-form-result"></div>
-        <form name="resetpassform" id="resetpassform"
-              action="' . site_url( get_option( 'flwgb_lost_password_page' ) ) . '?reset=complete" method="post">
+        <form name="flwgb-reset-pass-form" id="flwgb-reset-pass-form" method="post">
             <div class="form-row">
                 <div class="col-12 mb-3">
                     <div class="input-group">

@@ -117,3 +117,30 @@ function using( $path ) {
 	require_once plugin_dir_path( dirname( __FILE__ ) ) . $path;
 
 }
+
+
+
+
+// Değiştireceğimiz değeri oluşturan fonksiyon
+function flwgb_replace_text( $content_option ) {
+
+
+	$text = get_option($content_option);
+
+	$dynamicText = preg_replace_callback( '/{{(.*?)}}/', function ( $matches ) {
+
+		$placeholder = $matches[1];
+
+		if ( $placeholder === 'username' ) {
+			return 'John';
+		} else {
+			return null;
+		}
+
+	}, $text );
+
+
+	echo $dynamicText;
+
+}
+

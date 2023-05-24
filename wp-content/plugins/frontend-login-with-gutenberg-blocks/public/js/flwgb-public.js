@@ -1,6 +1,7 @@
 jQuery(document).ready(function ($) {
+	$("#flwgb-register-form").on("submit",function (e) {
 
-	$(document).on("submit", ".flwgb-register-form", function () {
+		e.preventDefault();
 
 		var formData = new FormData();
 
@@ -39,9 +40,12 @@ jQuery(document).ready(function ($) {
 	})
 
 
-	$(document).on("submit", ".resetpassrequestform", function () {
+	$("#flwgb-reset-pass-request-form").on("submit",function (e) {
 
-		var formData = new FormData();
+		e.preventDefault();
+
+		alert("hello");
+		/*var formData = new FormData();
 
 		formData.append("action", "flwgbresetpasswordrequesthandle");
 
@@ -69,11 +73,13 @@ jQuery(document).ready(function ($) {
 				$(".flwgb-register-result").html(xhr.responseText);
 
 			}
-		});
+		});*/
 
 	})
 
-	$(document).on("submit", ".resetpassform", function () {
+	$("#resetpassform").on("submit",function (e) {
+
+		e.preventDefault();
 
 		var formData = new FormData();
 
