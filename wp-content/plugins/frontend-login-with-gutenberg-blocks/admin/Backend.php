@@ -62,13 +62,12 @@ class Backend {
 	/**
 	 * Print admin panel options page.
 	 *
-	 * @return string login form html
 	 * @since    1.0.0
 	 */
-	public function get_options_page(): string {
+	public function get_options_page() {
 
 		//Include options page html template from options_page.php
-		print_view( 'admin/partials/options_page.php' );
+		print_view( 'admin/partials/options-page.php' );
 
 	}
 }

@@ -39,7 +39,7 @@ class Options {
 				'Frontend Login with Gutenberg Blocks',
 				'Frontend Login',
 				'manage_options',
-				'frontend-login-with-gutenber-blocks-settings',
+				'frontend-login-with-gutenberg-blocks-settings',
 				[ $this, 'flwgb_settings_page_html' ],
 				'dashicons-admin-generic'
 		);
@@ -52,11 +52,13 @@ class Options {
 	 */
 	public function flwgb_register_settings() {
 
-		// Register settings group for Logout operation
-		register_setting( 'flwgb-settings-group', 'flwgb_redirect_after_logout', 'sanitize_text_field' );
+		// General settings
+		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_logout', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_login', 'sanitize_text_field' );
 
-		// Register settings group for Login operation
-		register_setting( 'flwgb-settings-group', 'flwgb_redirect_after_login', 'sanitize_text_field' );
+		// E-Mail settings
+		register_setting( 'flwgb-mail-settings-group', 'flwgb_register_mail_to_user' );
+		register_setting( 'flwgb-mail-settings-group', 'flwgb_register_mail_to_admin' );
 
 	}
 

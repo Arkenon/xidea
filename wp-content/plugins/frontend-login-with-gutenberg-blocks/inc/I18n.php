@@ -27,6 +27,14 @@ class I18n {
 	public static $password_again_input_text = 'Password Again';
 	public static $remember_me_checkbox_text = 'Remember Me';
 
+	/*Admin options page texts*/
+	public static $admin_general_settings = 'General Settings';
+	public static $admin_mail_settings = 'E-Mail Templates';
+	public static $redirect_after_logout = 'Redirect Page After Logout';
+	public static $redirect_after_login = 'Redirect Page After Login';
+	public static $register_mail_to_user = 'Register Mail Template to User';
+	public static $register_mail_to_admin = 'Register Mail Template to Admin';
+
 
 	/*Translatable texts for login operations*/
 	public static $login_fail_message = 'Your username or password is wrong. Please try again...';
