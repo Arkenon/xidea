@@ -11,6 +11,7 @@
 
 use FLWGB\I18n;
 
+$pages = get_pages();
 
 ?>
 
@@ -35,8 +36,19 @@ use FLWGB\I18n;
 			</th>
 			<td>
 
-				<input type="text" name="flwgb_redirect_after_logout" id="flwgb_redirect_after_logout"
-					   value="<?php echo esc_attr( get_option( 'flwgb_redirect_after_logout' ) ); ?>"/>
+				<select name="flwgb_redirect_after_logout" id="flwgb_redirect_after_logout">
+
+					<?php
+
+						foreach ( $pages as $page ) {
+
+							get_select_options_from_query( $page, 'flwgb_redirect_after_logout' );
+
+						}
+
+					?>
+
+				</select>
 
 			</td>
 		</tr>
@@ -51,8 +63,19 @@ use FLWGB\I18n;
 			</th>
 			<td>
 
-				<input type="text" name="flwgb_redirect_after_login" id="flwgb_redirect_after_login"
-					   value="<?php echo esc_attr( get_option( 'flwgb_redirect_after_login' ) ); ?>"/>
+				<select name="flwgb_redirect_after_login" id="flwgb_redirect_after_login">
+
+					<?php
+
+						foreach ( $pages as $page ) {
+
+							get_select_options_from_query( $page, 'flwgb_redirect_after_login' );
+
+						}
+
+					?>
+
+				</select>
 
 			</td>
 		</tr>

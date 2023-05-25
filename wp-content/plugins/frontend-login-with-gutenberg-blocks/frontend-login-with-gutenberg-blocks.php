@@ -17,6 +17,8 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
+use FLWGB\Activator;
+use FLWGB\Deactivator;
 use FLWGB\Flwgb;
 
 //Get helper functions at first.
@@ -44,7 +46,7 @@ function activate_flwgb() {
 
 	using('inc/Activator.php');
 
-	\FLWGB\Activator::activate();
+	Activator::activate();
 
 }
 
@@ -57,7 +59,7 @@ function deactivate_flwgb() {
 
 	using('inc/Deactivator.php');
 
-	\FLWGB\Deactivator::deactivate();
+	Deactivator::deactivate();
 
 }
 

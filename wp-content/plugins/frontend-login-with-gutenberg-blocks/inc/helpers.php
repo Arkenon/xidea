@@ -89,12 +89,13 @@ function print_view( $path ) {
  * To return a view uses include_once() function
  *
  * @param string $path Path for view page
- * @var string $view html output
+ *
  * @return string $view
+ * @var string $view html output
  * @since 1.0.0
  *
  */
-function view( $path ) : string {
+function view( $path ): string {
 
 	$view = "";
 
@@ -119,13 +120,11 @@ function using( $path ) {
 }
 
 
-
-
 // Değiştireceğimiz değeri oluşturan fonksiyon
 function flwgb_replace_text( $content_option ) {
 
 
-	$text = get_option($content_option);
+	$text = get_option( $content_option );
 
 	$dynamicText = preg_replace_callback( '/{{(.*?)}}/', function ( $matches ) {
 
@@ -144,3 +143,13 @@ function flwgb_replace_text( $content_option ) {
 
 }
 
+
+function get_select_options_from_query( $query_item, $option_name ) {
+
+	$selected = $query_item->post_name === esc_attr( get_option( $option_name ) ) ? " selected" : "";
+
+	echo '<option value="' . esc_attr( $query_item->post_name ) . '"' . $selected . '>
+			' . $query_item->post_title . '
+		  </option>';
+
+}
