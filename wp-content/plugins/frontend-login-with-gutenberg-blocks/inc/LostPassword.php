@@ -12,7 +12,7 @@ class LostPassword {
 	 */
 	public function lost_password_form(): string {
 
-		$frontend = new \FLWGB\Frontend();
+		$frontend = new Frontend();
 
 		//Get reset password form html output from Frontend class
 		return $frontend->get_lost_password_form();
@@ -41,7 +41,7 @@ class LostPassword {
 
 		$response = array();
 
-		if ( get( 'reset' ) == 'complete' ) {
+		if ( Helper::get( 'reset' ) == 'complete' ) {
 
 			$success_message = '<p class="alert alert-success">' . esc_html_x( I18n::$password_changed, 'Password change message', FLWGB_PLUGIN_NAME ) . '</p>';
 			$error_message   = '<p class="alert alert-danger"><strong class="font-s-14">' . esc_html_x( I18n::$general_error_message, 'General error message', FLWGB_PLUGIN_NAME ) . '</strong></p>';
@@ -84,9 +84,9 @@ class LostPassword {
 
 		$response = array();
 
-		if ( get( 'reset' ) == 'request' ) {
+		if ( Helper::get( 'reset' ) == 'request' ) {
 
-			$mail       = post( 'flwgb-reset-mail' );
+			$mail       = Helper::post( 'flwgb-reset-mail' );
 			$user       = get_user_by( 'email', $mail );
 			$user_id    = $user->ID;
 			$username   = $user->user_login;
@@ -94,7 +94,7 @@ class LostPassword {
 			$reset_link = site_url( get_option( 'flwgb_lost_password_page' ) ) . '/?reset=in-progress&key=' . $code . '&user=' . $user_id;
 
 			//TODO mail op
-			using( 'inc/MailTemplates.php' );
+			Helper::using( 'inc/MailTemplates.php' );
 			$mail                      = new MailTemplates();
 			$send_reset_password_email = $mail->flwgb_reset_password_mail_template( $username, $mail, $reset_link, "" );
 

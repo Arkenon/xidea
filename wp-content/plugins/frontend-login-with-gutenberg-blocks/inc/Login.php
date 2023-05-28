@@ -61,7 +61,7 @@ class Login {
 	 */
 	public function login_form(): string {
 
-		$frontend = new \FLWGB\Frontend();
+		$frontend = new Frontend();
 
 		//Get login form html output from Frontend class
 		return $frontend->get_login_form();

@@ -9,10 +9,11 @@
  * @subpackage Frontend_Login_With_Gutenberg_Blocks/admin/partials
  */
 
+use FLWGB\Helper;
 use FLWGB\I18n;
 
 $default_tab = null;
-$tab         = get( 'tab' ) ?? $default_tab;
+$tab         = Helper::get( 'tab' ) ?? $default_tab;
 
 ?>
 
@@ -45,11 +46,11 @@ $tab         = get( 'tab' ) ?? $default_tab;
 			switch ( $tab ) :
 
 				case 'mail-templates':
-					print_view( "admin/partials/mail-template-settings.php" );
+					Helper::print_view( "admin/partials/mail-template-settings.php" );
 					break;
 
 				default:
-					print_view( "admin/partials/general-settings.php" );
+					Helper::print_view( "admin/partials/general-settings.php" );
 					break;
 
 			endswitch;

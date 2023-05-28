@@ -20,9 +20,10 @@ defined( 'ABSPATH' ) or die;
 use FLWGB\Activator;
 use FLWGB\Deactivator;
 use FLWGB\Flwgb;
+use FLWGB\Helper;
 
 //Get helper functions at first.
-require plugin_dir_path( __FILE__ ) . 'inc/helpers.php';
+require plugin_dir_path( __FILE__ ) . 'inc/Helper.php';
 
 // Get plugin data
 $plugin_data = get_file_data(
@@ -44,7 +45,7 @@ define( 'FLWGB_PLUGIN_NAME', $plugin_data['text_domain'] );
  */
 function activate_flwgb() {
 
-	using('inc/Activator.php');
+	Helper::using('inc/Activator.php');
 
 	Activator::activate();
 
@@ -57,7 +58,7 @@ function activate_flwgb() {
  */
 function deactivate_flwgb() {
 
-	using('inc/Deactivator.php');
+	Helper::using('inc/Deactivator.php');
 
 	Deactivator::deactivate();
 
@@ -74,7 +75,7 @@ register_deactivation_hook( __FILE__, 'deactivate_flwgb' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, public-facing site hooks and more...
  */
-using('inc/Flwgb.php');
+Helper::using('inc/Flwgb.php');
 
 /**
  * Begins execution of the plugin.

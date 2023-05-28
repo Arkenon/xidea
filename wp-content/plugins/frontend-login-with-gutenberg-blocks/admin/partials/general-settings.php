@@ -9,6 +9,7 @@
  * @subpackage Frontend_Login_With_Gutenberg_Blocks/admin/partials
  */
 
+use FLWGB\Helper;
 use FLWGB\I18n;
 
 $pages = get_pages();
@@ -42,7 +43,7 @@ $pages = get_pages();
 
 						foreach ( $pages as $page ) {
 
-							get_select_options_from_query( $page, 'flwgb_redirect_after_logout' );
+							Helper::get_select_options_from_query( $page, 'flwgb_redirect_after_logout' );
 
 						}
 
@@ -69,7 +70,7 @@ $pages = get_pages();
 
 						foreach ( $pages as $page ) {
 
-							get_select_options_from_query( $page, 'flwgb_redirect_after_login' );
+							Helper::get_select_options_from_query( $page, 'flwgb_redirect_after_login' );
 
 						}
 

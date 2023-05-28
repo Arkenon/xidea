@@ -1,15 +1,16 @@
 <?php
 
+use FLWGB\Helper;
 use FLWGB\I18n;
 
 //Login Form
 if ( is_user_logged_in() ) {
 
-	$view = view( 'public/partials/login/already-logged-in.php' );
+	$view = Helper::view( 'public/partials/login/already-logged-in.php' );
 
 } else {
 
-	$view = view( 'public/partials/login/login-fail.php' );
+	$view = Helper::view( 'public/partials/login/login-fail.php' );
 	$view .= '<div class="border p-2 bg-white">
         <form name="loginform" id="loginform" action="' . wp_login_url( home_url() ) . '" method="post">
             <div class="form-row">

@@ -54,7 +54,7 @@ class Blocks {
 	 */
 	public function login_form_render_callback(): string {
 
-		using('inc/Login.php');
+		Helper::using('inc/Login.php');
 
 		$login = new Login();
 
@@ -70,7 +70,7 @@ class Blocks {
 	 */
 	public function register_form_render_callback(): string {
 
-		using('inc/Register.php');
+		Helper::using('inc/Register.php');
 
 		$register = new Register();
 
@@ -87,7 +87,7 @@ class Blocks {
 	 */
 	public function reset_password_form_render_callback(): string {
 
-		using('inc/LostPassword.php');
+		Helper::using('inc/LostPassword.php');
 
 		$lost_password = new LostPassword();
 

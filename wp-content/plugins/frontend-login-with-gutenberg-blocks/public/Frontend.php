@@ -69,7 +69,7 @@ class Frontend {
 	public function get_login_form() : string  {
 
 		//Return login form html output
-		return view( 'public/partials/login/login-form.php' );
+		return Helper::view( 'public/partials/login/login-form.php' );
 
 	}
 
@@ -82,7 +82,7 @@ class Frontend {
 	public function get_register_form() : string  {
 
 		//Return register form html output
-		return view( 'public/partials/register/register-form.php' );
+		return Helper::view( 'public/partials/register/register-form.php' );
 
 	}
 
@@ -95,7 +95,7 @@ class Frontend {
 	public function get_lost_password_form() : string  {
 
 		//Return reset password  form html output
-		return view( 'public/partials/reset-password/reset-password-form.php' );
+		return Helper::view( 'public/partials/reset-password/reset-password-form.php' );
 
 	}
 

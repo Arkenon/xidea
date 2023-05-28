@@ -14,7 +14,9 @@
  */
 
 namespace FLWGB;
-using('inc/Loader.php');
+
+Helper::using('inc/Loader.php');
+
 
 class Flwgb extends Loader {
 
@@ -38,11 +40,11 @@ class Flwgb extends Loader {
 		//Load block types (required)
 		self::set_block_types();
 
+		//Load internationalization functionality (required)
+		self::set_locale();
+
 		//Load admin options functionality (optional)
 		self::set_options();
-
-		//Load internationalization functionality
-		self::set_locale();
 
 		//Defines all hooks for the admin area (optional)
 		self::define_admin_hooks();
@@ -77,12 +79,12 @@ class Flwgb extends Loader {
 		 * The class responsible for registering block types
 		 * side of the site.
 		 */
-		using('inc/Blocks.php');
+		Helper::using('inc/Blocks.php');
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 */
-		using('inc/I18n.php');
+		Helper::using('inc/I18n.php');
 
 	}
 
@@ -99,9 +101,9 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for admin options.
 		 */
-		using('inc/Options.php');
+		Helper::using('inc/Options.php');
 
-		$plugin_options = new \FLWGB\Options();
+		$plugin_options = new Options();
 
 		self::add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_options' );
 
@@ -120,9 +122,9 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for registeration operations.
 		 */
-		using('inc/Register.php');
+		Helper::using('inc/Register.php');
 
-		$register = new \FLWGB\Register();
+		$register = new Register();
 
 		self::add_action( 'plugins_loaded', $register, 'load_register_actions' );
 
@@ -141,9 +143,9 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for registeration operations.
 		 */
-		using('inc/LostPassword.php');
+		Helper::using('inc/LostPassword.php');
 
-		$lost_password = new \FLWGB\LostPassword();
+		$lost_password = new LostPassword();
 
 		self::add_action( 'plugins_loaded', $lost_password, 'load_reset_password_actions' );
 
@@ -159,7 +161,7 @@ class Flwgb extends Loader {
 	 */
 	private function set_block_types() {
 
-		$plugin_options = new \FLWGB\Blocks();
+		$plugin_options = new Blocks();
 
 		self::add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_blocks' );
 
@@ -176,7 +178,7 @@ class Flwgb extends Loader {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new \FLWGB\I18n();
+		$plugin_i18n = new I18n();
 
 		self::add_action( 'plugins_loaded', $plugin_i18n, 'load_flwgb_textdomain' );
 
@@ -194,9 +196,9 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		using('admin/Backend.php');
+		Helper::using('admin/Backend.php');
 
-		$plugin_admin = new \FLWGB\Backend();
+		$plugin_admin = new Backend();
 
 		self::add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		self::add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -215,9 +217,9 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 */
-		using('public/Frontend.php');
+		Helper::using('public/Frontend.php');
 
-		$plugin_public = new \FLWGB\Frontend();
+		$plugin_public = new Frontend();
 
 		self::add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		self::add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );

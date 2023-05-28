@@ -1,17 +1,18 @@
 <?php
 
+use FLWGB\Helper;
 use FLWGB\I18n;
 
-if ( get('reset') == 'in-progress' ) {
+if ( Helper::get('reset') == 'in-progress' ) {
 
-	$code  = get('key');
-	$user  = get('user');
+	$code  = Helper::get('key');
+	$user  = Helper::get('user');
 
 	$code2 = get_user_meta( $user, 'flwgb_lost_password_key', true );
 
 	if ( $code === $code2 ) {
 
-		$view = view('public/partials/reset-password/reset-in-progress.php');
+		$view = Helper::view('public/partials/reset-password/reset-in-progress.php');
 
 	} else {
 
@@ -23,6 +24,6 @@ if ( get('reset') == 'in-progress' ) {
 
 } else {
 
-	$view = view('public/partials/reset-password/reset-request.php');
+	$view = Helper::view('public/partials/reset-password/reset-request.php');
 
 }

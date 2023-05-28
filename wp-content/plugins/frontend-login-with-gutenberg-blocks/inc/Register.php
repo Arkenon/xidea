@@ -45,7 +45,7 @@ class Register {
 	 */
 	public function flwgb_register_handle_ajax_callback() {
 
-		using( "inc/MailTemplates.php" );
+		Helper::using( "inc/MailTemplates.php" );
 		$mail = new MailTemplates();
 
 		$message    = esc_html_x( I18n::$register_succession, 'Registration success message', FLWGB_PLUGIN_NAME );
@@ -57,15 +57,15 @@ class Register {
 
 		}
 
-		if ( ( ! empty( post( 'user_pass' ) ) && ! empty( post( 'user_pass_repeat' ) ) ) && ( post( 'user_pass' ) != post( 'user_pass_repeat' ) ) ) {
+		if ( ( ! empty( Helper::post( 'user_pass' ) ) && ! empty( Helper::post( 'user_pass_repeat' ) ) ) && ( Helper::post( 'user_pass' ) != Helper::post( 'user_pass_repeat' ) ) ) {
 
 			$message = esc_html_x( I18n::$password_match_error, 'Reset password matching error', FLWGB_PLUGIN_NAME );
 
 		} else {
 
-			$username = post( 'username' );
-			$email    = post( 'user_email' );
-			$password = post( 'user_pass' );
+			$username = Helper::post( 'username' );
+			$email    = Helper::post( 'user_email' );
+			$password = Helper::post( 'user_pass' );
 
 			if ( ! username_exists( $username ) && ! email_exists( $email ) ) {
 

@@ -1,6 +1,7 @@
 <?php
 
 
+use FLWGB\Helper;
 use FLWGB\I18n;
 
 $view = '<div class="border p-2">
@@ -17,7 +18,7 @@ $view = '<div class="border p-2">
                     </div>
                 </div>
             </div>
-            <input type="hidden" name="userid" value="' . get( 'user' ) . '">
+            <input type="hidden" name="userid" value="' . Helper::get( 'user' ) . '">
             <button type="submit" name="rest-submit" id="rest-submit"
                     class="btn btn-dark btn-block">' . esc_html_x( I18n::$submit_reset_password_button_text, 'Change password button text', FLWGB_PLUGIN_NAME ) . '</button>
         </form>

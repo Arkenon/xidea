@@ -67,7 +67,7 @@ class Backend {
 	public function get_options_page() {
 
 		//Include options page html template from options_page.php
-		print_view( 'admin/partials/options-page.php' );
+		Helper::print_view( 'admin/partials/options-page.php' );
 
 	}
 }
