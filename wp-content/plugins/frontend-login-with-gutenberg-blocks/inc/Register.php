@@ -49,7 +49,7 @@ class Register {
 		$mail = new MailTemplates();
 
 		$message    = esc_html_x( I18n::$register_succession, 'Registration success message', FLWGB_PLUGIN_NAME );
-		$return_url = site_url( get_option( 'flwgb_return_after_registration' ) ) ?: '';
+		$return_url = site_url( get_option( 'flwgb_redirect_after_registration' ) ) ?: '';
 
 		if ( get_option( "flwgb_has_activation" ) ) {
 

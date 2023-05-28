@@ -53,8 +53,16 @@ class Options {
 	public function flwgb_register_settings() {
 
 		// General settings
-		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_logout', 'sanitize_text_field' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_login', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_registration', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_lost_password_page', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_register_page', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_activation_page', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_user_settings_page', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_terms_and_conditions_page', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_privacy_policy_page', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_has_activation', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_login_fail_message', 'sanitize_text_field' );
 
 		// E-Mail settings
 		register_setting( 'flwgb-mail-settings-group', 'flwgb_register_mail_to_user' );

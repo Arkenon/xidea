@@ -11,13 +11,10 @@ namespace FLWGB;
 
 class Login {
 
-	public function __construct() {
+	public function load_login_actions() {
 
 		// Hook: Redirect user if login completed
 		add_filter( 'login_redirect', [ $this, 'redirect_after_login' ] );
-
-		// Hook: Redirect user if login failed
-		add_action( 'wp_login_failed', [ $this, 'redirect_if_login_failed' ] );
 
 	}
 
@@ -28,28 +25,7 @@ class Login {
 	 */
 	public function redirect_after_login() {
 
-		return site_url( get_option( 'flwgb_user_dashboard_page' ) );
-
-	}
-
-
-	/**
-	 * Redirect if login operation failed
-	 *
-	 * @since 1.0.0
-	 */
-	public function redirect_if_login_failed() {
-
-		$param = '/?login=error';
-
-		$referrer = $_SERVER['HTTP_REFERER'];
-
-		if ( ! empty( $referrer ) && ! strstr( $referrer, 'wp-login' ) && ! strstr( $referrer, 'wp-admin' ) ) {
-
-			! strstr( $referrer, $param ) ? wp_redirect( $referrer . $param ) : wp_redirect( $referrer );
-
-			exit;
-		}
+		return site_url( get_option( 'flwgb_redirect_after_login' ) );
 
 	}
 

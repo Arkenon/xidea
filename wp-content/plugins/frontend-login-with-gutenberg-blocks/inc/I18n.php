@@ -14,7 +14,10 @@ namespace FLWGB;
 class I18n {
 
 	/*General translatable texts*/
-	public static $hello = 'Hello';
+	public static $hello_text = 'Hello';
+	public static $select_text = 'Please select...';
+	public static $yes_text = 'Yes';
+	public static $no_text = 'No';
 	public static $loading_text = 'Please wait...';
 	public static $general_error_message = 'Something went wrong. Please try again later.';
 	public static $general_success_message = 'Operation has completed successfully.';
@@ -30,14 +33,22 @@ class I18n {
 	/*Admin options page texts*/
 	public static $admin_general_settings = 'General Settings';
 	public static $admin_mail_settings = 'E-Mail Templates';
-	public static $redirect_after_logout = 'Redirect Page After Logout';
 	public static $redirect_after_login = 'Redirect Page After Login';
+	public static $redirect_after_register = 'Redirect Page After Registration';
 	public static $register_mail_to_user = 'Register Mail Template to User';
 	public static $register_mail_to_admin = 'Register Mail Template to Admin';
+	public static $lost_password_page = 'Lost (Reset) Password Page';
+	public static $registration_page = 'Registration Page';
+	public static $activation_page = 'User Activation Page';
+	public static $user_settings_page = 'User Settings Page';
+	public static $terms_and_conditions_page = 'Terms and Conditions Page';
+	public static $privacy_policy_page = 'Privacy Policy Page';
+	public static $has_activation = 'Users gonna be activated (to send activation e-mail)';
 
 
 	/*Translatable texts for login operations*/
 	public static $login_fail_message = 'Your username or password is wrong. Please try again...';
+	public static $login_fail_message_label = 'Customize alert for login fail.';
 	public static $login_button_text = 'Login';
 	public static $already_logged_in_message = 'You have already logged in.';
 

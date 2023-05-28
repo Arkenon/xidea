@@ -52,6 +52,9 @@ class Flwgb extends Loader {
 		//Defines all hooks for the public area (optional)
 		self::define_public_hooks();
 
+		//Load login actions
+		self::set_login_actions();
+
 		//Load reset password actions
 		self::set_register_form_actions();
 
@@ -106,6 +109,27 @@ class Flwgb extends Loader {
 		$plugin_options = new Options();
 
 		self::add_action( 'plugins_loaded', $plugin_options, 'load_flwgb_options' );
+
+	}
+
+	/**
+	 * Get login form actions
+	 *
+	 * Load login actions from Login Class
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_login_actions() {
+
+		/**
+		 * The class responsible for login operations.
+		 */
+		Helper::using('inc/Login.php');
+
+		$register = new Login();
+
+		self::add_action( 'plugins_loaded', $register, 'load_login_actions' );
 
 	}
 
