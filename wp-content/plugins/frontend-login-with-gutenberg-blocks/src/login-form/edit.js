@@ -1,78 +1,98 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
-import { __ } from '@wordpress/i18n';
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps } from '@wordpress/block-editor';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 import './editor.scss';
+import {useState, useBlockProps, InspectorControls} from '@wordpress/block-editor';
+import {__} from '@wordpress/i18n';
+import {
+	ToggleControl,
+	ColorPicker,
+	SelectControl,
+	Panel,
+	RangeControl,
+	PanelBody,
+	PanelRow,
+	__experimentalNumberControl as NumberControl
+} from '@wordpress/components';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
- */
-export default function Edit() {
+import ControlPanel from "./control-panel/controlPanel";
+
+
+export default function Edit(props) {
+
+	const {
+		attributes: {
+			showLabels,
+			showPlaceholders,
+			textColor,
+			textFontWeight,
+			inputBorderRadius,
+			buttonBgColor,
+			buttonTextColor
+		}, setAttributes
+	} = props;
+
+	const blockProps = useBlockProps(props);
+
+	const wrapperStyle = {
+		'border': '1px dotted lightgray'
+	}
 
 	const inputStyle = {
 		'width': '100%',
-		'border-radius': '0px',
-		'margin-bottom': '10px'
+		'border-radius': inputBorderRadius,
+		'margin-bottom': '10px',
+		'margin-top': '10px'
+	}
+
+	const textStyle = {
+		'color': textColor,
+		'font-weight': textFontWeight
+	}
+
+	const buttonStyle = {
+		'color': buttonTextColor,
+		'backgroundColor': buttonBgColor,
+		'margin-top': '10px',
+		'width': '100%'
 	}
 
 	return (
+
 		<>
-			<div { ...useBlockProps() }>
+			<ControlPanel options={props}/>
+			<div style={wrapperStyle} {...useBlockProps()}>
 
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
-						<input type="text" style={inputStyle} placeholder="...write placeholder..." />
-							<div className="flwgb-invalid-feedback">
-							</div>
+						{showLabels &&
+							<label style={textStyle} htmlFor="usr_or_ml">{__('Username or E-mail', 'flwgb')}</label>}
+						<input id="usr_or_ml" type="text" style={inputStyle}
+							   placeholder={__('Enter your username or e-mail', 'flwgb')}/>
 					</div>
 				</div>
 
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
-						<input type="text" style={inputStyle} className="flwgb-form-control" placeholder="...write placeholder..." />
-						<div className="flwgb-invalid-feedback">
-						</div>
+						{showLabels && <label style={textStyle} htmlFor="psswrd">{__('Password', 'flwgb')}</label>}
+						<input id="psswrd" type="password" style={inputStyle}
+							   placeholder={__('Enter your password', 'flwgb')}/>
 					</div>
 				</div>
 
+
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
-						<input checked="checked" type="checkbox" className="form-check-input"/>
-						<label htmlFor="">Remember me</label>
-						<div className="flwgb-invalid-feedback">
-						</div>
+						<input id="rmbrme" checked="checked" type="checkbox" className="form-check-input"/>
+						<label style={textStyle} htmlFor="rmbrme">Remember me</label>
 					</div>
 				</div>
 
 				<div className="text-center">
-					<button type="submit" name="wp-submit" id="wp-submit"
-							className="flwgb-btn">Submit
+					<button style={buttonStyle} type="submit" name="wp-submit" id="wp-submit" className="flwgb-btn">
+						{__('Submit', 'flwgb')}
 					</button>
 				</div>
 
 			</div>
 		</>
+
 	);
 }

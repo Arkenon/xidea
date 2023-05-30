@@ -25,7 +25,10 @@ class I18n {
 	public static $submit = 'Submit';
 	public static $go_to_user_dashboard = 'Go to User Dashboard';
 	public static $email_input_text = 'Your e-mail';
+	public static $email_or_username_input_text = 'Username or E-mail';
+	public static $email_or_username_placeholder_text = 'Enter your username or e-mail';
 	public static $password_input_text = 'Password';
+	public static $password_placeholder_text = 'Enter your password';
 	public static $user_input_text = 'Username';
 	public static $password_again_input_text = 'Password Again';
 	public static $remember_me_checkbox_text = 'Remember Me';

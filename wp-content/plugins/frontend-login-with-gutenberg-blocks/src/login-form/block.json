@@ -2,13 +2,43 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
   "name": "frontend-login-with-gutenberg-blocks/login-form",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "title": "Login Form",
   "category": "theme",
   "icon": "format-aside",
   "description": "Display login form",
   "supports": {
 	"html": false
+  },
+  "attributes": {
+	"showLabels": {
+	  "type": "boolean",
+	  "default": false
+	},
+	"showPlaceholders": {
+	  "type": "boolean",
+	  "default": false
+	},
+	"textColor": {
+	  "type": "string",
+	  "default": "black"
+	},
+	"textFontWeight": {
+	  "type": "string",
+	  "default": "bold"
+	},
+	"inputBorderRadius": {
+	  "type": "number",
+	  "default": 0
+	},
+	"buttonBgColor": {
+	  "type": "string",
+	  "default": "gray"
+	},
+	"buttonTextColor": {
+	  "type": "string",
+	  "default": "black"
+	}
   },
   "textdomain": "login-form",
   "editorScript": "file:./index.js",
