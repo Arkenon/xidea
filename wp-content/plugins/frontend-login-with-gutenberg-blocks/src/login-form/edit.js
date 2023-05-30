@@ -30,9 +30,49 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit() {
+
+	const inputStyle = {
+		'width': '100%',
+		'border-radius': '0px',
+		'margin-bottom': '10px'
+	}
+
 	return (
-		<p { ...useBlockProps() }>
-			GİRİŞ FORMUNU GÖSTERİR
-		</p>
+		<>
+			<div { ...useBlockProps() }>
+
+				<div className="flwgb-form-row">
+					<div className="flwgb-input-group">
+						<input type="text" style={inputStyle} placeholder="...write placeholder..." />
+							<div className="flwgb-invalid-feedback">
+							</div>
+					</div>
+				</div>
+
+				<div className="flwgb-form-row">
+					<div className="flwgb-input-group">
+						<input type="text" style={inputStyle} className="flwgb-form-control" placeholder="...write placeholder..." />
+						<div className="flwgb-invalid-feedback">
+						</div>
+					</div>
+				</div>
+
+				<div className="flwgb-form-row">
+					<div className="flwgb-input-group">
+						<input checked="checked" type="checkbox" className="form-check-input"/>
+						<label htmlFor="">Remember me</label>
+						<div className="flwgb-invalid-feedback">
+						</div>
+					</div>
+				</div>
+
+				<div className="text-center">
+					<button type="submit" name="wp-submit" id="wp-submit"
+							className="flwgb-btn">Submit
+					</button>
+				</div>
+
+			</div>
+		</>
 	);
 }
