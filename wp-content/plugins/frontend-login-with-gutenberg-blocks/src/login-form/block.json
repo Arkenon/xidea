@@ -7,9 +7,6 @@
   "category": "theme",
   "icon": "format-aside",
   "description": "Display login form",
-  "supports": {
-	"html": false
-  },
   "attributes": {
 	"showLabels": {
 	  "type": "boolean",
@@ -38,7 +35,68 @@
 	"buttonTextColor": {
 	  "type": "string",
 	  "default": "black"
+	},
+	"buttonBorder": {
+	  "type": "object",
+	  "default": {
+		"color": "#000",
+		"style": "solid",
+		"width": "0px"
+	  }
+	},
+	"buttonBorderRadius": {
+	  "type": "number",
+	  "default": 0
 	}
+  },
+  "supports": {
+	"color": {
+	  "__experimentalSkipSerialization": true,
+	  "gradients": true,
+	  "__experimentalDefaultControls": {
+		"background": true,
+		"text": true
+	  }
+	},
+	"typography": {
+	  "fontSize": true,
+	  "lineHeight": true,
+	  "__experimentalFontFamily": true,
+	  "__experimentalFontWeight": true,
+	  "__experimentalFontStyle": true,
+	  "__experimentalTextTransform": true,
+	  "__experimentalTextDecoration": true,
+	  "__experimentalLetterSpacing": true,
+	  "__experimentalDefaultControls": {
+		"fontSize": true
+	  }
+	},
+	"reusable": false,
+	"shadow": true,
+	"spacing": {
+	  "__experimentalSkipSerialization": true,
+	  "padding": [
+		"horizontal",
+		"vertical"
+	  ],
+	  "__experimentalDefaultControls": {
+		"padding": true
+	  }
+	},
+	"__experimentalBorder": {
+	  "color": true,
+	  "radius": true,
+	  "style": true,
+	  "width": true,
+	  "__experimentalSkipSerialization": true,
+	  "__experimentalDefaultControls": {
+		"color": true,
+		"radius": true,
+		"style": true,
+		"width": true
+	  }
+	},
+	"__experimentalSelector": ".wp-block-button .wp-block-button__link"
   },
   "textdomain": "login-form",
   "editorScript": "file:./index.js",

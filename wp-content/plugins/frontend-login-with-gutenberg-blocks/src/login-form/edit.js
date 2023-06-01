@@ -1,5 +1,5 @@
 import './editor.scss';
-import {useState, useBlockProps, InspectorControls} from '@wordpress/block-editor';
+import {useBlockProps} from '@wordpress/block-editor';
 import {__} from '@wordpress/i18n';
 import {
 	ToggleControl,
@@ -25,7 +25,9 @@ export default function Edit(props) {
 			textFontWeight,
 			inputBorderRadius,
 			buttonBgColor,
-			buttonTextColor
+			buttonTextColor,
+			buttonBorder,
+			buttonBorderRadius,
 		}, setAttributes
 	} = props;
 
@@ -51,7 +53,12 @@ export default function Edit(props) {
 		'color': buttonTextColor,
 		'backgroundColor': buttonBgColor,
 		'margin-top': '10px',
-		'width': '100%'
+		'width': '100%',
+		'border-color':buttonBorder.color,
+		'border-style':buttonBorder.style,
+		'border-width':buttonBorder.width,
+		'border-radius': buttonBorderRadius,
+		'padding': '10px'
 	}
 
 	return (
@@ -65,7 +72,7 @@ export default function Edit(props) {
 						{showLabels &&
 							<label style={textStyle} htmlFor="usr_or_ml">{__('Username or E-mail', 'flwgb')}</label>}
 						<input id="usr_or_ml" type="text" style={inputStyle}
-							   placeholder={__('Enter your username or e-mail', 'flwgb')}/>
+							   placeholder={showPlaceholders && __('Enter your username or e-mail', 'flwgb')}/>
 					</div>
 				</div>
 
@@ -73,7 +80,7 @@ export default function Edit(props) {
 					<div className="flwgb-input-group">
 						{showLabels && <label style={textStyle} htmlFor="psswrd">{__('Password', 'flwgb')}</label>}
 						<input id="psswrd" type="password" style={inputStyle}
-							   placeholder={__('Enter your password', 'flwgb')}/>
+							   placeholder={showPlaceholders && __('Enter your password', 'flwgb')}/>
 					</div>
 				</div>
 
