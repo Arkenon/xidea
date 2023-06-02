@@ -5,8 +5,52 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-vizyon-sigorta-forms-login-form {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+.wp-block-frontend-login-with-gutenberg-blocks-login-form {
+
+}
+
+.flwgb-input-control {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 0 8px;
+  line-height: 2;
+  min-height: 30px;
+  border:1px solid #8c8f94;
+
+  &:focus{
+	border-color: transparent;
+	box-shadow: 0 0 0 1px;
+	outline: 2px solid transparent;
+  }
+}
+
+.flwgb-login-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.flwgb-form-check-input{
+
+}
+
+.flwgb-form-check-label{
+
+}
+
+.flwgb-input-label{
+
+}
+
+.flwgb-input-group{
+
+}
+
+.flwgb-form-row{
+
 }

@@ -49,16 +49,17 @@ class Blocks {
 	/**
 	 * Callback function for login form block
 	 *
+	 * @param array $block_attributes Get block attributes from block-name/edit.js
 	 * @return string Login form html template
 	 * @since    1.0.0
 	 */
-	public function login_form_render_callback(): string {
+	public function login_form_render_callback(array $block_attributes): string {
 
 		Helper::using('inc/Login.php');
 
 		$login = new Login();
 
-		return $login->login_form();
+		return $login->login_form($block_attributes);
 
 	}
 

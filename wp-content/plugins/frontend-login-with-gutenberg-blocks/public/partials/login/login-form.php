@@ -11,49 +11,80 @@ if ( is_user_logged_in() ) {
 } else {
 
 	$view = Helper::view( 'public/partials/login/login-fail.php' );
-	$view .= '<div class="border p-2 bg-white">
-        <form name="loginform" id="loginform" action="' . wp_login_url( home_url() ) . '" method="post">
-            <div class="form-row">
-                <div class="col-12 mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="log" id="user_login"
-                               placeholder="' . esc_attr_x( I18n::$email_input_text, "User e-mail input text", FLWGB_PLUGIN_NAME ) . '" required>
-                        <div class="invalid-feedback">
-							' . esc_html_x( I18n::$email_input_text, 'User e-mail input text', FLWGB_PLUGIN_NAME ) . '
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-12 mb-3">
-                    <div class="input-group">
-                        <input class="form-control" type="password" name="pwd" id="user_pass"
-                               placeholder="' . esc_attr_x( I18n::$password_input_text, "User password input text", FLWGB_PLUGIN_NAME ) . '"
-                               required>
-                        <div class="invalid-feedback">
-							' . esc_html_x( I18n::$password_input_text, 'User password input text', FLWGB_PLUGIN_NAME ) . '
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-12 mb-3">
-                    <div class="form-check">
-                        <input id="keepme" name="rememberme" checked="checked" type="checkbox" class="form-check-input">
-                        <label class="form-check-label" for="keepme">' . esc_html_x( I18n::$remember_me_checkbox_text, 'Remember me checkbox text', FLWGB_PLUGIN_NAME ) . '</label>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <button type="submit" name="wp-submit" id="wp-submit"
-                        class="btn btn-dark btn-block">' . esc_html_x( I18n::$login_button_text, 'Login button text', FLWGB_PLUGIN_NAME ) . '</button>
-				' . do_action( 'wp_login' ) . '
-            </div>
-            <div class="mt-2 text-center">
-            <a href="' . site_url( get_option( 'flwgb_register_page' ) ) . '">' . esc_html_x( I18n::$register_button_text, 'Register button text', FLWGB_PLUGIN_NAME ) . ' | </a>
-            <a href="' . site_url( get_option( 'flwgb_lost_password_page' ) ) . '">' . esc_html_x( I18n::$reset_password_button_text, 'Reset password button text', FLWGB_PLUGIN_NAME ) . '</a>
-            </div>
-        </form>
+
+	$input_style = 'border-radius:'.$form_attributes['inputBorderRadius'].'px';
+	$text_style = 'color:'. $form_attributes['textColor'].'; font-weight:'. $form_attributes['textFontWeight'];
+	$button_style = 'color:'. $form_attributes['buttonTextColor'].'; '.
+	                'background-color: '. $form_attributes['buttonBgColor'].'; '.
+	                'border-color: '. $form_attributes['buttonTextColor'].'; '.
+	                'border-style: '. $form_attributes['buttonBorder']['style'].'; '.
+	                'border-width: '. $form_attributes['buttonBorder']['width'].'; '.
+					'border-radius: '. $form_attributes['buttonBorder']['radius'];
+
+
+	$view .= '<div>
+				<form name="loginform" id="loginform" action="' . wp_login_url( home_url() ) . '" method="post">';
+
+				$view .= '<div class="flwgb-form-row">
+							<div class="flwgb-input-group">';
+
+							if ( $form_attributes['showLabels'] ) {
+
+								$view .= '<label class="flwgb-input-label" style="'.$text_style.'"
+														   for="flwgb-username-or-email">' . esc_html_x( I18n::$email_or_username_input_text, I18n::$email_or_username_input_text, FLWGB_PLUGIN_NAME ) . '</label>';
+							}
+
+							$view .= '<input class="flwgb-input-control" id="flwgb-username-or-email" name="log" type="text" style='.$input_style.' placeholder="';
+
+							if ( $form_attributes['showLabels'] ) {
+
+								$view .= esc_attr_x( I18n::$email_or_username_input_text, I18n::$email_or_username_input_text, FLWGB_PLUGIN_NAME ) ;
+
+							}
+
+							$view .= '" />';
+					$view .= '</div>
+						</div>';
+
+				$view .= '<div class="flwgb-form-row">
+										<div class="flwgb-input-group">';
+
+				if ( $form_attributes['showLabels'] ) {
+
+					$view .= '<label class="flwgb-input-label" style="'.$text_style.'"
+																	   for="flwgb-password">' . esc_html_x( I18n::$password_input_text, I18n::$password_input_text, FLWGB_PLUGIN_NAME ) . '</label>';
+				}
+
+				$view .= '<input class="flwgb-input-control" id="flwgb-password" name="pwd" type="password" style='.$input_style.' placeholder="';
+
+				if ( $form_attributes['showLabels'] ) {
+
+					$view .= esc_attr_x( I18n::$password_placeholder_text, I18n::$password_placeholder_text, FLWGB_PLUGIN_NAME ) ;
+
+				}
+
+						$view .= '" />';
+					$view .= '</div>
+						</div>';
+
+
+				$view .= '<div class="flwgb-form-row">
+						<div class="flwgb-input-group">
+							<input id="flwgb-rememberme" checked="checked" type="checkbox" class="flwgb-form-check-input"/>
+							<label class="flwgb-form-check-label" style="'.$text_style.'" for="flwgb-rememberme" name="rememberme">'.esc_html_x(I18n::$remember_me_text,I18n::$remember_me_text,FLWGB_PLUGIN_NAME).'</label>
+						</div>
+					</div>';
+
+				$view .= '<div class="flwgb-form-row">
+						<button style="'.$button_style.'" type="submit" name="wp-submit" id="wp-submit" class="flwgb-login-btn">
+							'.esc_html_x(I18n::$login_button_text,I18n::$login_button_text,FLWGB_PLUGIN_NAME).'
+						</button>
+						' . do_action( 'wp_login' ) . '
+					</div>';
+
+	$view .= '</form>
     </div>';
+
+
 
 }

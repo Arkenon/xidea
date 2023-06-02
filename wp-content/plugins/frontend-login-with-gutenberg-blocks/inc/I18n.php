@@ -25,13 +25,8 @@ class I18n {
 	public static $submit = 'Submit';
 	public static $go_to_user_dashboard = 'Go to User Dashboard';
 	public static $email_input_text = 'Your e-mail';
-	public static $email_or_username_input_text = 'Username or E-mail';
-	public static $email_or_username_placeholder_text = 'Enter your username or e-mail';
-	public static $password_input_text = 'Password';
-	public static $password_placeholder_text = 'Enter your password';
 	public static $user_input_text = 'Username';
 	public static $password_again_input_text = 'Password Again';
-	public static $remember_me_checkbox_text = 'Remember Me';
 
 	/*Admin options page texts*/
 	public static $admin_general_settings = 'General Settings';
@@ -54,6 +49,11 @@ class I18n {
 	public static $login_fail_message_label = 'Customize alert for login fail.';
 	public static $login_button_text = 'Login';
 	public static $already_logged_in_message = 'Thank you for logged in.';
+	public static $email_or_username_input_text = 'Username or E-mail';
+	public static $email_or_username_placeholder_text = 'Enter your username or e-mail';
+	public static $password_input_text = 'Password';
+	public static $password_placeholder_text = 'Enter your password';
+	public static $remember_me_text = 'Remember me';
 
 	/*Translatable texts for register operations*/
 	public static $register_button_text = 'Register';

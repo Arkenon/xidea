@@ -63,13 +63,14 @@ class Frontend {
 	/**
 	 * Return login form
 	 *
+	 * @param array $block_attributes Get block attributes from block-name/edit.js
 	 * @return string Login form html
 	 * @since    1.0.0
 	 */
-	public function get_login_form() : string  {
+	public function get_login_form(array $block_attributes) : string  {
 
 		//Return login form html output
-		return Helper::view( 'public/partials/login/login-form.php' );
+		return Helper::view( 'public/partials/login/login-form.php', $block_attributes );
 
 	}
 

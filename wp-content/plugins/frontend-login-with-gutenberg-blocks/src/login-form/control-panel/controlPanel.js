@@ -54,7 +54,6 @@ const ControlPanel = ({options}) => {
 									   options={[
 										   {label: 'Normal', value: 'normal'},
 										   {label: 'Bold', value: 'bold'},
-										   {label: 'Light', value: 'lighter'},
 									   ]}
 									   onChange={(val) => setAttributes({textFontWeight: val})}
 						/>

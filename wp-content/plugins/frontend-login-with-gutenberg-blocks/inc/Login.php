@@ -32,15 +32,16 @@ class Login {
 	/**
 	 * Login form html output
 	 *
+	 * @param array $block_attributes Get block attributes from block-name/edit.js
 	 * @return string html result of login form
 	 * @since 1.0.0
 	 */
-	public function login_form(): string {
+	public function login_form(array $block_attributes): string {
 
 		$frontend = new Frontend();
 
 		//Get login form html output from Frontend class
-		return $frontend->get_login_form();
+		return $frontend->get_login_form($block_attributes);
 
 	}
 
