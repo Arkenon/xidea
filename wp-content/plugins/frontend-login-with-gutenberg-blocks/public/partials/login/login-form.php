@@ -4,7 +4,7 @@ use FLWGB\Helper;
 use FLWGB\I18n;
 
 //Login Form
-if ( is_user_logged_in() ) {
+if ( !is_user_logged_in() ) {
 
 	$view = Helper::view( 'public/partials/login/already-logged-in.php' );
 
@@ -19,7 +19,8 @@ if ( is_user_logged_in() ) {
 	                'border-color: '. $form_attributes['buttonTextColor'].'; '.
 	                'border-style: '. $form_attributes['buttonBorder']['style'].'; '.
 	                'border-width: '. $form_attributes['buttonBorder']['width'].'; '.
-					'border-radius: '. $form_attributes['buttonBorder']['radius'];
+					'border-radius: '. $form_attributes['buttonBorderRadius'].'px;'.
+					'font-weight: '. $form_attributes['buttonTextFontWeight'];
 
 
 	$view .= '<div>

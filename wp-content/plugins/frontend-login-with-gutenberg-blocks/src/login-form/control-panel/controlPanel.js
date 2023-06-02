@@ -28,6 +28,7 @@ const ControlPanel = ({options}) => {
 			buttonTextColor,
 			buttonBorder,
 			buttonBorderRadius,
+			buttonTextFontWeight
 		}, setAttributes
 	} = options;
 
@@ -120,6 +121,17 @@ const ControlPanel = ({options}) => {
 						<ColorPalette
 							value={buttonBgColor}
 							onChange={(val) => setAttributes({buttonBgColor: val})}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<SelectControl labelPosition={'top'}
+									   label={__('Button Font Weight', 'flwgb')}
+									   value={buttonTextFontWeight}
+									   options={[
+										   {label: 'Normal', value: 'normal'},
+										   {label: 'Bold', value: 'bold'},
+									   ]}
+									   onChange={(val) => setAttributes({buttonTextFontWeight: val})}
 						/>
 					</PanelRow>
 					<PanelRow>

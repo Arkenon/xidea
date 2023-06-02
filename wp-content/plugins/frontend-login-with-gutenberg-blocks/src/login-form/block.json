@@ -47,6 +47,10 @@
 	"buttonBorderRadius": {
 	  "type": "number",
 	  "default": 0
+	},
+	"buttonTextFontWeight": {
+	  "type": "string",
+	  "default": "normal"
 	}
   },
   "textdomain": "login-form",
