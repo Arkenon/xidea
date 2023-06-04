@@ -1,3 +1,7 @@
 .flwgb-hide{
 	display: none;
 }
+
+.flwgb-loading, #flwgb-login-form-result{
+	text-align: center;
+}

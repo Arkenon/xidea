@@ -10,8 +10,6 @@ if ( is_user_logged_in() ) {
 
 } else {
 
-	$view = Helper::view( 'public/partials/login/login-fail.php' );
-
 	$input_style = 'border-radius:'.$form_attributes['inputBorderRadius'].'px';
 	$text_style = 'color:'. $form_attributes['textColor'].'; font-weight:'. $form_attributes['textFontWeight'];
 	$button_style = 'color:'. $form_attributes['buttonTextColor'].'; '.

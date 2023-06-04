@@ -41,21 +41,20 @@ class I18n {
 	public static $user_settings_page = 'User Settings Page';
 	public static $terms_and_conditions_page = 'Terms and Conditions Page';
 	public static $privacy_policy_page = 'Privacy Policy Page';
-	public static $has_activation = 'Will you send an activation e-mail? (Enable user activation)';
+	public static $has_activation = 'Enable user activation';
+	public static $has_user_dashboard = 'Enable user dashboard';
 
 
 	/*Translatable texts for login operations*/
-	public static $login_fail_message = 'Your username or password is wrong. Please try again...';
-	public static $login_fail_message_label = 'Customize alert for login fail.';
 	public static $login_button_text = 'Login';
-	public static $already_logged_in_message = 'Thank you for logged in.';
+	public static $already_logged_in_message = 'You have already logged in.';
 	public static $email_or_username_input_text = 'Username or E-mail';
 	public static $email_or_username_placeholder_text = 'Enter your username or e-mail';
 	public static $password_input_text = 'Password';
 	public static $password_placeholder_text = 'Enter your password';
 	public static $remember_me_text = 'Remember me';
 	public static $invalid_username_or_pass = 'Invalid username or password.';
-	public static $login_successful = 'You have successfully logged in.';
+	public static $login_successful = 'You have successfully logged in...';
 
 	/*Translatable texts for register operations*/
 	public static $register_button_text = 'Register';

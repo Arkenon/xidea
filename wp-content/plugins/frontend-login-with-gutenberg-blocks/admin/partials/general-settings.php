@@ -51,19 +51,20 @@ $pages = get_pages();
 		<tr>
 			<th scope="row">
 
-				<label for="flwgb_login_fail_message">
-					<?php echo esc_html_x( I18n::$login_fail_message_label, 'Login fail label text', FLWGB_PLUGIN_NAME ); ?>
+				<label for="flwgb_has_user_dashboard">
+					<?php echo esc_html_x( I18n::$has_user_dashboard, 'Has user activation', FLWGB_PLUGIN_NAME ); ?>
 				</label>
 
 			</th>
 			<td>
 
-				<?php
-				$fail_message = get_option( 'flwgb_login_fail_message' ) ?:
-						esc_html_x( I18n::$login_fail_message, 'Login fail message', FLWGB_PLUGIN_NAME ) ?>
+				<select name="flwgb_has_user_dashboard" id="flwgb_has_user_dashboard">
 
-				<textarea name="flwgb_login_fail_message" id="flwgb_login_fail_message" cols="80"
-						  rows="10"><?php echo $fail_message ?></textarea>
+					<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_PLUGIN_NAME ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$yes_text, 'Yes text', FLWGB_PLUGIN_NAME ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$no_text, 'No text', FLWGB_PLUGIN_NAME ); ?></option>
+
+				</select>
 
 			</td>
 		</tr>

@@ -62,7 +62,7 @@ class Options {
 		register_setting( 'flwgb-general-settings-group', 'flwgb_terms_and_conditions_page', 'sanitize_text_field' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_privacy_policy_page', 'sanitize_text_field' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_has_activation', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_login_fail_message', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_has_user_dashboard', 'sanitize_text_field' );
 
 		// E-Mail settings
 		register_setting( 'flwgb-mail-settings-group', 'flwgb_register_mail_to_user' );
