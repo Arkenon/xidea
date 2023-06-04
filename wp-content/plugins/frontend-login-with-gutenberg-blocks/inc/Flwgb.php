@@ -127,9 +127,9 @@ class Flwgb extends Loader {
 		 */
 		Helper::using('inc/Login.php');
 
-		$register = new Login();
+		$login = new Login();
 
-		self::add_action( 'plugins_loaded', $register, 'load_login_actions' );
+		self::add_action( 'plugins_loaded', $login, 'load_login_actions' );
 
 	}
 

@@ -54,6 +54,8 @@ class I18n {
 	public static $password_input_text = 'Password';
 	public static $password_placeholder_text = 'Enter your password';
 	public static $remember_me_text = 'Remember me';
+	public static $invalid_username_or_pass = 'Invalid username or password.';
+	public static $login_successful = 'You have successfully logged in.';
 
 	/*Translatable texts for register operations*/
 	public static $register_button_text = 'Register';

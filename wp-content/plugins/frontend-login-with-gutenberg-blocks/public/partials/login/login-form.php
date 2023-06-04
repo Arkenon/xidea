@@ -4,7 +4,7 @@ use FLWGB\Helper;
 use FLWGB\I18n;
 
 //Login Form
-if ( !is_user_logged_in() ) {
+if ( is_user_logged_in() ) {
 
 	$view = Helper::view( 'public/partials/login/already-logged-in.php' );
 
@@ -24,7 +24,7 @@ if ( !is_user_logged_in() ) {
 
 
 	$view .= '<div>
-				<form name="loginform" id="loginform" action="' . wp_login_url( home_url() ) . '" method="post">';
+				<form name="flwgb-login-form" id="flwgb-login-form" method="post">';
 
 				$view .= '<div class="flwgb-form-row">
 							<div class="flwgb-input-group">';
@@ -35,11 +35,11 @@ if ( !is_user_logged_in() ) {
 														   for="flwgb-username-or-email">' . esc_html_x( I18n::$email_or_username_input_text, I18n::$email_or_username_input_text, FLWGB_PLUGIN_NAME ) . '</label>';
 							}
 
-							$view .= '<input class="flwgb-input-control" id="flwgb-username-or-email" name="log" type="text" style='.$input_style.' placeholder="';
+							$view .= '<input class="flwgb-input-control" id="flwgb-username-or-email" name="flwgb-username-or-email" type="text" style='.$input_style.' placeholder="';
 
-							if ( $form_attributes['showLabels'] ) {
+							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::$email_or_username_input_text, I18n::$email_or_username_input_text, FLWGB_PLUGIN_NAME ) ;
+								$view .= esc_attr_x( I18n::$email_or_username_placeholder_text, I18n::$email_or_username_placeholder_text, FLWGB_PLUGIN_NAME ) ;
 
 							}
 
@@ -56,9 +56,9 @@ if ( !is_user_logged_in() ) {
 																	   for="flwgb-password">' . esc_html_x( I18n::$password_input_text, I18n::$password_input_text, FLWGB_PLUGIN_NAME ) . '</label>';
 				}
 
-				$view .= '<input class="flwgb-input-control" id="flwgb-password" name="pwd" type="password" style='.$input_style.' placeholder="';
+				$view .= '<input class="flwgb-input-control" id="flwgb-password" name="flwgb-password" type="password" style='.$input_style.' placeholder="';
 
-				if ( $form_attributes['showLabels'] ) {
+				if ( $form_attributes['showPlaceholders'] ) {
 
 					$view .= esc_attr_x( I18n::$password_placeholder_text, I18n::$password_placeholder_text, FLWGB_PLUGIN_NAME ) ;
 
@@ -71,19 +71,24 @@ if ( !is_user_logged_in() ) {
 
 				$view .= '<div class="flwgb-form-row">
 						<div class="flwgb-input-group">
-							<input id="flwgb-rememberme" checked="checked" type="checkbox" class="flwgb-form-check-input"/>
-							<label class="flwgb-form-check-label" style="'.$text_style.'" for="flwgb-rememberme" name="rememberme">'.esc_html_x(I18n::$remember_me_text,I18n::$remember_me_text,FLWGB_PLUGIN_NAME).'</label>
+							<input id="flwgb-rememberme" checked="checked" type="checkbox" name="flwgb-rememberme" class="flwgb-form-check-input"/>
+							<label class="flwgb-form-check-label" style="'.$text_style.'" for="flwgb-rememberme">'.esc_html_x(I18n::$remember_me_text,I18n::$remember_me_text,FLWGB_PLUGIN_NAME).'</label>
 						</div>
 					</div>';
 
+				$view .= wp_nonce_field('flwgbloginhandle', 'security');
+
+				$view .= '<input type="hidden" name="action" value="flwgbloginhandle">';
+
 				$view .= '<div class="flwgb-form-row">
-						<button style="'.$button_style.'" type="submit" name="wp-submit" id="wp-submit" class="flwgb-login-btn">
+						<button style="'.$button_style.'" type="submit" id="flwgb-login-submit" class="flwgb-login-btn">
 							'.esc_html_x(I18n::$login_button_text,I18n::$login_button_text,FLWGB_PLUGIN_NAME).'
 						</button>
 						' . do_action( 'wp_login' ) . '
-					</div>';
-
+					</div>
+					<div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>';
 	$view .= '</form>
+			<div id="flwgb-login-form-result"></div>
     </div>';
 
 

@@ -57,7 +57,7 @@ class Frontend {
 		 */
 
 		wp_enqueue_script( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'js/flwgb-public.js', array( 'jquery' ), FLWGB_VERSION, false );
-		wp_localize_script( 'flwg-ajax-script', 'flwgb_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+		wp_localize_script( 'jquery', 'flwgb_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 	}
 
 	/**

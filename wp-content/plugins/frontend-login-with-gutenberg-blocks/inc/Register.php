@@ -18,6 +18,7 @@ class Register {
 	 */
 	public function load_register_actions() {
 
+		//Load ajax callback
 		add_action( 'wp_ajax_flwgbregisterhandle', 'flwgb_register_handle_ajax_callback' );
 
 	}

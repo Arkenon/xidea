@@ -63,7 +63,7 @@ $view = '<div class="border p-2 bg-white">
                 </div>
             </div>
             <div class="text-center mt-3">
-                <button id="kayit-buton" class="btn btn-dark btn-block"
+                <button class="btn btn-dark btn-block"
                         type="submit">' . esc_html_x( I18n::$register_button_text, 'Register form submit text', FLWGB_PLUGIN_NAME ) . '</button>
             </div>
             <div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>
