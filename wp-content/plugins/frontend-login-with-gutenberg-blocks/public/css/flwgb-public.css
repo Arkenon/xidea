@@ -5,3 +5,15 @@
 .flwgb-loading, #flwgb-login-form-result{
 	text-align: center;
 }
+
+.flwgb-btn{
+	cursor:pointer;
+}
+
+.flwgb-danger{
+	border: 1px solid #e08888;
+}
+
+.flwgb-success{
+	border: 1px solid #9dcb9d;
+}

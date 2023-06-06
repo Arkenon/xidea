@@ -55,6 +55,7 @@ class I18n {
 	public static $remember_me_text = 'Remember me';
 	public static $invalid_username_or_pass = 'Invalid username or password.';
 	public static $login_successful = 'You have successfully logged in...';
+	public static $user_not_activated = 'Please activate your account. We sent you an email. Click the activation link in the email.';
 
 	/*Translatable texts for register operations*/
 	public static $register_button_text = 'Register';

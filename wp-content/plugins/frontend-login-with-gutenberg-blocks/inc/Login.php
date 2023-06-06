@@ -14,7 +14,7 @@ class Login {
 	public function load_login_actions() {
 
 		///Load ajax callback
-		add_action( 'wp_ajax_nopriv_flwgbloginhandle', [ $this, 'flwgb_login_handle_ajax_callback' ] );
+		add_action( 'wp_ajax_nopriv_flwgbloginhandle', [ $this, 'login_handle_ajax_callback' ] );
 
 	}
 
@@ -41,7 +41,7 @@ class Login {
 	 * @return string|false a JSON encoded string on success or FALSE on failure.
 	 * @since 1.0.0
 	 */
-	public function flwgb_login_handle_ajax_callback() {
+	public function login_handle_ajax_callback() {
 
 		check_ajax_referer( 'flwgbloginhandle', 'security' );
 
@@ -61,15 +61,50 @@ class Login {
 
 		} else {
 
-			echo json_encode( array(
-				'loggedin'   => true,
-				'return_url' => site_url( get_option( 'flwgb_redirect_after_login' ) ),
-				'message'    => esc_html_x( I18n::$login_successful, I18n::$login_successful, 'flwgb' )
-			) );
+			if(get_option('flwgb_has_activation') === 'yes'){
+
+				Helper::using("inc/UserActivation.php");
+				$activation = new UserActivation();
+
+				if($activation->check_is_user_activated($user->ID)){
+
+					$this->login_success_response();
+
+				} else {
+
+					echo json_encode( array(
+						'loggedin'   => false,
+						'message'    => esc_html_x( I18n::$user_not_activated, I18n::$user_not_activated, 'flwgb' )
+					) );
+
+					wp_logout();
+
+				}
+
+			} else {
+
+				$this->login_success_response();
+
+			}
 
 		}
 
 		die();
+
+	}
+
+	/**
+	 * Json result for login. When login success
+	 *
+	 * @since 1.0.0
+	 */
+	private function login_success_response(){
+
+		echo json_encode( array(
+			'loggedin'   => true,
+			'return_url' => site_url( get_option( 'flwgb_redirect_after_login' ) ),
+			'message'    => esc_html_x( I18n::$login_successful, I18n::$login_successful, 'flwgb' )
+		) );
 
 	}
 

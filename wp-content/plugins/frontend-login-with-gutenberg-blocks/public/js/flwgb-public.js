@@ -23,6 +23,12 @@ jQuery(document).ready(function ($) {
 			},
 			success: function (response) {
 
+				if(response.loggedin){
+					$("#flwgb-login-form-result").addClass("flwgb-success")
+				} else {
+					$("#flwgb-login-form-result").addClass("flwgb-danger")
+				}
+
 				$("#flwgb-login-form-result").html(response.message);
 
 				$('.flwgb-loading').addClass('flwgb-hide');

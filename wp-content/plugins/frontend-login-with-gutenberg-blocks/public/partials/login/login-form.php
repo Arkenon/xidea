@@ -21,7 +21,7 @@ if ( is_user_logged_in() ) {
 					'font-weight: '. $form_attributes['buttonTextFontWeight'];
 
 
-	$view .= '<div>
+	$view = '<div>
 				<form name="flwgb-login-form" id="flwgb-login-form" method="post">';
 
 				$view .= '<div class="flwgb-form-row">
@@ -79,7 +79,7 @@ if ( is_user_logged_in() ) {
 				$view .= '<input type="hidden" name="action" value="flwgbloginhandle">';
 
 				$view .= '<div class="flwgb-form-row">
-						<button style="'.$button_style.'" type="submit" id="flwgb-login-submit" class="flwgb-login-btn">
+						<button style="'.$button_style.'" type="submit" id="flwgb-login-submit" class="flwgb-login-btn flwgb-btn">
 							'.esc_html_x(I18n::$login_button_text,I18n::$login_button_text,FLWGB_PLUGIN_NAME).'
 						</button>
 						' . do_action( 'wp_login' ) . '
