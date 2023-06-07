@@ -1,38 +1,79 @@
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
-import { __ } from '@wordpress/i18n';
-
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
-import { useBlockProps } from '@wordpress/block-editor';
-
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 import './editor.scss';
+import {useBlockProps} from '@wordpress/block-editor';
+import {__} from '@wordpress/i18n';
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
- */
-export default function Edit() {
+import ControlPanel from "./control-panel/controlPanel";
+
+export default function Edit(props) {
+
+	const {
+		attributes: {
+			showLabels,
+			showPlaceholders,
+			textColor,
+			textFontWeight,
+			inputBorderRadius,
+			buttonBgColor,
+			buttonTextColor,
+			buttonBorder,
+			buttonBorderRadius,
+			buttonTextFontWeight
+		}, setAttributes
+	} = props;
+
+	const blockProps = useBlockProps(props);
+
+	const inputStyle = {
+		'border-radius': inputBorderRadius,
+	}
+
+	const textStyle = {
+		'color': textColor,
+		'font-weight': textFontWeight
+	}
+
+	const buttonStyle = {
+		'color': buttonTextColor,
+		'backgroundColor': buttonBgColor,
+		'border-color': buttonBorder.color,
+		'border-style': buttonBorder.style,
+		'border-width': buttonBorder.width,
+		'border-radius': buttonBorderRadius,
+		'font-weight': buttonTextFontWeight
+	}
+
+
 	return (
-		<p { ...useBlockProps() }>
-			ŞİFREMİ UNUTTUM FORMUNU GÖSTERİR
-		</p>
+		<>
+
+			<ControlPanel options={props}/>
+
+			<div {...blockProps}>
+				<div style={{'text-align':'center'}}>
+					<p>{__("Please enter your e-mail address. We will send you an e-mail to reset your password.")}</p>
+				</div>
+				<div className="flwgb-form-row">
+					<div className="flwgb-input-group">
+						{showLabels &&
+						<label className="flwgb-input-label" style={textStyle}
+							   htmlFor="flwgb-email">{__('Your e-mail', 'flwgb')}</label>}
+						<input className="flwgb-input-control" id="flwgb-email" type="text"
+							   style={inputStyle}
+							   placeholder={showPlaceholders && __('Enter your e-mail', 'flwgb')}/>
+					</div>
+				</div>
+
+
+				<div className="flwgb-form-row">
+					<button style={buttonStyle} type="submit" name="wp-submit" id="wp-submit"
+							className="flwgb-reset-password-btn flwgb-btn">
+						{__('Send Request', 'flwgb')}
+					</button>
+				</div>
+
+			</div>
+
+		</>
+
 	);
 }

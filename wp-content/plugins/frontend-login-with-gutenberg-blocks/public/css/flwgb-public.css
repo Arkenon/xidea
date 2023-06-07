@@ -6,14 +6,54 @@
 	text-align: center;
 }
 
-.flwgb-btn{
-	cursor:pointer;
-}
-
 .flwgb-danger{
 	border: 1px solid #e08888;
 }
 
 .flwgb-success{
 	border: 1px solid #9dcb9d;
+}
+
+
+
+.flwgb-input-control {
+	width: 100%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #8c8f94;
+}
+
+
+.flwgb-input-control:focus{
+	border-color: transparent;
+	box-shadow: 0 0 0 1px;
+	outline: 2px solid transparent;
+}
+
+.flwgb-btn {
+	margin-top: 10px;
+	width: 100%;
+	padding: 10px;
+	cursor:pointer;
+}
+
+.flwgb-form-check-input{
+
+}
+
+.flwgb-form-check-label{
+
+}
+
+.flwgb-input-label{
+
+}
+
+.flwgb-input-group{
+
+}
+
+.flwgb-form-row{
+
 }

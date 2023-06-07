@@ -10,12 +10,12 @@ class LostPassword {
 	 * @return string html result of reset password form
 	 * @since 1.0.0
 	 */
-	public function lost_password_form(): string {
+	public function lost_password_form($block_attributes): string {
 
 		$frontend = new Frontend();
 
 		//Get reset password form html output from Frontend class
-		return $frontend->get_lost_password_form();
+		return $frontend->get_lost_password_form($block_attributes);
 	}
 
 	/**

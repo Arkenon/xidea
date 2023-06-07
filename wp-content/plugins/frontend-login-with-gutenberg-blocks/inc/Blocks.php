@@ -86,13 +86,13 @@ class Blocks {
 	 * @return string Lost password form template html
 	 * @since    1.0.0
 	 */
-	public function reset_password_form_render_callback(): string {
+	public function reset_password_form_render_callback(array $block_attributes): string {
 
 		Helper::using('inc/LostPassword.php');
 
 		$lost_password = new LostPassword();
 
-		return $lost_password->lost_password_form();
+		return $lost_password->lost_password_form($block_attributes);
 
 	}
 

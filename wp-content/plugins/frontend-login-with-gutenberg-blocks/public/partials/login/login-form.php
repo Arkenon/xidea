@@ -4,9 +4,9 @@ use FLWGB\Helper;
 use FLWGB\I18n;
 
 //Login Form
-if ( is_user_logged_in() ) {
+if ( !is_user_logged_in() ) {
 
-	$view = Helper::view( 'public/partials/login/already-logged-in.php' );
+	$view = Helper::return_view( 'public/partials/login/already-logged-in.php' );
 
 } else {
 
@@ -84,7 +84,7 @@ if ( is_user_logged_in() ) {
 						</button>
 						' . do_action( 'wp_login' ) . '
 					</div>
-					<div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>';
+					<div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, I18n::$loading_text, FLWGB_PLUGIN_NAME ) . '</div>';
 	$view .= '</form>
 			<div id="flwgb-login-form-result"></div>
     </div>';

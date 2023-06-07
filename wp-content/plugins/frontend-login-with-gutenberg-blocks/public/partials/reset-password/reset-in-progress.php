@@ -4,6 +4,17 @@
 use FLWGB\Helper;
 use FLWGB\I18n;
 
+$input_style = 'border-radius:'.$form_attributes['inputBorderRadius'].'px';
+$text_style = 'color:'. $form_attributes['textColor'].'; font-weight:'. $form_attributes['textFontWeight'];
+$button_style = 'color:'. $form_attributes['buttonTextColor'].'; '.
+                'background-color: '. $form_attributes['buttonBgColor'].'; '.
+                'border-color: '. $form_attributes['buttonTextColor'].'; '.
+                'border-style: '. $form_attributes['buttonBorder']['style'].'; '.
+                'border-width: '. $form_attributes['buttonBorder']['width'].'; '.
+                'border-radius: '. $form_attributes['buttonBorderRadius'].'px;'.
+                'font-weight: '. $form_attributes['buttonTextFontWeight'];
+
+
 $view = '<div class="border p-2">
 		<div class="flwgb-form-result"></div>
         <form name="flwgb-reset-pass-form" id="flwgb-reset-pass-form" method="post">

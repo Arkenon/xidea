@@ -25,6 +25,7 @@ class I18n {
 	public static $submit = 'Submit';
 	public static $go_to_user_dashboard = 'Go to User Dashboard';
 	public static $email_input_text = 'Your e-mail';
+	public static $email_placeholder_text = 'Enter your e-mail';
 	public static $user_input_text = 'Username';
 	public static $password_again_input_text = 'Password Again';
 
@@ -74,6 +75,8 @@ class I18n {
 	public static $reset_password_request_confirmation = 'We have successfully get your request. We have sent you an e-mail. Please check your inbox...';
 	public static $password_changed = 'Your password has been changed. Please sign in...';
 	public static $reset_password_request_input_text = 'Please sumbit your e-mail to get reset password link.';
+	public static $send_reset_request = 'Send Request';
+	public static $send_reset_request_description = 'Please enter your e-mail address. We will send you an e-mail to reset your password.';
 
 	/**
 	 * Load the plugin text domain for translation.
