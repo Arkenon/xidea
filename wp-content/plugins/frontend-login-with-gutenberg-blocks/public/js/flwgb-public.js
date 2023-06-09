@@ -80,7 +80,7 @@ jQuery( document ).ready( function ( $ ) {
 		alert( 'hello' );
 		/*var formData = new FormData();
 
-		formData.append("action", "flwgbresetpasswordrequesthandle");
+		formData.append("action", "flwgbresetrequesthandle");
 
 		$.ajax({
 			url: flwgb_ajax_object.ajax_url,

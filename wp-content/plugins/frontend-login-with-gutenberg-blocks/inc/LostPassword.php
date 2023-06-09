@@ -10,12 +10,12 @@ class LostPassword {
 	 * @return string html result of reset password form
 	 * @since 1.0.0
 	 */
-	public function lost_password_form($block_attributes): string {
+	public function lost_password_form( $block_attributes ): string {
 
 		$frontend = new Frontend();
 
 		//Get reset password form html output from Frontend class
-		return $frontend->get_lost_password_form($block_attributes);
+		return $frontend->get_lost_password_form( $block_attributes );
 	}
 
 	/**
@@ -99,20 +99,22 @@ class LostPassword {
 			$send_reset_password_email = $mail->flwgb_reset_password_mail_template( $username, $mail, $reset_link, "" );
 
 
-			$error_message   = '<p class="alert alert-danger"><strong class="font-s-14">' . esc_html_x( I18n::$general_error_message, 'General error message', FLWGB_PLUGIN_NAME ) . '</strong></p>';
-			$success_message = '</strong></p>' . esc_html_x( I18n::$reset_password_request_confirmation, 'Password request confirmation message', FLWGB_PLUGIN_NAME ) . '</strong></p>';
+			$success_message = esc_html_x( I18n::$reset_password_request_confirmation['text'], I18n::$reset_password_request_confirmation['context'], FLWGB_PLUGIN_NAME );
+			$error_message   = esc_html_x( I18n::$general_error_message, 'General error message', FLWGB_PLUGIN_NAME );
 
 			if ( ! is_wp_error( $send_reset_password_email ) ) {
 
 				update_user_meta( $user_id, 'flwgb_lost_password_key', $code );
 
 				$response = [
+					'status'  => true,
 					'message' => $success_message
 				];
 
 			} else {
 
 				$response = [
+					'status'  => false,
 					'message' => $error_message
 				];
 

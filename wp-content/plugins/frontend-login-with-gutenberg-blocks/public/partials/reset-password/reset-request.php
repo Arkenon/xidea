@@ -7,7 +7,7 @@ $input_style = 'border-radius:'.$form_attributes['inputBorderRadius'].'px';
 $text_style = 'color:'. $form_attributes['textColor'].'; font-weight:'. $form_attributes['textFontWeight'];
 $button_style = 'color:'. $form_attributes['buttonTextColor'].'; '.
                 'background-color: '. $form_attributes['buttonBgColor'].'; '.
-                'border-color: '. $form_attributes['buttonTextColor'].'; '.
+                'border-color: '. $form_attributes['buttonBorder']['color'].'; '.
                 'border-style: '. $form_attributes['buttonBorder']['style'].'; '.
                 'border-width: '. $form_attributes['buttonBorder']['width'].'; '.
                 'border-radius: '. $form_attributes['buttonBorderRadius'].'px;'.
