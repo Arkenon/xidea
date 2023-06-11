@@ -4,22 +4,25 @@ use FLWGB\Helper;
 use FLWGB\I18n;
 
 //Login Form
-if ( !is_user_logged_in() ) {
+if ( is_user_logged_in() ) {
 
 	$view = Helper::return_view( 'public/partials/login/already-logged-in.php' );
 
 } else {
-
 	$input_style = 'border-radius:'.$form_attributes['inputBorderRadius'].'px';
 	$text_style = 'color:'. $form_attributes['textColor'].'; font-weight:'. $form_attributes['textFontWeight'];
+
+	$button_border_color  = array_key_exists('color',$form_attributes['buttonBorder']) ? 'border-color: '. $form_attributes['buttonBorder']['color'].';' : "";
+	$button_border_style  = array_key_exists('style',$form_attributes['buttonBorder']) ? 'border-style: '.$form_attributes['buttonBorder']['style'].';' : "";
+	$button_border_width  = array_key_exists('width',$form_attributes['buttonBorder']) ? 'border-width: '.$form_attributes['buttonBorder']['width'].';' : "";
+
 	$button_style = 'color:'. $form_attributes['buttonTextColor'].'; '.
 	                'background-color: '. $form_attributes['buttonBgColor'].'; '.
-	                'border-color: '. $form_attributes['buttonBorder']['color'].'; '.
-	                'border-style: '. $form_attributes['buttonBorder']['style'].'; '.
-	                'border-width: '. $form_attributes['buttonBorder']['width'].'; '.
-					'border-radius: '. $form_attributes['buttonBorderRadius'].'px;'.
-					'font-weight: '. $form_attributes['buttonTextFontWeight'];
-
+	                $button_border_color .
+	                $button_border_style .
+	                $button_border_width .
+	                'border-radius: '. $form_attributes['buttonBorderRadius'].'px;'.
+	                'font-weight: '. $form_attributes['buttonTextFontWeight'];
 
 	$view = '<div>
 				<form name="flwgb-login-form" id="flwgb-login-form" method="post">';
@@ -70,7 +73,7 @@ if ( !is_user_logged_in() ) {
 				$view .= '<div class="flwgb-form-row">
 						<div class="flwgb-input-group">
 							<input id="flwgb-rememberme" checked="checked" type="checkbox" name="flwgb-rememberme" class="flwgb-form-check-input"/>
-							<label class="flwgb-form-check-label" style="'.$text_style.'" for="flwgb-rememberme">'.esc_html_x(I18n::$remember_me_text,I18n::$remember_me_text,FLWGB_PLUGIN_NAME).'</label>
+							<label class="flwgb-form-check-label" for="flwgb-rememberme">'.esc_html_x(I18n::$remember_me_text,I18n::$remember_me_text,FLWGB_PLUGIN_NAME).'</label>
 						</div>
 					</div>';
 
@@ -84,7 +87,7 @@ if ( !is_user_logged_in() ) {
 						</button>
 						' . do_action( 'wp_login' ) . '
 					</div>
-					<div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, I18n::$loading_text, FLWGB_PLUGIN_NAME ) . '</div>';
+					<div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>';
 	$view .= '</form>
 			<div id="flwgb-login-form-result"></div>
     </div>';

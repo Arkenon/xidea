@@ -64,11 +64,10 @@ class Frontend {
 	 * Return login form
 	 *
 	 * @param array $block_attributes Get block attributes from block-name/edit.js
-	 *
 	 * @return string Login form html
 	 * @since    1.0.0
 	 */
-	public function get_login_form( array $block_attributes ): string {
+	public function get_login_form(array $block_attributes) : string  {
 
 		//Return login form html output
 		return Helper::return_view( 'public/partials/login/login-form.php', $block_attributes );
@@ -81,7 +80,7 @@ class Frontend {
 	 * @return string Register form html
 	 * @since    1.0.0
 	 */
-	public function get_register_form(): string {
+	public function get_register_form() : string  {
 
 		//Return register form html output
 		return Helper::return_view( 'public/partials/register/register-form.php' );
@@ -94,7 +93,7 @@ class Frontend {
 	 * @return string Reset password  form html
 	 * @since    1.0.0
 	 */
-	public function get_lost_password_form( array $block_attributes ): string {
+	public function get_lost_password_form(array $block_attributes) : string  {
 
 		//Return reset password  form html output
 		return Helper::return_view( 'public/partials/reset-password/reset-password-form.php', $block_attributes );

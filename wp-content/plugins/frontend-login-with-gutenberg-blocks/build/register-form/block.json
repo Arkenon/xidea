@@ -3,10 +3,10 @@
   "apiVersion": 2,
   "name": "frontend-login-with-gutenberg-blocks/register-form",
   "version": "0.1.0",
-  "title": "Registration Form",
+  "title": "Register Form",
   "category": "theme",
   "icon": "format-aside",
-  "description": "Display registration form",
+  "description": "Display register form",
   "supports": {
     "html": false
   },

@@ -3,6 +3,21 @@
 
 use FLWGB\Helper;
 use FLWGB\I18n;
+/*
+$input_style = 'border-radius:' . $form_attributes['inputBorderRadius'] . 'px';
+$text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];
+
+$button_border_color  = $form_attributes['buttonBorder']['color'];
+$button_border_style  = $form_attributes['buttonBorder']['style'];
+$button_border_width  = $form_attributes['buttonBorder']['width'];
+
+$button_style = 'color:' . $form_attributes['buttonTextColor'] . '; ' .
+                'background-color: ' . $form_attributes['buttonBgColor'] . '; ' .
+                'border-color: ' . $button_border_color . '; ' .
+                'border-style: ' . $button_border_style . '; ' .
+                'border-width: ' . $button_border_width . '; ' .
+                'border-radius: ' . $form_attributes['buttonBorderRadius'] . 'px;' .
+                'font-weight: ' . $form_attributes['buttonTextFontWeight'];
 
 $input_style = 'border-radius:'.$form_attributes['inputBorderRadius'].'px';
 $text_style = 'color:'. $form_attributes['textColor'].'; font-weight:'. $form_attributes['textFontWeight'];
@@ -34,4 +49,6 @@ $view = '<div class="border p-2">
                     class="btn btn-dark btn-block">' . esc_html_x( I18n::$submit_reset_password_button_text, 'Change password button text', FLWGB_PLUGIN_NAME ) . '</button>
         </form>
         <div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>
-    </div>';
+    </div>';*/
+
+$view = "hello progress";

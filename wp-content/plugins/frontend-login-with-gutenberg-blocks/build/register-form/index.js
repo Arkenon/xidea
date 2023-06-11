@@ -52,7 +52,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {WPElement} Element to render.
  */
 function Edit() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), "KAYIT FORMUNU G\xD6STER\u0130R");
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), "register form");
 }
 
 /***/ }),
@@ -214,7 +214,7 @@ module.exports = window["wp"]["i18n"];
   \**************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"frontend-login-with-gutenberg-blocks/register-form","version":"0.1.0","title":"Registration Form","category":"theme","icon":"format-aside","description":"Display registration form","supports":{"html":false},"textdomain":"register-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"frontend-login-with-gutenberg-blocks/register-form","version":"0.1.0","title":"Register Form","category":"theme","icon":"format-aside","description":"Display register form","supports":{"html":false},"textdomain":"register-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

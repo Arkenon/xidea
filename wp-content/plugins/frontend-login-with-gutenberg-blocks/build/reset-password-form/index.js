@@ -180,12 +180,12 @@ function Edit(props) {
     'border-radius': inputBorderRadius
   };
   const textStyle = {
-    color: textColor,
+    'color': textColor,
     'font-weight': textFontWeight
   };
   const buttonStyle = {
-    color: buttonTextColor,
-    backgroundColor: buttonBgColor,
+    'color': buttonTextColor,
+    'backgroundColor': buttonBgColor,
     'border-color': buttonBorder.color,
     'border-style': buttonBorder.style,
     'border-width': buttonBorder.width,
@@ -198,7 +198,7 @@ function Edit(props) {
     style: {
       'text-align': 'center'
     }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Please enter your e-mail address. We will send you an e-mail to reset your password.'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Please enter your e-mail address. We will send you an e-mail to reset your password."))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-form-row"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-input-group"

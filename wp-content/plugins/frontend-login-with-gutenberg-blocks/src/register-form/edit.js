@@ -30,5 +30,9 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit() {
-	return <p { ...useBlockProps() }>KAYIT FORMUNU GÖSTERİR</p>;
+	return (
+		<p { ...useBlockProps() }>
+			register form
+		</p>
+	);
 }

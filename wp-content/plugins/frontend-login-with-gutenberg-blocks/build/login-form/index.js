@@ -180,12 +180,12 @@ function Edit(props) {
     'border-radius': inputBorderRadius
   };
   const textStyle = {
-    color: textColor,
+    'color': textColor,
     'font-weight': textFontWeight
   };
   const buttonStyle = {
-    color: buttonTextColor,
-    backgroundColor: buttonBgColor,
+    'color': buttonTextColor,
+    'backgroundColor': buttonBgColor,
     'border-color': buttonBorder.color,
     'border-style': buttonBorder.style,
     'border-width': buttonBorder.width,
@@ -225,7 +225,7 @@ function Edit(props) {
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-form-row"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "flwgb-input-group"
+    className: "flwgb-form-check-group"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
     id: "flwgb-rememberme",
     checked: "checked",
@@ -233,7 +233,6 @@ function Edit(props) {
     className: "flwgb-form-check-input"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
     className: "flwgb-form-check-label",
-    style: textStyle,
     htmlFor: "flwgb-rememberme"
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Remember me', 'flwgb')))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-form-row"
@@ -415,7 +414,7 @@ module.exports = window["wp"]["i18n"];
   \***********************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"frontend-login-with-gutenberg-blocks/login-form","version":"1.0.0","title":"Login Form","category":"theme","icon":"format-aside","description":"Display login form","attributes":{"showLabels":{"type":"boolean","default":false},"showPlaceholders":{"type":"boolean","default":false},"textColor":{"type":"string","default":"black"},"textFontWeight":{"type":"string","default":"bold"},"inputBorderRadius":{"type":"number","default":0},"buttonBgColor":{"type":"string","default":"gray"},"buttonTextColor":{"type":"string","default":"black"},"buttonBorder":{"type":"object","default":{"color":"#000","style":"solid","width":"0px"}},"buttonBorderRadius":{"type":"number","default":0},"buttonTextFontWeight":{"type":"string","default":"normal"}},"supports":{"html":false},"textdomain":"login-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"frontend-login-with-gutenberg-blocks/login-form","version":"1.0.0","title":"Login Form","category":"theme","icon":"format-aside","description":"Display login form","attributes":{"showLabels":{"type":"boolean","default":false},"showPlaceholders":{"type":"boolean","default":false},"textColor":{"type":"string","default":"black"},"textFontWeight":{"type":"string","default":"bold"},"inputBorderRadius":{"type":"number","default":0},"buttonBgColor":{"type":"string","default":"gray"},"buttonTextColor":{"type":"string","default":"black"},"buttonBorder":{"type":"object","default":{"color":"#000","style":"solid","width":"0px"}},"buttonBorderRadius":{"type":"number","default":0},"buttonTextFontWeight":{"type":"string","default":"normal"}},"textdomain":"login-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

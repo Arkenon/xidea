@@ -72,11 +72,12 @@ class I18n {
 	public static $reset_password_button_text = 'Lost Password';
 	public static $submit_reset_password_button_text = 'Change Password';
 	public static $wrong_reset_password_link = 'Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.';
-	public static $reset_password_request_confirmation = array('text' =>'We have successfully get your request. We have sent you an e-mail. Please check your inbox...','context'=>'Password request confirmation message');
+	public static $reset_password_request_confirmation = 'We have successfully get your request. We have sent you an e-mail. Please check your inbox...';
 	public static $password_changed = 'Your password has been changed. Please sign in...';
 	public static $reset_password_request_input_text = 'Please sumbit your e-mail to get reset password link.';
 	public static $send_reset_request = 'Send Request';
 	public static $send_reset_request_description = 'Please enter your e-mail address. We will send you an e-mail to reset your password.';
+
 
 	/**
 	 * Load the plugin text domain for translation.
