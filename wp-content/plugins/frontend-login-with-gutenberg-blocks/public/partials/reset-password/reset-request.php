@@ -44,16 +44,16 @@ $view = '<div>
 
 					</div>';
 
-			//$view .= wp_nonce_field('flwgbresetrequesthandle', 'reset_request_security');
-
 			$view .= '<input type="hidden" name="action" value="flwgbresetrequesthandle">';
+
+			$view .= '<input type="hidden" name="security" value="'.wp_create_nonce('flwgbresetrequesthandle').'">';
 
 			$view .= '<div class="flwgb-form-row">
 						<button style="'.$button_style.'" type="submit" id="flwgb-reset-request-submit" class="flwgb-reset-request-btn flwgb-btn">
 							' . esc_html_x( I18n::$send_reset_request, I18n::$send_reset_request, FLWGB_PLUGIN_NAME ) . '
 						</button>
 					</div>
-			<div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, I18n::$loading_text, FLWGB_PLUGIN_NAME ) . '</div>';
+			<div id="flwgb-reset-request-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, I18n::$loading_text, FLWGB_PLUGIN_NAME ) . '</div>';
 $view .= '</form>
 		<div id="flwgb-reset-request-form-result"></div>
     </div>';

@@ -53,6 +53,9 @@
       "default": "normal"
     }
   },
+  "supports": {
+    "html": false
+  },
   "textdomain": "login-form",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

@@ -20,19 +20,18 @@ class Backend {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run_plugin() function
-		 * defined in Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
 		wp_enqueue_style( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'css/flwgb-admin.css', array(), FLWGB_VERSION, 'all' );
+
+	}
+
+	/**
+	 * Register the stylesheets for the block editor.
+	 *
+	 * @since    1.0.0
+	 */
+	public function editor_styles() {
+
+		add_editor_style( array( plugin_dir_url( __FILE__ ) . 'css/flwgb-editor.css' ) );
 
 	}
 
@@ -42,18 +41,6 @@ class Backend {
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run_plugin() function
-		 * defined in Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
 
 		wp_enqueue_script( FLWGB_PLUGIN_NAME, plugin_dir_url( __FILE__ ) . 'js/flwgb-admin.js', array( 'jquery' ), FLWGB_VERSION, false );
 

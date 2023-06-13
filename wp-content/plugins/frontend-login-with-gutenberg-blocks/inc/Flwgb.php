@@ -225,6 +225,8 @@ class Flwgb extends Loader {
 		$plugin_admin = new Backend();
 
 		self::add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+		self::add_action( 'init', $plugin_admin, 'editor_styles' );
+		self::add_action( 'pre_get_posts', $plugin_admin, 'editor_styles' );
 		self::add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
 	}

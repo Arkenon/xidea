@@ -1,21 +1,3 @@
-.flwgb-hide{
-	display: none;
-}
-
-.flwgb-loading, #flwgb-login-form-result{
-	text-align: center;
-}
-
-.flwgb-danger{
-	border: 1px solid #e08888;
-	background-color: ghostwhite;
-}
-
-.flwgb-success{
-	border: 1px solid #9dcb9d;
-	background-color: ghostwhite;
-}
-
 .flwgb-input-control {
 	width: 100%!important;
 	margin-bottom: 10px!important;

@@ -77,9 +77,9 @@ if ( is_user_logged_in() ) {
 						</div>
 					</div>';
 
-				$view .= wp_nonce_field('flwgbloginhandle', 'security');
-
 				$view .= '<input type="hidden" name="action" value="flwgbloginhandle">';
+
+				$view .= '<input type="hidden" name="security" value="'.wp_create_nonce('flwgbloginhandle').'">';
 
 				$view .= '<div class="flwgb-form-row">
 						<button style="'.$button_style.'" type="submit" id="flwgb-login-submit" class="flwgb-login-btn flwgb-btn">
@@ -87,7 +87,7 @@ if ( is_user_logged_in() ) {
 						</button>
 						' . do_action( 'wp_login' ) . '
 					</div>
-					<div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>';
+					<div id="flwgb-login-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>';
 	$view .= '</form>
 			<div id="flwgb-login-form-result"></div>
     </div>';

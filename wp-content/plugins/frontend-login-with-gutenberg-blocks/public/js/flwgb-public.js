@@ -1,86 +1,13 @@
-jQuery( document ).ready( function ( $ ) {
-	$( '#flwgb-login-form' ).on( 'submit', function ( e ) {
+jQuery(document).ready(function ($) {
+	$('#flwgb-login-form').on('submit', function (e) {
 		e.preventDefault();
-		var form = $( this );
-		var formData = new FormData(
-			document.getElementById( 'flwgb-login-form' )
+		const form = $(this);
+		const formData = new FormData(
+			document.getElementById('flwgb-login-form')
 		);
-		var submitBtn = form.find( '#flwgb-login-submit' );
-
-		$.ajax( {
-			url: flwgb_ajax_object.ajax_url,
-			type: 'POST',
-			processData: false,
-			contentType: false,
-			dataType: 'json',
-			data: formData,
-			beforeSend: function () {
-				$( '.flwgb-loading' ).removeClass( 'flwgb-hide' );
-				$( '#flwgb-login-form-result' ).html( '' );
-				submitBtn.prop( 'disabled', true );
-			},
-			success: function ( response ) {
-				if ( response.loggedin ) {
-					$( '#flwgb-login-form-result' ).addClass( 'flwgb-success' );
-				} else {
-					$( '#flwgb-login-form-result' ).addClass( 'flwgb-danger' );
-				}
-
-				$( '#flwgb-login-form-result' ).html( response.message );
-
-				$( '.flwgb-loading' ).addClass( 'flwgb-hide' );
-
-				submitBtn.prop( 'disabled', false );
-
-				if ( response.return_url != null ) {
-					window.location.href = response.return_url;
-				}
-			},
-			error: function ( xhr, status, error ) {
-				$( '.flwgb-login-form-result' ).html( xhr.responseText );
-			},
-		} );
-	} );
-
-	$( '#flwgb-register-form' ).on( 'submit', function ( e ) {
-		e.preventDefault();
-
-		var formData = new FormData();
-
-		formData.append( 'action', 'flwgbregisterhandle' );
-
-		$.ajax( {
-			url: flwgb_ajax_object.ajax_url,
-			type: 'POST',
-			processData: false,
-			contentType: false,
-			dataType: 'json',
-			data: formData,
-			beforeSend: function () {
-				$( '.flwgb-loading' ).removeClass( 'flwgb-hide' );
-			},
-			success: function ( response ) {
-				$( '.flwgb-form-result' ).html( response.message );
-
-				$( '.flwgb-loading' ).addClass( 'flwgb-hide' );
-
-				if ( response.return_url != null ) {
-					window.location.href = response.return_url;
-				}
-			},
-			error: function ( xhr, status, error ) {
-				$( '.flwgb-register-result' ).html( xhr.responseText );
-			},
-		} );
-	} );
-
-	$( '#flwgb-reset-pass-request-form' ).on( 'submit', function ( e ) {
-		e.preventDefault();
-
-		alert( 'hello' );
-		/*var formData = new FormData();
-
-		formData.append("action", "flwgbresetrequesthandle");
+		const submitBtn = form.find('#flwgb-login-submit');
+		const formResult = $('#flwgb-login-form-result');
+		const loadingBtn = $('#flwgb-login-loading');
 
 		$.ajax({
 			url: flwgb_ajax_object.ajax_url,
@@ -89,34 +16,30 @@ jQuery( document ).ready( function ( $ ) {
 			contentType: false,
 			dataType: 'json',
 			data: formData,
-			beforeSend: function() {
-
-				$('.flwgb-loading').removeClass('flwgb-hide');
-
+			beforeSend: function () {
+				formBeforeSend(formResult, submitBtn, loadingBtn)
 			},
 			success: function (response) {
-
-				$(".flwgb-form-result").html(response.message);
-
-				$('.flwgb-loading').addClass('flwgb-hide');
-
+				formSuccess(response, formResult, submitBtn, loadingBtn)
 			},
-			error: function (xhr, status, error) {
+			error: function (xhr) {
+				formError(xhr, formResult)
+			},
+		});
+	});
 
-				$(".flwgb-register-result").html(xhr.responseText);
-
-			}
-		});*/
-	} );
-
-	$( '#resetpassform' ).on( 'submit', function ( e ) {
+	//Lost password request form
+	$('#flwgb-reset-pass-request-form').on('submit', function (e) {
 		e.preventDefault();
+		const form = $(this);
+		const formData = new FormData(
+			document.getElementById('flwgb-reset-pass-request-form')
+		);
+		const submitBtn = form.find('#flwgb-reset-request-submit');
+		const formResult = $('#flwgb-reset-request-form-result');
+		const loadingBtn = $('#flwgb-reset-request-loading');
 
-		var formData = new FormData();
-
-		formData.append( 'action', 'flwgbresetpasswordhandle' );
-
-		$.ajax( {
+		$.ajax({
 			url: flwgb_ajax_object.ajax_url,
 			type: 'POST',
 			processData: false,
@@ -124,16 +47,108 @@ jQuery( document ).ready( function ( $ ) {
 			dataType: 'json',
 			data: formData,
 			beforeSend: function () {
-				$( '.flwgb-loading' ).removeClass( 'flwgb-hide' );
+				formBeforeSend(formResult, submitBtn, loadingBtn)
 			},
-			success: function ( response ) {
-				$( '.flwgb-form-result' ).html( response.message );
+			success: function (response) {
+				formSuccess(response, formResult, submitBtn, loadingBtn)
+			},
+			error: function (xhr) {
+				formError(xhr, formResult)
+			},
+		});
+	});
 
-				$( '.flwgb-loading' ).addClass( 'flwgb-hide' );
+	// Reset Password Form
+	$('#resetpassform').on('submit', function (e) {
+		e.preventDefault();
+
+		var formData = new FormData();
+
+		formData.append('action', 'flwgbresetpasswordhandle');
+
+		$.ajax({
+			url: flwgb_ajax_object.ajax_url,
+			type: 'POST',
+			processData: false,
+			contentType: false,
+			dataType: 'json',
+			data: formData,
+			beforeSend: function () {
+				$('.flwgb-loading').removeClass('flwgb-hide');
 			},
-			error: function ( xhr, status, error ) {
-				$( '.flwgb-register-result' ).html( xhr.responseText );
+			success: function (response) {
+				$('.flwgb-form-result').html(response.message);
+
+				$('.flwgb-loading').addClass('flwgb-hide');
 			},
-		} );
-	} );
-} );
+			error: function (xhr, status, error) {
+				$('.flwgb-register-result').html(xhr.responseText);
+			},
+		});
+	});
+
+	// Registration Form
+	$('#flwgb-register-form').on('submit', function (e) {
+		e.preventDefault();
+
+		var formData = new FormData();
+
+		formData.append('action', 'flwgbregisterhandle');
+
+		$.ajax({
+			url: flwgb_ajax_object.ajax_url,
+			type: 'POST',
+			processData: false,
+			contentType: false,
+			dataType: 'json',
+			data: formData,
+			beforeSend: function () {
+				$('.flwgb-loading').removeClass('flwgb-hide');
+			},
+			success: function (response) {
+				$('.flwgb-form-result').html(response.message);
+
+				$('.flwgb-loading').addClass('flwgb-hide');
+
+				if (response.return_url != null) {
+					window.location.href = response.return_url;
+				}
+			},
+			error: function (xhr, status, error) {
+				$('.flwgb-register-result').html(xhr.responseText);
+			},
+		});
+	});
+
+	function formBeforeSend(form_result, submitBtn, loadingBtn) {
+		loadingBtn.removeClass('flwgb-hide');
+		form_result.html('');
+		submitBtn.prop('disabled', true);
+	}
+
+	function formSuccess(response, form_result, submitBtn, loadingBtn) {
+		if (response.loggedin) {
+			form_result.addClass('flwgb-success');
+		} else {
+			form_result.addClass('flwgb-danger');
+		}
+
+		form_result.html(response.message);
+
+		loadingBtn.addClass('flwgb-hide');
+
+		submitBtn.prop('disabled', false);
+
+		if (response.return_url != null) {
+			window.location.href = response.return_url;
+		}
+	}
+
+	function formError(xhr, form_result){
+		form_result.addClass('flwgb-danger');
+		form_result.html(xhr.responseText);
+	}
+
+});
+
+
