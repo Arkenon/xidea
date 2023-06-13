@@ -8,11 +8,13 @@
 
 .flwgb-danger{
 	border: 1px solid #e08888;
+	padding: 5px!important;
 	background-color: ghostwhite;
 }
 
 .flwgb-success{
 	border: 1px solid #9dcb9d;
+	padding: 5px!important;
 	background-color: ghostwhite;
 }
 

@@ -3,6 +3,7 @@
 use FLWGB\Helper;
 use FLWGB\I18n;
 
+//TODO check is user logged in
 
 	$input_style = 'border-radius:' . $form_attributes['inputBorderRadius'] . 'px';
 	$text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];

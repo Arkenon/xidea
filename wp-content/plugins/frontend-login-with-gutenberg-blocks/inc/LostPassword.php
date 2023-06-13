@@ -27,16 +27,17 @@ class LostPassword {
 	 */
 	public function load_reset_password_actions() {
 
-		add_action( 'wp_ajax_nopriv_flwgbresetpasswordhandle', 'flwgb_reset_password_handle_ajax_callback' );
+		add_action( 'wp_ajax_nopriv_flwgbresetpasswordhandle', [ $this, 'flwgb_reset_password_handle_ajax_callback' ] );
+		add_action( 'wp_ajax_flwgbresetpasswordhandle', [ $this, 'flwgb_reset_password_handle_ajax_callback' ] );
 
 		add_action( 'wp_ajax_nopriv_flwgbresetrequesthandle', 'flwgb_reset_password_request_handle_ajax_callback' );
+		add_action( 'wp_ajax_flwgbresetrequesthandle', [ $this, 'flwgb_reset_password_request_handle_ajax_callback' ] );
 
 	}
 
 	/**
 	 * POST operation for sending reset password request.
 	 *
-	 * @return string|false a JSON encoded string on success or FALSE on failure.
 	 * @since 1.0.0
 	 */
 	public function flwgb_reset_password_request_handle_ajax_callback() {
@@ -66,15 +67,15 @@ class LostPassword {
 			update_user_meta( $user_id, 'flwgb_lost_password_key', $code );
 
 			echo json_encode( array(
-				'status' => true,
-				'message'      => esc_html_x( I18n::$reset_password_request_confirmation, I18n::$reset_password_request_confirmation, FLWGB_PLUGIN_NAME)
+				'status'  => true,
+				'message' => esc_html_x( I18n::$reset_password_request_confirmation, I18n::$reset_password_request_confirmation, FLWGB_PLUGIN_NAME )
 			) );
 
 		} else {
 
 			echo json_encode( array(
-				'status' => true,
-				'message'      => esc_html_x( I18n::$general_error_message, I18n::$general_error_message, FLWGB_PLUGIN_NAME )
+				'status'  => false,
+				'message' => esc_html_x( I18n::$general_error_message, I18n::$general_error_message, FLWGB_PLUGIN_NAME )
 			) );
 
 		}

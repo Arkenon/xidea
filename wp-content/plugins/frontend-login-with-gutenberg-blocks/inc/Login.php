@@ -15,6 +15,7 @@ class Login {
 
 		///Load ajax callback
 		add_action( 'wp_ajax_nopriv_flwgbloginhandle', [ $this, 'login_handle_ajax_callback' ] );
+		add_action( 'wp_ajax_flwgbloginhandle', [ $this, 'login_handle_ajax_callback' ] );
 
 	}
 
@@ -38,7 +39,6 @@ class Login {
 	/**
 	 * POST operation for login.
 	 *
-	 * @return string|false a JSON encoded string on success or FALSE on failure.
 	 * @since 1.0.0
 	 */
 	public function login_handle_ajax_callback() {
@@ -56,7 +56,7 @@ class Login {
 
 			echo json_encode( array(
 				'status' => false,
-				'message'  => esc_html_x( I18n::$invalid_username_or_pass, I18n::$invalid_username_or_pass, 'flwgb' )
+				'message'  => esc_html_x( I18n::$invalid_username_or_pass, I18n::$invalid_username_or_pass, FLWGB_PLUGIN_NAME )
 			) );
 
 		} else {
@@ -74,7 +74,7 @@ class Login {
 
 					echo json_encode( array(
 						'status'   => false,
-						'message'    => esc_html_x( I18n::$user_not_activated, I18n::$user_not_activated, 'flwgb' )
+						'message'    => esc_html_x( I18n::$user_not_activated, I18n::$user_not_activated, FLWGB_PLUGIN_NAME )
 					) );
 
 					wp_logout();
@@ -89,7 +89,7 @@ class Login {
 
 		}
 
-		die();
+		wp_die();
 
 	}
 
