@@ -55,7 +55,7 @@ class Login {
 		if ( is_wp_error( $user ) ) {
 
 			echo json_encode( array(
-				'loggedin' => false,
+				'status' => false,
 				'message'  => esc_html_x( I18n::$invalid_username_or_pass, I18n::$invalid_username_or_pass, 'flwgb' )
 			) );
 
@@ -73,7 +73,7 @@ class Login {
 				} else {
 
 					echo json_encode( array(
-						'loggedin'   => false,
+						'status'   => false,
 						'message'    => esc_html_x( I18n::$user_not_activated, I18n::$user_not_activated, 'flwgb' )
 					) );
 
@@ -101,7 +101,7 @@ class Login {
 	private function login_success_response(){
 
 		echo json_encode( array(
-			'loggedin'   => true,
+			'status'   => true,
 			'return_url' => site_url( get_option( 'flwgb_redirect_after_login' ) ),
 			'message'    => esc_html_x( I18n::$login_successful, I18n::$login_successful, 'flwgb' )
 		) );

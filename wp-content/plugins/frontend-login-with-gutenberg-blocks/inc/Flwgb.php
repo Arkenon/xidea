@@ -218,7 +218,8 @@ class Flwgb extends Loader {
 	private function define_admin_hooks() {
 
 		/**
-		 * The class responsible for defining all actions that occur in the admin area.
+		 * The class responsible for defining all actions that occur in the admin area and block editor
+		 * Editor styles for only common css rules of blocks.
 		 */
 		Helper::using('admin/Backend.php');
 

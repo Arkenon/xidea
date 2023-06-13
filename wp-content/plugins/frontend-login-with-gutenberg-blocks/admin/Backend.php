@@ -25,7 +25,7 @@ class Backend {
 	}
 
 	/**
-	 * Register the stylesheets for the block editor.
+	 * Register the stylesheets for the block editor (Common styles).
 	 *
 	 * @since    1.0.0
 	 */

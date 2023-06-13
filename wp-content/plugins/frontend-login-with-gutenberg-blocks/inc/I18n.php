@@ -77,6 +77,7 @@ class I18n {
 	public static $reset_password_request_input_text = 'Please sumbit your e-mail to get reset password link.';
 	public static $send_reset_request = 'Send Request';
 	public static $send_reset_request_description = 'Please enter your e-mail address. We will send you an e-mail to reset your password.';
+	public static $reset_request_mail_title = 'Reset password request';
 
 
 	/**

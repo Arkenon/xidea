@@ -127,7 +127,7 @@ jQuery(document).ready(function ($) {
 	}
 
 	function formSuccess(response, form_result, submitBtn, loadingBtn) {
-		if (response.loggedin) {
+		if (response.status) {
 			form_result.addClass('flwgb-success');
 		} else {
 			form_result.addClass('flwgb-danger');

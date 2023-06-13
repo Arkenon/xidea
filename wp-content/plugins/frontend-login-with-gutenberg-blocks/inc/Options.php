@@ -67,6 +67,7 @@ class Options {
 		// E-Mail settings
 		register_setting( 'flwgb-mail-settings-group', 'flwgb_register_mail_to_user' );
 		register_setting( 'flwgb-mail-settings-group', 'flwgb_register_mail_to_admin' );
+		register_setting( 'flwgb-mail-settings-group', 'flwgb_reset_request_mail_to_user' );
 
 	}
 

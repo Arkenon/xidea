@@ -99,6 +99,7 @@ class Helper {
 	 *
 	 * @param string $path Path for view page
 	 * @param array $block_attributes Get block attributes from block-name/edit.js
+	 *
 	 * @return string $view
 	 * @var string $view html output
 	 * @since 1.0.0
@@ -132,30 +133,39 @@ class Helper {
 	}
 
 
-// Değiştireceğimiz değeri oluşturan fonksiyon
-	public static function flwgb_replace_text( $content_option ) {
+	/**
+	 * Replace texts with dynamic values (for e-mail templates)
+	 *
+	 * @param string $option_name Mail template option name
+	 * @param array $params Parameters for mail templates (username, mail, etc.)
+	 *
+	 * @return string $dynamicText Replaced text
+	 *
+	 * @since 1.0.0
+	 */
+	public static function replace_mail_parameters( string $option_name, array $params ) :  string {
 
+		$text = get_option( $option_name );
 
-		$text = get_option( $content_option );
-
-		$dynamicText = preg_replace_callback( '/{{(.*?)}}/', function ( $matches ) {
+		return preg_replace_callback( '/{{(.*?)}}/', function ( $matches ) use ( $params ) {
 
 			$placeholder = $matches[1];
 
-			if ( $placeholder === 'username' ) {
-				return 'John';
-			} else {
-				return null;
-			}
+			return $params[$placeholder] ?? $matches[0];
 
 		}, $text );
-
-
-		echo $dynamicText;
 
 	}
 
 
+	/**
+	 * Select option input helper for post query
+	 *
+	 * @param string $query_item Post item
+	 * @param array $option_name Option name
+	 *
+	 * @since 1.0.0
+	 */
 	public static function get_select_options_from_query( $query_item, $option_name ) {
 
 		$selected = $query_item->post_name === esc_attr( get_option( $option_name ) ) ? " selected" : "";
