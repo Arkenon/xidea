@@ -2,7 +2,25 @@
 
 namespace FLWGB;
 
-class MailTemplates {
+class Mail {
+
+	/**
+	 * Print an error message if wp_mail() failed.
+	 *
+	 * Created for wp_mail_failed hook.
+	 *
+	 * @since    1.0.0
+	 */
+	public function mail_fail_error(){
+
+		echo json_encode( array(
+			'status'  => false,
+			'message' => esc_html_x( I18n::$mail_error_message, I18n::$mail_error_message, FLWGB_PLUGIN_NAME )
+		) );
+
+		wp_die();
+
+	}
 
 	/**
 	 * Mail template for lost password request

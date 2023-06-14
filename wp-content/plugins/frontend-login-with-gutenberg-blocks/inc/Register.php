@@ -46,8 +46,8 @@ class Register {
 	 */
 	public function flwgb_register_handle_ajax_callback() {
 
-		Helper::using( "inc/MailTemplates.php" );
-		$mail = new MailTemplates();
+		Helper::using( "inc/Mail.php" );
+		$mail = new Mail();
 
 		$message    = esc_html_x( I18n::$register_succession, 'Registration success message', FLWGB_PLUGIN_NAME );
 		$return_url = site_url( get_option( 'flwgb_redirect_after_registration' ) ) ?: '';

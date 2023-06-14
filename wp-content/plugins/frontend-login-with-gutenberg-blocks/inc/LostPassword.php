@@ -57,8 +57,8 @@ class LostPassword {
 			'reset_link' => $reset_link
 		];
 
-		Helper::using( 'inc/MailTemplates.php' );
-		$mail_templates = new MailTemplates();
+		Helper::using( 'inc/Mail.php' );
+		$mail_templates = new Mail();
 
 		$send_reset_password_email = $mail_templates->flwgb_reset_password_request_mail_template( 'flwgb_reset_request_mail_to_user', $params );
 

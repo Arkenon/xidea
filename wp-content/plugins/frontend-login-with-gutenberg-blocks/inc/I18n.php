@@ -28,6 +28,7 @@ class I18n {
 	public static $email_placeholder_text = 'Enter your e-mail';
 	public static $user_input_text = 'Username';
 	public static $password_again_input_text = 'Password Again';
+	public static $mail_error_message = 'wp_mail() returned an error. Please check your e-mail configurations.';
 
 	/*Admin options page texts*/
 	public static $admin_general_settings = 'General Settings';

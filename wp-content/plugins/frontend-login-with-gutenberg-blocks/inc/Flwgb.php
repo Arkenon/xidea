@@ -15,7 +15,7 @@
 
 namespace FLWGB;
 
-Helper::using('inc/Loader.php');
+Helper::using( 'inc/Loader.php' );
 
 
 class Flwgb extends Loader {
@@ -29,7 +29,7 @@ class Flwgb extends Loader {
 	 *
 	 * @since    1.0.0
 	 */
-	public function __construct( ) {
+	public function __construct() {
 
 		/** Run the constructor of parent class (Loader) **/
 		parent::__construct();
@@ -61,6 +61,9 @@ class Flwgb extends Loader {
 		//Load reset password actions
 		self::set_reset_password_form_actions();
 
+		//Load wp_mail_failed hook
+		self::set_wp_mail_error();
+
 	}
 
 	/**
@@ -82,12 +85,12 @@ class Flwgb extends Loader {
 		 * The class responsible for registering block types
 		 * side of the site.
 		 */
-		Helper::using('inc/Blocks.php');
+		Helper::using( 'inc/Blocks.php' );
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 */
-		Helper::using('inc/I18n.php');
+		Helper::using( 'inc/I18n.php' );
 
 	}
 
@@ -104,7 +107,7 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for admin options.
 		 */
-		Helper::using('inc/Options.php');
+		Helper::using( 'inc/Options.php' );
 
 		$plugin_options = new Options();
 
@@ -125,7 +128,7 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for login operations.
 		 */
-		Helper::using('inc/Login.php');
+		Helper::using( 'inc/Login.php' );
 
 		$login = new Login();
 
@@ -146,7 +149,7 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for registeration operations.
 		 */
-		Helper::using('inc/Register.php');
+		Helper::using( 'inc/Register.php' );
 
 		$register = new Register();
 
@@ -167,7 +170,7 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for registeration operations.
 		 */
-		Helper::using('inc/LostPassword.php');
+		Helper::using( 'inc/LostPassword.php' );
 
 		$lost_password = new LostPassword();
 
@@ -221,7 +224,7 @@ class Flwgb extends Loader {
 		 * The class responsible for defining all actions that occur in the admin area and block editor
 		 * Editor styles for only common css rules of blocks.
 		 */
-		Helper::using('admin/Backend.php');
+		Helper::using( 'admin/Backend.php' );
 
 		$plugin_admin = new Backend();
 
@@ -241,15 +244,29 @@ class Flwgb extends Loader {
 	 */
 	private function define_public_hooks() {
 
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 */
-		Helper::using('public/Frontend.php');
+		Helper::using( 'public/Frontend.php' );
 
 		$plugin_public = new Frontend();
 
 		self::add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		self::add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+
+	}
+
+	/**
+	 *
+	 * Load hook that prints an error message if wp_mail() failed.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_wp_mail_error() {
+
+		Helper::using( 'inc/Mail.php' );
+
+		$mail = new Mail();
+
+		self::add_action( 'wp_mail_failed', $mail, 'mail_fail_error' );
 
 	}
 
