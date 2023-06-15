@@ -8,7 +8,7 @@
  * @subpackage Frontend_Login_With_Gutenberg_Blocks/admin/partials
  */
 
-use FLWGB\I18n;
+use FLWGB\I18n\I18n;
 
 ?>
 
@@ -28,7 +28,7 @@ use FLWGB\I18n;
 			<th scope="row">
 
 				<label for="flwgb_register_mail_to_user">
-					<?php echo esc_html_x( I18n::$register_mail_to_user, 'Register mail to user option text', FLWGB_PLUGIN_NAME ); ?>
+					<?php echo esc_html_x( I18n::$register_mail_to_user, 'Register mail to user option text', FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>
@@ -54,7 +54,7 @@ use FLWGB\I18n;
 			<th scope="row">
 
 				<label for="flwgb_register_mail_to_admin">
-					<?php echo esc_html_x( I18n::$register_mail_to_admin, 'Register mail to admin option text', FLWGB_PLUGIN_NAME ); ?>
+					<?php echo esc_html_x( I18n::$register_mail_to_admin, 'Register mail to admin option text', FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>

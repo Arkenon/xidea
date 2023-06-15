@@ -1,0 +1,10 @@
+{
+  "already_logged_in_message": {
+	"text": "You have already logged in.",
+	"context": "Already logged in message"
+  },
+  "remember_me_text" : {
+	"text" : "Remember me la",
+	"context" : "Remember me text"
+  }
+}

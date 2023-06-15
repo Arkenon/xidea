@@ -2,6 +2,8 @@
 
 namespace FLWGB;
 
+use FLWGB\I18n\I18n;
+
 class LostPassword {
 
 	/**
@@ -68,14 +70,14 @@ class LostPassword {
 
 			echo json_encode( array(
 				'status'  => true,
-				'message' => esc_html_x( I18n::$reset_password_request_confirmation, I18n::$reset_password_request_confirmation, FLWGB_PLUGIN_NAME )
+				'message' => esc_html_x( I18n::$reset_password_request_confirmation, I18n::$reset_password_request_confirmation, FLWGB_TEXT_DOMAIN )
 			) );
 
 		} else {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::$general_error_message, I18n::$general_error_message, FLWGB_PLUGIN_NAME )
+				'message' => esc_html_x( I18n::$general_error_message, I18n::$general_error_message, FLWGB_TEXT_DOMAIN )
 			) );
 
 		}
@@ -96,8 +98,8 @@ class LostPassword {
 
 		if ( Helper::get( 'reset' ) == 'complete' ) {
 
-			$success_message = '<p class="alert alert-success">' . esc_html_x( I18n::$password_changed, 'Password change message', FLWGB_PLUGIN_NAME ) . '</p>';
-			$error_message   = '<p class="alert alert-danger"><strong class="font-s-14">' . esc_html_x( I18n::$general_error_message, 'General error message', FLWGB_PLUGIN_NAME ) . '</strong></p>';
+			$success_message = '<p class="alert alert-success">' . esc_html_x( I18n::$password_changed, 'Password change message', FLWGB_TEXT_DOMAIN ) . '</p>';
+			$error_message   = '<p class="alert alert-danger"><strong class="font-s-14">' . esc_html_x( I18n::$general_error_message, 'General error message', FLWGB_TEXT_DOMAIN ) . '</strong></p>';
 
 			$resetpass = wp_update_user( array(
 				'ID'        => $_POST['userid'],

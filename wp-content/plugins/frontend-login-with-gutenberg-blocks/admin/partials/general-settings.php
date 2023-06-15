@@ -10,7 +10,7 @@
  */
 
 use FLWGB\Helper;
-use FLWGB\I18n;
+use FLWGB\I18n\I18n;
 
 $pages = get_pages();
 
@@ -31,7 +31,7 @@ $pages = get_pages();
 			<th scope="row">
 
 				<label for="flwgb_has_activation">
-					<?php echo esc_html_x( I18n::$has_activation, 'Has user activation', FLWGB_PLUGIN_NAME ); ?>
+					<?php echo esc_html_x( I18n::$has_activation, 'Has user activation', FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>
@@ -39,9 +39,9 @@ $pages = get_pages();
 
 				<select name="flwgb_has_activation" id="flwgb_has_activation">
 
-					<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_PLUGIN_NAME ) ?></option>
-					<option value="yes" <?php echo get_option( 'flwgb_has_activation' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$yes_text, 'Yes text', FLWGB_PLUGIN_NAME ); ?></option>
-					<option value="no" <?php echo get_option( 'flwgb_has_activation' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$no_text, 'No text', FLWGB_PLUGIN_NAME ); ?></option>
+					<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_TEXT_DOMAIN ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_has_activation' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$yes_text, 'Yes text', FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_has_activation' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$no_text, 'No text', FLWGB_TEXT_DOMAIN ); ?></option>
 
 				</select>
 
@@ -52,7 +52,7 @@ $pages = get_pages();
 			<th scope="row">
 
 				<label for="flwgb_has_user_dashboard">
-					<?php echo esc_html_x( I18n::$has_user_dashboard, 'Has user activation', FLWGB_PLUGIN_NAME ); ?>
+					<?php echo esc_html_x( I18n::$has_user_dashboard, 'Has user activation', FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>
@@ -60,9 +60,9 @@ $pages = get_pages();
 
 				<select name="flwgb_has_user_dashboard" id="flwgb_has_user_dashboard">
 
-					<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_PLUGIN_NAME ) ?></option>
-					<option value="yes" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$yes_text, 'Yes text', FLWGB_PLUGIN_NAME ); ?></option>
-					<option value="no" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$no_text, 'No text', FLWGB_PLUGIN_NAME ); ?></option>
+					<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_TEXT_DOMAIN ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$yes_text, 'Yes text', FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$no_text, 'No text', FLWGB_TEXT_DOMAIN ); ?></option>
 
 				</select>
 
@@ -98,7 +98,7 @@ $pages = get_pages();
 				<th scope="row">
 
 					<label for="<?php echo $select['option']; ?>">
-						<?php echo esc_html_x( $select['translate_text'], $select['translate_text'], FLWGB_PLUGIN_NAME ); ?>
+						<?php echo esc_html_x( $select['translate_text'], $select['translate_text'], FLWGB_TEXT_DOMAIN ); ?>
 					</label>
 
 				</th>
@@ -106,7 +106,7 @@ $pages = get_pages();
 
 					<select name="<?php echo $select['option']; ?>" id="<?php echo $select['option']; ?>">
 
-						<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_PLUGIN_NAME ) ?></option>
+						<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_TEXT_DOMAIN ) ?></option>
 
 						<?php
 

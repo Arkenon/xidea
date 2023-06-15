@@ -10,7 +10,7 @@
  */
 
 use FLWGB\Helper;
-use FLWGB\I18n;
+use FLWGB\I18n\I18n;
 
 $default_tab = null;
 $tab         = Helper::get( 'tab' ) ?? $default_tab;
@@ -22,7 +22,7 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 
 	<!-- Print the page title -->
 	<h1>
-		<?php echo esc_html_x( get_admin_page_title(), 'Admin page title', FLWGB_PLUGIN_NAME ); ?>
+		<?php echo esc_html_x( get_admin_page_title(), 'Admin page title', FLWGB_TEXT_DOMAIN ); ?>
 	</h1>
 
 	<!-- Here are our tabs -->
@@ -30,12 +30,12 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 
 		<a href="?page=frontend-login-with-gutenberg-blocks-settings"
 		   class="nav-tab <?php if ( $tab === null ): ?>nav-tab-active<?php endif; ?>">
-			<?php echo esc_html_x( I18n::$admin_general_settings, 'Admin page general settings', FLWGB_PLUGIN_NAME ); ?>
+			<?php echo esc_html_x( I18n::$admin_general_settings, 'Admin page general settings', FLWGB_TEXT_DOMAIN ); ?>
 		</a>
 
 		<a href="?page=frontend-login-with-gutenberg-blocks-settings&tab=mail-templates"
 		   class="nav-tab <?php if ( $tab === 'mail-templates' ): ?>nav-tab-active<?php endif; ?>">
-			<?php echo esc_html_x( I18n::$admin_mail_settings, 'Admin page mail settings', FLWGB_PLUGIN_NAME ); ?>
+			<?php echo esc_html_x( I18n::$admin_mail_settings, 'Admin page mail settings', FLWGB_TEXT_DOMAIN ); ?>
 		</a>
 
 	</nav>

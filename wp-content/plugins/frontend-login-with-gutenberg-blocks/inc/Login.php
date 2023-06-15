@@ -9,6 +9,8 @@
 
 namespace FLWGB;
 
+use FLWGB\I18n\I18n;
+
 class Login {
 
 	public function load_login_actions() {
@@ -56,7 +58,7 @@ class Login {
 
 			echo json_encode( array(
 				'status' => false,
-				'message'  => esc_html_x( I18n::$invalid_username_or_pass, I18n::$invalid_username_or_pass, FLWGB_PLUGIN_NAME )
+				'message'  => esc_html_x( I18n::$invalid_username_or_pass, I18n::$invalid_username_or_pass, FLWGB_TEXT_DOMAIN )
 			) );
 
 		} else {
@@ -74,7 +76,7 @@ class Login {
 
 					echo json_encode( array(
 						'status'   => false,
-						'message'    => esc_html_x( I18n::$user_not_activated, I18n::$user_not_activated, FLWGB_PLUGIN_NAME )
+						'message'    => esc_html_x( I18n::$user_not_activated, I18n::$user_not_activated, FLWGB_TEXT_DOMAIN )
 					) );
 
 					wp_logout();

@@ -1,7 +1,7 @@
 <?php
 
 use FLWGB\Helper;
-use FLWGB\I18n;
+use FLWGB\I18n\I18n;
 
 //Login Form
 if ( is_user_logged_in() ) {
@@ -33,14 +33,14 @@ if ( is_user_logged_in() ) {
 							if ( $form_attributes['showLabels'] ) {
 
 								$view .= '<label class="flwgb-input-label" style="'.$text_style.'"
-														   for="flwgb-username-or-email">' . esc_html_x( I18n::$email_or_username_input_text, I18n::$email_or_username_input_text, FLWGB_PLUGIN_NAME ) . '</label>';
+														   for="flwgb-username-or-email">' . esc_html_x( I18n::$email_or_username_input_text, I18n::$email_or_username_input_text, FLWGB_TEXT_DOMAIN ) . '</label>';
 							}
 
 							$view .= '<input class="flwgb-input-control" id="flwgb-username-or-email" name="flwgb-username-or-email" type="text" style='.$input_style.' placeholder="';
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::$email_or_username_placeholder_text, I18n::$email_or_username_placeholder_text, FLWGB_PLUGIN_NAME ) ;
+								$view .= esc_attr_x( I18n::$email_or_username_placeholder_text, I18n::$email_or_username_placeholder_text, FLWGB_TEXT_DOMAIN ) ;
 
 							}
 
@@ -54,14 +54,14 @@ if ( is_user_logged_in() ) {
 				if ( $form_attributes['showLabels'] ) {
 
 					$view .= '<label class="flwgb-input-label" style="'.$text_style.'"
-																	   for="flwgb-password">' . esc_html_x( I18n::$password_input_text, I18n::$password_input_text, FLWGB_PLUGIN_NAME ) . '</label>';
+																	   for="flwgb-password">' . esc_html_x( I18n::$password_input_text, I18n::$password_input_text, FLWGB_TEXT_DOMAIN ) . '</label>';
 				}
 
 				$view .= '<input class="flwgb-input-control" id="flwgb-password" name="flwgb-password" type="password" style='.$input_style.' placeholder="';
 
 				if ( $form_attributes['showPlaceholders'] ) {
 
-					$view .= esc_attr_x( I18n::$password_placeholder_text, I18n::$password_placeholder_text, FLWGB_PLUGIN_NAME ) ;
+					$view .= esc_attr_x( I18n::$password_placeholder_text, I18n::$password_placeholder_text, FLWGB_TEXT_DOMAIN ) ;
 
 				}
 
@@ -73,7 +73,7 @@ if ( is_user_logged_in() ) {
 				$view .= '<div class="flwgb-form-row">
 						<div class="flwgb-input-group">
 							<input id="flwgb-rememberme" checked="checked" type="checkbox" name="flwgb-rememberme" class="flwgb-form-check-input"/>
-							<label class="flwgb-form-check-label" for="flwgb-rememberme">'.esc_html_x(I18n::$remember_me_text,I18n::$remember_me_text,FLWGB_PLUGIN_NAME).'</label>
+							<label class="flwgb-form-check-label" for="flwgb-rememberme">'.esc_html_x(I18n::$remember_me_text,I18n::$remember_me_text,FLWGB_TEXT_DOMAIN).'</label>
 						</div>
 					</div>';
 
@@ -83,11 +83,11 @@ if ( is_user_logged_in() ) {
 
 				$view .= '<div class="flwgb-form-row">
 						<button style="'.$button_style.'" type="submit" id="flwgb-login-submit" class="flwgb-login-btn flwgb-btn">
-							'.esc_html_x(I18n::$login_button_text,I18n::$login_button_text,FLWGB_PLUGIN_NAME).'
+							'.esc_html_x(I18n::$login_button_text,I18n::$login_button_text,FLWGB_TEXT_DOMAIN).'
 						</button>
 						' . do_action( 'wp_login' ) . '
 					</div>
-					<div id="flwgb-login-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_PLUGIN_NAME ) . '</div>';
+					<div id="flwgb-login-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, 'Loading text', FLWGB_TEXT_DOMAIN ) . '</div>';
 	$view .= '</form>
 			<div id="flwgb-login-form-result"></div>
     </div>';

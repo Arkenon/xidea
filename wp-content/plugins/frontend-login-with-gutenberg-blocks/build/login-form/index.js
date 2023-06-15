@@ -154,6 +154,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _control_panel_controlPanel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./control-panel/controlPanel */ "./src/login-form/control-panel/controlPanel.js");
+/* harmony import */ var _inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../inc/I18n/I18n.json */ "./inc/I18n/I18n.json");
+
 
 
 
@@ -234,7 +236,7 @@ function Edit(props) {
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
     className: "flwgb-form-check-label",
     htmlFor: "flwgb-rememberme"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Remember me', 'flwgb')))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_5__.remember_me_text.text, 'flwgb')))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-form-row"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     style: buttonStyle,
@@ -405,6 +407,16 @@ module.exports = window["wp"]["element"];
 /***/ (function(module) {
 
 module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "./inc/I18n/I18n.json":
+/*!****************************!*\
+  !*** ./inc/I18n/I18n.json ***!
+  \****************************/
+/***/ (function(module) {
+
+module.exports = JSON.parse('{"already_logged_in_message":{"text":"You have already logged in.","context":"Already logged in message"},"remember_me_text":{"text":"Remember me la","context":"Remember me text"}}');
 
 /***/ }),
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace FLWGB;
+namespace FLWGB\I18n;
 /**
  * Define the internationalization functionality.
  *
@@ -89,7 +89,7 @@ class I18n {
 	public function load_flwgb_textdomain() {
 
 		load_plugin_textdomain(
-			FLWGB_PLUGIN_NAME,
+			FLWGB_TEXT_DOMAIN,
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

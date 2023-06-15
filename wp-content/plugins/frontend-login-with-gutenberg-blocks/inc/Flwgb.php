@@ -15,6 +15,8 @@
 
 namespace FLWGB;
 
+use FLWGB\I18n\I18n;
+
 Helper::using( 'inc/Loader.php' );
 
 
@@ -90,7 +92,7 @@ class Flwgb extends Loader {
 		/**
 		 * The class responsible for defining internationalization functionality
 		 */
-		Helper::using( 'inc/I18n.php' );
+		Helper::using( 'inc/I18n/I18n.php' );
 
 	}
 

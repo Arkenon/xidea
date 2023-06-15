@@ -25,18 +25,31 @@ use FLWGB\Helper;
 //Get helper functions at first.
 require plugin_dir_path( __FILE__ ) . 'inc/Helper.php';
 
-// Get plugin data
-$plugin_data = get_file_data(
-	__FILE__,
-	array(
-		'version'     => 'Version',
-		'text_domain' => 'Text Domain'
-	)
-);
+/**
+ * Get plugin data.
+ *
+ * @since    1.0.0
+ */
+function flwgb_get_plugin_data() : array {
 
-//Constants
-define( 'FLWGB_VERSION', $plugin_data['version'] );
-define( 'FLWGB_PLUGIN_NAME', $plugin_data['text_domain'] );
+	return get_file_data(
+		__FILE__,
+		array(
+			'version'     => 'Version',
+			'text_domain' => 'Text Domain'
+		)
+	);
+
+}
+
+/**
+ * Define plugin data.
+ *
+ * @since    1.0.0
+ */
+define( 'FLWGB_VERSION', flwgb_get_plugin_data()['version'] );
+define( 'FLWGB_TEXT_DOMAIN', flwgb_get_plugin_data()['text_domain'] );
+
 
 /**
  * The code that runs during plugin activation.
@@ -45,7 +58,7 @@ define( 'FLWGB_PLUGIN_NAME', $plugin_data['text_domain'] );
  */
 function activate_flwgb() {
 
-	Helper::using('inc/Activator.php');
+	Helper::using( 'inc/Activator.php' );
 
 	Activator::activate();
 
@@ -58,7 +71,7 @@ function activate_flwgb() {
  */
 function deactivate_flwgb() {
 
-	Helper::using('inc/Deactivator.php');
+	Helper::using( 'inc/Deactivator.php' );
 
 	Deactivator::deactivate();
 
@@ -75,7 +88,7 @@ register_deactivation_hook( __FILE__, 'deactivate_flwgb' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, public-facing site hooks and more...
  */
-Helper::using('inc/Flwgb.php');
+Helper::using( 'inc/Flwgb.php' );
 
 /**
  * Begins execution of the plugin.

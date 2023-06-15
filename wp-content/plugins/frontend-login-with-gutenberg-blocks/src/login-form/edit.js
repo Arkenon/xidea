@@ -3,7 +3,7 @@ import {useBlockProps} from '@wordpress/block-editor';
 import {__} from '@wordpress/i18n';
 
 import ControlPanel from "./control-panel/controlPanel";
-
+import I18n from "../../inc/I18n/I18n.json"
 
 export default function Edit(props) {
 
@@ -76,7 +76,7 @@ export default function Edit(props) {
 					<div className="flwgb-form-check-group">
 						<input id="flwgb-rememberme" checked="checked" type="checkbox"
 							   className="flwgb-form-check-input"/>
-						<label className="flwgb-form-check-label" htmlFor="flwgb-rememberme">{__('Remember me', 'flwgb')}</label>
+						<label className="flwgb-form-check-label" htmlFor="flwgb-rememberme">{__(I18n.remember_me_text.text, 'flwgb')}</label>
 					</div>
 				</div>
 

@@ -9,6 +9,8 @@
 
 namespace FLWGB;
 
+use FLWGB\I18n\I18n;
+
 class Register {
 
 	/**
@@ -49,18 +51,18 @@ class Register {
 		Helper::using( "inc/Mail.php" );
 		$mail = new Mail();
 
-		$message    = esc_html_x( I18n::$register_succession, 'Registration success message', FLWGB_PLUGIN_NAME );
+		$message    = esc_html_x( I18n::$register_succession, 'Registration success message', FLWGB_TEXT_DOMAIN );
 		$return_url = site_url( get_option( 'flwgb_redirect_after_registration' ) ) ?: '';
 
 		if ( get_option( "flwgb_has_activation" ) ) {
 
-			$message = esc_html_x( I18n::$register_succession_with_activation, 'Registration success message with activation', FLWGB_PLUGIN_NAME );
+			$message = esc_html_x( I18n::$register_succession_with_activation, 'Registration success message with activation', FLWGB_TEXT_DOMAIN );
 
 		}
 
 		if ( ( ! empty( Helper::post( 'user_pass' ) ) && ! empty( Helper::post( 'user_pass_repeat' ) ) ) && ( Helper::post( 'user_pass' ) != Helper::post( 'user_pass_repeat' ) ) ) {
 
-			$message = esc_html_x( I18n::$password_match_error, 'Reset password matching error', FLWGB_PLUGIN_NAME );
+			$message = esc_html_x( I18n::$password_match_error, 'Reset password matching error', FLWGB_TEXT_DOMAIN );
 
 		} else {
 
@@ -109,7 +111,7 @@ class Register {
 
 					} else {
 
-						$message = esc_html_x(I18n::$general_error_message,'General error message',FLWGB_PLUGIN_NAME);
+						$message = esc_html_x(I18n::$general_error_message,'General error message',FLWGB_TEXT_DOMAIN);
 
 					}
 
@@ -118,13 +120,13 @@ class Register {
 
 				if ( username_exists( $username ) ) {
 
-					$message = esc_html_x(I18n::$username_exist_error,'General error message',FLWGB_PLUGIN_NAME);
+					$message = esc_html_x(I18n::$username_exist_error,'General error message',FLWGB_TEXT_DOMAIN);
 
 				}
 
 				if ( email_exists( $email ) ) {
 
-					$message = esc_html_x(I18n::$user_exist_error,'General error message',FLWGB_PLUGIN_NAME);
+					$message = esc_html_x(I18n::$user_exist_error,'General error message',FLWGB_TEXT_DOMAIN);
 
 				}
 
