@@ -30,12 +30,12 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 
 		<a href="?page=frontend-login-with-gutenberg-blocks-settings"
 		   class="nav-tab <?php if ( $tab === null ): ?>nav-tab-active<?php endif; ?>">
-			<?php echo esc_html_x( I18n::$admin_general_settings, 'Admin page general settings', FLWGB_TEXT_DOMAIN ); ?>
+			<?php echo esc_html_x( I18n::text( 'admin_general_settings' )->text, I18n::text( 'admin_general_settings' )->context, FLWGB_TEXT_DOMAIN ); ?>
 		</a>
 
 		<a href="?page=frontend-login-with-gutenberg-blocks-settings&tab=mail-templates"
 		   class="nav-tab <?php if ( $tab === 'mail-templates' ): ?>nav-tab-active<?php endif; ?>">
-			<?php echo esc_html_x( I18n::$admin_mail_settings, 'Admin page mail settings', FLWGB_TEXT_DOMAIN ); ?>
+			<?php echo esc_html_x( I18n::text( 'admin_mail_settings' )->text, I18n::text( 'admin_mail_settings' )->context, FLWGB_TEXT_DOMAIN ); ?>
 		</a>
 
 	</nav>
@@ -43,17 +43,17 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 	<div class="tab-content">
 
 		<?php
-			switch ( $tab ) :
+		switch ( $tab ) :
 
-				case 'mail-templates':
-					Helper::print_view( "admin/partials/mail-template-settings.php" );
-					break;
+			case 'mail-templates':
+				Helper::print_view( "admin/partials/mail-template-settings.php" );
+				break;
 
-				default:
-					Helper::print_view( "admin/partials/general-settings.php" );
-					break;
+			default:
+				Helper::print_view( "admin/partials/general-settings.php" );
+				break;
 
-			endswitch;
+		endswitch;
 		?>
 
 	</div>

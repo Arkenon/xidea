@@ -28,7 +28,7 @@ use FLWGB\I18n\I18n;
 			<th scope="row">
 
 				<label for="flwgb_register_mail_to_user">
-					<?php echo esc_html_x( I18n::$register_mail_to_user, 'Register mail to user option text', FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( I18n::text('register_mail_to_user')->text, I18n::text('register_mail_to_user')->context, FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>
@@ -54,7 +54,7 @@ use FLWGB\I18n\I18n;
 			<th scope="row">
 
 				<label for="flwgb_register_mail_to_admin">
-					<?php echo esc_html_x( I18n::$register_mail_to_admin, 'Register mail to admin option text', FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( I18n::text('register_mail_to_admin')->text, I18n::text('register_mail_to_admin')->context, FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>

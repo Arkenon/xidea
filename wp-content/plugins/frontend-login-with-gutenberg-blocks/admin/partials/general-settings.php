@@ -31,7 +31,7 @@ $pages = get_pages();
 			<th scope="row">
 
 				<label for="flwgb_has_activation">
-					<?php echo esc_html_x( I18n::$has_activation, 'Has user activation', FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( I18n::text( 'has_activation' )->text, I18n::text( 'has_activation' )->context, FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>
@@ -39,9 +39,9 @@ $pages = get_pages();
 
 				<select name="flwgb_has_activation" id="flwgb_has_activation">
 
-					<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_TEXT_DOMAIN ) ?></option>
-					<option value="yes" <?php echo get_option( 'flwgb_has_activation' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$yes_text, 'Yes text', FLWGB_TEXT_DOMAIN ); ?></option>
-					<option value="no" <?php echo get_option( 'flwgb_has_activation' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$no_text, 'No text', FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value=""><?php echo esc_html_x( I18n::text( 'select_text' )->text, I18n::text( 'select_text' )->context, FLWGB_TEXT_DOMAIN ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_has_activation' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'yes_text' )->text, I18n::text( 'yes_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_has_activation' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'no_text' )->text, I18n::text( 'no_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
 
 				</select>
 
@@ -52,7 +52,7 @@ $pages = get_pages();
 			<th scope="row">
 
 				<label for="flwgb_has_user_dashboard">
-					<?php echo esc_html_x( I18n::$has_user_dashboard, 'Has user activation', FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( I18n::text( 'has_user_dashboard' )->text, I18n::text( 'has_user_dashboard' )->context, FLWGB_TEXT_DOMAIN ); ?>
 				</label>
 
 			</th>
@@ -60,9 +60,9 @@ $pages = get_pages();
 
 				<select name="flwgb_has_user_dashboard" id="flwgb_has_user_dashboard">
 
-					<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_TEXT_DOMAIN ) ?></option>
-					<option value="yes" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$yes_text, 'Yes text', FLWGB_TEXT_DOMAIN ); ?></option>
-					<option value="no" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::$no_text, 'No text', FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value=""><?php echo esc_html_x( I18n::text( 'select_text' )->text, I18n::text( 'select_text' )->context, FLWGB_TEXT_DOMAIN ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'yes_text' )->text, I18n::text( 'yes_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'no_text' )->text, I18n::text( 'no_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
 
 				</select>
 
@@ -80,14 +80,46 @@ $pages = get_pages();
 		<?php
 
 		$selections = [
-				[ 'option' => 'flwgb_redirect_after_login', 'translate_text' => I18n::$redirect_after_login ],
-				[ 'option' => 'flwgb_redirect_after_registration', 'translate_text' => I18n::$redirect_after_register ],
-				[ 'option' => 'flwgb_lost_password_page', 'translate_text' => I18n::$lost_password_page ],
-				[ 'option' => 'flwgb_register_page', 'translate_text' => I18n::$registration_page ],
-				[ 'option' => 'flwgb_activation_page', 'translate_text' => I18n::$activation_page ],
-				[ 'option' => 'flwgb_user_settings_page', 'translate_text' => I18n::$user_settings_page ],
-				[ 'option' => 'flwgb_terms_and_conditions_page', 'translate_text' => I18n::$terms_and_conditions_page ],
-				[ 'option' => 'flwgb_privacy_policy_page', 'translate_text' => I18n::$privacy_policy_page ]
+				[
+						'option'  => 'flwgb_redirect_after_login',
+						'text'    => I18n::text( 'redirect_after_login' )->text,
+						'context' => I18n::text( 'redirect_after_login' )->context,
+				],
+				[
+						'option'  => 'flwgb_redirect_after_registration',
+						'text'    => I18n::text( 'redirect_after_register' )->text,
+						'context' => I18n::text( 'redirect_after_register' )->context,
+				],
+				[
+						'option'  => 'flwgb_lost_password_page',
+						'text'    => I18n::text( 'lost_password_page' )->text,
+						'context' => I18n::text( 'lost_password_page' )->context,
+				],
+				[
+						'option'  => 'flwgb_register_page',
+						'text'    => I18n::text( 'registration_page' )->text,
+						'context' => I18n::text( 'registration_page' )->context,
+				],
+				[
+						'option'  => 'flwgb_activation_page',
+						'text'    => I18n::text( 'activation_page' )->text,
+						'context' => I18n::text( 'activation_page' )->context,
+				],
+				[
+						'option'  => 'flwgb_user_settings_page',
+						'text'    => I18n::text( 'user_settings_page' )->text,
+						'context' => I18n::text( 'user_settings_page' )->context,
+				],
+				[
+						'option'  => 'flwgb_terms_and_conditions_page',
+						'text'    => I18n::text( 'terms_and_conditions_page' )->text,
+						'context' => I18n::text( 'terms_and_conditions_page' )->context,
+				],
+				[
+						'option'  => 'flwgb_privacy_policy_page',
+						'text'    => I18n::text( 'privacy_policy_page' )->text,
+						'context' => I18n::text( 'privacy_policy_page' )->context,
+				]
 		];
 
 		foreach ( $selections as $select ):
@@ -98,7 +130,7 @@ $pages = get_pages();
 				<th scope="row">
 
 					<label for="<?php echo $select['option']; ?>">
-						<?php echo esc_html_x( $select['translate_text'], $select['translate_text'], FLWGB_TEXT_DOMAIN ); ?>
+						<?php echo esc_html_x( $select['text'], $select['context'], FLWGB_TEXT_DOMAIN ); ?>
 					</label>
 
 				</th>
@@ -106,7 +138,7 @@ $pages = get_pages();
 
 					<select name="<?php echo $select['option']; ?>" id="<?php echo $select['option']; ?>">
 
-						<option value=""><?php echo esc_html_x( I18n::$select_text, "Select text", FLWGB_TEXT_DOMAIN ) ?></option>
+						<option value=""><?php echo esc_html_x( I18n::text( 'select_text' )->text, I18n::text( 'select_text' )->context, FLWGB_TEXT_DOMAIN ) ?></option>
 
 						<?php
 

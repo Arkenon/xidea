@@ -13,11 +13,11 @@ class Mail {
 	 *
 	 * @since    1.0.0
 	 */
-	public function mail_fail_error(){
+	public function mail_fail_error() {
 
 		echo json_encode( array(
 			'status'  => false,
-			'message' => esc_html_x( I18n::$mail_error_message, I18n::$mail_error_message, FLWGB_TEXT_DOMAIN )
+			'message' => esc_html_x( I18n::text( 'mail_error_message' )->text, I18n::text( 'mail_error_message' )->context, FLWGB_TEXT_DOMAIN )
 		) );
 
 		wp_die();
@@ -39,7 +39,7 @@ class Mail {
 
 		$body = Helper::replace_mail_parameters( $option_name, $params );
 
-		$send_mail = wp_mail( $params['email'], esc_html_x( I18n::$reset_request_mail_title, I18n::$reset_request_mail_title, FLWGB_TEXT_DOMAIN ), $body );
+		$send_mail = wp_mail( $params['email'], esc_html_x( I18n::text( 'reset_request_mail_title' )->text, I18n::text( 'reset_request_mail_title' )->context, FLWGB_TEXT_DOMAIN ), $body );
 
 		if ( ! is_wp_error( $send_mail ) ) {
 			return true;

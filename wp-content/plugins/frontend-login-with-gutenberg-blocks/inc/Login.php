@@ -57,26 +57,26 @@ class Login {
 		if ( is_wp_error( $user ) ) {
 
 			echo json_encode( array(
-				'status' => false,
-				'message'  => esc_html_x( I18n::$invalid_username_or_pass, I18n::$invalid_username_or_pass, FLWGB_TEXT_DOMAIN )
+				'status'  => false,
+				'message' => esc_html_x( I18n::text( 'invalid_username_or_pass' )->text, I18n::text( 'invalid_username_or_pass' )->context, FLWGB_TEXT_DOMAIN )
 			) );
 
 		} else {
 
-			if(get_option('flwgb_has_activation') === 'yes'){
+			if ( get_option( 'flwgb_has_activation' ) === 'yes' ) {
 
-				Helper::using("inc/UserActivation.php");
+				Helper::using( "inc/UserActivation.php" );
 				$activation = new UserActivation();
 
-				if($activation->check_is_user_activated($user->ID)){
+				if ( $activation->check_is_user_activated( $user->ID ) ) {
 
 					$this->login_success_response();
 
 				} else {
 
 					echo json_encode( array(
-						'status'   => false,
-						'message'    => esc_html_x( I18n::$user_not_activated, I18n::$user_not_activated, FLWGB_TEXT_DOMAIN )
+						'status'  => false,
+						'message' => esc_html_x( I18n::text( 'user_not_activated' )->text, I18n::text( 'user_not_activated' )->context, FLWGB_TEXT_DOMAIN )
 					) );
 
 					wp_logout();
@@ -100,12 +100,12 @@ class Login {
 	 *
 	 * @since 1.0.0
 	 */
-	private function login_success_response(){
+	private function login_success_response() {
 
 		echo json_encode( array(
-			'status'   => true,
+			'status'     => true,
 			'return_url' => site_url( get_option( 'flwgb_redirect_after_login' ) ),
-			'message'    => esc_html_x( I18n::$login_successful, I18n::$login_successful, 'flwgb' )
+			'message'    => esc_html_x( I18n::text( 'login_successful' )->text, I18n::text( 'login_successful' )->context, 'flwgb' )
 		) );
 
 	}

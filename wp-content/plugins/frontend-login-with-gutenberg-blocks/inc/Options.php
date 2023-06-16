@@ -36,12 +36,12 @@ class Options {
 	public function flwgb_options_page() {
 
 		add_menu_page(
-				'Frontend Login with Gutenberg Blocks',
-				'Frontend Login',
-				'manage_options',
-				'frontend-login-with-gutenberg-blocks-settings',
-				[ $this, 'flwgb_settings_page_html' ],
-				'dashicons-admin-generic'
+			'Frontend Login with Gutenberg Blocks',
+			'Frontend Login',
+			'manage_options',
+			'frontend-login-with-gutenberg-blocks-settings',
+			[ $this, 'flwgb_settings_page_html' ],
+			'dashicons-admin-generic'
 		);
 	}
 

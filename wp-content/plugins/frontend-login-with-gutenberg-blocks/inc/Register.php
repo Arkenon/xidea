@@ -51,18 +51,18 @@ class Register {
 		Helper::using( "inc/Mail.php" );
 		$mail = new Mail();
 
-		$message    = esc_html_x( I18n::$register_succession, 'Registration success message', FLWGB_TEXT_DOMAIN );
+		$message    = esc_html_x( I18n::text('register_succession')->text, I18n::text('register_succession')->context, FLWGB_TEXT_DOMAIN );
 		$return_url = site_url( get_option( 'flwgb_redirect_after_registration' ) ) ?: '';
 
 		if ( get_option( "flwgb_has_activation" ) ) {
 
-			$message = esc_html_x( I18n::$register_succession_with_activation, 'Registration success message with activation', FLWGB_TEXT_DOMAIN );
+			$message = esc_html_x( I18n::text('register_succession_with_activation')->text, I18n::text('register_succession_with_activation')->context, FLWGB_TEXT_DOMAIN );
 
 		}
 
 		if ( ( ! empty( Helper::post( 'user_pass' ) ) && ! empty( Helper::post( 'user_pass_repeat' ) ) ) && ( Helper::post( 'user_pass' ) != Helper::post( 'user_pass_repeat' ) ) ) {
 
-			$message = esc_html_x( I18n::$password_match_error, 'Reset password matching error', FLWGB_TEXT_DOMAIN );
+			$message = esc_html_x( I18n::text('password_match_error')->text, I18n::text('password_match_error')->context, FLWGB_TEXT_DOMAIN );
 
 		} else {
 
@@ -111,7 +111,7 @@ class Register {
 
 					} else {
 
-						$message = esc_html_x(I18n::$general_error_message,'General error message',FLWGB_TEXT_DOMAIN);
+						$message = esc_html_x(I18n::text('general_error_message')->text,I18n::text('general_error_message')->context,FLWGB_TEXT_DOMAIN);
 
 					}
 
@@ -120,13 +120,13 @@ class Register {
 
 				if ( username_exists( $username ) ) {
 
-					$message = esc_html_x(I18n::$username_exist_error,'General error message',FLWGB_TEXT_DOMAIN);
+					$message = esc_html_x(I18n::text('username_exist_error')->text,'General error message',FLWGB_TEXT_DOMAIN);
 
 				}
 
 				if ( email_exists( $email ) ) {
 
-					$message = esc_html_x(I18n::$user_exist_error,'General error message',FLWGB_TEXT_DOMAIN);
+					$message = esc_html_x(I18n::text('user_exist_error'),'General error message',FLWGB_TEXT_DOMAIN);
 
 				}
 
