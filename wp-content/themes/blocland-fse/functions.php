@@ -29,7 +29,9 @@ if ( ! function_exists( 'blocland_fse_enqueue_styles' ) ) :
 		wp_enqueue_script( 'blocland-fse-js' );
 
 		wp_register_style( 'blocland-fse-custom', BLOCLAND_FSE_URI . '/assets/css/blocland_fse.css', [], BLOCLAND_FSE_VERSION);
+		wp_register_style( 'blocland-fse-elements', BLOCLAND_FSE_URI . '/assets/css/elements.css', [], BLOCLAND_FSE_VERSION);
 		wp_enqueue_style( 'blocland-fse-custom' );
+		wp_enqueue_style( 'blocland-fse-elements' );
 
 	}
 

@@ -1,9 +1,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-input:not([type=checkbox]), textarea{
-  width: 100% !important;
-}
 a:hover {
   text-decoration: underline!important;
 }

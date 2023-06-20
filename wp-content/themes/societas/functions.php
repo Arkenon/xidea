@@ -69,11 +69,13 @@ if ( ! function_exists( 'societas_enqueue_styles' ) ) :
 	function societas_enqueue_styles() {
 
 		wp_register_style( 'societas-style', SOCIETAS_URI . '/assets/css/style.css', [], SOCIETAS_VERSION );
+		wp_register_style( 'societas-elements', SOCIETAS_URI . '/assets/css/elements.css', [], SOCIETAS_VERSION );
 		wp_register_style( 'bootstrap', SOCIETAS_URI . '/assets/css/bootstrap.min.css', [], SOCIETAS_VERSION );
 		wp_register_style( 'animate', SOCIETAS_URI . '/assets/css/animate.min.css', [], SOCIETAS_VERSION );
 		wp_add_inline_style( 'societas-style', societas_get_custom_fonts() );
 
 		wp_enqueue_style( 'societas-style' );
+		wp_enqueue_style( 'societas-elements' );
 		wp_enqueue_style( 'bootstrap' );
 		wp_enqueue_style( 'animate' );
 

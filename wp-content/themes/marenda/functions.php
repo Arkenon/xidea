@@ -26,7 +26,9 @@ if ( ! function_exists( 'marenda_enqueue_styles' ) ) :
 	function marenda_enqueue_styles() {
 
 		wp_register_style( 'marenda-custom', MARENDA_URI . '/assets/css/marenda_custom.css', [], MARENDA_VERSION);
+		wp_register_style( 'marenda-elements', MARENDA_URI . '/assets/css/elements.css', [], MARENDA_VERSION);
 		wp_enqueue_style( 'marenda-custom' );
+		wp_enqueue_style( 'marenda-elements' );
 
 	}
 

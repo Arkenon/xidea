@@ -63,9 +63,11 @@ if ( ! function_exists( 'xidea_enqueue_styles' ) ) :
 	function xidea_enqueue_styles() {
 
 		wp_register_style( 'xidea-style', XIDEA_URI . '/assets/css/style.css', [], XIDEA_VERSION );
+		wp_register_style( 'xidea-elements', XIDEA_URI . '/assets/css/elements.css', [], XIDEA_VERSION );
 		wp_register_style( 'bootstrap', XIDEA_URI . '/assets/css/bootstrap.min.css', [], XIDEA_VERSION );
 
 		wp_enqueue_style( 'xidea-style' );
+		wp_enqueue_style( 'xidea-elements' );
 		wp_enqueue_style( 'bootstrap' );
 
 		wp_register_script( 'bootstrap-bundle', XIDEA_URI . '/assets/js/bootstrap.bundle.min.js', [ 'jquery' ], XIDEA_VERSION, true );
