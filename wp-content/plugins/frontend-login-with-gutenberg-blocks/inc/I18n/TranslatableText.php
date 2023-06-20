@@ -3,7 +3,7 @@
 namespace FLWGB\I18n;
 
 /**
- * Create an object for translatable texts
+ * Object for translatable texts
  *
  * @since      1.0.0
  * @package    Frontend_Login_With_Gutenberg_Blocks

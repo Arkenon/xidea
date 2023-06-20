@@ -17,7 +17,7 @@ if ( Helper::get('reset') == 'in-progress' ) {
 	} else {
 
 		$view = '<p class="alert alert-danger">
-					<strong class="font-s-14">'.esc_html_x(I18n::$wrong_reset_password_link,'Wrong reset password link',FLWGB_TEXT_DOMAIN).'</strong>
+					<strong class="font-s-14">'.esc_html_x(I18n::text('wrong_reset_password_link')->text, I18n::text('wrong_reset_password_link')->context,FLWGB_TEXT_DOMAIN).'</strong>
 				 </p>';
 
 	}

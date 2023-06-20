@@ -1,6 +1,8 @@
 <?php
 
 namespace FLWGB\I18n;
+use FLWGB\Helper;
+
 /**
  * Define the internationalization functionality.
  *
@@ -37,7 +39,7 @@ class I18n {
 	 */
 	protected static function get_translatable_texts(): array {
 
-		$get_json = file_get_contents( plugin_dir_path( dirname( __FILE__ ) ) . '/inc/I18n/I18n.json' );
+		$get_json = file_get_contents( plugin_dir_path( dirname( __FILE__ ) ) . '/I18n/I18n.json' );
 
 		return json_decode( $get_json, true );
 
@@ -53,6 +55,8 @@ class I18n {
 	 * @since    1.0.0
 	 */
 	public static function text( string $text ): TranslatableText {
+
+		Helper::using('inc/I18n/TranslatableText.php');
 
 		$texts = new TranslatableText();
 

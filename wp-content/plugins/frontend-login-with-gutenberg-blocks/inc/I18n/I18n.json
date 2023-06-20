@@ -16,7 +16,7 @@
 	"context": "no_text"
   },
   "loading_text": {
-	"text": "Loading",
+	"text": "Loading...",
 	"context": "loading_text"
   },
   "general_error_message": {

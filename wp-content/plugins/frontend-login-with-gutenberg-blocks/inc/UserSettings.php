@@ -19,7 +19,7 @@ class UserSettings {
 		$surname_input            = $lang == 'tr' ? 'Soyad' : 'Surname';
 
 		return '
-	'.sl_update_user_settings( $user_setting_page_url, $lang ).'
+	/*'.sl_update_user_settings( $user_setting_page_url, $lang ).'*/
     <form method="POST" action="'.$user_setting_page_url.'">
         <input type="hidden" name="user_id" value="'.$ID.'">
         <div class="col-12 form-group">

@@ -120,13 +120,13 @@ class Register {
 
 				if ( username_exists( $username ) ) {
 
-					$message = esc_html_x(I18n::text('username_exist_error')->text,'General error message',FLWGB_TEXT_DOMAIN);
+					$message = esc_html_x(I18n::text('username_exist_error')->text,I18n::text('username_exist_error')->context,FLWGB_TEXT_DOMAIN);
 
 				}
 
 				if ( email_exists( $email ) ) {
 
-					$message = esc_html_x(I18n::text('user_exist_error'),'General error message',FLWGB_TEXT_DOMAIN);
+					$message = esc_html_x(I18n::text('user_exist_error')->text,I18n::text('user_exist_error')->context,FLWGB_TEXT_DOMAIN);
 
 				}
 

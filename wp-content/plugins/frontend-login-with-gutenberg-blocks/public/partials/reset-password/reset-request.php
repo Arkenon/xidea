@@ -23,21 +23,21 @@ use FLWGB\I18n\I18n;
 	$view = '<div>
 				<form name="flwgb-reset-pass-request-form" id="flwgb-reset-pass-request-form" method="post">';
 				$view .= '<div style="text-align:center;">
-							<p>' . esc_html_x( I18n::$send_reset_request_description, I18n::$send_reset_request_description, FLWGB_TEXT_DOMAIN ) . '</p>
+							<p>' . esc_html_x( I18n::text('send_reset_request_description')->text, I18n::text('send_reset_request_description')->context, FLWGB_TEXT_DOMAIN ) . '</p>
 						  </div>
 						  <div class="flwgb-form-row">
 						    <div class="flwgb-input-group">';
 
 								if ( $form_attributes['showLabels'] ) {
 
-									$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="flwgb-email">' . esc_html_x( I18n::$email_input_text, I18n::$email_input_text, FLWGB_TEXT_DOMAIN ) . '</label>';
+									$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="flwgb-email">' . esc_html_x( I18n::text('email_input_text')->text, I18n::text('email_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
 								}
 
 									$view .= '<input class="flwgb-input-control" id="flwgb-email" name="flwgb-email" type="text" style=' . $input_style . ' placeholder="';
 
 									if ( $form_attributes['showPlaceholders'] ) {
 
-										$view .= esc_attr_x( I18n::$email_placeholder_text, I18n::$email_placeholder_text, FLWGB_TEXT_DOMAIN );
+										$view .= esc_attr_x( I18n::text('email_placeholder_text')->text, I18n::text('email_placeholder_text')->context, FLWGB_TEXT_DOMAIN );
 
 									}
 
@@ -52,10 +52,10 @@ use FLWGB\I18n\I18n;
 
 				$view .= '<div class="flwgb-form-row">
 							<button style="'.$button_style.'" type="submit" id="flwgb-reset-request-submit" class="flwgb-reset-request-btn flwgb-btn">
-								' . esc_html_x( I18n::$send_reset_request, I18n::$send_reset_request, FLWGB_TEXT_DOMAIN ) . '
+								' . esc_html_x( I18n::text('send_reset_request')->text, I18n::text('send_reset_request')->context, FLWGB_TEXT_DOMAIN ) . '
 							</button>
 						</div>
-				<div id="flwgb-reset-request-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::$loading_text, I18n::$loading_text, FLWGB_TEXT_DOMAIN ) . '</div>';
+				<div id="flwgb-reset-request-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::text('loading_text')->text, I18n::text('loading_text')->context, FLWGB_TEXT_DOMAIN ) . '</div>';
 	$view .= '</form>
 			<div id="flwgb-reset-request-form-result"></div>
 	    </div>';
