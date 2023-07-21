@@ -2,140 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/reset-password-form/control-panel/controlPanel.js":
-/*!***************************************************************!*\
-  !*** ./src/reset-password-form/control-panel/controlPanel.js ***!
-  \***************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
-/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
-
-const ControlPanel = _ref => {
-  let {
-    options
-  } = _ref;
-  const {
-    attributes: {
-      showLabels,
-      showPlaceholders,
-      textColor,
-      textFontWeight,
-      inputBorderRadius,
-      buttonBgColor,
-      buttonTextColor,
-      buttonBorder,
-      buttonBorderRadius,
-      buttonTextFontWeight
-    },
-    setAttributes
-  } = options;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Label Settings', 'flwgb'),
-    initialOpen: false
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show labels', 'flwgb'),
-    help: showLabels ? 'Show' : 'Hide',
-    checked: showLabels,
-    onChange: val => setAttributes({
-      showLabels: val
-    })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    labelPosition: 'top',
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Font Weight & Font Color', 'flwgb'),
-    value: textFontWeight,
-    options: [{
-      label: 'Normal',
-      value: 'normal'
-    }, {
-      label: 'Bold',
-      value: 'bold'
-    }],
-    onChange: val => setAttributes({
-      textFontWeight: val
-    })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
-    color: textColor,
-    onChange: val => setAttributes({
-      textColor: val
-    }),
-    enableAlpha: true,
-    defaultValue: "#000"
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Input Settings', 'flwgb'),
-    initialOpen: false
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Input Border Radius', 'flwgb'),
-    value: inputBorderRadius,
-    onChange: val => setAttributes({
-      inputBorderRadius: val
-    }),
-    min: 0,
-    max: 25
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Placeholders', 'flwgb'),
-    help: showPlaceholders ? 'Show' : 'Hide',
-    checked: showPlaceholders,
-    onChange: val => setAttributes({
-      showPlaceholders: val
-    })
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Settings', 'flwgb'),
-    initialOpen: false
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Border Radius', 'flwgb'),
-    value: buttonBorderRadius,
-    onChange: val => setAttributes({
-      buttonBorderRadius: val
-    }),
-    min: 0,
-    max: 25
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalBorderControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Border'),
-    onChange: newButtonBorder => setAttributes({
-      buttonBorder: newButtonBorder
-    }),
-    value: buttonBorder
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalText, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button background color', 'flwgb'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
-    value: buttonBgColor,
-    onChange: val => setAttributes({
-      buttonBgColor: val
-    })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    labelPosition: 'top',
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Font Weight', 'flwgb'),
-    value: buttonTextFontWeight,
-    options: [{
-      label: 'Normal',
-      value: 'normal'
-    }, {
-      label: 'Bold',
-      value: 'bold'
-    }],
-    onChange: val => setAttributes({
-      buttonTextFontWeight: val
-    })
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalText, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button text color', 'flwgb'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
-    value: buttonTextColor,
-    onChange: val => setAttributes({
-      buttonTextColor: val
-    })
-  })))));
-};
-/* harmony default export */ __webpack_exports__["default"] = (ControlPanel);
-
-/***/ }),
-
 /***/ "./src/reset-password-form/edit.js":
 /*!*****************************************!*\
   !*** ./src/reset-password-form/edit.js ***!
@@ -153,7 +19,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _control_panel_controlPanel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./control-panel/controlPanel */ "./src/reset-password-form/control-panel/controlPanel.js");
+/* harmony import */ var _inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../inc/I18n/I18n.json */ "./inc/I18n/I18n.json");
+/* harmony import */ var _options__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./options */ "./src/reset-password-form/options.js");
+
 
 
 
@@ -161,48 +29,37 @@ __webpack_require__.r(__webpack_exports__);
 
 function Edit(props) {
   const {
-    attributes: {
-      showLabels,
-      showPlaceholders,
-      textColor,
-      textFontWeight,
-      inputBorderRadius,
-      buttonBgColor,
-      buttonTextColor,
-      buttonBorder,
-      buttonBorderRadius,
-      buttonTextFontWeight
-    },
-    setAttributes
+    attributes
   } = props;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(props);
   const inputStyle = {
-    'border-radius': inputBorderRadius
+    'border-radius': attributes.inputBorderRadius
   };
   const textStyle = {
-    'color': textColor,
-    'font-weight': textFontWeight
+    'color': attributes.textColor,
+    'font-weight': attributes.textFontWeight
   };
   const buttonStyle = {
-    'color': buttonTextColor,
-    'backgroundColor': buttonBgColor,
-    'border-color': buttonBorder.color,
-    'border-style': buttonBorder.style,
-    'border-width': buttonBorder.width,
-    'border-radius': buttonBorderRadius,
-    'font-weight': buttonTextFontWeight
+    'color': attributes.buttonTextColor,
+    'backgroundColor': attributes.buttonBgColor,
+    'border-color': attributes.buttonBorder.color,
+    'border-style': attributes.buttonBorder.style,
+    'border-width': attributes.buttonBorder.width,
+    'border-radius': attributes.buttonBorderRadius,
+    'font-weight': attributes.buttonTextFontWeight
   };
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_control_panel_controlPanel__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  const desc = attributes.description ? attributes.description : _inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.send_reset_request_description.text;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
     options: props
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, attributes.showDescription && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     style: {
       'text-align': 'center'
     }
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)("Please enter your e-mail address. We will send you an e-mail to reset your password."))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(desc))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-form-row"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-input-group"
-  }, showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+  }, attributes.showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
     className: "flwgb-input-label",
     style: textStyle,
     htmlFor: "flwgb-email"
@@ -211,7 +68,7 @@ function Edit(props) {
     id: "flwgb-email",
     type: "text",
     style: inputStyle,
-    placeholder: showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Enter your e-mail', 'flwgb')
+    placeholder: attributes.showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Enter your e-mail', 'flwgb')
   }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "flwgb-form-row"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
@@ -276,6 +133,145 @@ __webpack_require__.r(__webpack_exports__);
    */
   save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
+
+/***/ }),
+
+/***/ "./src/reset-password-form/options.js":
+/*!********************************************!*\
+  !*** ./src/reset-password-form/options.js ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+const Options = _ref => {
+  let {
+    options
+  } = _ref;
+  const {
+    attributes,
+    setAttributes
+  } = options;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Label Settings', 'flwgb'),
+    initialOpen: false
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show labels', 'flwgb'),
+    help: attributes.showLabels ? 'Show' : 'Hide',
+    checked: attributes.showLabels,
+    onChange: val => setAttributes({
+      showLabels: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    labelPosition: 'top',
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Font Weight & Font Color', 'flwgb'),
+    value: attributes.textFontWeight,
+    options: [{
+      label: 'Normal',
+      value: 'normal'
+    }, {
+      label: 'Bold',
+      value: 'bold'
+    }],
+    onChange: val => setAttributes({
+      textFontWeight: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPicker, {
+    color: attributes.textColor,
+    onChange: val => setAttributes({
+      textColor: val
+    }),
+    enableAlpha: true,
+    defaultValue: "#000"
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Input Settings', 'flwgb'),
+    initialOpen: false
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Input Border Radius', 'flwgb'),
+    value: attributes.inputBorderRadius,
+    onChange: val => setAttributes({
+      inputBorderRadius: val
+    }),
+    min: 0,
+    max: 25
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Placeholders', 'flwgb'),
+    help: attributes.showPlaceholders ? 'Show' : 'Hide',
+    checked: attributes.showPlaceholders,
+    onChange: val => setAttributes({
+      showPlaceholders: val
+    })
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Settings', 'flwgb'),
+    initialOpen: false
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Border Radius', 'flwgb'),
+    value: attributes.buttonBorderRadius,
+    onChange: val => setAttributes({
+      buttonBorderRadius: val
+    }),
+    min: 0,
+    max: 25
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalBorderControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Border'),
+    onChange: newButtonBorder => setAttributes({
+      buttonBorder: newButtonBorder
+    }),
+    value: attributes.buttonBorder
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalText, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button background color', 'flwgb'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
+    value: attributes.buttonBgColor,
+    onChange: val => setAttributes({
+      buttonBgColor: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+    labelPosition: 'top',
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Font Weight', 'flwgb'),
+    value: attributes.buttonTextFontWeight,
+    options: [{
+      label: 'Normal',
+      value: 'normal'
+    }, {
+      label: 'Bold',
+      value: 'bold'
+    }],
+    onChange: val => setAttributes({
+      buttonTextFontWeight: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.__experimentalText, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button text color', 'flwgb'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ColorPalette, {
+    value: attributes.buttonTextColor,
+    onChange: val => setAttributes({
+      buttonTextColor: val
+    })
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Description Settings', 'flwgb'),
+    initialOpen: false
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Show Description', 'flwgb'),
+    help: attributes.showPlaceholders ? 'Show' : 'Hide',
+    checked: attributes.showDescription,
+    onChange: val => setAttributes({
+      showDescription: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextareaControl, {
+    label: "Description",
+    value: attributes.description,
+    onChange: val => setAttributes({
+      description: val
+    })
+  })))));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Options);
 
 /***/ }),
 
@@ -386,13 +382,23 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
+/***/ "./inc/I18n/I18n.json":
+/*!****************************!*\
+  !*** ./inc/I18n/I18n.json ***!
+  \****************************/
+/***/ (function(module) {
+
+module.exports = JSON.parse('{"hello_text":{"text":"Hello.","context":"hello_text"},"select_text":{"text":"Please select...","context":"select_text"},"yes_text":{"text":"Yes","context":"yes_text"},"no_text":{"text":"No","context":"no_text"},"loading_text":{"text":"Loading...","context":"loading_text"},"general_error_message":{"text":"Something went wrong. Please try again later.","context":"general_error_message"},"general_success_message":{"text":"Operation has been completed successfully.","context":"general_success_message"},"login_text":{"text":"Login","context":"login_text"},"logout_text":{"text":"Logout","context":"logout_text"},"submit_text":{"text":"Submit","context":"submit_text"},"go_to_user_dashboard_text":{"text":"Go to user dashboard","context":"go_to_user_dashboard_text"},"email_input_text":{"text":"Your e-mail","context":"email_input_text"},"email_placeholder_text":{"text":"Enter your e-mail","context":"email_placeholder_text"},"user_input_text":{"text":"Username","context":"user_input_text"},"password_again_input_text":{"text":"Password Again","context":"password_again_input_text"},"mail_error_message":{"text":"wp_mail() returned an error. Please check your e-mail configurations.","context":"mail_error_message"},"admin_general_settings":{"text":"General Settings","context":"admin_general_settings"},"admin_mail_settings":{"text":"E-Mail Templates","context":"admin_mail_settings"},"redirect_after_login":{"text":"Redirect Page After Login","context":"redirect_after_login"},"redirect_after_register":{"text":"Redirect Page After Registration","context":"redirect_after_register"},"register_mail_to_user":{"text":"Register Mail Template to User","context":"register_mail_to_user"},"register_mail_to_admin":{"text":"Register Mail Template to Admin","context":"register_mail_to_admin"},"lost_password_page":{"text":"Lost (Reset) Password Page","context":"lost_password_page"},"registration_page":{"text":"Registration Page","context":"registration_page"},"activation_page":{"text":"User Activation Page","context":"activation_page"},"user_settings_page":{"text":"User Settings Page","context":"user_settings_page"},"terms_and_conditions_page":{"text":"Terms and Conditions Page","context":"terms_and_conditions_page"},"privacy_policy_page":{"text":"Privacy Policy Page","context":"privacy_policy_page"},"has_activation":{"text":"Enable user activation","context":"has_activation"},"has_user_dashboard":{"text":"Enable user dashboard","context":"has_user_dashboard"},"already_logged_in_message":{"text":"You have already logged in.","context":"already_logged_in_message"},"email_or_username_input_text":{"text":"Username or E-mail","context":"email_or_username_input_text"},"email_or_username_placeholder_text":{"text":"Enter your username or e-mail","context":"email_or_username_placeholder_text"},"password_input_text":{"text":"Password","context":"password_input_text"},"password_placeholder_text":{"text":"Enter your password","context":"password_placeholder_text"},"remember_me_text":{"text":"Remember me","context":"remember_me_text"},"invalid_username_or_pass":{"text":"Invalid username or password.","context":"invalid_username_or_pass"},"login_successful":{"text":"You have successfully logged in...","context":"login_successful"},"user_not_activated":{"text":"Please activate your account. We sent you an email. Click the activation link in the email.","context":"user_not_activated"},"register_button_text":{"text":"Register","context":"register_button_text"},"terms_and_conditions_text":{"text":"I have read and accept <a href=\\"%s\\" target=\\"_blank\\">terms and conditions</a> and <a href=\\"%s\\" target=\\"_blank\\">privacy policy</a>","context":"terms_and_conditions_text"},"terms_and_conditions_validation":{"text":"Please check terms and conditions chechkbox","context":"terms_and_conditions_validation"},"password_match_error":{"text":"Your passwords do not match","context":"password_match_error"},"register_succession_with_activation":{"text":"You have been sign up successfuly. Please clikck the membership activation link sent your e-mail.","context":"register_succession_with_activation"},"register_succession":{"text":"You have been sign up successfuly. You can sign in with your username and password.","context":"register_succession"},"username_exist_error":{"text":"This username already exist.","context":"username_exist_error"},"user_exist_error":{"text":"This user already exist.","context":"user_exist_error"},"reset_password_button_text":{"text":"Lost Password","context":"reset_password_button_text"},"submit_reset_password_button_text":{"text":"Change Password","context":"submit_reset_password_button_text"},"wrong_reset_password_link":{"text":"Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.","context":"wrong_reset_password_link"},"reset_password_request_confirmation":{"text":"We have successfully get your request. We have sent you an e-mail. Please check your inbox...","context":"reset_password_request_confirmation"},"password_changed":{"text":"Your password has been changed. Please sign in...","context":"password_changed"},"reset_password_request_input_text":{"text":"Please sumbit your e-mail to get reset password link.","context":"reset_password_request_input_text"},"send_reset_request":{"text":"Send Request","context":"send_reset_request"},"send_reset_request_description":{"text":"Please enter your e-mail address. We will send you an e-mail to reset your password.","context":"send_reset_request_description"},"reset_request_mail_title":{"text":"Reset password request","context":"reset_request_mail_title"}}');
+
+/***/ }),
+
 /***/ "./src/reset-password-form/block.json":
 /*!********************************************!*\
   !*** ./src/reset-password-form/block.json ***!
   \********************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"frontend-login-with-gutenberg-blocks/reset-password-form","version":"0.1.0","title":"Reset (Lost) Password Form","category":"theme","icon":"format-aside","description":"Display reset password form","attributes":{"showLabels":{"type":"boolean","default":false},"showPlaceholders":{"type":"boolean","default":false},"textColor":{"type":"string","default":"black"},"textFontWeight":{"type":"string","default":"bold"},"inputBorderRadius":{"type":"number","default":0},"buttonBgColor":{"type":"string","default":"gray"},"buttonTextColor":{"type":"string","default":"black"},"buttonBorder":{"type":"object","default":{"color":"#000","style":"solid","width":"0px"}},"buttonBorderRadius":{"type":"number","default":0},"buttonTextFontWeight":{"type":"string","default":"normal"}},"supports":{"html":false},"textdomain":"reset-password-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"frontend-login-with-gutenberg-blocks/reset-password-form","version":"1.0.0","title":"Reset (Lost) Password Form","category":"theme","icon":"format-aside","description":"Display reset password form","attributes":{"showLabels":{"type":"boolean","default":false},"showDescription":{"type":"boolean","default":true},"showPlaceholders":{"type":"boolean","default":false},"textColor":{"type":"string","default":"black"},"textFontWeight":{"type":"string","default":"bold"},"inputBorderRadius":{"type":"number","default":0},"buttonBgColor":{"type":"string","default":"gray"},"buttonTextColor":{"type":"string","default":"black"},"description":{"type":"string","default":""},"buttonBorder":{"type":"object","default":{"color":"#000","style":"solid","width":"0px"}},"buttonBorderRadius":{"type":"number","default":0},"buttonTextFontWeight":{"type":"string","default":"normal"}},"supports":{"html":false},"textdomain":"reset-password-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

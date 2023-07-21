@@ -1,8 +1,8 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "frontend-login-with-gutenberg-blocks/reset-password-form",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "title": "Reset (Lost) Password Form",
   "category": "theme",
   "icon": "format-aside",
@@ -11,6 +11,10 @@
     "showLabels": {
       "type": "boolean",
       "default": false
+    },
+    "showDescription": {
+      "type": "boolean",
+      "default": true
     },
     "showPlaceholders": {
       "type": "boolean",
@@ -35,6 +39,10 @@
     "buttonTextColor": {
       "type": "string",
       "default": "black"
+    },
+    "description": {
+      "type": "string",
+      "default": ""
     },
     "buttonBorder": {
       "type": "object",

@@ -1,65 +1,57 @@
 import './editor.scss';
 import {useBlockProps} from '@wordpress/block-editor';
 import {__} from '@wordpress/i18n';
+import I18n from "../../inc/I18n/I18n.json";
 
-import ControlPanel from "./control-panel/controlPanel";
+import Options from "./options";
 
 export default function Edit(props) {
 
-	const {
-		attributes: {
-			showLabels,
-			showPlaceholders,
-			textColor,
-			textFontWeight,
-			inputBorderRadius,
-			buttonBgColor,
-			buttonTextColor,
-			buttonBorder,
-			buttonBorderRadius,
-			buttonTextFontWeight
-		}, setAttributes
-	} = props;
+	const {attributes} = props;
 
 	const blockProps = useBlockProps(props);
 
 	const inputStyle = {
-		'border-radius': inputBorderRadius,
+		'border-radius': attributes.inputBorderRadius,
 	}
 
 	const textStyle = {
-		'color': textColor,
-		'font-weight': textFontWeight
+		'color': attributes.textColor,
+		'font-weight': attributes.textFontWeight
 	}
 
 	const buttonStyle = {
-		'color': buttonTextColor,
-		'backgroundColor': buttonBgColor,
-		'border-color': buttonBorder.color,
-		'border-style': buttonBorder.style,
-		'border-width': buttonBorder.width,
-		'border-radius': buttonBorderRadius,
-		'font-weight': buttonTextFontWeight
+		'color': attributes.buttonTextColor,
+		'backgroundColor': attributes.buttonBgColor,
+		'border-color': attributes.buttonBorder.color,
+		'border-style': attributes.buttonBorder.style,
+		'border-width': attributes.buttonBorder.width,
+		'border-radius': attributes.buttonBorderRadius,
+		'font-weight': attributes.buttonTextFontWeight
 	}
 
+	const desc = attributes.description ? attributes.description : I18n.send_reset_request_description.text;
 
 	return (
 		<>
 
-			<ControlPanel options={props}/>
+			<Options options={props}/>
 
 			<div {...blockProps}>
-				<div style={{'text-align':'center'}}>
-					<p>{__("Please enter your e-mail address. We will send you an e-mail to reset your password.")}</p>
-				</div>
+				{
+					attributes.showDescription &&
+					<div style={{'text-align': 'center'}}>
+						<p>{__(desc)}</p>
+					</div>
+				}
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
-						{showLabels &&
-							<label className="flwgb-input-label" style={textStyle}
-								   htmlFor="flwgb-email">{__('Your e-mail', 'flwgb')}</label>}
+						{attributes.showLabels &&
+						<label className="flwgb-input-label" style={textStyle}
+							   htmlFor="flwgb-email">{__('Your e-mail', 'flwgb')}</label>}
 						<input className="flwgb-input-control" id="flwgb-email" type="text"
 							   style={inputStyle}
-							   placeholder={showPlaceholders && __('Enter your e-mail', 'flwgb')}/>
+							   placeholder={attributes.showPlaceholders && __('Enter your e-mail', 'flwgb')}/>
 					</div>
 				</div>
 

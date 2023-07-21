@@ -1,6 +1,5 @@
 <?php
 
-use FLWGB\Helper;
 use FLWGB\I18n\I18n;
 
 //TODO check is user logged in
@@ -20,12 +19,18 @@ use FLWGB\I18n\I18n;
 	                'border-radius: ' . $form_attributes['buttonBorderRadius'] . 'px;' .
 	                'font-weight: ' . $form_attributes['buttonTextFontWeight'];
 
+	$desc = $form_attributes['description'] ?: I18n::text('send_reset_request_description')->text;
+
 	$view = '<div>
 				<form name="flwgb-reset-pass-request-form" id="flwgb-reset-pass-request-form" method="post">';
-				$view .= '<div style="text-align:center;">
-							<p>' . esc_html_x( I18n::text('send_reset_request_description')->text, I18n::text('send_reset_request_description')->context, FLWGB_TEXT_DOMAIN ) . '</p>
-						  </div>
-						  <div class="flwgb-form-row">
+
+				if($form_attributes['showDescription']){
+					$view .= '<div style="text-align:center;">
+							<p>' . esc_html_x( $desc, I18n::text('send_reset_request_description')->context, FLWGB_TEXT_DOMAIN ) . '</p>
+						  </div>';
+				}
+
+				$view .= '<div class="flwgb-form-row">
 						    <div class="flwgb-input-group">';
 
 								if ( $form_attributes['showLabels'] ) {

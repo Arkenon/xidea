@@ -8,6 +8,7 @@ import {
 	RangeControl,
 	PanelBody,
 	PanelRow,
+	TextareaControl,
 	ColorPalette,
 	__experimentalText as Text,
 	__experimentalBorderControl as BorderControl
@@ -15,22 +16,9 @@ import {
 
 import {__} from '@wordpress/i18n';
 
-const ControlPanel = ({options}) => {
+const Options = ({options}) => {
 
-	const {
-		attributes: {
-			showLabels,
-			showPlaceholders,
-			textColor,
-			textFontWeight,
-			inputBorderRadius,
-			buttonBgColor,
-			buttonTextColor,
-			buttonBorder,
-			buttonBorderRadius,
-			buttonTextFontWeight
-		}, setAttributes
-	} = options;
+	const {attributes, setAttributes} = options;
 
 	return (
 		<InspectorControls>
@@ -40,18 +28,18 @@ const ControlPanel = ({options}) => {
 						<ToggleControl
 							label={__('Show labels', 'flwgb')}
 							help={
-								showLabels
+								attributes.showLabels
 									? 'Show'
 									: 'Hide'
 							}
-							checked={showLabels}
+							checked={attributes.showLabels}
 							onChange={(val) => setAttributes({showLabels: val})}
 						/>
 					</PanelRow>
 					<PanelRow>
 						<SelectControl labelPosition={'top'}
 									   label={__('Font Weight & Font Color', 'flwgb')}
-									   value={textFontWeight}
+									   value={attributes.textFontWeight}
 									   options={[
 										   {label: 'Normal', value: 'normal'},
 										   {label: 'Bold', value: 'bold'},
@@ -61,7 +49,7 @@ const ControlPanel = ({options}) => {
 					</PanelRow>
 					<PanelRow>
 						<ColorPicker
-							color={textColor}
+							color={attributes.textColor}
 							onChange={(val) => setAttributes({textColor: val})}
 							enableAlpha
 							defaultValue="#000"
@@ -75,7 +63,7 @@ const ControlPanel = ({options}) => {
 					<PanelRow>
 						<RangeControl
 							label={__('Input Border Radius', 'flwgb')}
-							value={inputBorderRadius}
+							value={attributes.inputBorderRadius}
 							onChange={(val) => setAttributes({inputBorderRadius: val})}
 							min={0}
 							max={25}
@@ -85,11 +73,11 @@ const ControlPanel = ({options}) => {
 						<ToggleControl
 							label={__('Show Placeholders', 'flwgb')}
 							help={
-								showPlaceholders
+								attributes.showPlaceholders
 									? 'Show'
 									: 'Hide'
 							}
-							checked={showPlaceholders}
+							checked={attributes.showPlaceholders}
 							onChange={(val) => setAttributes({showPlaceholders: val})}
 						/>
 					</PanelRow>
@@ -101,7 +89,7 @@ const ControlPanel = ({options}) => {
 					<PanelRow>
 						<RangeControl
 							label={__('Button Border Radius', 'flwgb')}
-							value={buttonBorderRadius}
+							value={attributes.buttonBorderRadius}
 							onChange={(val) => setAttributes({buttonBorderRadius: val})}
 							min={0}
 							max={25}
@@ -111,7 +99,7 @@ const ControlPanel = ({options}) => {
 						<BorderControl
 							label={__('Button Border')}
 							onChange={(newButtonBorder) => setAttributes({buttonBorder: newButtonBorder})}
-							value={buttonBorder}
+							value={attributes.buttonBorder}
 						/>
 					</PanelRow>
 					<PanelRow>
@@ -119,14 +107,14 @@ const ControlPanel = ({options}) => {
 					</PanelRow>
 					<PanelRow>
 						<ColorPalette
-							value={buttonBgColor}
+							value={attributes.buttonBgColor}
 							onChange={(val) => setAttributes({buttonBgColor: val})}
 						/>
 					</PanelRow>
 					<PanelRow>
 						<SelectControl labelPosition={'top'}
 									   label={__('Button Font Weight', 'flwgb')}
-									   value={buttonTextFontWeight}
+									   value={attributes.buttonTextFontWeight}
 									   options={[
 										   {label: 'Normal', value: 'normal'},
 										   {label: 'Bold', value: 'bold'},
@@ -139,8 +127,33 @@ const ControlPanel = ({options}) => {
 					</PanelRow>
 					<PanelRow>
 						<ColorPalette
-							value={buttonTextColor}
+							value={attributes.buttonTextColor}
 							onChange={(val) => setAttributes({buttonTextColor: val})}
+						/>
+					</PanelRow>
+
+				</PanelBody>
+			</Panel>
+
+			<Panel>
+				<PanelBody title={__('Description Settings', 'flwgb')} initialOpen={false}>
+					<PanelRow>
+						<ToggleControl
+							label={__('Show Description', 'flwgb')}
+							help={
+								attributes.showPlaceholders
+									? 'Show'
+									: 'Hide'
+							}
+							checked={attributes.showDescription}
+							onChange={(val) => setAttributes({showDescription: val})}
+						/>
+					</PanelRow>
+					<PanelRow>
+						<TextareaControl
+							label="Description"
+							value={attributes.description}
+							onChange={(val) => setAttributes({description: val})}
 						/>
 					</PanelRow>
 
@@ -150,4 +163,4 @@ const ControlPanel = ({options}) => {
 	)
 }
 
-export default ControlPanel;
+export default Options;
