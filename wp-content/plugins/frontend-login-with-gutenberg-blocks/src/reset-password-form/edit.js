@@ -2,7 +2,6 @@ import './editor.scss';
 import {useBlockProps} from '@wordpress/block-editor';
 import {__} from '@wordpress/i18n';
 import I18n from "../../inc/I18n/I18n.json";
-
 import Options from "./options";
 
 export default function Edit(props) {

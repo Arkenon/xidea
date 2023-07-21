@@ -58,7 +58,7 @@ class Login {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'invalid_username_or_pass' )->text, I18n::text( 'invalid_username_or_pass' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => $user->get_error_message()
 			) );
 
 		} else {

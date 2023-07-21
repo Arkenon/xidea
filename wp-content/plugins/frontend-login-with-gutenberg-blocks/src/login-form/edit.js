@@ -1,73 +1,59 @@
 import './editor.scss';
 import {useBlockProps} from '@wordpress/block-editor';
 import {__} from '@wordpress/i18n';
-
-import ControlPanel from "./control-panel/controlPanel";
-import I18n from "../../inc/I18n/I18n.json"
+import I18n from "../../inc/I18n/I18n.json";
+import Options from "./options";
 
 export default function Edit(props) {
 
-	const {
-		attributes: {
-			showLabels,
-			showPlaceholders,
-			textColor,
-			textFontWeight,
-			inputBorderRadius,
-			buttonBgColor,
-			buttonTextColor,
-			buttonBorder,
-			buttonBorderRadius,
-			buttonTextFontWeight
-		}, setAttributes
-	} = props;
+	const {attributes} = props;
 
 	const blockProps = useBlockProps(props);
 
 	const inputStyle = {
-		'border-radius': inputBorderRadius,
+		'border-radius': attributes.inputBorderRadius,
 	}
 
 	const textStyle = {
-		'color': textColor,
-		'font-weight': textFontWeight
+		'color': attributes.textColor,
+		'font-weight': attributes.textFontWeight
 	}
 
 	const buttonStyle = {
-		'color': buttonTextColor,
-		'backgroundColor': buttonBgColor,
-		'border-color': buttonBorder.color,
-		'border-style': buttonBorder.style,
-		'border-width': buttonBorder.width,
-		'border-radius': buttonBorderRadius,
-		'font-weight': buttonTextFontWeight
+		'color': attributes.buttonTextColor,
+		'backgroundColor': attributes.buttonBgColor,
+		'border-color': attributes.buttonBorder.color,
+		'border-style': attributes.buttonBorder.style,
+		'border-width': attributes.buttonBorder.width,
+		'border-radius': attributes.buttonBorderRadius,
+		'font-weight': attributes.buttonTextFontWeight
 	}
 
 	return (
 
 		<>
 
-			<ControlPanel options={props}/>
+			<Options options={props}/>
 
 			<div {...blockProps}>
 
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
-						{showLabels &&
+						{attributes.showLabels &&
 							<label className="flwgb-input-label" style={textStyle}
-								   htmlFor="flwgb-username-or-email">{__('Username or E-mail', 'flwgb')}</label>}
+								   htmlFor="flwgb-username-or-email">{__(I18n.email_or_username_input_text.text, 'flwgb')}</label>}
 						<input className="flwgb-input-control" id="flwgb-username-or-email" type="text"
 							   style={inputStyle}
-							   placeholder={showPlaceholders && __('Enter your username or e-mail', 'flwgb')}/>
+							   placeholder={attributes.showPlaceholders && __(I18n.email_or_username_placeholder_text.text, 'flwgb')}/>
 					</div>
 				</div>
 
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
-						{showLabels && <label className="flwgb-input-label" style={textStyle}
-											  htmlFor="flwgb-password">{__('Password', 'flwgb')}</label>}
+						{attributes.showLabels && <label className="flwgb-input-label" style={textStyle}
+											  htmlFor="flwgb-password">{__(I18n.password_input_text.text, 'flwgb')}</label>}
 						<input className="flwgb-input-control" id="flwgb-password" type="password" style={inputStyle}
-							   placeholder={showPlaceholders && __('Enter your password', 'flwgb')}/>
+							   placeholder={attributes.showPlaceholders && __(I18n.password_placeholder_text.text, 'flwgb')}/>
 					</div>
 				</div>
 
@@ -83,7 +69,7 @@ export default function Edit(props) {
 				<div className="flwgb-form-row">
 					<button style={buttonStyle} type="submit" name="wp-submit" id="wp-submit"
 							className="flwgb-login-btn flwgb-btn">
-						{__('Login', 'flwgb')}
+						{__(I18n.login_text.text, 'flwgb')}
 					</button>
 				</div>
 

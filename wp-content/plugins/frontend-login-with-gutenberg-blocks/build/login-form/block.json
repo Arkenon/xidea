@@ -1,11 +1,11 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "frontend-login-with-gutenberg-blocks/login-form",
   "version": "1.0.0",
   "title": "Login Form",
   "category": "theme",
-  "icon": "format-aside",
+  "icon": "share-alt2",
   "description": "Display login form",
   "attributes": {
     "showLabels": {

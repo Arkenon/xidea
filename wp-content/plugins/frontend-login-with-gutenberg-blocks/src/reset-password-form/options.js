@@ -1,5 +1,5 @@
+import {__} from '@wordpress/i18n';
 import {InspectorControls} from '@wordpress/block-editor';
-
 import {
 	ToggleControl,
 	ColorPicker,
@@ -14,7 +14,7 @@ import {
 	__experimentalBorderControl as BorderControl
 } from '@wordpress/components';
 
-import {__} from '@wordpress/i18n';
+//TODO translate label texts
 
 const Options = ({options}) => {
 

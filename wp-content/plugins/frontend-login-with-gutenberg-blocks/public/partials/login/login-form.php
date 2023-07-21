@@ -92,6 +92,9 @@ if ( is_user_logged_in() ) {
 			<div id="flwgb-login-form-result"></div>
     </div>';
 
+	/*$hook_name = 'login_form';
+	global $wp_filter;
+	var_dump( $wp_filter[$hook_name] );*/
 
 
 }
