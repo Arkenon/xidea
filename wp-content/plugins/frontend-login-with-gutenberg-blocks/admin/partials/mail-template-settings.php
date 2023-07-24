@@ -76,6 +76,32 @@ use FLWGB\I18n\I18n;
 			</td>
 		</tr>
 
+		<tr>
+			<th scope="row">
+
+				<label for="flwgb_reset_request_mail_to_user">
+					<?php echo esc_html_x( I18n::text('reset_password_request_mail_template')->text, I18n::text('reset_password_request_mail_template')->context, FLWGB_TEXT_DOMAIN ); ?>
+				</label>
+
+			</th>
+			<td>
+
+				<p>You can use these tags: {{username}}, {{reset_link}} </p>
+
+				<?php
+
+				$template  = 'Hello {{username}}, <br> You can change your password from the link below <br> {{reset_link}} <br> Thanks for your attention.';
+				$content   = stripslashes( get_option( 'flwgb_reset_request_mail_to_user' ) ) ?: $template;
+				$editor_id = 'flwgb_reset_request_mail_to_user';
+				$settings  = array( 'media_buttons' => false );
+
+				wp_editor( $content, $editor_id, $settings );
+
+				?>
+
+			</td>
+		</tr>
+
 	</table>
 
 	<?php submit_button(); ?>

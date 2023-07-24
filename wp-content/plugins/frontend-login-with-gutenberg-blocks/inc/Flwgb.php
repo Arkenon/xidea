@@ -66,6 +66,9 @@ class Flwgb extends Loader {
 		//Load wp_mail_failed hook
 		self::set_wp_mail_error();
 
+		//Load wp_mail_content_type filter
+		self::set_wp_mail_format();
+
 	}
 
 	/**
@@ -269,6 +272,23 @@ class Flwgb extends Loader {
 		$mail = new Mail();
 
 		self::add_action( 'wp_mail_failed', $mail, 'mail_fail_error' );
+
+	}
+
+	/**
+	 *
+	 * Load hook that prints an error message if wp_mail() failed.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_wp_mail_format() {
+
+		Helper::using( 'inc/Mail.php' );
+
+		$mail = new Mail();
+
+		self::add_filter( 'wp_mail_content_type', $mail, 'mail_html_format' );
 
 	}
 

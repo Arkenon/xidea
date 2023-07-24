@@ -25,6 +25,17 @@ class Mail {
 	}
 
 	/**
+	 * Html formatted mail body
+	 *
+	 * Created for wp_mail_content_type filter.
+	 *
+	 * @since    1.0.0
+	 */
+	public function mail_html_format(){
+		return "text/html";
+	}
+
+	/**
 	 * Mail template for lost password request
 	 *
 	 * @param string $username User to sent e-mail
@@ -41,11 +52,11 @@ class Mail {
 
 		$send_mail = wp_mail( $params['email'], esc_html_x( I18n::text( 'reset_request_mail_title' )->text, I18n::text( 'reset_request_mail_title' )->context, FLWGB_TEXT_DOMAIN ), $body );
 
-		if ( ! is_wp_error( $send_mail ) ) {
-			return true;
-		} else {
+		if ( is_wp_error( $send_mail ) ) {
 			return false;
 		}
+
+		return true;
 
 	}
 }

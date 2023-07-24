@@ -195,6 +195,10 @@
 	"text": "Change Password",
 	"context": "submit_reset_password_button_text"
   },
+  "password_changed": {
+	"text": "Your password has been changed. Please sign in...",
+	"context": "password_changed"
+  },
   "wrong_reset_password_link": {
 	"text": "Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.",
 	"context": "wrong_reset_password_link"
@@ -203,13 +207,13 @@
 	"text": "We have successfully get your request. We have sent you an e-mail. Please check your inbox...",
 	"context": "reset_password_request_confirmation"
   },
-  "password_changed": {
-	"text": "Your password has been changed. Please sign in...",
-	"context": "password_changed"
-  },
   "reset_password_request_input_text": {
 	"text": "Please sumbit your e-mail to get reset password link.",
 	"context": "reset_password_request_input_text"
+  },
+  "reset_password_request_mail_template": {
+	"text": "Reset Password Request Mail Template",
+	"context": "reset_password_request_mail_template"
   },
   "send_reset_request": {
 	"text": "Send Request",
