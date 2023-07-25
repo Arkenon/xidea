@@ -36,21 +36,23 @@ class Mail {
 	}
 
 	/**
+	 *
 	 * Mail template for lost password request
 	 *
-	 * @param string $username User to sent e-mail
-	 * @param string $email User e-mail address
-	 * @param string $reset_link Reset password link
+	 * @param string $option_name Email template option name
+	 * @param string $template_name Email template name for translation
+	 * @param array $params Parameters for email template
+	 * @param string $mail_title E-mail subject
 	 *
-	 * @return bool a TRUE on success or FALSE on failure.
+	 * @return bool
 	 *
-	 * @since    1.0.0
+	 * @since 1.0.0
 	 */
-	public function flwgb_reset_password_request_mail_template( $option_name, $params ): bool {
+	public function send_mail( string $option_name, string $template_name, array $params, string $mail_title ): bool {
 
-		$body = Helper::replace_mail_parameters( $option_name, $params );
+		$body = Helper::replace_mail_parameters( $option_name, $template_name, $params );
 
-		$send_mail = wp_mail( $params['email'], esc_html_x( I18n::text( 'reset_request_mail_title' )->text, I18n::text( 'reset_request_mail_title' )->context, FLWGB_TEXT_DOMAIN ), $body );
+		$send_mail = wp_mail( $params['email'], esc_html_x( I18n::text( $mail_title )->text, I18n::text( $mail_title )->context, FLWGB_TEXT_DOMAIN ), $body );
 
 		if ( is_wp_error( $send_mail ) ) {
 			return false;

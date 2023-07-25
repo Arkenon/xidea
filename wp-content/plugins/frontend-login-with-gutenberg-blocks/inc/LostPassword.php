@@ -60,9 +60,9 @@ class LostPassword {
 		];
 
 		Helper::using( 'inc/Mail.php' );
-		$mail_templates = new Mail();
+		$mail = new Mail();
 
-		$send_reset_password_email = $mail_templates->flwgb_reset_password_request_mail_template( 'flwgb_reset_request_mail_to_user', $params );
+		$send_reset_password_email = $mail->send_mail( 'flwgb_reset_request_mail_to_user', 'reset_password_request_mail_to_user_template', $params, 'reset_request_mail_title' );
 
 		if ( $send_reset_password_email ) {
 
@@ -94,36 +94,59 @@ class LostPassword {
 	 */
 	public function flwgb_reset_password_handle_ajax_callback() {
 
-		$response = array();
+		check_ajax_referer( 'flwgbresetpasswordhandle', 'security' );
 
-		if ( Helper::get( 'reset' ) == 'complete' ) {
+		$user_id = Helper::post( 'userid' );
+		$user    = get_user_by( 'ID', $user_id );;
+		$email    = $user->user_email;
+		$username = $user->user_login;
 
-			$success_message = '<p class="alert alert-success">' . esc_html_x( I18n::text( 'password_changed' )->text, I18n::text( 'password_changed' )->context, FLWGB_TEXT_DOMAIN ) . '</p>';
-			$error_message   = '<p class="alert alert-danger"><strong class="font-s-14">' . esc_html_x( I18n::text( 'general_error_message' )->text, I18n::text( 'general_error_message' )->context, FLWGB_TEXT_DOMAIN ) . '</strong></p>';
+		$new_password       = Helper::post( 'resetpass_pwd' );
+		$new_password_again = Helper::post( 'resetpass_pwd_again' );
 
-			$resetpass = wp_update_user( array(
-				'ID'        => $_POST['userid'],
-				'user_pass' => wp_slash( $_POST['resetpss'] )
+		$params = [
+			'username' => $username,
+			'email'    => $email,
+		];
+
+		if ( $new_password == $new_password_again ) {
+
+			$reset_pass = wp_update_user( array(
+				'ID'        => Helper::post( 'userid' ),
+				'user_pass' => wp_slash( Helper::post( 'resetpass_pwd' ) )
 			) );
 
-			delete_user_meta( intval( $_POST['userid'] ), 'flwgb_lost_password_key' );
+			if ( ! is_wp_error( $reset_pass ) ) {
 
-			if ( ! is_wp_error( $resetpass ) ) {
+				delete_user_meta( intval( Helper::post( 'userid' ) ), 'flwgb_lost_password_key' );
 
-				$response = [
-					'message' => $success_message
-				];
+				Helper::using( 'inc/Mail.php' );
+				$mail = new Mail();
+
+				$mail->send_mail( 'flwgb_reset_password_mail_to_user', 'reset_password_mail_to_user_template', $params, 'reset_password_mail_title' );
+
+				echo json_encode( array(
+					'status'  => true,
+					'message' => esc_html_x( I18n::text( 'password_changed_confirmation' )->text, I18n::text( 'password_changed_confirmation' )->context, FLWGB_TEXT_DOMAIN )
+				) );
 
 			} else {
 
-				$response = [
-					'message' => $error_message
-				];
+				echo json_encode( array(
+					'status'  => false,
+					'message' => $reset_pass->get_error_message()
+				) );
 
 			}
-		}
 
-		echo json_encode( $response );
+		} else {
+
+			echo json_encode( array(
+				'status'  => false,
+				'message' => esc_html_x( I18n::text( 'password_match_error' )->text, I18n::text( 'password_match_error' )->context, FLWGB_TEXT_DOMAIN )
+			) );
+
+		}
 
 		wp_die();
 

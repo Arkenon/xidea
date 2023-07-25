@@ -12,6 +12,8 @@
 
 namespace FLWGB;
 
+use FLWGB\I18n\I18n;
+
 class Helper {
 
 	/**
@@ -137,21 +139,22 @@ class Helper {
 	 * Replace texts with dynamic values (for e-mail templates)
 	 *
 	 * @param string $option_name Mail template option name
+	 * @param string $template_name Mail template name for translation
 	 * @param array $params Parameters for mail templates (username, mail, etc.)
 	 *
 	 * @return string $dynamicText Replaced text
 	 *
 	 * @since 1.0.0
 	 */
-	public static function replace_mail_parameters( string $option_name, array $params ) :  string {
+	public static function replace_mail_parameters( string $option_name, string $template_name, array $params ): string {
 
-		$text = get_option( $option_name );
+		$text = ! empty( get_option( $option_name ) ) ?: (string) I18n::text( $template_name )->text;
 
 		return preg_replace_callback( '/{{(.*?)}}/', function ( $matches ) use ( $params ) {
 
 			$placeholder = $matches[1];
 
-			return $params[$placeholder] ?? $matches[0];
+			return $params[ $placeholder ] ?? $matches[0];
 
 		}, $text );
 

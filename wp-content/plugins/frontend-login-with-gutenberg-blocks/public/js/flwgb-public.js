@@ -59,12 +59,15 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Reset Password Form
-	$('#resetpassform').on('submit', function (e) {
+	$('#flwgb-reset-pass-form').on('submit', function (e) {
 		e.preventDefault();
-
-		var formData = new FormData();
-
-		formData.append('action', 'flwgbresetpasswordhandle');
+		const form = $(this);
+		const formData = new FormData(
+			document.getElementById('flwgb-reset-pass-form')
+		);
+		const submitBtn = form.find('#flwgb-reset-password-submit');
+		const formResult = $('#flwgb-reset-password-form-result');
+		const loadingBtn = $('#flwgb-reset-password-loading');
 
 		$.ajax({
 			url: flwgb_ajax_object.ajax_url,
@@ -74,15 +77,13 @@ jQuery(document).ready(function ($) {
 			dataType: 'json',
 			data: formData,
 			beforeSend: function () {
-				$('.flwgb-loading').removeClass('flwgb-hide');
+				formBeforeSend(formResult, submitBtn, loadingBtn)
 			},
 			success: function (response) {
-				$('.flwgb-form-result').html(response.message);
-
-				$('.flwgb-loading').addClass('flwgb-hide');
+				formSuccess(response, formResult, submitBtn, loadingBtn)
 			},
-			error: function (xhr, status, error) {
-				$('.flwgb-register-result').html(xhr.responseText);
+			error: function (xhr) {
+				formError(xhr, formResult)
 			},
 		});
 	});

@@ -59,6 +59,10 @@
     "buttonTextFontWeight": {
       "type": "string",
       "default": "normal"
+    },
+    "selectedForm": {
+      "type": "string",
+      "default": "requestForm"
     }
   },
   "supports": {

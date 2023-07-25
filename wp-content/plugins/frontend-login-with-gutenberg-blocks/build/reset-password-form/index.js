@@ -27,9 +27,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Edit(props) {
   const {
-    attributes
+    attributes,
+    setAttributes
   } = props;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(props);
   const inputStyle = {
@@ -49,9 +51,48 @@ function Edit(props) {
     'font-weight': attributes.buttonTextFontWeight
   };
   const desc = attributes.description ? attributes.description : _inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.send_reset_request_description.text;
+
+  /*function selectForm(form) {
+  	setAttributes({selectedForm: form})
+  }
+  	useEffect(() => {
+  	if (newArticles !== oldArticles) {
+  		setArticles(newArticles)
+  	}
+  }, [attributes.selectedForm])*/
+
+  const formSelectBtnStyles = {
+    'cursor': 'pointer',
+    'border': '1px solid gray',
+    'padding': '5px',
+    'text-decoration': 'none'
+  };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
     options: props
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, attributes.showDescription && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    style: {
+      'display': 'flex',
+      'justify-content': 'center',
+      'align-items': 'center',
+      'gap': '15px',
+      'margin-bottom': '30px'
+    }
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    style: formSelectBtnStyles,
+    onClick: () => setAttributes({
+      selectedForm: 'requestForm'
+    })
+  }, "Step 1"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    style: formSelectBtnStyles,
+    onClick: () => setAttributes({
+      selectedForm: 'changePasswordForm'
+    })
+  }, "Step 2")), attributes.selectedForm === 'requestForm' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    style: {
+      'text-align': 'center',
+      'font-weight': 'bold'
+    }
+  }, "Request Form"), attributes.showDescription && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     style: {
       'text-align': 'center'
     }
@@ -77,7 +118,48 @@ function Edit(props) {
     name: "wp-submit",
     id: "wp-submit",
     className: "flwgb-reset-password-btn flwgb-btn"
-  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Send Request', 'flwgb')))));
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Send Request', 'flwgb')))), attributes.selectedForm === 'changePasswordForm' && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    style: {
+      'text-align': 'center',
+      'font-weight': 'bold'
+    }
+  }, "Change Password Form"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-input-group"
+  }, attributes.showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "flwgb-input-label",
+    style: textStyle,
+    htmlFor: "flwgb-password"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Password', 'flwgb')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    className: "flwgb-input-control",
+    id: "flwgb-password",
+    type: "password",
+    style: inputStyle,
+    placeholder: attributes.showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Enter your password', 'flwgb')
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-input-group"
+  }, attributes.showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "flwgb-input-label",
+    style: textStyle,
+    htmlFor: "flwgb-password-again"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Password Again', 'flwgb')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    className: "flwgb-input-control",
+    id: "flwgb-password-again",
+    type: "password",
+    style: inputStyle,
+    placeholder: attributes.showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Enter your password again', 'flwgb')
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+    style: buttonStyle,
+    type: "submit",
+    name: "wp-submit-pwd",
+    id: "wp-submit-pwd",
+    className: "flwgb-reset-password-btn flwgb-btn"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Change Password', 'flwgb'))))));
 }
 
 /***/ }),
@@ -391,7 +473,7 @@ module.exports = window["wp"]["i18n"];
   \****************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"hello_text":{"text":"Hello.","context":"hello_text"},"select_text":{"text":"Please select...","context":"select_text"},"yes_text":{"text":"Yes","context":"yes_text"},"no_text":{"text":"No","context":"no_text"},"loading_text":{"text":"Loading...","context":"loading_text"},"general_error_message":{"text":"Something went wrong. Please try again later.","context":"general_error_message"},"general_success_message":{"text":"Operation has been completed successfully.","context":"general_success_message"},"login_text":{"text":"Login","context":"login_text"},"logout_text":{"text":"Logout","context":"logout_text"},"submit_text":{"text":"Submit","context":"submit_text"},"go_to_user_dashboard_text":{"text":"Go to user dashboard","context":"go_to_user_dashboard_text"},"email_input_text":{"text":"Your e-mail","context":"email_input_text"},"email_placeholder_text":{"text":"Enter your e-mail","context":"email_placeholder_text"},"user_input_text":{"text":"Username","context":"user_input_text"},"password_again_input_text":{"text":"Password Again","context":"password_again_input_text"},"mail_error_message":{"text":"wp_mail() returned an error. Please check your e-mail configurations.","context":"mail_error_message"},"admin_general_settings":{"text":"General Settings","context":"admin_general_settings"},"admin_mail_settings":{"text":"E-Mail Templates","context":"admin_mail_settings"},"redirect_after_login":{"text":"Redirect Page After Login","context":"redirect_after_login"},"redirect_after_register":{"text":"Redirect Page After Registration","context":"redirect_after_register"},"register_mail_to_user":{"text":"Register Mail Template to User","context":"register_mail_to_user"},"register_mail_to_admin":{"text":"Register Mail Template to Admin","context":"register_mail_to_admin"},"lost_password_page":{"text":"Lost (Reset) Password Page","context":"lost_password_page"},"registration_page":{"text":"Registration Page","context":"registration_page"},"activation_page":{"text":"User Activation Page","context":"activation_page"},"user_settings_page":{"text":"User Settings Page","context":"user_settings_page"},"terms_and_conditions_page":{"text":"Terms and Conditions Page","context":"terms_and_conditions_page"},"privacy_policy_page":{"text":"Privacy Policy Page","context":"privacy_policy_page"},"has_activation":{"text":"Enable user activation","context":"has_activation"},"has_user_dashboard":{"text":"Enable user dashboard","context":"has_user_dashboard"},"already_logged_in_message":{"text":"You have already logged in.","context":"already_logged_in_message"},"email_or_username_input_text":{"text":"Username or E-mail","context":"email_or_username_input_text"},"email_or_username_placeholder_text":{"text":"Enter your username or e-mail","context":"email_or_username_placeholder_text"},"password_input_text":{"text":"Password","context":"password_input_text"},"password_placeholder_text":{"text":"Enter your password","context":"password_placeholder_text"},"remember_me_text":{"text":"Remember me","context":"remember_me_text"},"invalid_username_or_pass":{"text":"Invalid username or password.","context":"invalid_username_or_pass"},"login_successful":{"text":"You have successfully logged in...","context":"login_successful"},"user_not_activated":{"text":"Please activate your account. We sent you an email. Click the activation link in the email.","context":"user_not_activated"},"register_button_text":{"text":"Register","context":"register_button_text"},"terms_and_conditions_text":{"text":"I have read and accept <a href=\\"%s\\" target=\\"_blank\\">terms and conditions</a> and <a href=\\"%s\\" target=\\"_blank\\">privacy policy</a>","context":"terms_and_conditions_text"},"terms_and_conditions_validation":{"text":"Please check terms and conditions chechkbox","context":"terms_and_conditions_validation"},"password_match_error":{"text":"Your passwords do not match","context":"password_match_error"},"register_succession_with_activation":{"text":"You have been sign up successfuly. Please clikck the membership activation link sent your e-mail.","context":"register_succession_with_activation"},"register_succession":{"text":"You have been sign up successfuly. You can sign in with your username and password.","context":"register_succession"},"username_exist_error":{"text":"This username already exist.","context":"username_exist_error"},"user_exist_error":{"text":"This user already exist.","context":"user_exist_error"},"reset_password_button_text":{"text":"Lost Password","context":"reset_password_button_text"},"submit_reset_password_button_text":{"text":"Change Password","context":"submit_reset_password_button_text"},"password_changed":{"text":"Your password has been changed. Please sign in...","context":"password_changed"},"wrong_reset_password_link":{"text":"Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.","context":"wrong_reset_password_link"},"reset_password_request_confirmation":{"text":"We have successfully get your request. We have sent you an e-mail. Please check your inbox...","context":"reset_password_request_confirmation"},"reset_password_request_input_text":{"text":"Please sumbit your e-mail to get reset password link.","context":"reset_password_request_input_text"},"reset_password_request_mail_template":{"text":"Reset Password Request Mail Template","context":"reset_password_request_mail_template"},"send_reset_request":{"text":"Send Request","context":"send_reset_request"},"send_reset_request_description":{"text":"Please enter your e-mail address. We will send you an e-mail to reset your password.","context":"send_reset_request_description"},"reset_request_mail_title":{"text":"Reset password request","context":"reset_request_mail_title"}}');
+module.exports = JSON.parse('{"hello_text":{"text":"Hello.","context":"hello_text"},"select_text":{"text":"Please select...","context":"select_text"},"yes_text":{"text":"Yes","context":"yes_text"},"no_text":{"text":"No","context":"no_text"},"loading_text":{"text":"Loading...","context":"loading_text"},"general_error_message":{"text":"Something went wrong. Please try again later.","context":"general_error_message"},"general_success_message":{"text":"Operation has been completed successfully.","context":"general_success_message"},"login_text":{"text":"Login","context":"login_text"},"logout_text":{"text":"Logout","context":"logout_text"},"submit_text":{"text":"Submit","context":"submit_text"},"go_to_user_dashboard_text":{"text":"Go to user dashboard","context":"go_to_user_dashboard_text"},"email_input_text":{"text":"Your e-mail","context":"email_input_text"},"email_placeholder_text":{"text":"Enter your e-mail","context":"email_placeholder_text"},"user_input_text":{"text":"Username","context":"user_input_text"},"password_again_input_text":{"text":"Password Again","context":"password_again_input_text"},"password_again_placeholder_text":{"text":"Enter your password again","context":"password_again_placeholder_text"},"mail_error_message":{"text":"wp_mail() returned an error. Please check your e-mail configurations.","context":"mail_error_message"},"admin_general_settings":{"text":"General Settings","context":"admin_general_settings"},"admin_mail_settings":{"text":"E-Mail Templates","context":"admin_mail_settings"},"redirect_after_login":{"text":"Redirect Page After Login","context":"redirect_after_login"},"redirect_after_register":{"text":"Redirect Page After Registration","context":"redirect_after_register"},"register_mail_to_user":{"text":"Register Mail Template to User","context":"register_mail_to_user"},"register_mail_to_admin":{"text":"Register Mail Template to Admin","context":"register_mail_to_admin"},"lost_password_page":{"text":"Lost (Reset) Password Page","context":"lost_password_page"},"registration_page":{"text":"Registration Page","context":"registration_page"},"activation_page":{"text":"User Activation Page","context":"activation_page"},"user_settings_page":{"text":"User Settings Page","context":"user_settings_page"},"terms_and_conditions_page":{"text":"Terms and Conditions Page","context":"terms_and_conditions_page"},"privacy_policy_page":{"text":"Privacy Policy Page","context":"privacy_policy_page"},"has_activation":{"text":"Enable user activation","context":"has_activation"},"has_user_dashboard":{"text":"Enable user dashboard","context":"has_user_dashboard"},"already_logged_in_message":{"text":"You have already logged in.","context":"already_logged_in_message"},"email_or_username_input_text":{"text":"Username or E-mail","context":"email_or_username_input_text"},"email_or_username_placeholder_text":{"text":"Enter your username or e-mail","context":"email_or_username_placeholder_text"},"password_input_text":{"text":"Password","context":"password_input_text"},"password_placeholder_text":{"text":"Enter your password","context":"password_placeholder_text"},"new_password_input_text":{"text":"New Password","context":"password_input_text"},"new_password_placeholder_text":{"text":"Enter your new password","context":"password_placeholder_text"},"new_password_again_input_text":{"text":"New Password Again","context":"password_input_text"},"new_password_again_placeholder_text":{"text":"Enter your new password again","context":"password_placeholder_text"},"remember_me_text":{"text":"Remember me","context":"remember_me_text"},"invalid_username_or_pass":{"text":"Invalid username or password.","context":"invalid_username_or_pass"},"login_successful":{"text":"You have successfully logged in...","context":"login_successful"},"user_not_activated":{"text":"Please activate your account. We sent you an email. Click the activation link in the email.","context":"user_not_activated"},"register_button_text":{"text":"Register","context":"register_button_text"},"terms_and_conditions_text":{"text":"I have read and accept <a href=\\"%s\\" target=\\"_blank\\">terms and conditions</a> and <a href=\\"%s\\" target=\\"_blank\\">privacy policy</a>","context":"terms_and_conditions_text"},"terms_and_conditions_validation":{"text":"Please check terms and conditions chechkbox","context":"terms_and_conditions_validation"},"password_match_error":{"text":"Your passwords do not match","context":"password_match_error"},"register_succession_with_activation":{"text":"You have been sign up successfuly. Please clikck the membership activation link sent your e-mail.","context":"register_succession_with_activation"},"register_succession":{"text":"You have been sign up successfuly. You can sign in with your username and password.","context":"register_succession"},"username_exist_error":{"text":"This username already exist.","context":"username_exist_error"},"user_exist_error":{"text":"This user already exist.","context":"user_exist_error"},"reset_password_button_text":{"text":"Lost Password","context":"reset_password_button_text"},"submit_reset_password_button_text":{"text":"Change Password","context":"submit_reset_password_button_text"},"password_changed_confirmation":{"text":"Your password has been changed. Please sign in...","context":"password_changed_confirmation"},"wrong_reset_password_link":{"text":"Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.","context":"wrong_reset_password_link"},"reset_password_request_confirmation":{"text":"We have successfully get your request. We have sent you an e-mail. Please check your inbox...","context":"reset_password_request_confirmation"},"reset_password_request_input_text":{"text":"Please sumbit your e-mail to get reset password link.","context":"reset_password_request_input_text"},"reset_password_request_mail_to_user":{"text":"Reset Password Request Mail Template","context":"reset_password_request_mail_to_user"},"send_reset_request":{"text":"Send Request","context":"send_reset_request"},"send_reset_request_description":{"text":"Please enter your e-mail address. We will send you an e-mail to reset your password.","context":"send_reset_request_description"},"reset_request_mail_title":{"text":"Reset password request","context":"reset_request_mail_title"},"reset_password_mail_title":{"text":"Your password changed","context":"reset_password_mail_title"},"register_mail_to_user_template":{"text":"Hello {{username}}, <br> Welcome to our website. We have sent an e-mail to you.","context":"register_mail_to_user_template"},"register_mail_to_admin_template":{"text":"Hello {{username}}, <br> Welcome to our website. We have sent an e-mail to you.","context":"register_mail_to_admin_template"},"reset_password_request_mail_to_user_template":{"text":"Hello {{username}}, <br> You can change your password from the link below <br> {{reset_link}} <br> Thanks for your attention.","context":"reset_password_request_mail_to_user_template"},"reset_password_mail_to_user_template":{"text":"Hello {{username}}, <br> This notice confirms that your password was changed. If you did not change your password, please contact the Site Administrator.","context":"reset_password_mail_to_user_template"},"you_can_use_this_tags_text":{"text":"You can use these tags:","context":"you_can_use_this_tags_text"}}');
 
 /***/ }),
 
@@ -401,7 +483,7 @@ module.exports = JSON.parse('{"hello_text":{"text":"Hello.","context":"hello_tex
   \********************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"frontend-login-with-gutenberg-blocks/reset-password-form","version":"1.0.0","title":"Reset (Lost) Password Form","category":"theme","icon":"format-aside","description":"Display reset password form","attributes":{"showLabels":{"type":"boolean","default":false},"showDescription":{"type":"boolean","default":true},"showPlaceholders":{"type":"boolean","default":false},"textColor":{"type":"string","default":"black"},"textFontWeight":{"type":"string","default":"bold"},"inputBorderRadius":{"type":"number","default":0},"buttonBgColor":{"type":"string","default":"gray"},"buttonTextColor":{"type":"string","default":"black"},"description":{"type":"string","default":""},"buttonBorder":{"type":"object","default":{"color":"#000","style":"solid","width":"0px"}},"buttonBorderRadius":{"type":"number","default":0},"buttonTextFontWeight":{"type":"string","default":"normal"}},"supports":{"html":false},"textdomain":"reset-password-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"frontend-login-with-gutenberg-blocks/reset-password-form","version":"1.0.0","title":"Reset (Lost) Password Form","category":"theme","icon":"format-aside","description":"Display reset password form","attributes":{"showLabels":{"type":"boolean","default":false},"showDescription":{"type":"boolean","default":true},"showPlaceholders":{"type":"boolean","default":false},"textColor":{"type":"string","default":"black"},"textFontWeight":{"type":"string","default":"bold"},"inputBorderRadius":{"type":"number","default":0},"buttonBgColor":{"type":"string","default":"gray"},"buttonTextColor":{"type":"string","default":"black"},"description":{"type":"string","default":""},"buttonBorder":{"type":"object","default":{"color":"#000","style":"solid","width":"0px"}},"buttonBorderRadius":{"type":"number","default":0},"buttonTextFontWeight":{"type":"string","default":"normal"},"selectedForm":{"type":"string","default":"requestForm"}},"supports":{"html":false},"textdomain":"reset-password-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

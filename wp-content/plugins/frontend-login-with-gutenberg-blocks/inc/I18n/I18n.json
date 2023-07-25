@@ -59,6 +59,10 @@
 	"text": "Password Again",
 	"context": "password_again_input_text"
   },
+  "password_again_placeholder_text": {
+	"text": "Enter your password again",
+	"context": "password_again_placeholder_text"
+  },
   "mail_error_message": {
 	"text": "wp_mail() returned an error. Please check your e-mail configurations.",
 	"context": "mail_error_message"
@@ -139,6 +143,22 @@
 	"text": "Enter your password",
 	"context": "password_placeholder_text"
   },
+  "new_password_input_text": {
+	"text": "New Password",
+	"context": "password_input_text"
+  },
+  "new_password_placeholder_text": {
+	"text": "Enter your new password",
+	"context": "password_placeholder_text"
+  },
+  "new_password_again_input_text": {
+	"text": "New Password Again",
+	"context": "password_input_text"
+  },
+  "new_password_again_placeholder_text": {
+	"text": "Enter your new password again",
+	"context": "password_placeholder_text"
+  },
   "remember_me_text": {
 	"text": "Remember me",
 	"context": "remember_me_text"
@@ -195,9 +215,9 @@
 	"text": "Change Password",
 	"context": "submit_reset_password_button_text"
   },
-  "password_changed": {
+  "password_changed_confirmation": {
 	"text": "Your password has been changed. Please sign in...",
-	"context": "password_changed"
+	"context": "password_changed_confirmation"
   },
   "wrong_reset_password_link": {
 	"text": "Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.",
@@ -211,9 +231,9 @@
 	"text": "Please sumbit your e-mail to get reset password link.",
 	"context": "reset_password_request_input_text"
   },
-  "reset_password_request_mail_template": {
+  "reset_password_request_mail_to_user": {
 	"text": "Reset Password Request Mail Template",
-	"context": "reset_password_request_mail_template"
+	"context": "reset_password_request_mail_to_user"
   },
   "send_reset_request": {
 	"text": "Send Request",
@@ -226,5 +246,29 @@
   "reset_request_mail_title": {
 	"text": "Reset password request",
 	"context": "reset_request_mail_title"
+  },
+  "reset_password_mail_title": {
+	"text": "Your password changed",
+	"context": "reset_password_mail_title"
+  },
+  "register_mail_to_user_template": {
+	"text": "Hello {{username}}, <br> Welcome to our website. We have sent an e-mail to you.",
+	"context" : "register_mail_to_user_template"
+  },
+  "register_mail_to_admin_template": {
+	"text": "Hello {{username}}, <br> Welcome to our website. We have sent an e-mail to you.",
+	"context" : "register_mail_to_admin_template"
+  },
+  "reset_password_request_mail_to_user_template": {
+	"text": "Hello {{username}}, <br> You can change your password from the link below <br> {{reset_link}} <br> Thanks for your attention.",
+	"context" : "reset_password_request_mail_to_user_template"
+  },
+  "reset_password_mail_to_user_template": {
+	"text": "Hello {{username}}, <br> This notice confirms that your password was changed. If you did not change your password, please contact the Site Administrator.",
+	"context" : "reset_password_mail_to_user_template"
+  },
+  "you_can_use_this_tags_text": {
+	"text": "You can use these tags:",
+	"context" : "you_can_use_this_tags_text"
   }
 }
