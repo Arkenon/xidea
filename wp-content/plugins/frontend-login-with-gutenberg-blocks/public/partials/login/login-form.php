@@ -36,7 +36,7 @@ if ( is_user_logged_in() ) {
 														   for="flwgb-username-or-email">' . esc_html_x( I18n::text('email_or_username_input_text')->text, I18n::text('email_or_username_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
 							}
 
-							$view .= '<input class="flwgb-input-control" id="flwgb-username-or-email" name="flwgb-username-or-email" type="text" style='.$input_style.' placeholder="';
+							$view .= '<input class="flwgb-input-control" id="flwgb-username-or-email" name="flwgb-username-or-email" type="text" required style='.$input_style.' placeholder="';
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
@@ -57,7 +57,7 @@ if ( is_user_logged_in() ) {
 																	   for="flwgb-password">' . esc_html_x( I18n::text('password_input_text')->text, I18n::text('password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
 				}
 
-				$view .= '<input class="flwgb-input-control" id="flwgb-password" name="flwgb-password" type="password" style='.$input_style.' placeholder="';
+				$view .= '<input class="flwgb-input-control" id="flwgb-password" name="flwgb-password" type="password" required style='.$input_style.' placeholder="';
 
 				if ( $form_attributes['showPlaceholders'] ) {
 
@@ -91,10 +91,5 @@ if ( is_user_logged_in() ) {
 	$view .= '</form>
 			<div id="flwgb-login-form-result"></div>
     </div>';
-
-	/*$hook_name = 'login_form';
-	global $wp_filter;
-	var_dump( $wp_filter[$hook_name] );*/
-
 
 }

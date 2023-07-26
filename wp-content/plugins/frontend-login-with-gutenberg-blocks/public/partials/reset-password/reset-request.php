@@ -4,7 +4,7 @@ use FLWGB\I18n\I18n;
 
 //TODO check is user logged in
 
-	$input_style = 'border-radius:' . $form_attributes['inputBorderRadius'] . 'px';
+	$input_style = 'border-radius:' . $form_attributes[''] . 'px';
 	$text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];
 
 	$button_border_color  = array_key_exists('color',$form_attributes['buttonBorder']) ? 'border-color: '. $form_attributes['buttonBorder']['color'].';' : "";
@@ -38,7 +38,7 @@ use FLWGB\I18n\I18n;
 									$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="flwgb-email">' . esc_html_x( I18n::text('email_input_text')->text, I18n::text('email_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
 								}
 
-									$view .= '<input class="flwgb-input-control" id="flwgb-email" name="flwgb-email" type="text" style=' . $input_style . ' placeholder="';
+									$view .= '<input class="flwgb-input-control" id="flwgb-email" name="flwgb-email" required type="text" style=' . $input_style . ' placeholder="';
 
 									if ( $form_attributes['showPlaceholders'] ) {
 

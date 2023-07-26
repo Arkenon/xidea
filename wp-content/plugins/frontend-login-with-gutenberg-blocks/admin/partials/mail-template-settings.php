@@ -102,6 +102,34 @@ use FLWGB\I18n\I18n;
 			</td>
 		</tr>
 
+		<tr>
+			<th scope="row">
+
+				<label for="flwgb_reset_password_mail_to_user">
+					<?php echo esc_html_x( I18n::text('reset_password_mail_to_user')->text, I18n::text('reset_password_mail_to_user')->context, FLWGB_TEXT_DOMAIN ); ?>
+				</label>
+
+			</th>
+			<td>
+
+				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}} </p>
+
+				<?php
+
+				$template  = I18n::text('reset_password_mail_to_user_template')->text;
+				$content   = stripslashes( get_option( 'flwgb_reset_password_mail_to_user' ) ) ?: $template;
+				$editor_id = 'flwgb_reset_password_mail_to_user';
+				$settings  = array( 'media_buttons' => false );
+
+				wp_editor( $content, $editor_id, $settings );
+
+				?>
+
+			</td>
+		</tr>
+
+
+
 	</table>
 
 	<?php submit_button(); ?>

@@ -41,7 +41,7 @@ class Options {
 			'manage_options',
 			'frontend-login-with-gutenberg-blocks-settings',
 			[ $this, 'flwgb_settings_page_html' ],
-			'dashicons-admin-generic'
+			'dashicons-migrate'
 		);
 	}
 

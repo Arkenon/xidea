@@ -25,7 +25,7 @@ $pages = get_pages();
 
 	?>
 
-	<table class="form-table">
+	<table id="flwgb-admin-general-settings" class="form-table">
 
 		<tr>
 			<th scope="row">
@@ -33,6 +33,10 @@ $pages = get_pages();
 				<label for="flwgb_has_activation">
 					<?php echo esc_html_x( I18n::text( 'has_activation' )->text, I18n::text( 'has_activation' )->context, FLWGB_TEXT_DOMAIN ); ?>
 				</label>
+
+				<p class="flwgb-admin-settings-description">
+					<?php echo esc_html_x( I18n::text( 'has_activation_description' )->text, I18n::text( 'has_activation_description' )->context, FLWGB_TEXT_DOMAIN ); ?>
+				</p>
 
 			</th>
 			<td>
@@ -52,8 +56,12 @@ $pages = get_pages();
 			<th scope="row">
 
 				<label for="flwgb_has_user_dashboard">
-					<?php echo esc_html_x( I18n::text( 'has_user_dashboard' )->text, I18n::text( 'has_user_dashboard' )->context, FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( I18n::text( 'has_user_settings' )->text, I18n::text( 'has_user_settings' )->context, FLWGB_TEXT_DOMAIN ); ?>
 				</label>
+
+				<p class="flwgb-admin-settings-description">
+					<?php echo esc_html_x( I18n::text( 'has_user_settings_description' )->text, I18n::text( 'has_user_settings_description' )->context, FLWGB_TEXT_DOMAIN ); ?>
+				</p>
 
 			</th>
 			<td>
@@ -81,44 +89,40 @@ $pages = get_pages();
 
 		$selections = [
 				[
-						'option'  => 'flwgb_redirect_after_login',
-						'text'    => I18n::text( 'redirect_after_login' )->text,
-						'context' => I18n::text( 'redirect_after_login' )->context,
+						'option'      => 'flwgb_redirect_after_login',
+						'text'        => I18n::text( 'redirect_page_after_login' ),
+						'description' => I18n::text( 'redirect_page_description' ),
 				],
 				[
 						'option'  => 'flwgb_redirect_after_registration',
-						'text'    => I18n::text( 'redirect_after_register' )->text,
-						'context' => I18n::text( 'redirect_after_register' )->context,
+						'text'    => I18n::text( 'redirect_page_after_register' ),
+						'description' => I18n::text( 'redirect_page_description' ),
 				],
 				[
 						'option'  => 'flwgb_lost_password_page',
-						'text'    => I18n::text( 'lost_password_page' )->text,
-						'context' => I18n::text( 'lost_password_page' )->context,
+						'text'    => I18n::text( 'lost_password_page'),
 				],
 				[
 						'option'  => 'flwgb_register_page',
-						'text'    => I18n::text( 'registration_page' )->text,
-						'context' => I18n::text( 'registration_page' )->context,
+						'text'    => I18n::text( 'registration_page' ),
 				],
 				[
 						'option'  => 'flwgb_activation_page',
-						'text'    => I18n::text( 'activation_page' )->text,
-						'context' => I18n::text( 'activation_page' )->context,
+						'text'    => I18n::text( 'activation_page' ),
+						'description' => I18n::text( 'activation_page_description' ),
 				],
 				[
 						'option'  => 'flwgb_user_settings_page',
-						'text'    => I18n::text( 'user_settings_page' )->text,
-						'context' => I18n::text( 'user_settings_page' )->context,
+						'text'    => I18n::text( 'user_settings_page' ),
+						'description' => I18n::text( 'user_settings_page_description' ),
 				],
 				[
 						'option'  => 'flwgb_terms_and_conditions_page',
-						'text'    => I18n::text( 'terms_and_conditions_page' )->text,
-						'context' => I18n::text( 'terms_and_conditions_page' )->context,
+						'text'    => I18n::text( 'terms_and_conditions_page' ),
 				],
 				[
 						'option'  => 'flwgb_privacy_policy_page',
-						'text'    => I18n::text( 'privacy_policy_page' )->text,
-						'context' => I18n::text( 'privacy_policy_page' )->context,
+						'text'    => I18n::text( 'privacy_policy_page' ),
 				]
 		];
 
@@ -130,8 +134,12 @@ $pages = get_pages();
 				<th scope="row">
 
 					<label for="<?php echo $select['option']; ?>">
-						<?php echo esc_html_x( $select['text'], $select['context'], FLWGB_TEXT_DOMAIN ); ?>
+						<?php echo esc_html_x( $select['text']->text, $select['text']->context, FLWGB_TEXT_DOMAIN ); ?>
 					</label>
+
+					<p class="flwgb-admin-settings-description">
+						<?php echo esc_html_x( $select['description']->text, $select['description']->context, FLWGB_TEXT_DOMAIN ); ?>
+					</p>
 
 				</th>
 				<td>

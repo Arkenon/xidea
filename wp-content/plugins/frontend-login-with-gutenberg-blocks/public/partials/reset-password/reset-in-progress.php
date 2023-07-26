@@ -31,7 +31,7 @@ $view = '<div>
 								$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="resetpass_pwd">' . esc_html_x( I18n::text('new_password_input_text')->text, I18n::text('new_password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
 							}
 
-							$view .= '<input class="flwgb-input-control" id="resetpass_pwd" name="resetpass_pwd" type="password" style=' . $input_style . ' placeholder="';
+							$view .= '<input class="flwgb-input-control" id="resetpass_pwd" name="resetpass_pwd" type="password" required style=' . $input_style . ' placeholder="';
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
@@ -52,7 +52,7 @@ $view = '<div>
 								$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="resetpass_pwd_again">' . esc_html_x( I18n::text('new_password_again_input_text')->text, I18n::text('new_password_again_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
 							}
 
-							$view .= '<input class="flwgb-input-control" id="resetpass_pwd_again" name="resetpass_pwd_again" type="password" style=' . $input_style . ' placeholder="';
+							$view .= '<input class="flwgb-input-control" id="resetpass_pwd_again" name="resetpass_pwd_again" type="password" required style=' . $input_style . ' placeholder="';
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
