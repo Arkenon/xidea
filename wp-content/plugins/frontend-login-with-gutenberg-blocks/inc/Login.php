@@ -34,7 +34,7 @@ class Login {
 		$frontend = new Frontend();
 
 		//Get login form html output from Frontend class
-		return $frontend->get_login_form( $block_attributes );
+		return $frontend->get_the_form('public/partials/login/login-form.php', $block_attributes );
 
 	}
 

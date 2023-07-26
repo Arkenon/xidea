@@ -2,71 +2,122 @@
 
 use FLWGB\I18n\I18n;
 
-$view = '<div class="border p-2 bg-white">
-		<div class="flwgb-form-result"></div>
-        <form name="flwgb-register-form" id="flwgb-register-form" method="post">
-            <div class="form-row">
-                <div class="col-12 mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="username" id="username"
-                               placeholder="' . esc_attr_x( I18n::text('user_input_text')->text, I18n::text('user_input_text')->context, FLWGB_TEXT_DOMAIN ) . '" required>
-                        <div class="invalid-feedback">
-							' . esc_html_x( I18n::text('user_input_text')->text, I18n::text('user_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-12 mb-3">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="user_email" id="user_email"
-                               placeholder="' . esc_attr_x( I18n::text('email_input_text')->text, I18n::text('email_input_text')->context, FLWGB_TEXT_DOMAIN ) . '" required>
-                        <div class="invalid-feedback">
-							' . esc_html_x( I18n::text('email_input_text')->text, I18n::text('email_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-12 mb-3">
-                    <div class="input-group">
-                        <input class="form-control" type="password" name="user_pass" id="user_pass"
-                               placeholder="' . esc_attr_x( I18n::text('password_input_text')->text, I18n::text('password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '"
-                               required>
-                        <div class="invalid-feedback">
-							' . esc_html_x( I18n::text('password_input_text')->text, I18n::text('password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="col-12 mb-3">
-                    <div class="input-group">
-                        <input class="form-control" type="password" name="user_pass_repeat" id="user_pass_repeat"
-                               placeholder="' . esc_attr_x( I18n::text('password_again_input_text')->text, I18n::text('password_again_input_text')->context, FLWGB_TEXT_DOMAIN ) . '"
-                               required>
-                        <div class="invalid-feedback">
-							' . esc_html_x( I18n::text('password_again_input_text')->text, I18n::text('password_again_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-						' . sprintf( __( I18n::text('terms_and_conditions_text')->text, FLWGB_TEXT_DOMAIN ), get_option( 'flwgb_terms_and_conditions_page' ), get_option( 'flwgb_privacy_policy_page' ) ) . '
-                    </label>
-                    <div class="invalid-feedback">
-						' . esc_html_x( I18n::text('terms_and_conditions_validation')->text, I18n::text('terms_and_conditions_validation')->context, FLWGB_TEXT_DOMAIN ) . '
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-3">
-                <button class="btn btn-dark btn-block"
-                        type="submit">' . esc_html_x( I18n::text('register_button_text')->text, I18n::text('register_button_text')->context, FLWGB_TEXT_DOMAIN ) . '</button>
-            </div>
-            <div class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::text('loading_text')->text, I18n::text('loading_text')->context, FLWGB_TEXT_DOMAIN ) . '</div>
-        </form>
-    </div>';
+$input_style = 'border-radius:'.$form_attributes['inputBorderRadius'].'px';
+$text_style = 'color:'. $form_attributes['textColor'].'; font-weight:'. $form_attributes['textFontWeight'];
 
+$button_border_color  = array_key_exists('color',$form_attributes['buttonBorder']) ? 'border-color: '. $form_attributes['buttonBorder']['color'].';' : "";
+$button_border_style  = array_key_exists('style',$form_attributes['buttonBorder']) ? 'border-style: '.$form_attributes['buttonBorder']['style'].';' : "";
+$button_border_width  = array_key_exists('width',$form_attributes['buttonBorder']) ? 'border-width: '.$form_attributes['buttonBorder']['width'].';' : "";
+
+$button_style = 'color:'. $form_attributes['buttonTextColor'].'; '.
+                'background-color: '. $form_attributes['buttonBgColor'].'; '.
+                $button_border_color .
+                $button_border_style .
+                $button_border_width .
+                'border-radius: '. $form_attributes['buttonBorderRadius'].'px;'.
+                'font-weight: '. $form_attributes['buttonTextFontWeight'];
+
+$view = '<form name="flwgb-register-form" id="flwgb-register-form" method="post">
+            <div class="flwgb-form-row">
+               <div class="flwgb-input-group">';
+               if ( $form_attributes['showLabels'] ) {
+
+				   $view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-username-for-register">
+						        ' . esc_html_x( I18n::text('username_input_text')->text, I18n::text('username_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+						     </label>';
+				}
+
+				$view .= '<input class="flwgb-input-control" id="flwgb-username-for-register" name="flwgb-username-for-register" type="text" required style='.$input_style.' placeholder="';
+
+					if ( $form_attributes['showPlaceholders'] ) {
+
+						$view .= esc_attr_x( I18n::text('username_placeholder_text')->text, I18n::text('username_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+
+					}
+
+				$view .= '" />';
+				$view .= '</div>
+            </div>';
+
+	$view .= '<div class="flwgb-form-row">
+               <div class="flwgb-input-group">';
+				if ( $form_attributes['showLabels'] ) {
+
+					$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-email-for-register">
+								' . esc_html_x( I18n::text('email_input_text')->text, I18n::text('email_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+							 </label>';
+				}
+
+				$view .= '<input class="flwgb-input-control" id="flwgb-email-for-register" name="flwgb-email-for-register" type="text" required style='.$input_style.' placeholder="';
+
+				if ( $form_attributes['showPlaceholders'] ) {
+
+					$view .= esc_attr_x( I18n::text('email_placeholder_text')->text, I18n::text('email_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+
+				}
+
+				$view .= '" />';
+				$view .= '</div>
+            </div>';
+	$view .= '<div class="flwgb-form-row">
+	            <div class="flwgb-input-group">';
+				if ( $form_attributes['showLabels'] ) {
+
+					$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-password-for-register">
+								' . esc_html_x( I18n::text('password_input_text')->text, I18n::text('password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+							  </label>';
+				}
+
+				$view .= '<input class="flwgb-input-control" id="flwgb-password-for-register" name="flwgb-password-for-register" type="password" required style='.$input_style.' placeholder="';
+
+				if ( $form_attributes['showPlaceholders'] ) {
+
+					$view .= esc_attr_x( I18n::text('password_placeholder_text')->text, I18n::text('password_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+
+				}
+
+				$view .= '" />';
+				$view .= '</div>
+            </div>';
+
+	$view .= '<div class="flwgb-form-row">
+	            <div class="flwgb-input-group">';
+				if ( $form_attributes['showLabels'] ) {
+
+					$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-password-again-for-register">
+							    ' . esc_html_x( I18n::text('password_again_input_text')->text, I18n::text('password_again_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+							 </label>';
+				}
+
+				$view .= '<input class="flwgb-input-control" id="flwgb-password-again-for-register" name="flwgb-password-again-for-register" type="password" required style='.$input_style.' placeholder="';
+
+				if ( $form_attributes['showPlaceholders'] ) {
+
+					$view .= esc_attr_x( I18n::text('password_again_placeholder_text')->text, I18n::text('password_again_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+
+				}
+
+				$view .= '" />';
+				$view .= '</div>
+            </div>';
+
+	$view .= '<div class="flwgb-form-row">
+				<div class="flwgb-input-group">
+					<input id="flwgb-terms-and-privacy" checked="checked" type="checkbox" name="flwgb-terms-and-privacy" required class="flwgb-form-check-input"/>
+						<label class="flwgb-form-check-label" for="flwgb-terms-and-privacy">'. sprintf( __( I18n::text( 'terms_and_conditions_text' )->text, FLWGB_TEXT_DOMAIN ), get_option( 'flwgb_terms_and_conditions_page' ), get_option( 'flwgb_privacy_policy_page' ) ) .'</label>
+					</div>
+				</div>';
+
+	$view .= '<input type="hidden" name="action" value="flwgbregisterhandle">';
+
+	$view .= '<input type="hidden" name="security" value="'.wp_create_nonce('flwgbregisterhandle').'">';
+
+	$view .= '<div class="flwgb-form-row">
+						<button style="'.$button_style.'" type="submit" id="flwgb-register-submit" class="flwgb-register-btn flwgb-btn">
+							'.esc_html_x(I18n::text('register_button_text')->text, I18n::text('register_button_text')->context,FLWGB_TEXT_DOMAIN).'
+						</button>
+					</div>
+					<div id="flwgb-register-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::text('loading_text')->text, I18n::text('loading_text')->context, FLWGB_TEXT_DOMAIN ) . '</div>';
+$view .= '</form>
+			<div id="flwgb-register-form-result"></div>
+    </div>';

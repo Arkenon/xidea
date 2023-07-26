@@ -14,45 +14,119 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.scss */ "./src/register-form/editor.scss");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./editor.scss */ "./src/register-form/editor.scss");
-
-/**
- * Retrieves the translation of text.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
- */
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../inc/I18n/I18n.json */ "./inc/I18n/I18n.json");
+/* harmony import */ var _options__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./options */ "./src/register-form/options.js");
 
 
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
 
 
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * Those files can contain any CSS code that gets applied to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
 
 
-/**
- * The edit function describes the structure of your block in the context of the
- * editor. This represents what the editor will render when the block is used.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#edit
- *
- * @return {WPElement} Element to render.
- */
-function Edit() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), "register form");
+function Edit(props) {
+  const {
+    attributes
+  } = props;
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(props);
+  const inputStyle = {
+    'border-radius': attributes.inputBorderRadius
+  };
+  const textStyle = {
+    'color': attributes.textColor,
+    'font-weight': attributes.textFontWeight
+  };
+  const buttonStyle = {
+    'color': attributes.buttonTextColor,
+    'backgroundColor': attributes.buttonBgColor,
+    'border-color': attributes.buttonBorder.color,
+    'border-style': attributes.buttonBorder.style,
+    'border-width': attributes.buttonBorder.width,
+    'border-radius': attributes.buttonBorderRadius,
+    'font-weight': attributes.buttonTextFontWeight
+  };
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_options__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    options: props
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", blockProps, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-input-group"
+  }, attributes.showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "flwgb-input-label",
+    style: textStyle,
+    htmlFor: "flwgb-username"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.username_input_text.text, 'flwgb')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    className: "flwgb-input-control",
+    id: "flwgb-username",
+    type: "text",
+    style: inputStyle,
+    placeholder: attributes.showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.username_placeholder_text.text, 'flwgb')
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-input-group"
+  }, attributes.showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "flwgb-input-label",
+    style: textStyle,
+    htmlFor: "flwgb-email"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.email_input_text.text, 'flwgb')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    className: "flwgb-input-control",
+    id: "flwgb-email",
+    type: "text",
+    style: inputStyle,
+    placeholder: attributes.showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.email_placeholder_text.text, 'flwgb')
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-input-group"
+  }, attributes.showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "flwgb-input-label",
+    style: textStyle,
+    htmlFor: "flwgb-password"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.password_input_text.text, 'flwgb')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    className: "flwgb-input-control",
+    id: "flwgb-password",
+    type: "password",
+    style: inputStyle,
+    placeholder: attributes.showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.password_placeholder_text.text, 'flwgb')
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-input-group"
+  }, attributes.showLabels && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "flwgb-input-label",
+    style: textStyle,
+    htmlFor: "flwgb-password-again"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.password_again_input_text.text, 'flwgb')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    className: "flwgb-input-control",
+    id: "flwgb-password-again",
+    type: "password",
+    style: inputStyle,
+    placeholder: attributes.showPlaceholders && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.password_again_placeholder_text.text, 'flwgb')
+  }))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-check-group"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+    id: "flwgb-terms-and-privacy",
+    checked: "checked",
+    type: "checkbox",
+    className: "flwgb-form-check-input"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("label", {
+    className: "flwgb-form-check-label",
+    htmlFor: "flwgb-terms-and-privacy"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.terms_and_conditions_text_plain.text, 'flwgb')))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "flwgb-form-row"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
+    style: buttonStyle,
+    type: "submit",
+    name: "wp-submit",
+    id: "wp-submit",
+    className: "flwgb-register-btn flwgb-btn"
+  }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)(_inc_I18n_I18n_json__WEBPACK_IMPORTED_MODULE_4__.register_button_text.text, 'flwgb')))));
 }
 
 /***/ }),
@@ -108,6 +182,132 @@ __webpack_require__.r(__webpack_exports__);
    */
   save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
+
+/***/ }),
+
+/***/ "./src/register-form/options.js":
+/*!**************************************!*\
+  !*** ./src/register-form/options.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+//TODO translate label texts
+
+const Options = _ref => {
+  let {
+    options
+  } = _ref;
+  const {
+    attributes,
+    setAttributes
+  } = options;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Label Settings', 'flwgb'),
+    initialOpen: false
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Show labels', 'flwgb'),
+    help: attributes.showLabels ? 'Show' : 'Hide',
+    checked: attributes.showLabels,
+    onChange: val => setAttributes({
+      showLabels: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
+    labelPosition: 'top',
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Font Weight & Font Color', 'flwgb'),
+    value: attributes.textFontWeight,
+    options: [{
+      label: 'Normal',
+      value: 'normal'
+    }, {
+      label: 'Bold',
+      value: 'bold'
+    }],
+    onChange: val => setAttributes({
+      textFontWeight: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPicker, {
+    color: attributes.textColor,
+    onChange: val => setAttributes({
+      textColor: val
+    }),
+    enableAlpha: true,
+    defaultValue: "#000"
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Input Settings', 'flwgb'),
+    initialOpen: false
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Input Border Radius', 'flwgb'),
+    value: attributes.inputBorderRadius,
+    onChange: val => setAttributes({
+      inputBorderRadius: val
+    }),
+    min: 0,
+    max: 25
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Show Placeholders', 'flwgb'),
+    help: attributes.showPlaceholders ? 'Show' : 'Hide',
+    checked: attributes.showPlaceholders,
+    onChange: val => setAttributes({
+      showPlaceholders: val
+    })
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.Panel, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelBody, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Button Settings', 'flwgb'),
+    initialOpen: false
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.RangeControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Button Border Radius', 'flwgb'),
+    value: attributes.buttonBorderRadius,
+    onChange: val => setAttributes({
+      buttonBorderRadius: val
+    }),
+    min: 0,
+    max: 25
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalBorderControl, {
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Button Border'),
+    onChange: newButtonBorder => setAttributes({
+      buttonBorder: newButtonBorder
+    }),
+    value: attributes.buttonBorder
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalText, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Button background color', 'flwgb'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
+    value: attributes.buttonBgColor,
+    onChange: val => setAttributes({
+      buttonBgColor: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
+    labelPosition: 'top',
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Button Font Weight', 'flwgb'),
+    value: attributes.buttonTextFontWeight,
+    options: [{
+      label: 'Normal',
+      value: 'normal'
+    }, {
+      label: 'Bold',
+      value: 'bold'
+    }],
+    onChange: val => setAttributes({
+      buttonTextFontWeight: val
+    })
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.__experimentalText, null, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Button text color', 'flwgb'))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.PanelRow, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ColorPalette, {
+    value: attributes.buttonTextColor,
+    onChange: val => setAttributes({
+      buttonTextColor: val
+    })
+  })))));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Options);
 
 /***/ }),
 
@@ -188,6 +388,16 @@ module.exports = window["wp"]["blocks"];
 
 /***/ }),
 
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ (function(module) {
+
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
 /***/ "@wordpress/element":
 /*!*********************************!*\
   !*** external ["wp","element"] ***!
@@ -208,13 +418,23 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
+/***/ "./inc/I18n/I18n.json":
+/*!****************************!*\
+  !*** ./inc/I18n/I18n.json ***!
+  \****************************/
+/***/ (function(module) {
+
+module.exports = JSON.parse('{"hello_text":{"text":"Hello.","context":"hello_text"},"select_text":{"text":"Please select...","context":"select_text"},"yes_text":{"text":"Yes","context":"yes_text"},"no_text":{"text":"No","context":"no_text"},"loading_text":{"text":"Loading...","context":"loading_text"},"general_error_message":{"text":"Something went wrong. Please try again later.","context":"general_error_message"},"general_success_message":{"text":"Operation has been completed successfully.","context":"general_success_message"},"login_text":{"text":"Login","context":"login_text"},"logout_text":{"text":"Logout","context":"logout_text"},"submit_text":{"text":"Submit","context":"submit_text"},"go_to_user_dashboard_text":{"text":"Go to user dashboard","context":"go_to_user_dashboard_text"},"email_input_text":{"text":"Your e-mail","context":"email_input_text"},"email_placeholder_text":{"text":"Enter your e-mail","context":"email_placeholder_text"},"username_input_text":{"text":"Username","context":"user_input_text"},"username_placeholder_text":{"text":"Enter your username","context":"username_placeholder_text"},"email_or_username_input_text":{"text":"Username or E-mail","context":"email_or_username_input_text"},"email_or_username_placeholder_text":{"text":"Enter your username or e-mail","context":"email_or_username_placeholder_text"},"password_input_text":{"text":"Password","context":"password_input_text"},"password_placeholder_text":{"text":"Enter your password","context":"password_placeholder_text"},"password_again_input_text":{"text":"Password Again","context":"password_again_input_text"},"password_again_placeholder_text":{"text":"Enter your password again","context":"password_again_placeholder_text"},"new_password_input_text":{"text":"New Password","context":"password_input_text"},"new_password_placeholder_text":{"text":"Enter your new password","context":"password_placeholder_text"},"new_password_again_input_text":{"text":"New Password Again","context":"password_input_text"},"new_password_again_placeholder_text":{"text":"Enter your new password again","context":"password_placeholder_text"},"reset_password_button_text":{"text":"Lost Password","context":"reset_password_button_text"},"submit_reset_password_button_text":{"text":"Change Password","context":"submit_reset_password_button_text"},"register_button_text":{"text":"Register","context":"register_button_text"},"mail_error_message":{"text":"wp_mail() returned an error. Please check your e-mail configurations.","context":"mail_error_message"},"admin_general_settings":{"text":"General Settings","context":"admin_general_settings"},"admin_mail_settings":{"text":"E-Mail Templates","context":"admin_mail_settings"},"redirect_page_after_login":{"text":"Redirect Page After Login","context":"redirect_page_after_login"},"redirect_page_after_register":{"text":"Redirect Page After Registration","context":"redirect_page_after_register"},"redirect_page_description":{"text":"Do not select anything if you want to redirect to home page.","context":"redirect_page_description"},"lost_password_page":{"text":"Lost (Reset) Password Page","context":"lost_password_page"},"registration_page":{"text":"Registration Page","context":"registration_page"},"activation_page":{"text":"User Activation Page","context":"activation_page"},"activation_page_description":{"text":"Select a page if you select Yes \'Enable user activation\' setting","context":"activation_page_description"},"user_settings_page":{"text":"User Settings Page","context":"user_settings_page"},"user_settings_page_description":{"text":"Select a page if you select Yes \'Enable user settings\' setting","context":"user_settings_page_description"},"terms_and_conditions_page":{"text":"Terms and Conditions Page","context":"terms_and_conditions_page"},"privacy_policy_page":{"text":"Privacy Policy Page","context":"privacy_policy_page"},"has_activation":{"text":"Enable user activation","context":"has_activation"},"has_activation_description":{"text":"If you want to send an activation code to your users, select Yes.","context":"has_activation_description"},"has_user_settings":{"text":"Enable user settings","context":"has_user_settings"},"has_user_settings_description":{"text":"If you want to show a user settings page, select Yes. (Don\'t forget to select a User Settings page below)","context":"has_user_settings_description"},"already_logged_in_message":{"text":"You have already logged in.","context":"already_logged_in_message"},"remember_me_text":{"text":"Remember me","context":"remember_me_text"},"invalid_username_or_pass":{"text":"Invalid username or password.","context":"invalid_username_or_pass"},"login_successful":{"text":"You have successfully logged in...","context":"login_successful"},"user_not_activated":{"text":"Please activate your account. We sent you an email. Click the activation link in the email.","context":"user_not_activated"},"terms_and_conditions_text":{"text":"I have read and accept <a href=\\"%s\\" target=\\"_blank\\">terms and conditions</a> and <a href=\\"%s\\" target=\\"_blank\\">privacy policy</a>","context":"terms_and_conditions_text"},"terms_and_conditions_text_plain":{"text":"I have read and accept terms and conditions and privacy policy.","context":"terms_and_conditions_text_plain"},"password_match_error":{"text":"Your passwords do not match","context":"password_match_error"},"register_succession_with_activation":{"text":"You have been sign up successfuly. Please click the membership activation link sent your e-mail.","context":"register_succession_with_activation"},"register_succession":{"text":"You have been sign up successfuly. You can sign in with your username and password.","context":"register_succession"},"register_mail_to_user":{"text":"Register Mail Template to User","context":"register_mail_to_user"},"register_mail_to_user_with_activation":{"text":"Register Mail Template to User (With Activation Code)","context":"register_mail_to_user_with_activation"},"register_mail_to_admin":{"text":"Register Mail Template to Admin","context":"register_mail_to_admin"},"username_exist_error":{"text":"This username already exist.","context":"username_exist_error"},"user_exist_error":{"text":"This user already exist.","context":"user_exist_error"},"password_changed_confirmation":{"text":"Your password has been changed. Please sign in...","context":"password_changed_confirmation"},"wrong_reset_password_link":{"text":"Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.","context":"wrong_reset_password_link"},"reset_password_request_confirmation":{"text":"We have successfully get your request. We have sent you an e-mail. Please check your inbox...","context":"reset_password_request_confirmation"},"reset_password_request_input_text":{"text":"Please sumbit your e-mail to get reset password link.","context":"reset_password_request_input_text"},"reset_password_request_mail_to_user":{"text":"Reset Password Request Mail Template","context":"reset_password_request_mail_to_user"},"send_reset_request":{"text":"Send Request","context":"send_reset_request"},"send_reset_request_description":{"text":"Please enter your e-mail address. We will send you an e-mail to reset your password.","context":"send_reset_request_description"},"reset_password_request_mail_to_user_template":{"text":"Hello {{username}}, <br> You can change your password from the link below <br> {{reset_link}} <br> Thanks for your attention.","context":"reset_password_request_mail_to_user_template"},"reset_request_mail_title":{"text":"Reset Password Request","context":"reset_request_mail_title"},"reset_password_mail_title":{"text":"Your Password Changed","context":"reset_password_mail_title"},"reset_password_mail_to_user":{"text":"Change Password Mail Template","context":"reset_password_mail_to_user"},"reset_password_mail_to_user_template":{"text":"Hello {{username}}, <br> This notice confirms that your password was changed. If you did not change your password, please contact the Site Administrator.","context":"reset_password_mail_to_user_template"},"register_mail_to_user_template":{"text":"Hello {{username}}, <br> Welcome to our website.","context":"register_mail_to_user_template"},"register_mail_to_user_template_with_activation":{"text":"Hello {{username}}. You have been sign up successfully. Please click the membership activation link below: <br/> {{activation_link}}","context":"register_mail_to_user_template_with_activation"},"register_mail_to_admin_template":{"text":"New member registered to your web site. <br> Username: {{username}} | User E-Mail: {{email}}","context":"register_mail_to_admin_template"},"register_mail_title_to_user":{"text":"Welcome to Join Us","context":"register_mail_title_to_user"},"register_mail_title_to_admin":{"text":"New Member Registration","context":"register_mail_title_to_admin"},"mail_error_information_mail_title":{"text":"Failed to Send E-Mail","context":"mail_error_information_mail_title"},"you_can_use_this_tags_text":{"text":"You can use these tags:","context":"you_can_use_this_tags_text"}}');
+
+/***/ }),
+
 /***/ "./src/register-form/block.json":
 /*!**************************************!*\
   !*** ./src/register-form/block.json ***!
   \**************************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"frontend-login-with-gutenberg-blocks/register-form","version":"0.1.0","title":"Register Form","category":"theme","icon":"format-aside","description":"Display register form","supports":{"html":false},"textdomain":"register-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"frontend-login-with-gutenberg-blocks/register-form","version":"0.1.0","title":"Register Form","category":"theme","icon":"format-aside","description":"Display register form","attributes":{"showLabels":{"type":"boolean","default":false},"showPlaceholders":{"type":"boolean","default":false},"textColor":{"type":"string","default":"black"},"textFontWeight":{"type":"string","default":"bold"},"inputBorderRadius":{"type":"number","default":0},"buttonBgColor":{"type":"string","default":"gray"},"buttonTextColor":{"type":"string","default":"black"},"buttonBorder":{"type":"object","default":{"color":"#000","style":"solid","width":"0px"}},"buttonBorderRadius":{"type":"number","default":0},"buttonTextFontWeight":{"type":"string","default":"normal"}},"supports":{"html":false},"textdomain":"register-form","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

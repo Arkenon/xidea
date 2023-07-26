@@ -154,7 +154,14 @@ class Helper {
 
 			$placeholder = $matches[1];
 
-			return $params[ $placeholder ] ?? $matches[0];
+			//TODO getting error
+
+			if($placeholder != $matches[0] && !isset($params[ $placeholder ])){
+				return "";
+			}
+
+			return $matches[0];
+//			return $params[ $placeholder ]??$matches[0];
 
 		}, $text );
 

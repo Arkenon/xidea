@@ -53,6 +53,32 @@ use FLWGB\I18n\I18n;
 		<tr>
 			<th scope="row">
 
+				<label for="flwgb_register_mail_to_user">
+					<?php echo esc_html_x( I18n::text('register_mail_to_user_with_activation')->text, I18n::text('register_mail_to_user_with_activation')->context, FLWGB_TEXT_DOMAIN ); ?>
+				</label>
+
+			</th>
+			<td>
+
+				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}}, {{activation_link}} </p>
+
+				<?php
+
+				$template  = I18n::text('register_mail_to_user_template_with_activation')->text;
+				$content   = get_option( 'flwgb_register_mail_to_user_with_activation' ) ?: $template;
+				$editor_id = 'flwgb_register_mail_to_user_with_activation';
+				$settings  = array( 'media_buttons' => false );
+
+				wp_editor( $content, $editor_id, $settings );
+
+				?>
+
+			</td>
+		</tr>
+
+		<tr>
+			<th scope="row">
+
 				<label for="flwgb_register_mail_to_admin">
 					<?php echo esc_html_x( I18n::text('register_mail_to_admin')->text, I18n::text('register_mail_to_admin')->context, FLWGB_TEXT_DOMAIN ); ?>
 				</label>
@@ -60,7 +86,7 @@ use FLWGB\I18n\I18n;
 			</th>
 			<td>
 
-				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}} </p>
+				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}}, {{email}} </p>
 
 				<?php
 

@@ -91,10 +91,13 @@ jQuery(document).ready(function ($) {
 	// Registration Form
 	$('#flwgb-register-form').on('submit', function (e) {
 		e.preventDefault();
-
-		var formData = new FormData();
-
-		formData.append('action', 'flwgbregisterhandle');
+		const form = $(this);
+		const formData = new FormData(
+			document.getElementById('flwgb-register-form')
+		);
+		const submitBtn = form.find('#flwgb-register-submit');
+		const formResult = $('#flwgb-register-form-result');
+		const loadingBtn = $('#flwgb-register-loading');
 
 		$.ajax({
 			url: flwgb_ajax_object.ajax_url,
@@ -104,19 +107,13 @@ jQuery(document).ready(function ($) {
 			dataType: 'json',
 			data: formData,
 			beforeSend: function () {
-				$('.flwgb-loading').removeClass('flwgb-hide');
+				formBeforeSend(formResult, submitBtn, loadingBtn)
 			},
 			success: function (response) {
-				$('.flwgb-form-result').html(response.message);
-
-				$('.flwgb-loading').addClass('flwgb-hide');
-
-				if (response.return_url != null) {
-					window.location.href = response.return_url;
-				}
+				formSuccess(response, formResult, submitBtn, loadingBtn)
 			},
-			error: function (xhr, status, error) {
-				$('.flwgb-register-result').html(xhr.responseText);
+			error: function (xhr) {
+				formError(xhr, formResult)
 			},
 		});
 	});

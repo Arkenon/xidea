@@ -1,6 +1,5 @@
 import './editor.scss';
 import {useBlockProps} from '@wordpress/block-editor';
-import {useEffect} from '@wordpress/element'
 import {__} from '@wordpress/i18n';
 import I18n from "../../inc/I18n/I18n.json";
 import Options from "./options";
@@ -31,16 +30,6 @@ export default function Edit(props) {
 	}
 
 	const desc = attributes.description ? attributes.description : I18n.send_reset_request_description.text;
-
-	/*function selectForm(form) {
-		setAttributes({selectedForm: form})
-	}
-
-	useEffect(() => {
-		if (newArticles !== oldArticles) {
-			setArticles(newArticles)
-		}
-	}, [attributes.selectedForm])*/
 
 	const formSelectBtnStyles = {
 		'cursor': 'pointer', 'border': '1px solid gray', 'padding': '5px','text-decoration':'none'

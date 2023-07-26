@@ -25,6 +25,8 @@ $pages = get_pages();
 
 	?>
 
+<!--	TODO do not redirect after register -->
+
 	<table id="flwgb-admin-general-settings" class="form-table">
 
 		<tr>

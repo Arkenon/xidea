@@ -208,16 +208,16 @@
 	"text": "I have read and accept <a href=\"%s\" target=\"_blank\">terms and conditions</a> and <a href=\"%s\" target=\"_blank\">privacy policy</a>",
 	"context": "terms_and_conditions_text"
   },
-  "terms_and_conditions_validation": {
-	"text": "Please check terms and conditions chechkbox",
-	"context": "terms_and_conditions_validation"
+  "terms_and_conditions_text_plain": {
+	"text": "I have read and accept terms and conditions and privacy policy.",
+	"context": "terms_and_conditions_text_plain"
   },
   "password_match_error": {
 	"text": "Your passwords do not match",
 	"context": "password_match_error"
   },
   "register_succession_with_activation": {
-	"text": "You have been sign up successfuly. Please clikck the membership activation link sent your e-mail.",
+	"text": "You have been sign up successfuly. Please click the membership activation link sent your e-mail.",
 	"context": "register_succession_with_activation"
   },
   "register_succession": {
@@ -227,6 +227,10 @@
   "register_mail_to_user": {
 	"text": "Register Mail Template to User",
 	"context": "register_mail_to_user"
+  },
+  "register_mail_to_user_with_activation": {
+	"text": "Register Mail Template to User (With Activation Code)",
+	"context": "register_mail_to_user_with_activation"
   },
   "register_mail_to_admin": {
 	"text": "Register Mail Template to Admin",
@@ -273,11 +277,11 @@
 	"context" : "reset_password_request_mail_to_user_template"
   },
   "reset_request_mail_title": {
-	"text": "Reset password request",
+	"text": "Reset Password Request",
 	"context": "reset_request_mail_title"
   },
   "reset_password_mail_title": {
-	"text": "Your password changed",
+	"text": "Your Password Changed",
 	"context": "reset_password_mail_title"
   },
   "reset_password_mail_to_user": {
@@ -289,14 +293,29 @@
 	"context" : "reset_password_mail_to_user_template"
   },
   "register_mail_to_user_template": {
-	"text": "Hello {{username}}, <br> Welcome to our website. We have sent an e-mail to you.",
+	"text": "Hello {{username}}, <br> Welcome to our website.",
 	"context" : "register_mail_to_user_template"
   },
+  "register_mail_to_user_template_with_activation": {
+	"text": "Hello {{username}}. You have been sign up successfully. Please click the membership activation link below: <br/> {{activation_link}}",
+	"context": "register_mail_to_user_template_with_activation"
+  },
   "register_mail_to_admin_template": {
-	"text": "Hello {{username}}, <br> Welcome to our website. We have sent an e-mail to you.",
+	"text": "New member registered to your web site. <br> Username: {{username}} | User E-Mail: {{email}}",
 	"context" : "register_mail_to_admin_template"
   },
-
+  "register_mail_title_to_user": {
+	"text": "Welcome to Join Us",
+	"context": "register_mail_title_to_user"
+  },
+  "register_mail_title_to_admin": {
+	"text": "New Member Registration",
+	"context": "register_mail_title_to_admin"
+  },
+  "mail_error_information_mail_title": {
+	"text": "Failed to Send E-Mail",
+	"context": "mail_error_information_mail_title"
+  },
   "you_can_use_this_tags_text": {
 	"text": "You can use these tags:",
 	"context" : "you_can_use_this_tags_text"

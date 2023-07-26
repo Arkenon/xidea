@@ -19,7 +19,7 @@ class LostPassword {
 		$frontend = new Frontend();
 
 		//Get reset password form html output from Frontend class
-		return $frontend->get_lost_password_form( $block_attributes );
+		return $frontend->get_the_form( 'public/partials/reset-password/reset-password-form.php', $block_attributes );
 	}
 
 	/**

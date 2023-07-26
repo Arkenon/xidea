@@ -66,16 +66,18 @@ class Blocks {
 	/**
 	 * Callback function for register form block
 	 *
+	 * @param array $block_attributes Get block attributes from block-name/edit.js
+	 *
 	 * @return string Login form template html
 	 * @since    1.0.0
 	 */
-	public function register_form_render_callback(): string {
+	public function register_form_render_callback(array $block_attributes): string {
 
 		Helper::using('inc/Register.php');
 
 		$register = new Register();
 
-		return $register->register_form();
+		return $register->register_form($block_attributes);
 
 
 	}

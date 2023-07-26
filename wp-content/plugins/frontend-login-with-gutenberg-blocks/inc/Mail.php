@@ -15,12 +15,13 @@ class Mail {
 	 */
 	public function mail_fail_error() {
 
-		echo json_encode( array(
-			'status'  => false,
-			'message' => esc_html_x( I18n::text( 'mail_error_message' )->text, I18n::text( 'mail_error_message' )->context, FLWGB_TEXT_DOMAIN )
-		) );
+		$admin_mail = get_bloginfo( 'admin_email' );
 
-		wp_die();
+		wp_mail(
+			$admin_mail,
+			esc_html_x( I18n::text( 'mail_error_message' )->text, I18n::text( 'mail_error_message' )->context, FLWGB_TEXT_DOMAIN ),
+			esc_html_x( I18n::text( 'mail_error_message' )->text, I18n::text( 'mail_error_message' )->context, FLWGB_TEXT_DOMAIN )
+		);
 
 	}
 
@@ -31,7 +32,7 @@ class Mail {
 	 *
 	 * @since    1.0.0
 	 */
-	public function mail_html_format(){
+	public function mail_html_format() {
 		return "text/html";
 	}
 
@@ -48,14 +49,16 @@ class Mail {
 	 *
 	 * @since 1.0.0
 	 */
-	public function send_mail( string $option_name, string $template_name, array $params, string $mail_title ): bool {
+	public function send_mail( string $option_name, string $template_name, array $params, string $mail_title, bool $to_admin = false ): bool {
 
 		$body = Helper::replace_mail_parameters( $option_name, $template_name, $params );
 
-		$send_mail = wp_mail( $params['email'], esc_html_x( I18n::text( $mail_title )->text, I18n::text( $mail_title )->context, FLWGB_TEXT_DOMAIN ), $body );
+		$send_mail = wp_mail( $to_admin ? $params['admin_email'] : $params['email'], esc_html_x( I18n::text( $mail_title )->text, I18n::text( $mail_title )->context, FLWGB_TEXT_DOMAIN ), $body );
 
 		if ( is_wp_error( $send_mail ) ) {
+
 			return false;
+
 		}
 
 		return true;
