@@ -44,6 +44,12 @@ class Blocks {
 				'render_callback' => [ $this, 'reset_password_form_render_callback' ]
 			] );
 
+		//User Activation Block
+		register_block_type( plugin_dir_path( dirname( __FILE__ ) ) . '/build/user-activation',
+			[
+				'render_callback' => [ $this, 'user_activation_render_callback' ]
+			] );
+
 	}
 
 	/**
@@ -95,6 +101,22 @@ class Blocks {
 		$lost_password = new LostPassword();
 
 		return $lost_password->lost_password_form($block_attributes);
+
+	}
+
+	/**
+	 * Callback function for user activation block
+	 *
+	 * @return string User activation block template html
+	 * @since    1.0.0
+	 */
+	public function user_activation_render_callback(array $block_attributes): string {
+
+		Helper::using('inc/UserActivation.php');
+
+		$lost_password = new UserActivation();
+
+		return $lost_password->user_activation_block($block_attributes);
 
 	}
 

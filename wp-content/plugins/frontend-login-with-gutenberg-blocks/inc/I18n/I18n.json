@@ -208,6 +208,14 @@
 	"text": "Please activate your account. We sent you an email. Click the activation link in the email.",
 	"context": "user_not_activated"
   },
+  "your_account_has_activated": {
+	"text": "Your account has activated successfully. You can sign in.",
+	"context": "your_account_has_activated"
+  },
+  "wrong_activation_code": {
+	"text": "Wrong activation code. Please contact with your site administrator.",
+	"context": "wrong_activation_code"
+  },
   "terms_and_conditions_text": {
 	"text": "I have read and accept <a href=\"%s\" target=\"_blank\">terms and conditions</a> and <a href=\"%s\" target=\"_blank\">privacy policy</a>",
 	"context": "terms_and_conditions_text"

@@ -96,69 +96,65 @@ class Register {
 
 		}
 
+		$code = sha1( $email . time() );
+
 		$userdata = array(
-			'user_login' => $username,
-			'user_email' => $email,
-			'user_pass'  => $password
+			'user_login'          => $username,
+			'user_email'          => $email,
+			'user_pass'           => $password,
+			'user_activation_key' => $code
 		);
 
 		$newuser = wp_insert_user( $userdata );
 
 		if ( ! is_wp_error( $newuser ) ) {
 
-			$code = sha1( $newuser . time() );
+			if ( get_option( "flwgb_has_activation" ) ) {
 
-			global $wpdb;
+				$add_user_meta = add_user_meta( $newuser, 'flwgb_needs_user_activation', true );
 
-			$update = $wpdb->update( $wpdb->prefix . '_users', array(
-				'ID'                  => $newuser,
-				'user_activation_key' => $code
-			), array( 'ID' => $newuser ) );
-
-			if ( ! is_wp_error( $update ) ) {
-
-				if ( get_option( "flwgb_has_activation" ) ) {
+				if($add_user_meta){
 
 					$message = esc_html_x( I18n::text( 'register_succession_with_activation' )->text, I18n::text( 'register_succession_with_activation' )->context, FLWGB_TEXT_DOMAIN );
 
-					$activation_link = site_url().'/'.get_option( "flwgb_activation_page" ) . '/activation?key=' . $code . '&user=' . $newuser;
+					$activation_link = site_url() . '/' . get_option( "flwgb_activation_page" ) . '/activation?key=' . $code . '&user=' . $newuser;
 
 					$params['activation_link'] = $activation_link;
 
-				} else {
-
-					$message = esc_html_x( I18n::text( 'register_succession' )->text, I18n::text( 'register_succession' )->context, FLWGB_TEXT_DOMAIN );
-
 				}
-
-				Helper::using( 'inc/Mail.php' );
-				$mail = new Mail();
-
-				if ( get_option( "flwgb_has_activation" ) ) {
-
-					$mail->send_mail( 'flwgb_register_mail_to_user_with_activation', 'register_mail_to_user_template_with_activation', $params, 'register_mail_title_to_user' );
-
-				} else {
-
-					$mail->send_mail( 'flwgb_register_mail_to_user', 'register_mail_to_user_template', $params, 'register_mail_title_to_user' );
-
-				}
-
-				$mail->send_mail( 'flwgb_register_mail_to_admin', 'register_mail_to_admin_template', $params, 'register_mail_title_to_admin', true );
-
-				echo json_encode( array(
-					'status'     => true,
-					'message'    => $message,
-				) );
 
 			} else {
 
-				echo json_encode( array(
-					'status'  => false,
-					'message' => esc_html_x( I18n::text( 'general_error_message' )->text, I18n::text( 'general_error_message' )->context, FLWGB_TEXT_DOMAIN )
-				) );
+				$message = esc_html_x( I18n::text( 'register_succession' )->text, I18n::text( 'register_succession' )->context, FLWGB_TEXT_DOMAIN );
 
 			}
+
+			Helper::using( 'inc/Mail.php' );
+			$mail = new Mail();
+
+			if ( get_option( "flwgb_has_activation" ) ) {
+
+				$mail->send_mail( 'flwgb_register_mail_to_user_with_activation', 'register_mail_to_user_template_with_activation', $params, 'register_mail_title_to_user' );
+
+			} else {
+
+				$mail->send_mail( 'flwgb_register_mail_to_user', 'register_mail_to_user_template', $params, 'register_mail_title_to_user' );
+
+			}
+
+			$mail->send_mail( 'flwgb_register_mail_to_admin', 'register_mail_to_admin_template', $params, 'register_mail_title_to_admin', true );
+
+			echo json_encode( array(
+				'status'  => true,
+				'message' => $message,
+			) );
+
+		} else {
+
+			echo json_encode( array(
+				'status'  => false,
+				'message' => esc_html_x( I18n::text( 'general_error_message' )->text, I18n::text( 'general_error_message' )->context, FLWGB_TEXT_DOMAIN )
+			) );
 
 		}
 

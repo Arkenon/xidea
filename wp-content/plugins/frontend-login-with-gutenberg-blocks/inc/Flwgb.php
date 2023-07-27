@@ -173,7 +173,7 @@ class Flwgb extends Loader {
 	private function set_reset_password_form_actions() {
 
 		/**
-		 * The class responsible for registeration operations.
+		 * The class responsible for registration operations.
 		 */
 		Helper::using( 'inc/LostPassword.php' );
 
