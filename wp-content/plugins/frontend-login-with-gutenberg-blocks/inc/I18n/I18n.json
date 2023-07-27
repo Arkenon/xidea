@@ -125,16 +125,20 @@
   },
 
   "redirect_page_after_login": {
-	"text": "Redirect Page After Login",
+	"text": "Redirection Page After Login",
 	"context": "redirect_page_after_login"
   },
-  "redirect_page_after_register": {
-	"text": "Redirect Page After Registration",
-	"context": "redirect_page_after_register"
+  "login_page": {
+	"text": "Login Page",
+	"context": "login_page"
   },
-  "redirect_page_description": {
-	"text": "Do not select anything if you want to redirect to home page.",
-	"context": "redirect_page_description"
+  "login_page_description": {
+	"text": "Select a page if created a login page.",
+	"context": "login_page"
+  },
+  "redirect_page_after_login_description": {
+	"text": "Select a page if you want to redirect users to home page after logged in.",
+	"context": "redirect_page_after_login_description"
   },
   "lost_password_page": {
 	"text": "Lost (Reset) Password Page",
@@ -149,7 +153,7 @@
 	"context": "activation_page"
   },
   "activation_page_description": {
-	"text": "Select a page if you select Yes 'Enable user activation' setting",
+	"text": "Select a page if you selected 'Yes' in the 'Enable user activation' setting",
 	"context": "activation_page_description"
   },
   "user_settings_page": {
@@ -157,7 +161,7 @@
 	"context": "user_settings_page"
   },
   "user_settings_page_description": {
-	"text": "Select a page if you select Yes 'Enable user settings' setting",
+	"text": "Select a page if you selected 'Yes' in the 'Enable user settings' setting",
 	"context": "user_settings_page_description"
   },
   "terms_and_conditions_page": {
@@ -173,7 +177,7 @@
 	"context": "has_activation"
   },
   "has_activation_description": {
-	"text": "If you want to send an activation code to your users, select Yes.",
+	"text": "If you want to send an activation code to your users, select 'Yes'.",
 	"context": "has_activation_description"
   },
   "has_user_settings": {
@@ -225,15 +229,15 @@
 	"context": "register_succession"
   },
   "register_mail_to_user": {
-	"text": "Register Mail Template to User",
+	"text": "Registration Mail Template for User",
 	"context": "register_mail_to_user"
   },
   "register_mail_to_user_with_activation": {
-	"text": "Register Mail Template to User (With Activation Code)",
+	"text": "Registration Mail Template for User (With Activation Code)",
 	"context": "register_mail_to_user_with_activation"
   },
   "register_mail_to_admin": {
-	"text": "Register Mail Template to Admin",
+	"text": "Registration Mail Template for Admin",
 	"context": "register_mail_to_admin"
   },
   "username_exist_error": {
@@ -261,7 +265,7 @@
 	"context": "reset_password_request_input_text"
   },
   "reset_password_request_mail_to_user": {
-	"text": "Reset Password Request Mail Template",
+	"text": "Password Reset Request Mail Template",
 	"context": "reset_password_request_mail_to_user"
   },
   "send_reset_request": {
@@ -285,7 +289,7 @@
 	"context": "reset_password_mail_title"
   },
   "reset_password_mail_to_user": {
-	"text": "Change Password Mail Template",
+	"text": "Password Change Mail Template for User",
 	"context": "reset_password_mail_to_user"
   },
   "reset_password_mail_to_user_template": {

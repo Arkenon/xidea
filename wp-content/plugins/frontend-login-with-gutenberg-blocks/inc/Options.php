@@ -54,6 +54,7 @@ class Options {
 
 		// General settings
 		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_login', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_login_page', 'sanitize_text_field' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_lost_password_page', 'sanitize_text_field' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_register_page', 'sanitize_text_field' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_activation_page', 'sanitize_text_field' );

@@ -89,9 +89,14 @@ $pages = get_pages();
 
 		$selections = [
 				[
+						'option'  => 'flwgb_login_page',
+						'text'    => I18n::text( 'login_page' ),
+						'description' => I18n::text( 'login_page_description' ),
+				],
+				[
 						'option'      => 'flwgb_redirect_after_login',
 						'text'        => I18n::text( 'redirect_page_after_login' ),
-						'description' => I18n::text( 'redirect_page_description' ),
+						'description' => I18n::text( 'redirect_page_after_login_description' ),
 				],
 				[
 						'option'  => 'flwgb_lost_password_page',
