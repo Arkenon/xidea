@@ -148,20 +148,13 @@ class Helper {
 	 */
 	public static function replace_mail_parameters( string $option_name, string $template_name, array $params ): string {
 
-		$text = ! empty( get_option( $option_name ) ) ?: (string) I18n::text( $template_name )->text;
+		$text = get_option( $option_name ) ?: (string) I18n::text( $template_name )->text;
 
 		return preg_replace_callback( '/{{(.*?)}}/', function ( $matches ) use ( $params ) {
 
 			$placeholder = $matches[1];
 
-			//TODO getting error
-
-			if($placeholder != $matches[0] && !isset($params[ $placeholder ])){
-				return "";
-			}
-
-			return $matches[0];
-//			return $params[ $placeholder ]??$matches[0];
+			return $params[ $placeholder ] ?? $matches[0];
 
 		}, $text );
 

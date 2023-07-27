@@ -25,8 +25,6 @@ $pages = get_pages();
 
 	?>
 
-<!--	TODO do not redirect after register -->
-
 	<table id="flwgb-admin-general-settings" class="form-table">
 
 		<tr>
@@ -93,11 +91,6 @@ $pages = get_pages();
 				[
 						'option'      => 'flwgb_redirect_after_login',
 						'text'        => I18n::text( 'redirect_page_after_login' ),
-						'description' => I18n::text( 'redirect_page_description' ),
-				],
-				[
-						'option'  => 'flwgb_redirect_after_registration',
-						'text'    => I18n::text( 'redirect_page_after_register' ),
 						'description' => I18n::text( 'redirect_page_description' ),
 				],
 				[

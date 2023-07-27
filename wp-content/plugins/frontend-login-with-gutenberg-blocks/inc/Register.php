@@ -56,8 +56,6 @@ class Register {
 		$username       = Helper::post( 'flwgb-username-for-register' );
 		$email          = Helper::post( 'flwgb-email-for-register' );
 
-		$return_url = site_url( get_option( 'flwgb_redirect_after_registration' ) ) ?: '';
-
 		$params = [
 			'username'        => $username,
 			'email'           => $email,
@@ -151,7 +149,6 @@ class Register {
 				echo json_encode( array(
 					'status'     => true,
 					'message'    => $message,
-					'return_url' => $return_url
 				) );
 
 			} else {
