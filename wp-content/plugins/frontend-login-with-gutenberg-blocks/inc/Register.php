@@ -96,24 +96,26 @@ class Register {
 
 		}
 
-		$code = sha1( $email . time() );
-
 		$userdata = array(
-			'user_login'          => $username,
-			'user_email'          => $email,
-			'user_pass'           => $password,
-			'user_activation_key' => $code
+			'user_login' => $username,
+			'user_email' => $email,
+			'user_pass'  => $password,
 		);
 
 		$newuser = wp_insert_user( $userdata );
 
 		if ( ! is_wp_error( $newuser ) ) {
 
+			$message = "";
+
 			if ( get_option( "flwgb_has_activation" ) ) {
 
-				$add_user_meta = add_user_meta( $newuser, 'flwgb_needs_user_activation', true );
+				$code = sha1( $email . time() );
 
-				if($add_user_meta){
+				$add_user_activation      = add_user_meta( $newuser, 'flwgb_user_activation', 'not_activated' );
+				$add_user_activation_code = add_user_meta( $newuser, 'flwgb_user_activation_code', $code );
+
+				if ( $add_user_activation && $add_user_activation_code ) {
 
 					$message = esc_html_x( I18n::text( 'register_succession_with_activation' )->text, I18n::text( 'register_succession_with_activation' )->context, FLWGB_TEXT_DOMAIN );
 

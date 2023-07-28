@@ -216,6 +216,10 @@
 	"text": "Wrong activation code. Please contact with your site administrator.",
 	"context": "wrong_activation_code"
   },
+  "user_already_activated": {
+	"text": "This account has already activated.",
+	"context": "user_already_activated"
+  },
   "terms_and_conditions_text": {
 	"text": "I have read and accept <a href=\"%s\" target=\"_blank\">terms and conditions</a> and <a href=\"%s\" target=\"_blank\">privacy policy</a>",
 	"context": "terms_and_conditions_text"

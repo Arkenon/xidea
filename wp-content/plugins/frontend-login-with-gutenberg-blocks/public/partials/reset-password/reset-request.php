@@ -2,8 +2,6 @@
 
 use FLWGB\I18n\I18n;
 
-//TODO check is user logged in
-
 	$input_style = 'border-radius:' . $form_attributes[''] . 'px';
 	$text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];
 
