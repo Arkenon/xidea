@@ -204,6 +204,10 @@
 	"text": "You have successfully logged in...",
 	"context": "login_successful"
   },
+  "login_attempts_error": {
+	"text": "You have made too many unsuccessful login attempts. Please wait 30 minutes.",
+	"context": "login_attempts_error"
+  },
   "user_not_activated": {
 	"text": "Please activate your account. We sent you an email. Click the activation link in the email.",
 	"context": "user_not_activated"

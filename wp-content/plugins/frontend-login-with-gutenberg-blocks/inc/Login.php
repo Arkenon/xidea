@@ -19,6 +19,9 @@ class Login {
 		add_action( 'wp_ajax_nopriv_flwgbloginhandle', [ $this, 'login_handle_ajax_callback' ] );
 		add_action( 'wp_ajax_flwgbloginhandle', [ $this, 'login_handle_ajax_callback' ] );
 
+		//Limit login
+		add_action( 'wp_login_failed', [ $this, 'limit_login_attempts' ] );
+
 	}
 
 	/**
@@ -34,7 +37,7 @@ class Login {
 		$frontend = new Frontend();
 
 		//Get login form html output from Frontend class
-		return $frontend->get_the_form('public/partials/login/login-form.php', $block_attributes );
+		return $frontend->get_the_form( 'public/partials/login/login-form.php', $block_attributes );
 
 	}
 
@@ -44,6 +47,14 @@ class Login {
 	 * @since 1.0.0
 	 */
 	public function login_handle_ajax_callback() {
+
+		if($this->get_login_attempts_count()['login_attempts'] >= 5){
+
+			echo $this->login_attempts_error();
+
+			wp_die();
+
+		}
 
 		check_ajax_referer( 'flwgbloginhandle', 'security' );
 
@@ -56,10 +67,7 @@ class Login {
 
 		if ( is_wp_error( $user ) ) {
 
-			echo json_encode( array(
-				'status'  => false,
-				'message' => $user->get_error_message()
-			) );
+			echo $this->login_failed_response();
 
 		} else {
 
@@ -70,7 +78,7 @@ class Login {
 
 				if ( $activation->check_is_user_activated( $user->ID ) ) {
 
-					$this->login_success_response();
+					echo $this->login_success_response();
 
 				} else {
 
@@ -98,14 +106,87 @@ class Login {
 	/**
 	 * Json result for login. When login success
 	 *
+	 * @return string Json result
 	 * @since 1.0.0
 	 */
-	private function login_success_response() {
+	private function login_success_response(): string {
 
-		echo json_encode( array(
+		return json_encode( array(
 			'status'     => true,
 			'return_url' => site_url( get_option( 'flwgb_redirect_after_login' ) ),
-			'message'    => esc_html_x( I18n::text( 'login_successful' )->text, I18n::text( 'login_successful' )->context, 'flwgb' )
+			'message'    => esc_html_x( I18n::text( 'login_successful' )->text, I18n::text( 'login_successful' )->context, FLWGB_TEXT_DOMAIN )
+		) );
+
+	}
+
+	/**
+	 * Json result for login. When login failed
+	 *
+	 * @return string Json result
+	 * @since 1.0.0
+	 */
+	private function login_failed_response(): string {
+
+		return json_encode( array(
+			'status'     => false,
+			'message'    => esc_html_x( I18n::text( 'invalid_username_or_pass' )->text, I18n::text( 'invalid_username_or_pass' )->context, FLWGB_TEXT_DOMAIN )
+		) );
+
+	}
+
+	/**
+	 * Get login attempts count
+	 *
+	 * @return array
+	 * @since 1.0.0
+	 */
+	public function get_login_attempts_count(): array {
+
+		//$user_ip = $_SERVER['REMOTE_ADDR'];
+		$user_ip = "1.172.00.13";
+
+		return [
+			'user_ip'        => $user_ip,
+			'login_attempts' => get_transient( "login_attempts_" . $user_ip )
+		];
+
+	}
+
+	/**
+	 * Limit login attempt to prevent brute force attacks
+	 *
+	 * @since 1.0.0
+	 */
+	public function limit_login_attempts() {
+
+		$max_attempts     = 5;
+		$lockout_duration = 1 * 60;
+
+		$user_ip        = $this->get_login_attempts_count()['user_ip'];
+		$login_attempts = $this->get_login_attempts_count()['login_attempts'];
+
+		if ( $login_attempts >= $max_attempts ) {
+
+			echo $this->login_attempts_error();
+
+		}
+
+
+		set_transient( "login_attempts_" . $user_ip, $login_attempts + 1, $lockout_duration );
+
+	}
+
+	/**
+	 * Json result for to login attemp error.
+	 *
+	 * @return string Json result
+	 * @since 1.0.0
+	 */
+	private function login_attempts_error(): string {
+
+		return json_encode( array(
+			'status'  => false,
+			'message' => esc_html_x( I18n::text( 'login_attempts_error' )->text, I18n::text( 'login_attempts_error' )->context, FLWGB_TEXT_DOMAIN )
 		) );
 
 	}
