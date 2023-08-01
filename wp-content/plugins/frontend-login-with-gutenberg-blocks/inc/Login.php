@@ -13,6 +13,9 @@ use FLWGB\I18n\I18n;
 
 class Login {
 
+	private $max_attempts = 5; //times
+	private $lockout_duration = 300; //seconds
+
 	public function load_login_actions() {
 
 		///Load ajax callback
@@ -20,7 +23,15 @@ class Login {
 		add_action( 'wp_ajax_flwgbloginhandle', [ $this, 'login_handle_ajax_callback' ] );
 
 		//Limit login
-		add_action( 'wp_login_failed', [ $this, 'limit_login_attempts' ] );
+		if ( get_option( 'flwgb_enable_limit_login' ) == 'yes' ) {
+
+			add_action( 'wp_login_failed', [ $this, 'limit_login_attempts' ] );
+
+		}
+
+		//todo error here
+		echo $this->get_limit_login_options()['max_attempts'];
+		echo $this->get_limit_login_options()['lockout_duration'];
 
 	}
 
@@ -48,7 +59,7 @@ class Login {
 	 */
 	public function login_handle_ajax_callback() {
 
-		if($this->get_login_attempts_count()['login_attempts'] >= 5){
+		if ( get_option( 'flwgb_enable_limit_login' ) == 'yes' && $this->get_login_attempts_count()['login_attempts'] >= 3 ) {
 
 			echo $this->login_attempts_error();
 
@@ -128,8 +139,8 @@ class Login {
 	private function login_failed_response(): string {
 
 		return json_encode( array(
-			'status'     => false,
-			'message'    => esc_html_x( I18n::text( 'invalid_username_or_pass' )->text, I18n::text( 'invalid_username_or_pass' )->context, FLWGB_TEXT_DOMAIN )
+			'status'  => false,
+			'message' => esc_html_x( I18n::text( 'invalid_username_or_pass' )->text, I18n::text( 'invalid_username_or_pass' )->context, FLWGB_TEXT_DOMAIN )
 		) );
 
 	}
@@ -142,12 +153,31 @@ class Login {
 	 */
 	public function get_login_attempts_count(): array {
 
-		//$user_ip = $_SERVER['REMOTE_ADDR'];
-		$user_ip = "1.172.00.13";
+		$user_ip = $_SERVER['REMOTE_ADDR'];
+
+		//$user_ip = "172.1.00.125";
 
 		return [
 			'user_ip'        => $user_ip,
 			'login_attempts' => get_transient( "login_attempts_" . $user_ip )
+		];
+
+	}
+
+	/**
+	 * Get limit login options from database
+	 *
+	 * @return array
+	 * @since 1.0.0
+	 */
+	public function get_limit_login_options(): array {
+
+		$max_attempts     = ! get_option( 'flwgb_limit_login_max_attempt' ) ? $this->max_attempts : get_option( 'flwgb_limit_login_max_attempt' );
+		$lockout_duration = ! get_option( 'flwgb_limit_login_lockout_duration' ) ? $this->lockout_duration : get_option( 'flwgb_limit_login_lockout_duration' );
+
+		return [
+			'max_attempts '    => $max_attempts,
+			'lockout_duration' => $lockout_duration
 		];
 
 	}
@@ -159,34 +189,42 @@ class Login {
 	 */
 	public function limit_login_attempts() {
 
-		$max_attempts     = 5;
-		$lockout_duration = 1 * 60;
+		$lockout_duration = $this->get_limit_login_options()['lockout_duration'];
 
 		$user_ip        = $this->get_login_attempts_count()['user_ip'];
 		$login_attempts = $this->get_login_attempts_count()['login_attempts'];
-
-		if ( $login_attempts >= $max_attempts ) {
-
-			echo $this->login_attempts_error();
-
-		}
-
 
 		set_transient( "login_attempts_" . $user_ip, $login_attempts + 1, $lockout_duration );
 
 	}
 
 	/**
-	 * Json result for to login attemp error.
+	 * Json result for to login attempt error.
 	 *
 	 * @return string Json result
 	 * @since 1.0.0
 	 */
 	private function login_attempts_error(): string {
 
+		//TODO does sprintf return translatable text?
+
+		$limit_login_options = $this->get_limit_login_options();
+
+		if ( $limit_login_options['lockout_duration'] >= 60 ) {
+
+			$duration_type  = "minutes";
+			$duration_limit = $limit_login_options['lockout_duration'] / 60;
+
+		} else {
+
+			$duration_type  = "seconds";
+			$duration_limit = $limit_login_options['lockout_duration'];
+
+		}
+
 		return json_encode( array(
 			'status'  => false,
-			'message' => esc_html_x( I18n::text( 'login_attempts_error' )->text, I18n::text( 'login_attempts_error' )->context, FLWGB_TEXT_DOMAIN )
+			'message' => sprintf( __( I18n::text( 'login_attempts_error' )->text, FLWGB_TEXT_DOMAIN ), $duration_limit, $duration_type )
 		) );
 
 	}

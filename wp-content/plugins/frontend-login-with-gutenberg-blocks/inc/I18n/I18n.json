@@ -205,8 +205,24 @@
 	"context": "login_successful"
   },
   "login_attempts_error": {
-	"text": "You have made too many unsuccessful login attempts. Please wait 30 minutes.",
-	"context": "login_attempts_error"
+	"text": "You have made too many unsuccessful login attempts. Please wait %s %s.",
+	"context": "login_attempts_error: 1) duration limit 2) duration type (second or minute)"
+  },
+  "enable_limit_login": {
+	"text": "Enable limit login",
+	"context": "enable_limit_login"
+  },
+  "enable_limit_login_description": {
+	"text": "Protect your web site from too many unsuccessful login attempts.",
+	"context": "enable_limit_login_description"
+  },
+  "limit_login_max_attempt": {
+	"text": "Maximum number of attempts",
+	"context": "limit_login_max_attempt"
+  },
+  "limit_login_lockout_duration": {
+	"text": "Lockout duration (as seconds)",
+	"context": "limit_login_lockout_duration"
   },
   "user_not_activated": {
 	"text": "Please activate your account. We sent you an email. Click the activation link in the email.",

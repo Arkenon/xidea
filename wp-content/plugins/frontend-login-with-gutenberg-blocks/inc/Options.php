@@ -71,6 +71,11 @@ class Options {
 		register_setting( 'flwgb-mail-settings-group', 'flwgb_reset_request_mail_to_user' );
 		register_setting( 'flwgb-mail-settings-group', 'flwgb_reset_password_mail_to_user' );
 
+		// Limit login attempt settings
+		register_setting( 'flwgb-limit-login-settings-group', 'flwgb_enable_limit_login' );
+		register_setting( 'flwgb-limit-login-settings-group', 'flwgb_limit_login_max_attempt' );
+		register_setting( 'flwgb-limit-login-settings-group', 'flwgb_limit_login_lockout_duration' );
+
 	}
 
 	/**
