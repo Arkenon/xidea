@@ -29,10 +29,6 @@ class Login {
 
 		}
 
-		//todo error here
-		echo $this->get_limit_login_options()['max_attempts'];
-		echo $this->get_limit_login_options()['lockout_duration'];
-
 	}
 
 	/**
@@ -59,7 +55,7 @@ class Login {
 	 */
 	public function login_handle_ajax_callback() {
 
-		if ( get_option( 'flwgb_enable_limit_login' ) == 'yes' && $this->get_login_attempts_count()['login_attempts'] >= 3 ) {
+		if ( get_option( 'flwgb_enable_limit_login' ) == 'yes' && $this->get_login_attempts_count()['login_attempts'] >= $this->get_limit_login_options()['max_attempts'] ) {
 
 			echo $this->login_attempts_error();
 
@@ -172,11 +168,11 @@ class Login {
 	 */
 	public function get_limit_login_options(): array {
 
-		$max_attempts     = ! get_option( 'flwgb_limit_login_max_attempt' ) ? $this->max_attempts : get_option( 'flwgb_limit_login_max_attempt' );
+		$max_attempts     = ! get_option( 'flwgb_limit_login_max_attempts' ) ? $this->max_attempts : get_option( 'flwgb_limit_login_max_attempts' );
 		$lockout_duration = ! get_option( 'flwgb_limit_login_lockout_duration' ) ? $this->lockout_duration : get_option( 'flwgb_limit_login_lockout_duration' );
 
 		return [
-			'max_attempts '    => $max_attempts,
+			'max_attempts'    => $max_attempts,
 			'lockout_duration' => $lockout_duration
 		];
 

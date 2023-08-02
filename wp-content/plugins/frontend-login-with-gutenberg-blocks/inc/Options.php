@@ -73,7 +73,7 @@ class Options {
 
 		// Limit login attempt settings
 		register_setting( 'flwgb-limit-login-settings-group', 'flwgb_enable_limit_login' );
-		register_setting( 'flwgb-limit-login-settings-group', 'flwgb_limit_login_max_attempt' );
+		register_setting( 'flwgb-limit-login-settings-group', 'flwgb_limit_login_max_attempts' );
 		register_setting( 'flwgb-limit-login-settings-group', 'flwgb_limit_login_lockout_duration' );
 
 	}

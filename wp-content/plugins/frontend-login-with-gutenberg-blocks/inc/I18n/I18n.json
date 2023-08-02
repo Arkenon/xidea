@@ -208,6 +208,10 @@
 	"text": "You have made too many unsuccessful login attempts. Please wait %s %s.",
 	"context": "login_attempts_error: 1) duration limit 2) duration type (second or minute)"
   },
+  "limit_login_settings": {
+	"text": "Limit Login",
+	"context": "limit_login_settings"
+  },
   "enable_limit_login": {
 	"text": "Enable limit login",
 	"context": "enable_limit_login"

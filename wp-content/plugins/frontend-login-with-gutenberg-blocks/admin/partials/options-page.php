@@ -38,6 +38,11 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 			<?php echo esc_html_x( I18n::text( 'admin_mail_settings' )->text, I18n::text( 'admin_mail_settings' )->context, FLWGB_TEXT_DOMAIN ); ?>
 		</a>
 
+		<a href="?page=frontend-login-with-gutenberg-blocks-settings&tab=limit-login"
+		   class="nav-tab <?php if ( $tab === 'limit-login' ): ?>nav-tab-active<?php endif; ?>">
+			<?php echo esc_html_x( I18n::text( 'limit_login_settings' )->text, I18n::text( 'limit_login_settings' )->context, FLWGB_TEXT_DOMAIN ); ?>
+		</a>
+
 	</nav>
 
 	<div class="tab-content">
@@ -47,6 +52,10 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 
 			case 'mail-templates':
 				Helper::print_view( "admin/partials/mail-template-settings.php" );
+				break;
+
+			case 'limit-login':
+				Helper::print_view( "admin/partials/limit-login-settings.php" );
 				break;
 
 			default:

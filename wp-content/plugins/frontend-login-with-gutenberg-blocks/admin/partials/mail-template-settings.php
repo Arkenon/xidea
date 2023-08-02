@@ -18,7 +18,6 @@ use FLWGB\I18n\I18n;
 	<?php
 
 	settings_fields( 'flwgb-mail-settings-group' );
-	do_settings_sections( 'flwgb-mail-settings-group' );
 
 	?>
 
