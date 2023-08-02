@@ -44,6 +44,8 @@ class LostPassword {
 	 */
 	public function flwgb_reset_password_request_handle_ajax_callback() {
 
+		//TODO getting an error
+
 		check_ajax_referer( 'flwgbresetrequesthandle', 'security' );
 
 		$email      = Helper::post( 'flwgb-email' );

@@ -1,6 +1,7 @@
 import './editor.scss';
 import {useBlockProps} from '@wordpress/block-editor';
-
+import {__} from '@wordpress/i18n';
+import I18n from "../../inc/I18n/I18n.json";
 
 export default function Edit(props) {
 
@@ -10,7 +11,7 @@ export default function Edit(props) {
 
 		<div {...blockProps}>
 
-			This is a placeholder for USER ACTIVATION BLOCK. To preview the result go to frontend of the page.
+			{__(I18n.user_activation_block_description.text,'flwgb')}
 
 		</div>
 

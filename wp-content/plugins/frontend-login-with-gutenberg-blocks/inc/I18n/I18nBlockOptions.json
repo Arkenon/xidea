@@ -1,0 +1,21 @@
+{
+  "label_settings_panel_title": {
+	"text": "Label Settings",
+	"context": "label_settings_panel_title"
+  },
+  "show_labels_input_text": {
+	"text": "Show labels",
+	"context": "show_labels_input_text"
+  },
+  "font_weight_and_color_input_text": {
+	"text": "Font Weight & Font Color",
+	"context": "font_weight_and_color_input_text"
+  },
+
+
+  "input_settings_panel_title": {
+	"text": "Input Settings",
+	"context": "input_settings_panel_title"
+  }
+
+}

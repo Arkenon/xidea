@@ -1,8 +1,8 @@
 import {__} from '@wordpress/i18n';
+import I18n from "../../inc/I18n/I18nBlockOptions.json";
 import {InspectorControls} from '@wordpress/block-editor';
 import {
 	ToggleControl,
-	ColorPicker,
 	SelectControl,
 	Panel,
 	RangeControl,
@@ -12,8 +12,10 @@ import {
 	__experimentalText as Text,
 	__experimentalBorderControl as BorderControl,
 } from '@wordpress/components';
+import LabelSettings from "../components/LabelSettings";
 
 //TODO translate label texts
+//TODO continue to export components => input settings
 
 const Options = ({options}) => {
 
@@ -21,47 +23,9 @@ const Options = ({options}) => {
 
 	return (
 		<InspectorControls>
-			<Panel>
-				<PanelBody
-					title={__('Label Settings', 'flwgb')}
-					initialOpen={false}
-				>
-					<PanelRow>
-						<ToggleControl
-							label={__('Show labels', 'flwgb')}
-							help={attributes.showLabels ? 'Show' : 'Hide'}
-							checked={attributes.showLabels}
-							onChange={(val) =>
-								setAttributes({showLabels: val})
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<SelectControl
-							labelPosition={'top'}
-							label={__('Font Weight & Font Color', 'flwgb')}
-							value={attributes.textFontWeight}
-							options={[
-								{label: 'Normal', value: 'normal'},
-								{label: 'Bold', value: 'bold'},
-							]}
-							onChange={(val) =>
-								setAttributes({textFontWeight: val})
-							}
-						/>
-					</PanelRow>
-					<PanelRow>
-						<ColorPicker
-							color={attributes.textColor}
-							onChange={(val) =>
-								setAttributes({textColor: val})
-							}
-							enableAlpha
-							defaultValue="#000"
-						/>
-					</PanelRow>
-				</PanelBody>
-			</Panel>
+
+			<LabelSettings options={options} />
+
 
 			<Panel>
 				<PanelBody

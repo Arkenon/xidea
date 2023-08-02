@@ -43,14 +43,14 @@ export default function Edit(props) {
 			<div {...blockProps}>
 
 				<div style={{'display': 'flex', 'justify-content': 'center', 'align-items': 'center', 'gap':'15px','margin-bottom':'30px'}}>
-					<a style={formSelectBtnStyles} onClick={() => setAttributes({selectedForm: 'requestForm'})}>Step 1</a>
-					<a style={formSelectBtnStyles} onClick={() => setAttributes({selectedForm: 'changePasswordForm'})}>Step 2</a>
+					<a style={formSelectBtnStyles} onClick={() => setAttributes({selectedForm: 'requestForm'})}>{__(I18n.register_form_step_1.text, 'flwgb')}</a>
+					<a style={formSelectBtnStyles} onClick={() => setAttributes({selectedForm: 'changePasswordForm'})}>{__(I18n.register_form_step_2.text, 'flwgb')}</a>
 				</div>
 
 				{
 					attributes.selectedForm === 'requestForm' &&
 					<div>
-						<p style={{'text-align':'center','font-weight':'bold'}}>Request Form</p>
+						<p style={{'text-align':'center','font-weight':'bold'}}>{__(I18n.register_form_step_1_title.text, 'flwgb')}</p>
 						{
 							attributes.showDescription &&
 							<div style={{'text-align': 'center'}}>
@@ -61,10 +61,10 @@ export default function Edit(props) {
 							<div className="flwgb-input-group">
 								{attributes.showLabels &&
 								<label className="flwgb-input-label" style={textStyle}
-									   htmlFor="flwgb-email">{__('Your e-mail', 'flwgb')}</label>}
+									   htmlFor="flwgb-email">{__(I18n.email_input_text.text, 'flwgb')}</label>}
 								<input className="flwgb-input-control" id="flwgb-email" type="text"
 									   style={inputStyle}
-									   placeholder={attributes.showPlaceholders && __('Enter your e-mail', 'flwgb')}/>
+									   placeholder={attributes.showPlaceholders && __(I18n.email_placeholder_text.text, 'flwgb')}/>
 							</div>
 						</div>
 
@@ -72,7 +72,7 @@ export default function Edit(props) {
 						<div className="flwgb-form-row">
 							<button style={buttonStyle} type="submit" name="wp-submit" id="wp-submit"
 									className="flwgb-reset-password-btn flwgb-btn">
-								{__('Send Request', 'flwgb')}
+								{__(I18n.send_reset_request.text, 'flwgb')}
 							</button>
 						</div>
 
@@ -82,15 +82,15 @@ export default function Edit(props) {
 				{
 					attributes.selectedForm === 'changePasswordForm' &&
 					<div>
-						<p style={{'text-align':'center','font-weight':'bold'}}>Change Password Form</p>
+						<p style={{'text-align':'center','font-weight':'bold'}}>{__(I18n.register_form_step_2_title.text, 'flwgb')}</p>
 						<div className="flwgb-form-row">
 							<div className="flwgb-input-group">
 								{attributes.showLabels &&
 								<label className="flwgb-input-label" style={textStyle}
-									   htmlFor="flwgb-password">{__('Password', 'flwgb')}</label>}
+									   htmlFor="flwgb-password">{__(I18n.password_input_text.text, 'flwgb')}</label>}
 								<input className="flwgb-input-control" id="flwgb-password" type="password"
 									   style={inputStyle}
-									   placeholder={attributes.showPlaceholders && __('Enter your password', 'flwgb')}/>
+									   placeholder={attributes.showPlaceholders && __(I18n.password_placeholder_text.text, 'flwgb')}/>
 							</div>
 						</div>
 
@@ -98,10 +98,10 @@ export default function Edit(props) {
 							<div className="flwgb-input-group">
 								{attributes.showLabels &&
 								<label className="flwgb-input-label" style={textStyle}
-									   htmlFor="flwgb-password-again">{__('Password Again', 'flwgb')}</label>}
+									   htmlFor="flwgb-password-again">{__(I18n.password_again_input_text.text, 'flwgb')}</label>}
 								<input className="flwgb-input-control" id="flwgb-password-again" type="password"
 									   style={inputStyle}
-									   placeholder={attributes.showPlaceholders && __('Enter your password again', 'flwgb')}/>
+									   placeholder={attributes.showPlaceholders && __(I18n.password_again_placeholder_text.text, 'flwgb')}/>
 							</div>
 						</div>
 
@@ -109,7 +109,7 @@ export default function Edit(props) {
 						<div className="flwgb-form-row">
 							<button style={buttonStyle} type="submit" name="wp-submit-pwd" id="wp-submit-pwd"
 									className="flwgb-reset-password-btn flwgb-btn">
-								{__('Change Password', 'flwgb')}
+								{__(I18n.submit_reset_password_button_text.text, 'flwgb')}
 							</button>
 						</div>
 
