@@ -119,7 +119,7 @@ class Register {
 
 					$message = esc_html_x( I18n::text( 'register_succession_with_activation' )->text, I18n::text( 'register_succession_with_activation' )->context, FLWGB_TEXT_DOMAIN );
 
-					$activation_link = site_url() . '/' . get_option( "flwgb_activation_page" ) . '/activation?key=' . $code . '&user=' . $newuser;
+					$activation_link = site_url() . '/' . get_option( "flwgb_activation_page" ) . '?key=' . $code . '&user=' . $newuser;
 
 					$params['activation_link'] = $activation_link;
 

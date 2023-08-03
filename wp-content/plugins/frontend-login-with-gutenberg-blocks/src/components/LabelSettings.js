@@ -21,7 +21,7 @@ const LabelSettings = ({options}) => {
 			>
 				<PanelRow>
 					<ToggleControl
-						label={__(I18n.show_labels_input_text.text, 'flwgb')}
+						label={__(I18n.show_labels_text.text, 'flwgb')}
 						help={attributes.showLabels ? 'Show' : 'Hide'}
 						checked={attributes.showLabels}
 						onChange={(val) =>
@@ -32,7 +32,7 @@ const LabelSettings = ({options}) => {
 				<PanelRow>
 					<SelectControl
 						labelPosition={'top'}
-						label={__(I18n.font_weight_and_color_input_text.text, 'flwgb')}
+						label={__(I18n.font_weight_and_color_text.text, 'flwgb')}
 						value={attributes.textFontWeight}
 						options={[
 							{label: 'Normal', value: 'normal'},
