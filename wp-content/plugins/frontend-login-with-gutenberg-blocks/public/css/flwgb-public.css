@@ -69,6 +69,11 @@
 	border: 1px solid rgba(0,0,0,.25)!important;
 }
 
+.flwgb-form-check-group{
+	display: flex!important;
+	align-items: center!important;
+}
+
 .flwgb-input-label{
 
 }

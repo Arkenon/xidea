@@ -71,7 +71,7 @@ if ( is_user_logged_in() ) {
 
 
 				$view .= '<div class="flwgb-form-row">
-						<div class="flwgb-input-group">
+						<div class="flwgb-form-check-group">
 							<input id="flwgb-rememberme" checked="checked" type="checkbox" name="flwgb-rememberme" class="flwgb-form-check-input"/>
 							<label class="flwgb-form-check-label" for="flwgb-rememberme">'.esc_html_x(I18n::text('remember_me_text')->text, I18n::text('remember_me_text')->context,FLWGB_TEXT_DOMAIN).'</label>
 						</div>
