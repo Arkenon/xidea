@@ -31,6 +31,24 @@ class Login {
 
 	}
 
+
+	/**
+	 * Welcome Card html output (for logged in users)
+	 *
+	 * @param array $block_attributes Get block attributes from block-name/edit.js
+	 *
+	 * @return string html result of welcome card
+	 * @since 1.0.0
+	 */
+	public function welcome_card( array $block_attributes ): string {
+
+		$frontend = new Frontend();
+
+		//Get html output from Frontend class
+		return $frontend->get_the_form( 'public/partials/login/welcome-card.php', $block_attributes );
+
+	}
+
 	/**
 	 * Login form html output
 	 *

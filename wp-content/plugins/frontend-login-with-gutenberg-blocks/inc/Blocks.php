@@ -50,6 +50,12 @@ class Blocks {
 				'render_callback' => [ $this, 'user_activation_render_callback' ]
 			] );
 
+		//Welcome Card Block
+		register_block_type( plugin_dir_path( dirname( __FILE__ ) ) . '/build/welcome-card',
+			[
+				'render_callback' => [ $this, 'welcome_card_render_callback' ]
+			] );
+
 	}
 
 	/**
@@ -117,6 +123,22 @@ class Blocks {
 		$lost_password = new UserActivation();
 
 		return $lost_password->user_activation_block($block_attributes);
+
+	}
+
+	/**
+	 * Callback function for welcome card block
+	 *
+	 * @return string Welcome card block template html
+	 * @since    1.0.0
+	 */
+	public function welcome_card_render_callback(array $block_attributes): string {
+
+		Helper::using('inc/Login.php');
+
+		$lost_password = new Login();
+
+		return $lost_password->welcome_card($block_attributes);
 
 	}
 
