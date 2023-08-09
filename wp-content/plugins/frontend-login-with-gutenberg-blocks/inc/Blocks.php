@@ -56,6 +56,29 @@ class Blocks {
 				'render_callback' => [ $this, 'welcome_card_render_callback' ]
 			] );
 
+		//User Settings Block
+		register_block_type( plugin_dir_path( dirname( __FILE__ ) ) . '/build/user-settings-form',
+			[
+				'render_callback' => [ $this, 'user_settings_render_callback' ]
+			] );
+
+	}
+
+	/**
+	 * Callback function for user settings form block
+	 *
+	 * @param array $block_attributes Get block attributes from block-name/edit.js
+	 * @return string User settings form html template
+	 * @since    1.0.0
+	 */
+	public function user_settings_render_callback(array $block_attributes): string {
+
+		Helper::using('inc/UserSettings.php');
+
+		$login = new UserSettings();
+
+		return $login->user_settings_form($block_attributes);
+
 	}
 
 	/**

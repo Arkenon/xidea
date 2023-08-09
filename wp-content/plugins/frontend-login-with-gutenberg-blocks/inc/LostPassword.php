@@ -44,6 +44,8 @@ class LostPassword {
 	 */
 	public function flwgb_reset_password_request_handle_ajax_callback() {
 
+		header( 'Access-Control-Allow-Origin: *' );
+
 		check_ajax_referer( 'flwgbresetrequesthandle', 'security' );
 
 		$email      = Helper::post( 'flwgb-email' );
@@ -94,10 +96,12 @@ class LostPassword {
 	 */
 	public function flwgb_reset_password_handle_ajax_callback() {
 
+		header( 'Access-Control-Allow-Origin: *' );
+
 		check_ajax_referer( 'flwgbresetpasswordhandle', 'security' );
 
-		$user_id = Helper::post( 'userid' );
-		$user    = get_user_by( 'ID', $user_id );;
+		$user_id  = Helper::post( 'userid' );
+		$user     = get_userdata( $user_id );
 		$email    = $user->user_email;
 		$username = $user->user_login;
 

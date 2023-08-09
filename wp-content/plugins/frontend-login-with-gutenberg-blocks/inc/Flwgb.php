@@ -33,7 +33,7 @@ class Flwgb extends Loader {
 	 */
 	public function __construct() {
 
-		/** Run the constructor of parent class (Loader) **/
+		//Run the constructor of parent class (Loader)
 		parent::__construct();
 
 		//Include required files (required)
@@ -60,14 +60,14 @@ class Flwgb extends Loader {
 		//Load reset password actions
 		self::set_register_form_actions();
 
+		//Load user settings actions
+		self::set_user_settings_form_actions();
+
 		//Load reset password actions
 		self::set_reset_password_form_actions();
 
-		//Load wp_mail_failed hook
-		self::set_wp_mail_error();
-
-		//Load wp_mail_content_type filter
-		self::set_wp_mail_format();
+		//Load e-mail actions
+		self::set_wp_mail_actions();
 
 	}
 
@@ -159,6 +159,27 @@ class Flwgb extends Loader {
 		$register = new Register();
 
 		self::add_action( 'plugins_loaded', $register, 'load_register_actions' );
+
+	}
+
+	/**
+	 * Get user settings form ajax actions.
+	 *
+	 * Get ajax handle action from UserSettings.php
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_user_settings_form_actions() {
+
+		/**
+		 * The class responsible for user settings operations.
+		 */
+		Helper::using( 'inc/UserSettings.php' );
+
+		$user_settings = new UserSettings();
+
+		self::add_action( 'plugins_loaded', $user_settings, 'load_user_settings_actions' );
 
 	}
 
@@ -260,34 +281,21 @@ class Flwgb extends Loader {
 
 	/**
 	 *
-	 * Load hook that prints an error message if wp_mail() failed.
+	 * Actions from Mail class.
 	 *
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function set_wp_mail_error() {
+	private function set_wp_mail_actions() {
 
 		Helper::using( 'inc/Mail.php' );
 
 		$mail = new Mail();
 
+		//Load hook that prints an error message if wp_mail() failed.
 		self::add_action( 'wp_mail_failed', $mail, 'mail_fail_error' );
 
-	}
-
-	/**
-	 *
-	 * Load hook that prints an error message if wp_mail() failed.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 */
-	private function set_wp_mail_format() {
-
-		Helper::using( 'inc/Mail.php' );
-
-		$mail = new Mail();
-
+		//Set mail content type as html
 		self::add_filter( 'wp_mail_content_type', $mail, 'mail_html_format' );
 
 	}

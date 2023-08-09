@@ -3,27 +3,35 @@
 use FLWGB\Helper;
 use FLWGB\I18n\I18n;
 
-if ( Helper::get('reset') == 'in-progress' ) {
+if ( ! is_user_logged_in() ) {
 
-	$code  = Helper::get('key');
-	$user  = Helper::get('user');
+	if ( Helper::get( 'reset' ) == 'in-progress' ) {
 
-	$code2 = get_user_meta( $user, 'flwgb_lost_password_key', true );
+		$code = Helper::get( 'key' );
+		$user = Helper::get( 'user' );
 
-	if ( $code === $code2 ) {
+		$code2 = get_user_meta( $user, 'flwgb_lost_password_key', true );
 
-		$view = Helper::return_view('public/partials/reset-password/reset-in-progress.php', $form_attributes);
+		if ( $code === $code2 ) {
+
+			$view = Helper::return_view( 'public/partials/reset-password/reset-in-progress.php', $form_attributes );
+
+		} else {
+
+			$view = '<p class="alert alert-danger">
+					<strong class="font-s-14">' . esc_html_x( I18n::text( 'wrong_reset_password_link' )->text, I18n::text( 'wrong_reset_password_link' )->context, FLWGB_TEXT_DOMAIN ) . '</strong>
+				 </p>';
+
+		}
 
 	} else {
 
-		$view = '<p class="alert alert-danger">
-					<strong class="font-s-14">'.esc_html_x(I18n::text('wrong_reset_password_link')->text, I18n::text('wrong_reset_password_link')->context,FLWGB_TEXT_DOMAIN).'</strong>
-				 </p>';
+		$view = Helper::return_view( 'public/partials/reset-password/reset-request.php', $form_attributes );
 
 	}
 
 } else {
 
-	$view = Helper::return_view('public/partials/reset-password/reset-request.php', $form_attributes);
+	$view = esc_html_x( I18n::text( 'reset_password_alert_for_non_logged_in_users' )->text, I18n::text( 'reset_password_alert_for_non_logged_in_users' )->context, FLWGB_TEXT_DOMAIN );
 
 }

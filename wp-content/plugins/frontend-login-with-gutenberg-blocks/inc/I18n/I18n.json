@@ -43,6 +43,42 @@
 	"text": "Go to user dashboard",
 	"context": "go_to_user_dashboard_text"
   },
+  "user_first_name_text": {
+	"text": "First Name (optional)",
+	"context": "user_first_name_text"
+  },
+  "user_first_name_placeholder_text": {
+	"text": "Enter your first name",
+	"context": "user_first_name_placeholder_text"
+  },
+  "user_last_name_text": {
+	"text": "Last Name (optional)",
+	"context": "user_last_name_text"
+  },
+  "user_last_name_placeholder_text": {
+	"text": "Enter your last name",
+	"context": "user_last_name_placeholder_text"
+  },
+  "user_bio_text": {
+	"text": "Bio (optional)",
+	"context": "user_bio_text"
+  },
+  "user_bio_placeholder_text": {
+	"text": "Your short biography",
+	"context": "user_bio_placeholder_text"
+  },
+  "user_website_text": {
+	"text": "Website Url (optional)",
+	"context": "user_website_text"
+  },
+  "user_website_placeholder_text": {
+	"text": "Enter your website url",
+	"context": "user_website_placeholder_text"
+  },
+  "user_update_button_text": {
+	"text": "Update User",
+	"context": "user_update_button_text"
+  },
   "email_input_text": {
 	"text": "Your e-mail",
 	"context": "email_input_text"
@@ -99,9 +135,25 @@
 	"text": "Enter your new password again",
 	"context": "password_placeholder_text"
   },
+  "current_password_input_text": {
+	"text": "Current Password",
+	"context": "current_password_input_text"
+  },
+  "current_password_placeholder_text": {
+	"text": "Enter your current_password",
+	"context": "current_password_placeholder_text"
+  },
+  "current_password_error": {
+	"text": "Your current password is wrong. Please check it again.",
+	"context": "current_password_error"
+  },
   "reset_password_button_text": {
 	"text": "Lost Password",
 	"context": "reset_password_button_text"
+  },
+  "reset_password_alert_for_non_logged_in_users": {
+	"text": "This form is only shown for users who are not logged in.",
+	"context": "reset_password_alert_for_non_logged_in_users"
   },
   "submit_reset_password_button_text": {
 	"text": "Change Password",

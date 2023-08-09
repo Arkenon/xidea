@@ -118,6 +118,36 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
+	// User Settings Form
+	$('#flwgb-user-settings-form').on('submit', function (e) {
+		e.preventDefault();
+		const form = $(this);
+		const formData = new FormData(
+			document.getElementById('flwgb-user-settings-form')
+		);
+		const submitBtn = form.find('#flwgb-user-settings-submit');
+		const formResult = $('#flwgb-user-settings-form-result');
+		const loadingBtn = $('#flwgb-user-settings-loading');
+
+		$.ajax({
+			url: flwgb_ajax_object.ajax_url,
+			type: 'POST',
+			processData: false,
+			contentType: false,
+			dataType: 'json',
+			data: formData,
+			beforeSend: function () {
+				formBeforeSend(formResult, submitBtn, loadingBtn)
+			},
+			success: function (response) {
+				formSuccess(response, formResult, submitBtn, loadingBtn)
+			},
+			error: function (xhr) {
+				formError(xhr, formResult)
+			},
+		});
+	});
+
 	function formBeforeSend(form_result, submitBtn, loadingBtn) {
 		loadingBtn.removeClass('flwgb-hide');
 		form_result.html('');

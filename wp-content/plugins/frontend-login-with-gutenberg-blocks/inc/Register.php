@@ -51,6 +51,8 @@ class Register {
 	 */
 	public function flwgb_register_handle_ajax_callback() {
 
+		header( 'Access-Control-Allow-Origin: *' );
+
 		$password       = Helper::post( 'flwgb-password-for-register' );
 		$password_again = Helper::post( 'flwgb-password-again-for-register' );
 		$username       = Helper::post( 'flwgb-username-for-register' );

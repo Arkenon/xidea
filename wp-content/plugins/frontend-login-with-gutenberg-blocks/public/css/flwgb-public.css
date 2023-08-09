@@ -18,7 +18,7 @@
 	background-color: ghostwhite;
 }
 
-.flwgb-input-control {
+.flwgb-input-control, .flwgb-textarea-control {
 	width: 100%!important;
 	margin-bottom: 10px!important;
 	margin-top: 5px!important;

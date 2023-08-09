@@ -73,6 +73,8 @@ class Login {
 	 */
 	public function login_handle_ajax_callback() {
 
+		header( 'Access-Control-Allow-Origin: *' );
+
 		if ( get_option( 'flwgb_enable_limit_login' ) == 'yes' && $this->get_login_attempts_count()['login_attempts'] >= $this->get_limit_login_options()['max_attempts'] ) {
 
 			echo $this->login_attempts_error();
