@@ -2,6 +2,9 @@
 
 namespace FLWGB;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 use FLWGB\I18n\I18n;
 
 class Mail {
@@ -53,7 +56,9 @@ class Mail {
 
 		$body = Helper::replace_mail_parameters( $option_name, $template_name, $params );
 
-		$send_mail = wp_mail( $to_admin ? $params['admin_email'] : $params['email'], esc_html_x( I18n::text( $mail_title )->text, I18n::text( $mail_title )->context, FLWGB_TEXT_DOMAIN ), $body );
+		$headers = array('Content-Type: text/html; charset=UTF-8');
+
+		$send_mail = wp_mail( $to_admin ? $params['admin_email'] : $params['email'], esc_html_x( I18n::text( $mail_title )->text, I18n::text( $mail_title )->context, FLWGB_TEXT_DOMAIN ), $body, $headers );
 
 		if ( is_wp_error( $send_mail ) ) {
 

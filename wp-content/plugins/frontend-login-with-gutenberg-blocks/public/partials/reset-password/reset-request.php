@@ -49,9 +49,9 @@ use FLWGB\I18n\I18n;
 
 						</div>';
 
-				$view .= '<input type="hidden" name="action" value="flwgbresetrequesthandle">';
+				$view .= '<input type="hidden" name="action" value="'.esc_attr('flwgbresetrequesthandle').'">';
 
-				$view .= '<input type="hidden" name="security" value="'.wp_create_nonce('flwgbresetrequesthandle').'">';
+				$view .= '<input type="hidden" name="security" value="'.esc_attr(wp_create_nonce('flwgbresetrequesthandle')).'">';
 
 				$view .= '<div class="flwgb-form-row">
 							<button style="'.$button_style.'" type="submit" id="flwgb-reset-request-submit" class="flwgb-reset-request-btn flwgb-btn">

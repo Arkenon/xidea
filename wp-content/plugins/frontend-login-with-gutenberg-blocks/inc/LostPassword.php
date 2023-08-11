@@ -2,6 +2,9 @@
 
 namespace FLWGB;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 use FLWGB\I18n\I18n;
 
 class LostPassword {
@@ -32,7 +35,7 @@ class LostPassword {
 		add_action( 'wp_ajax_nopriv_flwgbresetpasswordhandle', [ $this, 'flwgb_reset_password_handle_ajax_callback' ] );
 		add_action( 'wp_ajax_flwgbresetpasswordhandle', [ $this, 'flwgb_reset_password_handle_ajax_callback' ] );
 
-		add_action( 'wp_ajax_nopriv_flwgbresetrequesthandle', 'flwgb_reset_password_request_handle_ajax_callback' );
+		add_action( 'wp_ajax_nopriv_flwgbresetrequesthandle', [ $this, 'flwgb_reset_password_request_handle_ajax_callback' ]  );
 		add_action( 'wp_ajax_flwgbresetrequesthandle', [ $this, 'flwgb_reset_password_request_handle_ajax_callback' ] );
 
 	}

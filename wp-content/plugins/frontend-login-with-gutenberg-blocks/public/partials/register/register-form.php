@@ -108,9 +108,9 @@ $view = '<form name="flwgb-register-form" id="flwgb-register-form" method="post"
 					</div>
 				</div>';
 
-	$view .= '<input type="hidden" name="action" value="flwgbregisterhandle">';
+	$view .= '<input type="hidden" name="action" value="'.esc_attr('flwgbregisterhandle').'">';
 
-	$view .= '<input type="hidden" name="security" value="'.wp_create_nonce('flwgbregisterhandle').'">';
+	$view .= '<input type="hidden" name="security" value="'.esc_attr(wp_create_nonce('flwgbregisterhandle')).'">';
 
 	$view .= '<div class="flwgb-form-row">
 						<button style="'.$button_style.'" type="submit" id="flwgb-register-submit" class="flwgb-register-btn flwgb-btn">

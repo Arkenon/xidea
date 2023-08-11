@@ -58,7 +58,7 @@ use FLWGB\I18n\I18n;
 			</th>
 			<td>
 
-				<input type="number" name="flwgb_limit_login_max_attempts" id="flwgb_limit_login_max_attempts" value="<?php echo get_option( 'flwgb_limit_login_max_attempts' ); ?>">
+				<input type="number" name="flwgb_limit_login_max_attempts" id="flwgb_limit_login_max_attempts" value="<?php echo esc_attr(get_option( 'flwgb_limit_login_max_attempts' )); ?>">
 
 			</td>
 		</tr>
@@ -73,7 +73,7 @@ use FLWGB\I18n\I18n;
 			</th>
 			<td>
 
-				<input type="number" name="flwgb_limit_login_lockout_duration" id="flwgb_limit_login_lockout_duration" value="<?php echo get_option( 'flwgb_limit_login_lockout_duration' ); ?>">
+				<input type="number" name="flwgb_limit_login_lockout_duration" id="flwgb_limit_login_lockout_duration" value="<?php echo esc_attr(get_option( 'flwgb_limit_login_lockout_duration' )); ?>">
 
 			</td>
 		</tr>

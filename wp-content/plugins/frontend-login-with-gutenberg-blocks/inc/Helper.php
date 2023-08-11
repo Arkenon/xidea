@@ -12,6 +12,9 @@
 
 namespace FLWGB;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 use FLWGB\I18n\I18n;
 
 class Helper {

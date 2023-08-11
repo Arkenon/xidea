@@ -12,6 +12,9 @@
 
 namespace FLWGB;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 class Backend {
 	/**
 	 * Register the stylesheets for the admin area.

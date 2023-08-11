@@ -19,140 +19,78 @@ use FLWGB\I18n\I18n;
 
 	settings_fields( 'flwgb-mail-settings-group' );
 
+	$data = [
+			[
+					"id"       => "flwgb_register_mail_to_user",
+					"title"    => "register_mail_to_user",
+					"tags"     => "{{username}}",
+					"template" => "register_mail_to_user_template",
+					"content"  => "flwgb_register_mail_to_user"
+			],
+			[
+					"id"       => "flwgb_register_mail_to_user_with_activation",
+					"title"    => "register_mail_to_user_with_activation",
+					"tags"     => "{{username}}, {{activation_link}}",
+					"template" => "register_mail_to_user_template_with_activation",
+					"content"  => "flwgb_register_mail_to_user_with_activation"
+			],
+			[
+					"id"       => "flwgb_register_mail_to_admin",
+					"title"    => "register_mail_to_admin",
+					"tags"     => "{{username}}, {{email}}",
+					"template" => "register_mail_to_admin_template",
+					"content"  => "flwgb_register_mail_to_admin"
+			],
+			[
+					"id"       => "flwgb_reset_request_mail_to_user",
+					"title"    => "reset_password_request_mail_to_user",
+					"tags"     => "{{username}}, {{reset_link}}",
+					"template" => "reset_password_request_mail_to_user_template",
+					"content"  => "flwgb_reset_request_mail_to_user"
+			],
+			[
+					"id"       => "flwgb_reset_password_mail_to_user",
+					"title"    => "reset_password_mail_to_user",
+					"tags"     => "{{username}}",
+					"template" => "reset_password_mail_to_user_template",
+					"content"  => "flwgb_reset_password_mail_to_user"
+			]
+	]
+
 	?>
 
 	<table class="form-table">
 
-		<tr>
-			<th scope="row">
+		<?php foreach ( $data as $item ): ?>
 
-				<label for="flwgb_register_mail_to_user">
-					<?php echo esc_html_x( I18n::text('register_mail_to_user')->text, I18n::text('register_mail_to_user')->context, FLWGB_TEXT_DOMAIN ); ?>
-				</label>
+			<tr>
+				<th scope="row">
 
-			</th>
-			<td>
+					<label for="<?php echo $item['id'] ?>">
+						<?php echo esc_html_x( I18n::text( $item['title'] )->text, I18n::text( $item['title'] )->context, FLWGB_TEXT_DOMAIN ); ?>
+					</label>
 
-				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}} </p>
+				</th>
+				<td>
 
-				<?php
+					<p><?php echo esc_html_x( I18n::text( 'you_can_use_this_tags_text' )->text, I18n::text( 'you_can_use_this_tags_text' )->context, FLWGB_TEXT_DOMAIN ); ?>
+						<?php echo $item['tags'] ?> </p>
 
-				$template  = I18n::text('register_mail_to_user_template')->text;
-				$content   = get_option( 'flwgb_register_mail_to_user' ) ?: $template;
-				$editor_id = 'flwgb_register_mail_to_user';
-				$settings  = array( 'media_buttons' => false );
+					<?php
 
-				wp_editor( $content, $editor_id, $settings );
+					$template  = esc_html_x( I18n::text( $item['template'] )->text, I18n::text( $item['template'] )->context, FLWGB_TEXT_DOMAIN );
+					$content   = get_option( $item['content'] ) ?: $template;
+					$editor_id = $item['id'];
+					$settings  = array( 'media_buttons' => false, 'wpautop' => false );
 
-				?>
+					wp_editor( $content, $editor_id, $settings );
 
-			</td>
-		</tr>
+					?>
 
-		<tr>
-			<th scope="row">
+				</td>
+			</tr>
 
-				<label for="flwgb_register_mail_to_user">
-					<?php echo esc_html_x( I18n::text('register_mail_to_user_with_activation')->text, I18n::text('register_mail_to_user_with_activation')->context, FLWGB_TEXT_DOMAIN ); ?>
-				</label>
-
-			</th>
-			<td>
-
-				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}}, {{activation_link}} </p>
-
-				<?php
-
-				$template  = I18n::text('register_mail_to_user_template_with_activation')->text;
-				$content   = get_option( 'flwgb_register_mail_to_user_with_activation' ) ?: $template;
-				$editor_id = 'flwgb_register_mail_to_user_with_activation';
-				$settings  = array( 'media_buttons' => false );
-
-				wp_editor( $content, $editor_id, $settings );
-
-				?>
-
-			</td>
-		</tr>
-
-		<tr>
-			<th scope="row">
-
-				<label for="flwgb_register_mail_to_admin">
-					<?php echo esc_html_x( I18n::text('register_mail_to_admin')->text, I18n::text('register_mail_to_admin')->context, FLWGB_TEXT_DOMAIN ); ?>
-				</label>
-
-			</th>
-			<td>
-
-				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}}, {{email}} </p>
-
-				<?php
-
-				$template  = I18n::text('register_mail_to_admin_template')->text;
-				$content   = stripslashes( get_option( 'flwgb_register_mail_to_admin' ) ) ?: $template;
-				$editor_id = 'flwgb_register_mail_to_admin';
-				$settings  = array( 'media_buttons' => false );
-
-				wp_editor( $content, $editor_id, $settings );
-
-				?>
-
-			</td>
-		</tr>
-
-		<tr>
-			<th scope="row">
-
-				<label for="flwgb_reset_request_mail_to_user">
-					<?php echo esc_html_x( I18n::text('reset_password_request_mail_to_user')->text, I18n::text('reset_password_request_mail_to_user')->context, FLWGB_TEXT_DOMAIN ); ?>
-				</label>
-
-			</th>
-			<td>
-
-				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}}, {{reset_link}} </p>
-
-				<?php
-
-				$template  = I18n::text('reset_password_request_mail_to_user_template')->text;
-				$content   = stripslashes( get_option( 'flwgb_reset_request_mail_to_user' ) ) ?: $template;
-				$editor_id = 'flwgb_reset_request_mail_to_user';
-				$settings  = array( 'media_buttons' => false );
-
-				wp_editor( $content, $editor_id, $settings );
-
-				?>
-
-			</td>
-		</tr>
-
-		<tr>
-			<th scope="row">
-
-				<label for="flwgb_reset_password_mail_to_user">
-					<?php echo esc_html_x( I18n::text('reset_password_mail_to_user')->text, I18n::text('reset_password_mail_to_user')->context, FLWGB_TEXT_DOMAIN ); ?>
-				</label>
-
-			</th>
-			<td>
-
-				<p><?php echo I18n::text('you_can_use_this_tags_text')->text; ?> {{username}} </p>
-
-				<?php
-
-				$template  = I18n::text('reset_password_mail_to_user_template')->text;
-				$content   = stripslashes( get_option( 'flwgb_reset_password_mail_to_user' ) ) ?: $template;
-				$editor_id = 'flwgb_reset_password_mail_to_user';
-				$settings  = array( 'media_buttons' => false );
-
-				wp_editor( $content, $editor_id, $settings );
-
-				?>
-
-			</td>
-		</tr>
-
+		<?php endforeach; ?>
 
 
 	</table>

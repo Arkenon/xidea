@@ -1,6 +1,10 @@
 <?php
 
 namespace FLWGB\I18n;
+
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 use FLWGB\Helper;
 
 /**

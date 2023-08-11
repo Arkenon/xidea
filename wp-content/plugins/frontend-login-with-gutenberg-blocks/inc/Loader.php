@@ -2,6 +2,9 @@
 
 namespace FLWGB;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 /**
  * Register all actions and filters for the plugin.
  *

@@ -65,9 +65,9 @@ $view = '<div>
 
 					</div>';
 
-			$view .= '<input type="hidden" name="action" value="flwgbresetpasswordhandle">';
-			$view .= '<input type="hidden" name="security" value="'.wp_create_nonce('flwgbresetpasswordhandle').'">';
-			$view .= '<input type="hidden" name="userid" value="' . Helper::get( 'user' ) . '">';
+			$view .= '<input type="hidden" name="action" value="'.esc_attr('flwgbresetpasswordhandle').'">';
+			$view .= '<input type="hidden" name="security" value="'.esc_attr(wp_create_nonce('flwgbresetpasswordhandle')).'">';
+			$view .= '<input type="hidden" name="userid" value="' . esc_attr(Helper::get( 'user' )) . '">';
 
 			$view .= '<div class="flwgb-form-row">
 							<button style="'.$button_style.'" type="submit" id="flwgb-reset-password-submit" class="flwgb-reset-password-btn flwgb-btn">

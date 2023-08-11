@@ -13,6 +13,9 @@
 
 namespace FLWGB;
 
+// Exit if accessed directly.
+defined( 'ABSPATH' ) or die;
+
 class Blocks {
 
 	public function load_flwgb_blocks() {
