@@ -132,13 +132,14 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
+								//TODO returns false
 								if($bio){
 
 									$view .= esc_textarea( $bio );
 
 								} else {
 
-									$view .= esc_html_x( I18n::text('user_bio_placeholder_text')->text, I18n::text('user_bio_placeholder_text')->context, FLWGB_TEXT_DOMAIN );
+									$view .= esc_textarea( I18n::text('user_bio_placeholder_text')->text, I18n::text('user_bio_placeholder_text')->context, FLWGB_TEXT_DOMAIN );
 
 								}
 

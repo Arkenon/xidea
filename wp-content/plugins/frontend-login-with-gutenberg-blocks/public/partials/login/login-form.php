@@ -91,11 +91,11 @@ if ( is_user_logged_in() ) {
 	$view .= '</form>';
 	$view .='<div id="flwgb-login-form-result"></div>';
 	$view .='<div style="text-align:center;">
-				<a style="text-decoration:none;" href="' .esc_url(get_option( 'flwgb_lost_password_page' )) . '">
+				<a style="text-decoration:none;" href="' .esc_url(site_url(get_option( 'flwgb_lost_password_page' ))) . '">
 						'. esc_html_x( I18n::text('reset_password_button_text')->text, I18n::text('reset_password_button_text')->context, FLWGB_TEXT_DOMAIN ) . '
 				</a> | ';
 
-		$view .='<a style="text-decoration:none;" href="' .esc_url_raw(get_option( 'flwgb_register_page' )) . '">
+		$view .='<a style="text-decoration:none;" href="' .esc_url(site_url(get_option( 'flwgb_register_page' ))) . '">
 						'. esc_html_x( I18n::text('register_button_text')->text, I18n::text('register_button_text')->context, FLWGB_TEXT_DOMAIN ) . '
 				</a>
 			</div>
