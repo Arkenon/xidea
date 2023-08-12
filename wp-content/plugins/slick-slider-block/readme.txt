@@ -1,10 +1,10 @@
 === Gutenberg Block for Slick Slider  ===
 Contributors:      xideathemes
 Tags:              block, slider, slider block, slick slider, carousel, carousel block, gutenberg, full site editing
-Requires at least: 5.9
-Tested up to:      6.2
+Requires at least: 6.1
+Tested up to:      6.3
 Requires PHP:      7.0
-Stable tag:        1.0.4
+Stable tag:        1.0.5
 Donate link: https://xideathemes.com
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,6 +27,9 @@ This is a very simple and useful slider block.
 3. Search for the block within the Block Editor (Gutenberg) and begin using.
 
 == Changelog ==
+
+= 1.0.5 =
+* Successfully tested with WordPress version 6.3
 
 = 1.0.4 =
 * Removed padding of slider container.
