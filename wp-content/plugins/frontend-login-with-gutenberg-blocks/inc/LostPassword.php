@@ -5,8 +5,6 @@ namespace FLWGB;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
-use FLWGB\I18n\I18n;
-
 class LostPassword {
 
 	/**
@@ -67,6 +65,8 @@ class LostPassword {
 		Helper::using( 'inc/Mail.php' );
 		$mail = new Mail();
 
+		$template = "Hello {{username}}, <br> You can change your password from the link below <br> {{reset_link}} <br> Thanks for your attention.";
+
 		$send_reset_password_email = $mail->send_mail( 'flwgb_reset_request_mail_to_user', 'reset_password_request_mail_to_user_template', $params, 'reset_request_mail_title' );
 
 		if ( $send_reset_password_email ) {
@@ -75,14 +75,14 @@ class LostPassword {
 
 			echo json_encode( array(
 				'status'  => true,
-				'message' => esc_html_x( I18n::text( 'reset_password_request_confirmation' )->text, I18n::text( 'reset_password_request_confirmation' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "We have successfully get your request. We have sent you an e-mail. Please check your inbox...", "reset_password_request_confirmation", "flwgb" )
 			) );
 
 		} else {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'general_error_message' )->text, I18n::text( 'general_error_message' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "Something went wrong. Please try again later.", "general_error_message", "flwgb" )
 			) );
 
 		}
@@ -116,7 +116,7 @@ class LostPassword {
 			'email'    => $email,
 		];
 
-		if ( $new_password == $new_password_again ) {
+		if ( $new_password === $new_password_again ) {
 
 			$reset_pass = wp_update_user( array(
 				'ID'        => Helper::post( 'userid' ),
@@ -134,7 +134,7 @@ class LostPassword {
 
 				echo json_encode( array(
 					'status'  => true,
-					'message' => esc_html_x( I18n::text( 'password_changed_confirmation' )->text, I18n::text( 'password_changed_confirmation' )->context, FLWGB_TEXT_DOMAIN )
+					'message' => esc_html_x( "Your password has been changed. Please sign in...", "password_changed_confirmation", "flwgb" )
 				) );
 
 			} else {
@@ -150,7 +150,7 @@ class LostPassword {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'password_match_error' )->text, I18n::text( 'password_match_error' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "Your passwords do not match","password_match_error", "flwgb" )
 			) );
 
 		}

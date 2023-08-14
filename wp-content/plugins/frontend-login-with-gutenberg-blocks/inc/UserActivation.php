@@ -14,8 +14,6 @@ namespace FLWGB;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
-use FLWGB\I18n\I18n;
-
 class UserActivation {
 
 	/**
@@ -81,7 +79,7 @@ class UserActivation {
 
 				return array(
 					'status'  => true,
-					'message' => esc_html_x( I18n::text( 'user_already_activated' )->text, I18n::text( 'user_already_activated' )->context, FLWGB_TEXT_DOMAIN )
+					'message' => esc_html_x( "This account has already activated.", "user_already_activated", "flwgb" )
 				);
 
 			}
@@ -92,21 +90,21 @@ class UserActivation {
 
 				return array(
 					'status'  => false,
-					'message' => esc_html_x( I18n::text( 'general_error_message' )->text, I18n::text( 'general_error_message' )->context, FLWGB_TEXT_DOMAIN )
+					'message' => esc_html_x("Something went wrong. Please try again later.", "general_error_message", "flwgb" )
 				);
 
 			}
 
 			return array(
 				'status'  => true,
-				'message' => esc_html_x( I18n::text( 'your_account_has_activated' )->text, I18n::text( 'your_account_has_activated' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "Your account has activated successfully. You can sign in.", "your_account_has_activated", "flwgb" )
 			);
 
 		} else {
 
 			return array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'wrong_activation_code' )->text, I18n::text( 'wrong_activation_code' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "Wrong activation code. Please contact with your site administrator.", "wrong_activation_code", "flwgb" )
 			);
 
 		}

@@ -18,8 +18,6 @@ namespace FLWGB;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
-use FLWGB\I18n\I18n;
-
 Helper::using( 'inc/Loader.php' );
 
 
@@ -91,14 +89,13 @@ class Flwgb extends Loader {
 
 		/**
 		 * The class responsible for registering block types
-		 * side of the site.
 		 */
 		Helper::using( 'inc/Blocks.php' );
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 */
-		Helper::using( 'inc/I18n/I18n.php' );
+		Helper::using( 'inc/I18n.php' );
 
 	}
 
@@ -294,9 +291,6 @@ class Flwgb extends Loader {
 		Helper::using( 'inc/Mail.php' );
 
 		$mail = new Mail();
-
-		//Load hook that prints an error message if wp_mail() failed.
-		self::add_action( 'wp_mail_failed', $mail, 'mail_fail_error' );
 
 		//Set mail content type as html
 		self::add_filter( 'wp_mail_content_type', $mail, 'mail_html_format' );

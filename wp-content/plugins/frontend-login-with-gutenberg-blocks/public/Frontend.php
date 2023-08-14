@@ -36,7 +36,7 @@ class Frontend {
 		 * class.
 		 */
 
-		wp_enqueue_style( FLWGB_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'css/flwgb-public.css', array(), FLWGB_VERSION, 'all' );
+		wp_enqueue_style( "flwgb-public-css", plugin_dir_url( __FILE__ ) . 'css/flwgb-public.css', array(), FLWGB_VERSION, 'all' );
 
 	}
 
@@ -59,7 +59,7 @@ class Frontend {
 		 * class.
 		 */
 
-		wp_enqueue_script( FLWGB_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'js/flwgb-public.js', array( 'jquery' ), FLWGB_VERSION, false );
+		wp_enqueue_script( "flwgb-public-js", plugin_dir_url( __FILE__ ) . 'js/flwgb-public.js', array( 'jquery' ), FLWGB_VERSION, false );
 		wp_localize_script( 'jquery', 'flwgb_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 	}
 

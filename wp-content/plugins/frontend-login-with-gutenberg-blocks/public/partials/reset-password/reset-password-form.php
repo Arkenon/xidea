@@ -1,11 +1,10 @@
 <?php
 
 use FLWGB\Helper;
-use FLWGB\I18n\I18n;
 
 if ( ! is_user_logged_in() ) {
 
-	if ( Helper::get( 'reset' ) == 'in-progress' ) {
+	if ( Helper::get( 'reset' ) === 'in-progress' ) {
 
 		$code = Helper::get( 'key' );
 		$user = Helper::get( 'user' );
@@ -19,7 +18,7 @@ if ( ! is_user_logged_in() ) {
 		} else {
 
 			$view = '<p class="alert alert-danger">
-					<strong class="font-s-14">' . esc_html_x( I18n::text( 'wrong_reset_password_link' )->text, I18n::text( 'wrong_reset_password_link' )->context, FLWGB_TEXT_DOMAIN ) . '</strong>
+					<strong class="font-s-14">' . esc_html_x( "Wrong reset password link. Please check your reset link sent to your e-mail address or send a new request.", "wrong_reset_password_link", "flwgb" ) . '</strong>
 				 </p>';
 
 		}
@@ -32,6 +31,6 @@ if ( ! is_user_logged_in() ) {
 
 } else {
 
-	$view = esc_html_x( I18n::text( 'reset_password_alert_for_non_logged_in_users' )->text, I18n::text( 'reset_password_alert_for_non_logged_in_users' )->context, FLWGB_TEXT_DOMAIN );
+	$view = esc_html_x( "This form is only shown for users who are not logged in.", "reset_password_alert_for_non_logged_in_users", "flwgb" );
 
 }

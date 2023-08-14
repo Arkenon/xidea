@@ -30,13 +30,12 @@ require plugin_dir_path( __FILE__ ) . 'inc/Helper.php';
  *
  * @since    1.0.0
  */
-function flwgb_get_plugin_data() : array {
+function flwgb_get_plugin_data(): array {
 
 	return get_file_data(
 		__FILE__,
 		array(
-			'version'     => 'Version',
-			'text_domain' => 'Text Domain'
+			'version' => 'Version'
 		)
 	);
 
@@ -48,7 +47,6 @@ function flwgb_get_plugin_data() : array {
  * @since    1.0.0
  */
 define( 'FLWGB_VERSION', flwgb_get_plugin_data()['version'] );
-define( 'FLWGB_TEXT_DOMAIN', flwgb_get_plugin_data()['text_domain'] );
 
 
 /**

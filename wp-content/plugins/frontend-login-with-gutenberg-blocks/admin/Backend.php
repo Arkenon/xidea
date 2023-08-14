@@ -23,7 +23,7 @@ class Backend {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( FLWGB_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'css/flwgb-admin.css', array(), FLWGB_VERSION, 'all' );
+		wp_enqueue_style( "flwgb-admin-css", plugin_dir_url( __FILE__ ) . 'css/flwgb-admin.css', array(), FLWGB_VERSION, 'all' );
 
 	}
 
@@ -45,9 +45,7 @@ class Backend {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( FLWGB_TEXT_DOMAIN, plugin_dir_url( __FILE__ ) . 'js/flwgb-admin.js', array( 'jquery' ), FLWGB_VERSION, false );
-
-		wp_localize_script( 'flwgb-plugin-data', 'FLWGB', flwgb_get_plugin_data() );
+		wp_enqueue_script( "flwgb-admin-js", plugin_dir_url( __FILE__ ) . 'js/flwgb-admin.js', array( 'jquery' ), FLWGB_VERSION, false );
 
 	}
 

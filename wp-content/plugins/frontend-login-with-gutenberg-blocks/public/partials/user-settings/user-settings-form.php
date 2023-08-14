@@ -1,7 +1,5 @@
 <?php
 
-use FLWGB\I18n\I18n;
-
 $current_user             = wp_get_current_user();
 $ID                       = $current_user->ID;
 $user_email               = $current_user->user_email;
@@ -32,7 +30,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 					if ( $form_attributes['showLabels'] ) {
 
 						$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-user-first-name">
-									' . esc_html_x( I18n::text('user_first_name_text')->text, I18n::text('user_first_name_text')->context, FLWGB_TEXT_DOMAIN ) . '
+									' . esc_html_x( "First Name (optional)", "user_first_name_text", "flwgb" ) . '
 								  </label>';
 
 					}
@@ -41,7 +39,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 					if ( $form_attributes['showPlaceholders'] ) {
 
-						$view .= esc_attr_x( I18n::text('user_first_name_placeholder_text')->text, I18n::text('user_first_name_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+						$view .= esc_attr_x( "Enter your first name", "user_first_name_placeholder_text", "flwgb" ) ;
 
 					}
 
@@ -55,7 +53,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 							if ( $form_attributes['showLabels'] ) {
 
 								$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-user-last-name">
-												' . esc_html_x( I18n::text('user_last_name_text')->text, I18n::text('user_last_name_text')->context, FLWGB_TEXT_DOMAIN ) . '
+												' . esc_html_x( "Last Name (optional)", "user_last_name_text", "flwgb" ) . '
 										</label>';
 
 							}
@@ -64,7 +62,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::text('user_last_name_placeholder_text')->text, I18n::text('user_last_name_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+								$view .= esc_attr_x("Enter your last name", "user_last_name_placeholder_text", "flwgb" ) ;
 
 							}
 
@@ -78,7 +76,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 					if ( $form_attributes['showLabels'] ) {
 
 						$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-email-update">
-									' . esc_html_x( I18n::text('email_input_text')->text, I18n::text('email_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+									' . esc_html_x( "Your e-mail", "email_input_text", "flwgb" ) . '
 								 </label>';
 					}
 
@@ -86,7 +84,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 					if ( $form_attributes['showPlaceholders'] ) {
 
-						$view .= esc_attr_x( I18n::text('email_placeholder_text')->text, I18n::text('email_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+						$view .= esc_attr_x( "Enter your e-mail", "email_placeholder_text", "flwgb" ) ;
 
 					}
 
@@ -100,7 +98,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 						if ( $form_attributes['showLabels'] ) {
 
 							$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-user-website">
-										' . esc_html_x( I18n::text('user_website_text')->text, I18n::text('user_website_text')->context, FLWGB_TEXT_DOMAIN ) . '
+										' . esc_html_x( "Website Url (optional)", "user_website_text", "flwgb" ) . '
 									 </label>';
 
 						}
@@ -109,7 +107,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 						if ( $form_attributes['showPlaceholders'] ) {
 
-							$view .= esc_attr_x( I18n::text('user_website_placeholder_text')->text, I18n::text('user_website_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+							$view .= esc_attr_x( "Enter your website url", "user_website_placeholder_text", "flwgb" ) ;
 
 						}
 
@@ -123,7 +121,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 							if ( $form_attributes['showLabels'] ) {
 
 								$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-user-bio">
-											' . esc_html_x( I18n::text('user_bio_text')->text, I18n::text('user_bio_text')->context, FLWGB_TEXT_DOMAIN ) . '
+											' . esc_html_x( "Bio (optional)", "user_bio_text", "flwgb" ) . '
 										 </label>';
 
 							}
@@ -132,14 +130,13 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								//TODO returns false
 								if($bio){
 
 									$view .= esc_textarea( $bio );
 
 								} else {
 
-									$view .= esc_textarea( I18n::text('user_bio_placeholder_text')->text, I18n::text('user_bio_placeholder_text')->context, FLWGB_TEXT_DOMAIN );
+									$view .= esc_textarea( _x("Your short biography", "user_bio_placeholder_text", "flwgb") );
 
 								}
 
@@ -155,7 +152,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 							if ( $form_attributes['showLabels'] ) {
 
 								$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-current-password">
-											' . esc_html_x( I18n::text('current_password_input_text')->text, I18n::text('current_password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+											' . esc_html_x( "Current Password", "current_password_input_text", "flwgb" ) . '
 										  </label>';
 							}
 
@@ -163,7 +160,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::text('current_password_placeholder_text')->text, I18n::text('current_password_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+								$view .= esc_attr_x( "Enter your current_password", "current_password_placeholder_text", "flwgb" ) ;
 
 							}
 
@@ -177,7 +174,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 							if ( $form_attributes['showLabels'] ) {
 
 								$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-password-update">
-											' . esc_html_x( I18n::text('new_password_input_text')->text, I18n::text('new_password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+											' . esc_html_x( "New Password","new_password_input_text", "flwgb" ) . '
 										 </label>';
 							}
 
@@ -185,7 +182,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::text('new_password_placeholder_text')->text, I18n::text('new_password_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+								$view .= esc_attr_x( "Enter your new password", "new_password_placeholder_text", "flwgb" ) ;
 
 							}
 
@@ -199,7 +196,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 							if ( $form_attributes['showLabels'] ) {
 
 								$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-password-again-update">
-											' . esc_html_x( I18n::text('new_password_again_input_text')->text, I18n::text('new_password_again_input_text')->context, FLWGB_TEXT_DOMAIN ) . '
+											' . esc_html_x( "New Password Again", "new_password_again_input_text", "flwgb" ) . '
 										  </label>';
 							}
 
@@ -207,7 +204,7 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::text('new_password_again_placeholder_text')->text, I18n::text('new_password_again_placeholder_text')->context, FLWGB_TEXT_DOMAIN ) ;
+								$view .= esc_attr_x( "Enter your new password again", "new_password_again_placeholder_text", "flwgb" ) ;
 
 							}
 
@@ -224,10 +221,10 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 
 			$view .= '<div class="flwgb-form-row">
 							<button style="'.$button_style.'" type="submit" id="flwgb-user-settings-submit" class="flwgb-update-user-btn flwgb-btn">
-								'.esc_html_x(I18n::text('user_update_button_text')->text, I18n::text('user_update_button_text')->context,FLWGB_TEXT_DOMAIN).'
+								'.esc_html_x("Update User","update_user_button_text","flwgb").'
 							</button>
 						</div>
-						<div id="flwgb-user-settings-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::text('loading_text')->text, I18n::text('loading_text')->context, FLWGB_TEXT_DOMAIN ) . '</div>';
+						<div id="flwgb-user-settings-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( "Loading...", "loading_text", "flwgb" ) . '</div>';
 		$view .= '</form>
 	<div id="flwgb-user-settings-form-result"></div>
 </div>';

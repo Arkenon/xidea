@@ -23,8 +23,12 @@ class Options {
 	 */
 	public function load_flwgb_options() {
 
-		// Register the options menu page
-		add_action( 'admin_menu', [ $this, 'flwgb_options_page' ] );
+		if ( current_user_can( "administrator" ) ) {
+
+			// Register the options menu page
+			add_action( 'admin_menu', [ $this, 'flwgb_options_page' ] );
+
+		}
 
 		// Register the options with their default values
 		add_action( 'admin_init', [ $this, 'flwgb_register_settings' ] );
@@ -56,16 +60,16 @@ class Options {
 	public function flwgb_register_settings() {
 
 		// General settings
-		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_login', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_login_page', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_lost_password_page', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_register_page', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_activation_page', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_user_settings_page', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_terms_and_conditions_page', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_privacy_policy_page', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_has_activation', 'sanitize_text_field' );
-		register_setting( 'flwgb-general-settings-group', 'flwgb_has_user_dashboard', 'sanitize_text_field' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_login' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_login_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_lost_password_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_register_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_activation_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_user_settings_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_terms_and_conditions_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_privacy_policy_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_has_activation' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_has_user_dashboard' );
 
 		// E-Mail settings
 		register_setting( 'flwgb-mail-settings-group', 'flwgb_register_mail_to_user' );

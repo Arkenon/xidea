@@ -12,8 +12,6 @@ namespace FLWGB;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
-use FLWGB\I18n\I18n;
-
 class Login {
 
 	private $max_attempts = 5; //times
@@ -26,7 +24,7 @@ class Login {
 		add_action( 'wp_ajax_flwgbloginhandle', [ $this, 'login_handle_ajax_callback' ] );
 
 		//Limit login
-		if ( get_option( 'flwgb_enable_limit_login' ) == 'yes' ) {
+		if ( get_option( 'flwgb_enable_limit_login' ) === 'yes' ) {
 
 			add_action( 'wp_login_failed', [ $this, 'limit_login_attempts' ] );
 
@@ -78,7 +76,7 @@ class Login {
 
 		header( 'Access-Control-Allow-Origin: *' );
 
-		if ( get_option( 'flwgb_enable_limit_login' ) == 'yes' && $this->get_login_attempts_count()['login_attempts'] >= $this->get_limit_login_options()['max_attempts'] ) {
+		if ( get_option( 'flwgb_enable_limit_login' ) === 'yes' && $this->get_login_attempts_count()['login_attempts'] >= $this->get_limit_login_options()['max_attempts'] ) {
 
 			echo $this->login_attempts_error();
 
@@ -91,7 +89,7 @@ class Login {
 		$credentials                  = array();
 		$credentials['user_login']    = Helper::post( 'flwgb-username-or-email' ) ?? '';
 		$credentials['user_password'] = Helper::post( 'flwgb-password' ) ?? '';
-		$credentials['remember']      = Helper::post( 'flwgb-rememberme' ) == 'on' ? true : false;
+		$credentials['remember']      = Helper::post( 'flwgb-rememberme' ) === 'on' ? true : false;
 
 		$user = wp_signon( $credentials, false );
 
@@ -114,7 +112,7 @@ class Login {
 
 					echo json_encode( array(
 						'status'  => false,
-						'message' => esc_html_x( I18n::text( 'user_not_activated' )->text, I18n::text( 'user_not_activated' )->context, FLWGB_TEXT_DOMAIN )
+						'message' => esc_html_x( "Please activate your account. We sent you an email. Click the activation link in the email.", "user_not_activated", "flwgb" )
 					) );
 
 					wp_logout();
@@ -144,7 +142,7 @@ class Login {
 		return json_encode( array(
 			'status'     => true,
 			'return_url' => site_url( get_option( 'flwgb_redirect_after_login' ) ),
-			'message'    => esc_html_x( I18n::text( 'login_successful' )->text, I18n::text( 'login_successful' )->context, FLWGB_TEXT_DOMAIN )
+			'message'    => esc_html_x( "You have successfully logged in...", "login_successful", "flwgb" )
 		) );
 
 	}
@@ -159,7 +157,7 @@ class Login {
 
 		return json_encode( array(
 			'status'  => false,
-			'message' => esc_html_x( I18n::text( 'invalid_username_or_pass' )->text, I18n::text( 'invalid_username_or_pass' )->context, FLWGB_TEXT_DOMAIN )
+			'message' => esc_html_x( "Invalid username or password.", "invalid_username_or_pass", "flwgb" )
 		) );
 
 	}
@@ -225,8 +223,6 @@ class Login {
 	 */
 	private function login_attempts_error(): string {
 
-		//TODO does sprintf return translatable text?
-
 		$limit_login_options = $this->get_limit_login_options();
 
 		if ( $limit_login_options['lockout_duration'] >= 60 ) {
@@ -243,7 +239,8 @@ class Login {
 
 		return json_encode( array(
 			'status'  => false,
-			'message' => sprintf( __( I18n::text( 'login_attempts_error' )->text, FLWGB_TEXT_DOMAIN ), $duration_limit, $duration_type )
+			// translators: %1$s duration limit %2$s duration type (second or minute)
+			'message' => sprintf( __( 'You have made too many unsuccessful login attempts. Please wait %1$s %2$s', 'flwgb' ), $duration_limit, $duration_type )
 		) );
 
 	}

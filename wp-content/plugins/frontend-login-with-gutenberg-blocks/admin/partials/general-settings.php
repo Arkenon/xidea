@@ -10,7 +10,6 @@
  */
 
 use FLWGB\Helper;
-use FLWGB\I18n\I18n;
 
 $pages = get_pages();
 
@@ -30,11 +29,11 @@ $pages = get_pages();
 			<th scope="row">
 
 				<label for="flwgb_has_activation">
-					<?php echo esc_html_x( I18n::text( 'has_activation' )->text, I18n::text( 'has_activation' )->context, FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( "Enable user activation", "has_activation", "flwgb" ); ?>
 				</label>
 
 				<p class="flwgb-admin-settings-description">
-					<?php echo esc_html_x( I18n::text( 'has_activation_description' )->text, I18n::text( 'has_activation_description' )->context, FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( "If you want to send an activation code to your users, select 'Yes'.", "has_activation_description", "flwgb" ); ?>
 				</p>
 
 			</th>
@@ -42,9 +41,9 @@ $pages = get_pages();
 
 				<select name="flwgb_has_activation" id="flwgb_has_activation">
 
-					<option value=""><?php echo esc_html_x( I18n::text( 'select_text' )->text, I18n::text( 'select_text' )->context, FLWGB_TEXT_DOMAIN ) ?></option>
-					<option value="yes" <?php echo get_option( 'flwgb_has_activation' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'yes_text' )->text, I18n::text( 'yes_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
-					<option value="no" <?php echo get_option( 'flwgb_has_activation' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'no_text' )->text, I18n::text( 'no_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value=""><?php echo esc_html_x( "Please select...", "select_text", "flwgb" ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_has_activation' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( "Yes", "yes_text", "flwgb" ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_has_activation' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( "No", "no_text", "flwgb" ); ?></option>
 
 				</select>
 
@@ -55,11 +54,11 @@ $pages = get_pages();
 			<th scope="row">
 
 				<label for="flwgb_has_user_dashboard">
-					<?php echo esc_html_x( I18n::text( 'has_user_settings' )->text, I18n::text( 'has_user_settings' )->context, FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( "Enable user settings", "has_user_settings", "flwgb" ); ?>
 				</label>
 
 				<p class="flwgb-admin-settings-description">
-					<?php echo esc_html_x( I18n::text( 'has_user_settings_description' )->text, I18n::text( 'has_user_settings_description' )->context, FLWGB_TEXT_DOMAIN ); ?>
+					<?php echo esc_html_x( "If you want to show a user settings page, select Yes. (Don't forget to select a User Settings page below)", "has_user_settings_description", "flwgb" ); ?>
 				</p>
 
 			</th>
@@ -67,9 +66,9 @@ $pages = get_pages();
 
 				<select name="flwgb_has_user_dashboard" id="flwgb_has_user_dashboard">
 
-					<option value=""><?php echo esc_html_x( I18n::text( 'select_text' )->text, I18n::text( 'select_text' )->context, FLWGB_TEXT_DOMAIN ) ?></option>
-					<option value="yes" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'yes_text' )->text, I18n::text( 'yes_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
-					<option value="no" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( I18n::text( 'no_text' )->text, I18n::text( 'no_text' )->context, FLWGB_TEXT_DOMAIN ); ?></option>
+					<option value=""><?php echo esc_html_x( "Please select...", "select_text", "flwgb" ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( "Yes", "yes_text", "flwgb" ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_has_user_dashboard' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( "No", "no_text", "flwgb" ); ?></option>
 
 				</select>
 
@@ -88,40 +87,76 @@ $pages = get_pages();
 
 		$selections = [
 				[
-						'option'  => 'flwgb_login_page',
-						'text'    => I18n::text( 'login_page' ),
-						'description' => I18n::text( 'login_page_description' ),
+						'option'      => 'flwgb_login_page',
+						'title'       => [
+								"text"    => "Login Page",
+								"context" => "login_page"
+						],
+						'description' => [
+								"text"    => "Select a page if created a login page.",
+								"context" => "login_page_description"
+						]
 				],
 				[
 						'option'      => 'flwgb_redirect_after_login',
-						'text'        => I18n::text( 'redirect_page_after_login' ),
-						'description' => I18n::text( 'redirect_page_after_login_description' ),
+						'title'       => [
+								"text"    => "Redirection Page After Login",
+								"context" => "redirect_page_after_login"
+						],
+						'description' => [
+								"text"    => "Select a page if you want to redirect users to home page after logged in.",
+								"context" => "redirect_page_after_login_description"
+						]
 				],
 				[
-						'option'  => 'flwgb_lost_password_page',
-						'text'    => I18n::text( 'lost_password_page'),
+						'option' => 'flwgb_lost_password_page',
+						'title'  => [
+								"text"    => "Lost (Reset) Password Page",
+								"context" => "lost_password_page"
+						]
 				],
 				[
-						'option'  => 'flwgb_register_page',
-						'text'    => I18n::text( 'registration_page' ),
+						'option' => 'flwgb_register_page',
+						'title'  => [
+								"text"    => "Registration Page",
+								"context" => "registration_page"
+						]
 				],
 				[
-						'option'  => 'flwgb_activation_page',
-						'text'    => I18n::text( 'activation_page' ),
-						'description' => I18n::text( 'activation_page_description' ),
+						'option'      => 'flwgb_activation_page',
+						'title'       => [
+								"text"    => "User Activation Page",
+								"context" => "activation_page"
+						],
+						'description' => [
+								"text"    => "Select a page if you selected 'Yes' in the 'Enable user activation' setting",
+								"context" => "activation_page_description"
+						]
 				],
 				[
-						'option'  => 'flwgb_user_settings_page',
-						'text'    => I18n::text( 'user_settings_page' ),
-						'description' => I18n::text( 'user_settings_page_description' ),
+						'option'      => 'flwgb_user_settings_page',
+						'title'       => [
+								"text"    => "User Settings Page",
+								"context" => "user_settings_page"
+						],
+						'description' => [
+								"text"    => "Select a page if you selected 'Yes' in the 'Enable user settings' setting",
+								"context" => "user_settings_page_description"
+						]
 				],
 				[
-						'option'  => 'flwgb_terms_and_conditions_page',
-						'text'    => I18n::text( 'terms_and_conditions_page' ),
+						'option' => 'flwgb_terms_and_conditions_page',
+						'title'  => [
+								"text"    => "Terms and Conditions Page",
+								"context" => "terms_and_conditions_page"
+						]
 				],
 				[
-						'option'  => 'flwgb_privacy_policy_page',
-						'text'    => I18n::text( 'privacy_policy_page' ),
+						'option' => 'flwgb_privacy_policy_page',
+						'title'  => [
+								"text"    => "Privacy Policy Page",
+								"context" => "privacy_policy_page"
+						]
 				]
 		];
 
@@ -133,11 +168,11 @@ $pages = get_pages();
 				<th scope="row">
 
 					<label for="<?php echo $select['option']; ?>">
-						<?php echo esc_html_x( $select['text']->text, $select['text']->context, FLWGB_TEXT_DOMAIN ); ?>
+						<?php echo esc_html_x( $select['title']['text'], $select['title']['context'], "flwgb" ); ?>
 					</label>
 
 					<p class="flwgb-admin-settings-description">
-						<?php echo esc_html_x( $select['description']->text, $select['description']->context, FLWGB_TEXT_DOMAIN ); ?>
+						<?php echo esc_html_x( $select['description']['text'], $select['description']['context'], "flwgb" ); ?>
 					</p>
 
 				</th>
@@ -145,7 +180,7 @@ $pages = get_pages();
 
 					<select name="<?php echo $select['option']; ?>" id="<?php echo $select['option']; ?>">
 
-						<option value=""><?php echo esc_html_x( I18n::text( 'select_text' )->text, I18n::text( 'select_text' )->context, FLWGB_TEXT_DOMAIN ) ?></option>
+						<option value=""><?php echo esc_html_x( "Please select...", "select_text", "flwgb" ) ?></option>
 
 						<?php
 

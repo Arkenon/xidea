@@ -149,9 +149,9 @@ class Helper {
 	 *
 	 * @since 1.0.0
 	 */
-	public static function replace_mail_parameters( string $option_name, string $template_name, array $params ): string {
+	public static function replace_mail_parameters( string $option_name, string $template, array $params ): string {
 
-		$text = get_option( $option_name ) ?: (string) I18n::text( $template_name )->text;
+		$text = get_option( $option_name ) ?: $template;
 
 		return preg_replace_callback( '/{{(.*?)}}/', function ( $matches ) use ( $params ) {
 

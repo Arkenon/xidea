@@ -23,6 +23,10 @@
 	"text": "Something went wrong. Please try again later.",
 	"context": "general_error_message"
   },
+  "auth_error": {
+	"text": "You are not authorized to see this page.",
+	"context": "auth_error"
+  },
   "general_success_message": {
 	"text": "Operation has been completed successfully.",
 	"context": "general_success_message"
@@ -75,9 +79,9 @@
 	"text": "Enter your website url",
 	"context": "user_website_placeholder_text"
   },
-  "user_update_button_text": {
+  "update_user_button_text": {
 	"text": "Update User",
-	"context": "user_update_button_text"
+	"context": "update_user_button_text"
   },
   "email_input_text": {
 	"text": "Your e-mail",
@@ -162,10 +166,6 @@
   "register_button_text": {
 	"text": "Register",
 	"context": "register_button_text"
-  },
-  "mail_error_message": {
-	"text": "wp_mail() returned an error. Please check your e-mail configurations.",
-	"context": "mail_error_message"
   },
   "admin_general_settings": {
 	"text": "General Settings",
@@ -257,7 +257,7 @@
 	"context": "login_successful"
   },
   "login_attempts_error": {
-	"text": "You have made too many unsuccessful login attempts. Please wait %s %s.",
+	"text": "You have made too many unsuccessful login attempts. Please wait %1$s %2$s",
 	"context": "login_attempts_error: 1) duration limit 2) duration type (second or minute)"
   },
   "limit_login_settings": {
@@ -305,8 +305,8 @@
 	"context": "welcome_card_block_description"
   },
   "terms_and_conditions_text": {
-	"text": "I have read and accept <a href=\"%s\" target=\"_blank\">terms and conditions</a> and <a href=\"%s\" target=\"_blank\">privacy policy</a>",
-	"context": "terms_and_conditions_text"
+	"text": "I have read and accept <a href=\"%1$s\" target=\"_blank\">terms and conditions</a> and <a href=\"%2$s\" target=\"_blank\">privacy policy</a>",
+	"context": "terms_and_conditions_text %1$s terms and cond. url %2$s privacy policy url"
   },
   "terms_and_conditions_text_plain": {
 	"text": "I have read and accept terms and conditions and privacy policy.",
@@ -333,11 +333,11 @@
 	"context": "register_form_step_2_title"
   },
   "register_succession_with_activation": {
-	"text": "You have been sign up successfuly. Please click the membership activation link sent your e-mail.",
+	"text": "You have been sign up successfully. Please click the membership activation link sent your e-mail.",
 	"context": "register_succession_with_activation"
   },
   "register_succession": {
-	"text": "You have been sign up successfuly. You can sign in with your username and password.",
+	"text": "You have been sign up successfully. You can sign in with your username and password.",
 	"context": "register_succession"
   },
   "register_mail_to_user": {

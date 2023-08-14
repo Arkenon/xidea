@@ -1,7 +1,6 @@
 <?php
 
 use FLWGB\Helper;
-use FLWGB\I18n\I18n;
 use FLWGB\UserActivation;
 
 Helper::using('inc/UserActivation.php');
@@ -20,7 +19,7 @@ if(!empty($activation_code)){
 
 	$activation_result = array(
 		'status' => false,
-		'message' => esc_html_x( I18n::text( 'wrong_activation_code' )->text, I18n::text( 'wrong_activation_code' )->context, FLWGB_TEXT_DOMAIN )
+		'message' => esc_html_x( "Wrong activation code. Please contact with your site administrator.", "wrong_activation_code", "flwgb" )
 	);
 	$color = $activation_result['status'] ? "green" : "red";
 

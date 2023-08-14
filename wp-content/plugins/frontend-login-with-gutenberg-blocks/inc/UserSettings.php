@@ -5,8 +5,6 @@ namespace FLWGB;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
-use FLWGB\I18n\I18n;
-
 class UserSettings {
 
 	/**
@@ -37,6 +35,14 @@ class UserSettings {
 	public function user_settings_form( array $block_attributes ) {
 
 		$frontend = new Frontend();
+
+		if(!is_user_logged_in()){
+
+			wp_redirect(home_url());
+
+			exit;
+
+		}
 
 		//Get user settings form html output from Frontend class
 		return $frontend->get_the_form( 'public/partials/user-settings/user-settings-form.php', $block_attributes );
@@ -79,7 +85,7 @@ class UserSettings {
 
 						echo json_encode( array(
 							'status'  => false,
-							'message' => esc_html_x( I18n::text( 'password_match_error' )->text, I18n::text( 'password_match_error' )->context, FLWGB_TEXT_DOMAIN )
+							'message' => esc_html_x("Your passwords do not match", "password_match_error", "flwgb" )
 						) );
 
 						wp_die();
@@ -90,7 +96,7 @@ class UserSettings {
 
 						echo json_encode( array(
 							'status'  => true,
-							'message' => esc_html_x( I18n::text( 'general_success_message' )->text, I18n::text( 'general_success_message' )->context, FLWGB_TEXT_DOMAIN )
+							'message' => esc_html_x( "Operation has been completed successfully.", "general_success_message", "flwgb" )
 						) );
 
 						wp_die();
@@ -100,7 +106,7 @@ class UserSettings {
 
 					echo json_encode( array(
 						'status'  => false,
-						'message' => esc_html_x( I18n::text( 'current_password_error' )->text, I18n::text( 'current_password_error' )->context, FLWGB_TEXT_DOMAIN )
+						'message' => esc_html_x( "Something went wrong. Please try again later.", "current_password_error", "flwgb" )
 					) );
 
 					wp_die();
@@ -110,7 +116,7 @@ class UserSettings {
 
 				echo json_encode( array(
 					'status'  => true,
-					'message' => esc_html_x( I18n::text( 'general_success_message' )->text, I18n::text( 'general_success_message' )->context, FLWGB_TEXT_DOMAIN )
+					'message' => esc_html_x( "Operation has been completed successfully.", "general_success_message", "flwgb" )
 				) );
 
 				wp_die();
@@ -121,7 +127,7 @@ class UserSettings {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'general_error_message' )->text, I18n::text( 'general_error_message' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "Something went wrong. Please try again later.", "general_error_message", "flwgb" )
 			) );
 
 			wp_die();

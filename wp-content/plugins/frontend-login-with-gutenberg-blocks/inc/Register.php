@@ -12,8 +12,6 @@ namespace FLWGB;
 // Exit if accessed directly.
 defined( 'ABSPATH' ) or die;
 
-use FLWGB\I18n\I18n;
-
 class Register {
 
 	/**
@@ -72,7 +70,7 @@ class Register {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'password_match_error' )->text, I18n::text( 'password_match_error' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "Your passwords do not match", "password_match_error", "flwgb" )
 			) );
 
 			wp_die();
@@ -83,7 +81,7 @@ class Register {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'username_exist_error' )->text, I18n::text( 'username_exist_error' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "This username already exist.", "username_exist_error", "flwgb" )
 			) );
 
 			wp_die();
@@ -94,7 +92,7 @@ class Register {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'user_exist_error' )->text, I18n::text( 'user_exist_error' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "This user already exist.", "user_exist_error", "flwgb" )
 			) );
 
 			wp_die();
@@ -122,7 +120,7 @@ class Register {
 
 				if ( $add_user_activation && $add_user_activation_code ) {
 
-					$message = esc_html_x( I18n::text( 'register_succession_with_activation' )->text, I18n::text( 'register_succession_with_activation' )->context, FLWGB_TEXT_DOMAIN );
+					$message = esc_html_x( "You have been sign up successfully. Please click the membership activation link sent your e-mail.", "register_succession_with_activation", "flwgb" );
 
 					$activation_link = site_url() . '/' . get_option( "flwgb_activation_page" ) . '?key=' . $code . '&user=' . $newuser;
 
@@ -132,7 +130,7 @@ class Register {
 
 			} else {
 
-				$message = esc_html_x( I18n::text( 'register_succession' )->text, I18n::text( 'register_succession' )->context, FLWGB_TEXT_DOMAIN );
+				$message = esc_html_x( "You have been sign up successfuly. You can sign in with your username and password.", "register_succession", "flwgb" );
 
 			}
 
@@ -160,7 +158,7 @@ class Register {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( I18n::text( 'general_error_message' )->text, I18n::text( 'general_error_message' )->context, FLWGB_TEXT_DOMAIN )
+				'message' => esc_html_x( "Something went wrong. Please try again later.", "general_error_message", "flwgb" )
 			) );
 
 		}

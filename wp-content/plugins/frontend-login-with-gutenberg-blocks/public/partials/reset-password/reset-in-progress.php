@@ -1,8 +1,6 @@
 <?php
 
-
 use FLWGB\Helper;
-use FLWGB\I18n\I18n;
 
 $input_style = 'border-radius:' . $form_attributes['inputBorderRadius'] . 'px';
 $text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];
@@ -28,14 +26,14 @@ $view = '<div>
 
 							if ( $form_attributes['showLabels'] ) {
 
-								$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="resetpass_pwd">' . esc_html_x( I18n::text('new_password_input_text')->text, I18n::text('new_password_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
+								$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="resetpass_pwd">' . esc_html_x( "New Password","new_password_input_text", "flwgb" ) . '</label>';
 							}
 
 							$view .= '<input class="flwgb-input-control" id="resetpass_pwd" name="resetpass_pwd" type="password" required style=' . $input_style . ' placeholder="';
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::text('new_password_placeholder_text')->text, I18n::text('new_password_placeholder_text')->context, FLWGB_TEXT_DOMAIN );
+								$view .= esc_attr_x( "Enter your new password", "new_password_placeholder_text", "flwgb" );
 
 							}
 
@@ -49,14 +47,14 @@ $view = '<div>
 
 							if ( $form_attributes['showLabels'] ) {
 
-								$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="resetpass_pwd_again">' . esc_html_x( I18n::text('new_password_again_input_text')->text, I18n::text('new_password_again_input_text')->context, FLWGB_TEXT_DOMAIN ) . '</label>';
+								$view .= '<label class="flwgb-input-label" style="' . $text_style . '" for="resetpass_pwd_again">' . esc_html_x( "New Password Again", "new_password_again_input_text", "flwgb" ) . '</label>';
 							}
 
 							$view .= '<input class="flwgb-input-control" id="resetpass_pwd_again" name="resetpass_pwd_again" type="password" required style=' . $input_style . ' placeholder="';
 
 							if ( $form_attributes['showPlaceholders'] ) {
 
-								$view .= esc_attr_x( I18n::text('new_password_again_placeholder_text')->text, I18n::text('new_password_again_placeholder_text')->context, FLWGB_TEXT_DOMAIN );
+								$view .= esc_attr_x( "Enter your new password again", "new_password_again_placeholder_text", "flwgb" );
 
 							}
 
@@ -71,10 +69,10 @@ $view = '<div>
 
 			$view .= '<div class="flwgb-form-row">
 							<button style="'.$button_style.'" type="submit" id="flwgb-reset-password-submit" class="flwgb-reset-password-btn flwgb-btn">
-								' . esc_html_x( I18n::text('submit_reset_password_button_text')->text, I18n::text('submit_reset_password_button_text')->context, FLWGB_TEXT_DOMAIN ) . '
+								' . esc_html_x( "Change Password", "submit_reset_password_button_text", "flwgb" ) . '
 							</button>
 						</div>
-				<div id="flwgb-reset-password-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( I18n::text('loading_text')->text, I18n::text('loading_text')->context, FLWGB_TEXT_DOMAIN ) . '</div>';
+				<div id="flwgb-reset-password-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( "Loading...","loading_text", "flwgb" ) . '</div>';
 		$view .= '</form>
 	<div id="flwgb-reset-password-form-result"></div>
 </div>';

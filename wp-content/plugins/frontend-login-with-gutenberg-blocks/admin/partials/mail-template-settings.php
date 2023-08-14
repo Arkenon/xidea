@@ -8,7 +8,7 @@
  * @subpackage Frontend_Login_With_Gutenberg_Blocks/admin/partials
  */
 
-use FLWGB\I18n\I18n;
+use FLWGB\Mail;
 
 ?>
 
@@ -22,37 +22,37 @@ use FLWGB\I18n\I18n;
 	$data = [
 			[
 					"id"       => "flwgb_register_mail_to_user",
-					"title"    => "register_mail_to_user",
+					"title"    => _x( "Registration Mail Template for User", "register_mail_to_user", "flwgb" ),
 					"tags"     => "{{username}}",
-					"template" => "register_mail_to_user_template",
+					"template" => Mail::mail_templates( 'register_mail_to_user_template' ),
 					"content"  => "flwgb_register_mail_to_user"
 			],
 			[
 					"id"       => "flwgb_register_mail_to_user_with_activation",
-					"title"    => "register_mail_to_user_with_activation",
+					"title"    => _x( "Registration Mail Template for User (With Activation Code)", "register_mail_to_user_with_activation", "flwgb" ),
 					"tags"     => "{{username}}, {{activation_link}}",
-					"template" => "register_mail_to_user_template_with_activation",
+					"template" => Mail::mail_templates( 'register_mail_to_user_template_with_activation' ),
 					"content"  => "flwgb_register_mail_to_user_with_activation"
 			],
 			[
 					"id"       => "flwgb_register_mail_to_admin",
-					"title"    => "register_mail_to_admin",
+					"title"    => _x( "Registration Mail Template for Admin", "register_mail_to_admin", "flwgb" ),
 					"tags"     => "{{username}}, {{email}}",
-					"template" => "register_mail_to_admin_template",
+					"template" => Mail::mail_templates( 'register_mail_to_admin_template' ),
 					"content"  => "flwgb_register_mail_to_admin"
 			],
 			[
 					"id"       => "flwgb_reset_request_mail_to_user",
-					"title"    => "reset_password_request_mail_to_user",
+					"title"    => _x( "Password Reset Request Mail Template", "reset_password_request_mail_to_user", "flwgb" ),
 					"tags"     => "{{username}}, {{reset_link}}",
-					"template" => "reset_password_request_mail_to_user_template",
+					"template" => Mail::mail_templates( 'reset_password_request_mail_to_user_template' ),
 					"content"  => "flwgb_reset_request_mail_to_user"
 			],
 			[
 					"id"       => "flwgb_reset_password_mail_to_user",
-					"title"    => "reset_password_mail_to_user",
+					"title"    => _x( "Password Change Mail Template for User", "reset_password_mail_to_user", "flwgb" ),
 					"tags"     => "{{username}}",
-					"template" => "reset_password_mail_to_user_template",
+					"template" => Mail::mail_templates( 'reset_password_mail_to_user_template' ),
 					"content"  => "flwgb_reset_password_mail_to_user"
 			]
 	]
@@ -67,18 +67,18 @@ use FLWGB\I18n\I18n;
 				<th scope="row">
 
 					<label for="<?php echo $item['id'] ?>">
-						<?php echo esc_html_x( I18n::text( $item['title'] )->text, I18n::text( $item['title'] )->context, FLWGB_TEXT_DOMAIN ); ?>
+						<?php echo esc_html( $item['title'] ); ?>
 					</label>
 
 				</th>
 				<td>
 
-					<p><?php echo esc_html_x( I18n::text( 'you_can_use_this_tags_text' )->text, I18n::text( 'you_can_use_this_tags_text' )->context, FLWGB_TEXT_DOMAIN ); ?>
+					<p><?php echo esc_html_x( "You can use these tags:", "you_can_use_this_tags_text", "flwgb" ); ?>
 						<?php echo $item['tags'] ?> </p>
 
 					<?php
 
-					$template  = esc_html_x( I18n::text( $item['template'] )->text, I18n::text( $item['template'] )->context, FLWGB_TEXT_DOMAIN );
+					$template  =  $item['template'];
 					$content   = get_option( $item['content'] ) ?: $template;
 					$editor_id = $item['id'];
 					$settings  = array( 'media_buttons' => false, 'wpautop' => false );
