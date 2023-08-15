@@ -33,7 +33,10 @@ class LostPassword {
 		add_action( 'wp_ajax_nopriv_flwgbresetpasswordhandle', [ $this, 'flwgb_reset_password_handle_ajax_callback' ] );
 		add_action( 'wp_ajax_flwgbresetpasswordhandle', [ $this, 'flwgb_reset_password_handle_ajax_callback' ] );
 
-		add_action( 'wp_ajax_nopriv_flwgbresetrequesthandle', [ $this, 'flwgb_reset_password_request_handle_ajax_callback' ]  );
+		add_action( 'wp_ajax_nopriv_flwgbresetrequesthandle', [
+			$this,
+			'flwgb_reset_password_request_handle_ajax_callback'
+		] );
 		add_action( 'wp_ajax_flwgbresetrequesthandle', [ $this, 'flwgb_reset_password_request_handle_ajax_callback' ] );
 
 	}
@@ -67,7 +70,7 @@ class LostPassword {
 
 		$template = "Hello {{username}}, <br> You can change your password from the link below <br> {{reset_link}} <br> Thanks for your attention.";
 
-		$send_reset_password_email = $mail->send_mail( 'flwgb_reset_request_mail_to_user', 'reset_password_request_mail_to_user_template', $params, 'reset_request_mail_title' );
+		$send_reset_password_email = $mail->send_mail( 'flwgb_reset_request_mail_to_user', 'reset_password_request_mail_to_user_template', $params, _x( 'Reset Password Request', 'reset_request_mail_title', 'flwgb' ) );
 
 		if ( $send_reset_password_email ) {
 
@@ -130,7 +133,7 @@ class LostPassword {
 				Helper::using( 'inc/Mail.php' );
 				$mail = new Mail();
 
-				$mail->send_mail( 'flwgb_reset_password_mail_to_user', 'reset_password_mail_to_user_template', $params, 'reset_password_mail_title' );
+				$mail->send_mail( 'flwgb_reset_password_mail_to_user', 'reset_password_mail_to_user_template', $params, _x( 'Your Password Changed', 'reset_password_mail_title', 'flwgb' ));
 
 				echo json_encode( array(
 					'status'  => true,
@@ -150,7 +153,7 @@ class LostPassword {
 
 			echo json_encode( array(
 				'status'  => false,
-				'message' => esc_html_x( "Your passwords do not match","password_match_error", "flwgb" )
+				'message' => esc_html_x( "Your passwords do not match", "password_match_error", "flwgb" )
 			) );
 
 		}

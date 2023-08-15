@@ -30,6 +30,8 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 		<?php echo get_admin_page_title(); ?>
 	</h1>
 
+	<?php settings_errors(); ?>
+
 	<!-- Here are our tabs -->
 	<nav class="nav-tab-wrapper">
 

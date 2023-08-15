@@ -76,6 +76,31 @@ $pages = get_pages();
 		</tr>
 
 		<tr>
+			<th scope="row">
+
+				<label for="flwgb_redirect_from_wp_login_admin">
+					<?php echo esc_html_x( "Hide wp-login&wp-admin", "hide_wp_login_admin", "flwgb" ); ?>
+				</label>
+
+				<p class="flwgb-admin-settings-description">
+					<?php echo esc_html_x( "If you choose 'Yes', users who are not logged in will be redirected to the home page.", "hide_wp_login_admin_description", "flwgb" ); ?>
+				</p>
+
+			</th>
+			<td>
+
+				<select name="flwgb_redirect_from_wp_login_admin" id="flwgb_redirect_from_wp_login_admin">
+
+					<option value=""><?php echo esc_html_x( "Please select...", "select_text", "flwgb" ) ?></option>
+					<option value="yes" <?php echo get_option( 'flwgb_redirect_from_wp_login_admin' ) === 'yes' ? "selected" : ""; ?>><?php echo esc_html_x( "Yes", "yes_text", "flwgb" ); ?></option>
+					<option value="no" <?php echo get_option( 'flwgb_redirect_from_wp_login_admin' ) === 'no' ? "selected" : ""; ?>><?php echo esc_html_x( "No", "no_text", "flwgb" ); ?></option>
+
+				</select>
+
+			</td>
+		</tr>
+
+		<tr>
 			<th>
 				<hr>
 			</th>

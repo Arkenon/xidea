@@ -139,15 +139,15 @@ class Register {
 
 			if ( get_option( "flwgb_has_activation" ) ) {
 
-				$mail->send_mail( 'flwgb_register_mail_to_user_with_activation', 'register_mail_to_user_template_with_activation', $params, 'register_mail_title_to_user' );
+				$mail->send_mail( 'flwgb_register_mail_to_user_with_activation', 'register_mail_to_user_template_with_activation', $params, _x( 'Welcome to Join Us', 'register_mail_title_to_user', 'flwgb' ) );
 
 			} else {
 
-				$mail->send_mail( 'flwgb_register_mail_to_user', 'register_mail_to_user_template', $params, 'register_mail_title_to_user' );
+				$mail->send_mail( 'flwgb_register_mail_to_user', 'register_mail_to_user_template', $params, _x( 'Welcome to Join Us', 'register_mail_title_to_user', 'flwgb' ) );
 
 			}
 
-			$mail->send_mail( 'flwgb_register_mail_to_admin', 'register_mail_to_admin_template', $params, 'register_mail_title_to_admin', true );
+			$mail->send_mail( 'flwgb_register_mail_to_admin', 'register_mail_to_admin_template', $params, _x( 'New Member Registration', 'register_mail_title_to_admin', 'flwgb' ), true );
 
 			echo json_encode( array(
 				'status'  => true,

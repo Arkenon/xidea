@@ -30,6 +30,9 @@ class Login {
 
 		}
 
+		//Redirect from wp-login and wp-admin to homepage
+		add_action( 'init', [ $this, 'redirect_login_admin_pages' ] );
+
 	}
 
 
@@ -172,8 +175,6 @@ class Login {
 
 		$user_ip = $_SERVER['REMOTE_ADDR'];
 
-		//$user_ip = "172.1.00.125";
-
 		return [
 			'user_ip'        => $user_ip,
 			'login_attempts' => get_transient( "login_attempts_" . $user_ip )
@@ -193,7 +194,7 @@ class Login {
 		$lockout_duration = ! get_option( 'flwgb_limit_login_lockout_duration' ) ? $this->lockout_duration : get_option( 'flwgb_limit_login_lockout_duration' );
 
 		return [
-			'max_attempts'    => $max_attempts,
+			'max_attempts'     => $max_attempts,
 			'lockout_duration' => $lockout_duration
 		];
 
@@ -242,6 +243,26 @@ class Login {
 			// translators: %1$s duration limit %2$s duration type (second or minute)
 			'message' => sprintf( __( 'You have made too many unsuccessful login attempts. Please wait %1$s %2$s', 'flwgb' ), $duration_limit, $duration_type )
 		) );
+
+	}
+
+	/**
+	 * Redirect non-login users from wp-login and wp-admin to homepage
+	 *
+	 * @since 1.0.0
+	 */
+	public function redirect_login_admin_pages() {
+
+		if(get_option('flwgb_redirect_from_wp_login_admin') === 'yes'){
+
+			if ( ( strpos( $_SERVER['REQUEST_URI'], 'wp-login.php' ) !== false || strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) !== false ) && ! is_user_logged_in() ) {
+
+				wp_redirect( home_url() );
+				exit;
+
+			}
+
+		}
 
 	}
 

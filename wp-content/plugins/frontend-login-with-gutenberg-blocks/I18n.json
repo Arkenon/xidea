@@ -19,9 +19,17 @@
 	"text": "Loading...",
 	"context": "loading_text"
   },
+  "change_avatar_description": {
+	"text": "You can change your profile picture on Gravatar.",
+	"context": "change_avatar_description"
+  },
   "general_error_message": {
 	"text": "Something went wrong. Please try again later.",
 	"context": "general_error_message"
+  },
+  "check_your_user_info_error": {
+	"text": "Make sure your user information is correct.",
+	"context": "check_your_user_info_error"
   },
   "auth_error": {
 	"text": "You are not authorized to see this page.",
@@ -30,7 +38,7 @@
   "general_success_message": {
 	"text": "Operation has been completed successfully.",
 	"context": "general_success_message"
-  },
+  }
   "login_text": {
 	"text": "Login",
 	"context": "login_text"
@@ -144,7 +152,7 @@
 	"context": "current_password_input_text"
   },
   "current_password_placeholder_text": {
-	"text": "Enter your current_password",
+	"text": "Enter your current password",
 	"context": "current_password_placeholder_text"
   },
   "current_password_error": {
@@ -239,6 +247,14 @@
   "has_user_settings_description": {
 	"text": "If you want to show a user settings page, select Yes. (Don't forget to select a User Settings page below)",
 	"context": "has_user_settings_description"
+  },
+  "hide_wp_login_admin": {
+	"text": "Hide wp-login&wp-admin",
+	"context": "hide_wp_login_admin"
+  },
+  "hide_wp_login_admin_description": {
+	"text": "If you choose 'Yes', users who are not logged in will be redirected to the home page.",
+	"context": "hide_wp_login_admin_description"
   },
   "already_logged_in_message": {
 	"text": "You have already logged in.",

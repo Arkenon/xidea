@@ -79,29 +79,44 @@ class UserSettings {
 
 			if ( ! empty( $new_password ) && ! empty( $new_password_again ) ) {
 
-				if ( $user_info && wp_check_password( $current_password, $user_info->user_pass, $user_id ) ) {
+				if ( $user_info ) {
 
-					if ( ( ! empty( $new_password ) && ! empty( $new_password_again ) ) && ( $new_password != $new_password_again ) ) {
+					if(wp_check_password( $current_password, $user_info->user_pass, $user_id )){
 
-						echo json_encode( array(
-							'status'  => false,
-							'message' => esc_html_x("Your passwords do not match", "password_match_error", "flwgb" )
-						) );
+						if ( ( ! empty( $new_password ) && ! empty( $new_password_again ) ) && ( $new_password != $new_password_again ) ) {
 
-						wp_die();
+							echo json_encode( array(
+								'status'  => false,
+								'message' => esc_html_x("Your passwords do not match", "password_match_error", "flwgb" )
+							) );
+
+							wp_die();
+
+						} else {
+
+							wp_set_password( $new_password, $user_id );
+
+							echo json_encode( array(
+								'status'  => true,
+								'message' => esc_html_x( "Operation has been completed successfully.", "general_success_message", "flwgb" )
+							) );
+
+							wp_die();
+
+						}
 
 					} else {
 
-						wp_set_password( $new_password, $user_id );
-
 						echo json_encode( array(
-							'status'  => true,
-							'message' => esc_html_x( "Operation has been completed successfully.", "general_success_message", "flwgb" )
+							'status'  => false,
+							'message' => esc_html_x( "Make sure your user information is correct.", "check_your_user_info_error", "flwgb" )
 						) );
 
 						wp_die();
 
 					}
+
+
 				} else {
 
 					echo json_encode( array(

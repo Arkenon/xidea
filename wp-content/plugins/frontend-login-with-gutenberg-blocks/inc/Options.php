@@ -62,6 +62,7 @@ class Options {
 		// General settings
 		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_after_login' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_login_page' );
+		register_setting( 'flwgb-general-settings-group', 'flwgb_redirect_from_wp_login_admin' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_lost_password_page' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_register_page' );
 		register_setting( 'flwgb-general-settings-group', 'flwgb_activation_page' );
