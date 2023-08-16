@@ -1,5 +1,4 @@
 import {__} from '@wordpress/i18n';
-import I18n from "../../inc/I18n/I18nBlockOptions.json";
 import {
 	ToggleControl,
 	ColorPicker,
@@ -16,12 +15,12 @@ const LabelSettings = ({options}) => {
 	return (
 		<Panel>
 			<PanelBody
-				title={__(I18n.label_settings_panel_title.text, 'flwgb')}
+				title={__('Label Settings', 'flwgb')}
 				initialOpen={false}
 			>
 				<PanelRow>
 					<ToggleControl
-						label={__(I18n.show_labels_text.text, 'flwgb')}
+						label={__('Show labels', 'flwgb')}
 						help={attributes.showLabels ? 'Show' : 'Hide'}
 						checked={attributes.showLabels}
 						onChange={(val) =>
@@ -32,7 +31,7 @@ const LabelSettings = ({options}) => {
 				<PanelRow>
 					<SelectControl
 						labelPosition={'top'}
-						label={__(I18n.font_weight_and_color_text.text, 'flwgb')}
+						label={__('Font Weight & Font Color', 'flwgb')}
 						value={attributes.textFontWeight}
 						options={[
 							{label: 'Normal', value: 'normal'},

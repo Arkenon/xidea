@@ -1,5 +1,4 @@
 import {__} from '@wordpress/i18n';
-import I18n from "../../inc/I18n/I18nBlockOptions.json";
 import {
 	__experimentalText as Text,
 	__experimentalBorderControl as BorderControl,
@@ -18,12 +17,12 @@ const ButtonSettings = ({options}) => {
 	return (
 		<Panel>
 			<PanelBody
-				title={__(I18n.button_settings_panel_title.text, 'flwgb')}
+				title={__('Button Settings', 'flwgb')}
 				initialOpen={false}
 			>
 				<PanelRow>
 					<RangeControl
-						label={__(I18n.button_border_radius_text.text, 'flwgb')}
+						label={__('Button Border Radius', 'flwgb')}
 						value={attributes.buttonBorderRadius}
 						onChange={(val) =>
 							setAttributes({buttonBorderRadius: val})
@@ -34,7 +33,7 @@ const ButtonSettings = ({options}) => {
 				</PanelRow>
 				<PanelRow>
 					<BorderControl
-						label={__(I18n.button_border_text.text, 'flwgb')}
+						label={__('Button Border', 'flwgb')}
 						onChange={(newButtonBorder) =>
 							setAttributes({
 								buttonBorder: newButtonBorder,
@@ -45,7 +44,7 @@ const ButtonSettings = ({options}) => {
 				</PanelRow>
 				<PanelRow>
 					<Text>
-						{__(I18n.button_bg_color_text.text, 'flwgb')}
+						{__('Button Background Color', 'flwgb')}
 					</Text>
 				</PanelRow>
 				<PanelRow>
@@ -59,7 +58,7 @@ const ButtonSettings = ({options}) => {
 				<PanelRow>
 					<SelectControl
 						labelPosition={'top'}
-						label={__(I18n.button_font_weight_text.text, 'flwgb')}
+						label={__('Button Font Weight', 'flwgb')}
 						value={attributes.buttonTextFontWeight}
 						options={[
 							{label: 'Normal', value: 'normal'},
@@ -71,7 +70,7 @@ const ButtonSettings = ({options}) => {
 					/>
 				</PanelRow>
 				<PanelRow>
-					<Text>{__(I18n.button_text_color_text.text, 'flwgb')}</Text>
+					<Text>{__('Button Text Color', 'flwgb')}</Text>
 				</PanelRow>
 				<PanelRow>
 					<ColorPalette

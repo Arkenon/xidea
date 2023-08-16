@@ -1,7 +1,6 @@
 import './editor.scss';
 import {useBlockProps} from '@wordpress/block-editor';
 import {__} from '@wordpress/i18n';
-import I18n from "../../inc/I18n/I18n.json";
 
 export default function Edit(props) {
 
@@ -11,7 +10,7 @@ export default function Edit(props) {
 
 		<div {...blockProps}>
 
-			{__(I18n.welcome_card_block_description.text, 'flwgb')}
+			{__('This is a placeholder for the WELCOME CARD BLOCK to display a welcome card for logged in users. Card has a logout button... Go to the front end of the page to preview the activation result.', 'flwgb')}
 
 		</div>
 

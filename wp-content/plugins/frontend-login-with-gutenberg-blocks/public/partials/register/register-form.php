@@ -1,5 +1,13 @@
 <?php
 
+if( is_user_logged_in()){
+
+	$view = '<div style="text-align: center;">'.esc_html_x( "This form is only shown to users who are not logged in.", "alert_for_non_logged_in_users", "flwgb" ).'</div>';
+	return;
+
+}
+
+
 $input_style = 'border-radius:' . $form_attributes['inputBorderRadius'] . 'px';
 $text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];
 
@@ -92,6 +100,7 @@ if ( $form_attributes['showPlaceholders'] ) {
 
 $view .= '" /></div></div>';
 
+if($form_attributes['showTermsAndPrivacy']):
 $view .= '<div class="flwgb-form-row">
 				<div class="flwgb-input-group">
 					<input id="flwgb-terms-and-privacy" checked="checked" type="checkbox" name="flwgb-terms-and-privacy" required class="flwgb-form-check-input"/>
@@ -102,6 +111,7 @@ $view .= '<div class="flwgb-form-row">
 						</label>
 					</div>
 				</div>';
+endif;
 
 $view .= '<input type="hidden" name="action" value="' . esc_attr( 'flwgbregisterhandle' ) . '">';
 

@@ -72,12 +72,8 @@
 	"context": "user_last_name_placeholder_text"
   },
   "user_bio_text": {
-	"text": "Bio (optional)",
+	"text": "Your short biography (optional)",
 	"context": "user_bio_text"
-  },
-  "user_bio_placeholder_text": {
-	"text": "Your short biography",
-	"context": "user_bio_placeholder_text"
   },
   "user_website_text": {
 	"text": "Website Url (optional)",
@@ -163,9 +159,13 @@
 	"text": "Lost Password",
 	"context": "reset_password_button_text"
   },
-  "reset_password_alert_for_non_logged_in_users": {
-	"text": "This form is only shown for users who are not logged in.",
-	"context": "reset_password_alert_for_non_logged_in_users"
+  "alert_for_non_logged_in_users": {
+	"text": "This form is only shown to users who are not logged in.",
+	"context": "alert_for_non_logged_in_users"
+  },
+  "alert_for_logged_in_users": {
+	"text": "This form is only shown to logged in users...",
+	"context": "alert_for_logged_in_users"
   },
   "submit_reset_password_button_text": {
 	"text": "Change Password",
@@ -277,11 +277,11 @@
 	"context": "login_attempts_error: 1) duration limit 2) duration type (second or minute)"
   },
   "limit_login_settings": {
-	"text": "Limit Login",
+	"text": "Limit login attempts",
 	"context": "limit_login_settings"
   },
   "enable_limit_login": {
-	"text": "Enable limit login",
+	"text": "Enable limit login attempts",
 	"context": "enable_limit_login"
   },
   "enable_limit_login_description": {

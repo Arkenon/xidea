@@ -1,5 +1,4 @@
 import {__} from '@wordpress/i18n';
-import I18n from "../../inc/I18n/I18nBlockOptions.json";
 import {
 	ToggleControl,
 	RangeControl,
@@ -15,12 +14,12 @@ const InputSettings = ({options}) => {
 	return (
 		<Panel>
 			<PanelBody
-				title={__(I18n.input_settings_panel_title.text, 'flwgb')}
+				title={__('Input Settings', 'flwgb')}
 				initialOpen={false}
 			>
 				<PanelRow>
 					<RangeControl
-						label={__(I18n.input_border_radius_text.text, 'flwgb')}
+						label={__('Input Border Radius', 'flwgb')}
 						value={attributes.inputBorderRadius}
 						onChange={(val) =>
 							setAttributes({inputBorderRadius: val})
@@ -31,7 +30,7 @@ const InputSettings = ({options}) => {
 				</PanelRow>
 				<PanelRow>
 					<ToggleControl
-						label={__(I18n.show_placeholders_text.text, 'flwgb')}
+						label={__('Show Placeholders', 'flwgb')}
 						help={attributes.showPlaceholders ? 'Show' : 'Hide'}
 						checked={attributes.showPlaceholders}
 						onChange={(val) =>

@@ -1,7 +1,6 @@
 import './editor.scss';
 import {useBlockProps} from '@wordpress/block-editor';
 import {__} from '@wordpress/i18n';
-import I18n from "../../inc/I18n/I18n.json";
 import Options from "./options";
 
 export default function Edit(props) {
@@ -41,10 +40,10 @@ export default function Edit(props) {
 					<div className="flwgb-input-group">
 						{attributes.showLabels &&
 						<label className="flwgb-input-label" style={textStyle}
-							   htmlFor="flwgb-username">{__(I18n.username_input_text.text, 'flwgb')}</label>}
+							   htmlFor="flwgb-username">{__('Username', 'flwgb')}</label>}
 						<input className="flwgb-input-control" id="flwgb-username" type="text"
 							   style={inputStyle}
-							   placeholder={attributes.showPlaceholders && __(I18n.username_placeholder_text.text, 'flwgb')}/>
+							   placeholder={attributes.showPlaceholders && __('Enter your username', 'flwgb')}/>
 					</div>
 				</div>
 
@@ -52,44 +51,47 @@ export default function Edit(props) {
 					<div className="flwgb-input-group">
 						{attributes.showLabels &&
 						<label className="flwgb-input-label" style={textStyle}
-							   htmlFor="flwgb-email">{__(I18n.email_input_text.text, 'flwgb')}</label>}
+							   htmlFor="flwgb-email">{__('Your e-mail', 'flwgb')}</label>}
 						<input className="flwgb-input-control" id="flwgb-email" type="text"
 							   style={inputStyle}
-							   placeholder={attributes.showPlaceholders && __(I18n.email_placeholder_text.text, 'flwgb')}/>
+							   placeholder={attributes.showPlaceholders && __('Enter your e-mail', 'flwgb')}/>
 					</div>
 				</div>
 
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
 						{attributes.showLabels && <label className="flwgb-input-label" style={textStyle}
-														 htmlFor="flwgb-password">{__(I18n.password_input_text.text, 'flwgb')}</label>}
+														 htmlFor="flwgb-password">{__('Password', 'flwgb')}</label>}
 						<input className="flwgb-input-control" id="flwgb-password" type="password" style={inputStyle}
-							   placeholder={attributes.showPlaceholders && __(I18n.password_placeholder_text.text, 'flwgb')}/>
+							   placeholder={attributes.showPlaceholders && __('Enter your password', 'flwgb')}/>
 					</div>
 				</div>
 
 				<div className="flwgb-form-row">
 					<div className="flwgb-input-group">
 						{attributes.showLabels && <label className="flwgb-input-label" style={textStyle}
-														 htmlFor="flwgb-password-again">{__(I18n.password_again_input_text.text, 'flwgb')}</label>}
+														 htmlFor="flwgb-password-again">{__('Password Again', 'flwgb')}</label>}
 						<input className="flwgb-input-control" id="flwgb-password-again" type="password" style={inputStyle}
-							   placeholder={attributes.showPlaceholders && __(I18n.password_again_placeholder_text.text, 'flwgb')}/>
+							   placeholder={attributes.showPlaceholders && __('Enter your password again', 'flwgb')}/>
 					</div>
 				</div>
 
 
-				<div className="flwgb-form-row">
-					<div className="flwgb-form-check-group">
-						<input id="flwgb-terms-and-privacy" checked="checked" type="checkbox"
-							   className="flwgb-form-check-input"/>
-						<label className="flwgb-form-check-label" htmlFor="flwgb-terms-and-privacy">{__(I18n.terms_and_conditions_text_plain.text, 'flwgb')}</label>
+				{
+					attributes.showTermsAndPrivacy &&
+					<div className="flwgb-form-row">
+						<div className="flwgb-form-check-group">
+							<input id="flwgb-terms-and-privacy" checked="checked" type="checkbox"
+								   className="flwgb-form-check-input"/>
+							<label className="flwgb-form-check-label" htmlFor="flwgb-terms-and-privacy">{__('I have read and accept terms and conditions and privacy policy.', 'flwgb')}</label>
+						</div>
 					</div>
-				</div>
+				}
 
 				<div className="flwgb-form-row">
 					<button style={buttonStyle} type="submit" name="wp-submit" id="wp-submit"
 							className="flwgb-register-btn flwgb-btn">
-						{__(I18n.register_button_text.text, 'flwgb')}
+						{__('Register', 'flwgb')}
 					</button>
 				</div>
 

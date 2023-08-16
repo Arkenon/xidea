@@ -7,6 +7,10 @@
 	"text": "Show labels",
 	"context": "show_labels_text"
   },
+  "show_terms_and_privacy_text": {
+	"text": "Show Terms and Conditions & Privacy Policy Checkbox",
+	"context": "show_labels_text"
+  },
   "font_weight_and_color_text": {
 	"text": "Font Weight & Font Color",
 	"context": "font_weight_and_color_input_text"
@@ -46,5 +50,17 @@
   "button_text_color_text": {
 	"text": "Button Text Color",
 	"context": "button_text_color_text"
+  },
+  "description_settings": {
+	"text": "Description Settings",
+	"context": "description_settings"
+  },
+  "description_settings_title": {
+	"text": "Description",
+	"context": "description_settings_title"
+  },
+  "show_description": {
+	"text": "Show Description",
+	"context": "show_description"
   }
 }

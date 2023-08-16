@@ -25,7 +25,7 @@
 			<th scope="row">
 
 				<label for="flwgb_enable_limit_login">
-					<?php echo esc_html_x( "Enable limit login", "enable_limit_login", "flwgb" ); ?>
+					<?php echo esc_html_x( "Enable limit login attempts", "enable_limit_login", "flwgb" ); ?>
 				</label>
 
 				<p class="flwgb-admin-settings-description">

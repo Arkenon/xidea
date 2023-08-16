@@ -36,14 +36,6 @@ class UserSettings {
 
 		$frontend = new Frontend();
 
-		if(!is_user_logged_in()){
-
-			wp_redirect(home_url());
-
-			exit;
-
-		}
-
 		//Get user settings form html output from Frontend class
 		return $frontend->get_the_form( 'public/partials/user-settings/user-settings-form.php', $block_attributes );
 
@@ -121,7 +113,7 @@ class UserSettings {
 
 					echo json_encode( array(
 						'status'  => false,
-						'message' => esc_html_x( "Something went wrong. Please try again later.", "current_password_error", "flwgb" )
+						'message' => esc_html_x( "Your current password is wrong. Please check it again.", "current_password_error", "flwgb" )
 					) );
 
 					wp_die();

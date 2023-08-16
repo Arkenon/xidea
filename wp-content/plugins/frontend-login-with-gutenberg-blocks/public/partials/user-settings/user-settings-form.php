@@ -1,5 +1,12 @@
 <?php
 
+if( !is_user_logged_in()){
+
+	$view = '<div style="text-align: center;">'.esc_html_x( "This form is only shown to logged in users...", "alert_for_logged_in_users", "flwgb" ).'</div>';
+	return;
+
+}
+
 $current_user             = wp_get_current_user();
 $ID                       = $current_user->ID;
 $user_email               = $current_user->user_email;
@@ -125,26 +132,18 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 							if ( $form_attributes['showLabels'] ) {
 
 								$view .= '<label class="flwgb-input-label" style="'.$text_style.'" for="flwgb-user-bio">
-											' . esc_html_x( "Bio (optional)", "user_bio_text", "flwgb" ) . '
+											' . esc_html_x( "Your short biography (optional)", "user_bio_text", "flwgb" ) . '
 										 </label>';
 
 							}
 
 							$view .= '<textarea class="flwgb-textarea-control" name="flwgb-user-bio" id="flwgb-user-bio" cols="30" rows="10" >';
 
-							if ( $form_attributes['showPlaceholders'] ) {
+									if($bio){
 
-								if($bio){
+										$view .= esc_textarea( $bio );
 
-									$view .= esc_textarea( $bio );
-
-								} else {
-
-									$view .= esc_textarea( _x("Your short biography", "user_bio_placeholder_text", "flwgb") );
-
-								}
-
-							}
+									}
 
 							$view .= '</textarea>';
 				$view .= '</div>

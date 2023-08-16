@@ -1,6 +1,6 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "frontend-login-with-gutenberg-blocks/register-form",
   "version": "0.1.0",
   "title": "Register Form",
@@ -10,11 +10,15 @@
   "attributes": {
     "showLabels": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "showPlaceholders": {
       "type": "boolean",
       "default": false
+    },
+    "showTermsAndPrivacy": {
+      "type": "boolean",
+      "default": true
     },
     "textColor": {
       "type": "string",

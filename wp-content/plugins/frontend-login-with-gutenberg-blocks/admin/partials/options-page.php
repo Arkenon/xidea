@@ -47,7 +47,7 @@ $tab         = Helper::get( 'tab' ) ?? $default_tab;
 
 		<a href="?page=frontend-login-with-gutenberg-blocks-settings&tab=limit-login"
 		   class="nav-tab <?php if ( $tab === 'limit-login' ): ?>nav-tab-active<?php endif; ?>">
-			<?php echo esc_html_x( "Limit Login", "limit_login_settings", "flwgb" ); ?>
+			<?php echo esc_html_x( "Limit Login Attempts", "limit_login_settings", "flwgb" ); ?>
 		</a>
 
 	</nav>

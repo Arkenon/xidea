@@ -10,7 +10,7 @@
   "attributes": {
 	"showLabels": {
 	  "type": "boolean",
-	  "default": false
+	  "default": true
 	},
 	"showDescription": {
 	  "type": "boolean",
