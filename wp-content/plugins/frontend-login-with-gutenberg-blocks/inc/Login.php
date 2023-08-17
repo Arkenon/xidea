@@ -35,7 +35,6 @@ class Login {
 
 	}
 
-
 	/**
 	 * Welcome Card html output (for logged in users)
 	 *
@@ -94,13 +93,16 @@ class Login {
 		$credentials['user_password'] = Helper::post( 'flwgb-password' ) ?? '';
 		$credentials['remember']      = Helper::post( 'flwgb-rememberme' ) === 'on' ? true : false;
 
-		$user = wp_signon( $credentials, false );
+		$user = wp_signon( $credentials, true  );
+
 
 		if ( is_wp_error( $user ) ) {
 
 			echo $this->login_failed_response();
 
 		} else {
+
+			wp_set_current_user( $user->ID, $user->user_login );
 
 			if ( get_option( 'flwgb_has_activation' ) === 'yes' ) {
 
@@ -253,13 +255,15 @@ class Login {
 	 */
 	public function redirect_login_admin_pages() {
 
-		if(get_option('flwgb_redirect_from_wp_login_admin') === 'yes'){
+		if ( get_option( 'flwgb_redirect_from_wp_login_admin' ) === 'yes' && ! is_user_logged_in() &&
+		     ! defined( 'DOING_AJAX' ) ) {
 
-			if ( ( strpos( $_SERVER['REQUEST_URI'], 'wp-login.php' ) !== false || strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) !== false ) && ! is_user_logged_in() ) {
+			$login_url = ! empty( get_option( 'flwgb_redirect_after_login' ) ) ? site_url( get_option( 'flwgb_login_page' ) ) : home_url();
+			$url = isset( $_REQUEST['redirect_to'] ) ? "wp-login.php" :basename($_SERVER['REQUEST_URI']);
 
-				wp_redirect( home_url() );
+			if( $url  == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET')  {
+				wp_redirect( $login_url );
 				exit;
-
 			}
 
 		}

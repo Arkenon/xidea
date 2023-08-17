@@ -197,7 +197,7 @@
 	"context": "login_page"
   },
   "redirect_page_after_login_description": {
-	"text": "Select a page if you want to redirect users to home page after logged in.",
+	"text": "Select a page if you want to redirect users to a specific page after login.",
 	"context": "redirect_page_after_login_description"
   },
   "lost_password_page": {

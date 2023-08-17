@@ -113,75 +113,39 @@ $pages = get_pages();
 		$selections = [
 				[
 						'option'      => 'flwgb_login_page',
-						'title'       => [
-								"text"    => "Login Page",
-								"context" => "login_page"
-						],
-						'description' => [
-								"text"    => "Select a page if created a login page.",
-								"context" => "login_page_description"
-						]
+						"title"    => _x( "Login Page", "login_page", "flwgb" ),
+						"description"    => _x( "Select a page if created a login page.", "login_page_description", "flwgb" ),
 				],
 				[
 						'option'      => 'flwgb_redirect_after_login',
-						'title'       => [
-								"text"    => "Redirection Page After Login",
-								"context" => "redirect_page_after_login"
-						],
-						'description' => [
-								"text"    => "Select a page if you want to redirect users to home page after logged in.",
-								"context" => "redirect_page_after_login_description"
-						]
+						"title"    => _x( "Redirection Page After Login", "redirect_page_after_login", "flwgb" ),
+						"description"    => _x( "Select a page if you want to redirect users to a specific page after login.", "redirect_page_after_login_description", "flwgb" ),
 				],
 				[
 						'option' => 'flwgb_lost_password_page',
-						'title'  => [
-								"text"    => "Lost (Reset) Password Page",
-								"context" => "lost_password_page"
-						]
+						"title"    => _x( "Lost (Reset) Password Page", "lost_password_page", "flwgb" ),
 				],
 				[
 						'option' => 'flwgb_register_page',
-						'title'  => [
-								"text"    => "Registration Page",
-								"context" => "registration_page"
-						]
+						"title"    => _x( "Registration Page", "registration_page", "flwgb" ),
 				],
 				[
 						'option'      => 'flwgb_activation_page',
-						'title'       => [
-								"text"    => "User Activation Page",
-								"context" => "activation_page"
-						],
-						'description' => [
-								"text"    => "Select a page if you selected 'Yes' in the 'Enable user activation' setting",
-								"context" => "activation_page_description"
-						]
+						"title"    => _x( "User Activation Page", "activation_page", "flwgb" ),
+						"description"    => _x( "Select a page if you selected 'Yes' in the 'Enable user activation' setting", "activation_page_description", "flwgb" ),
 				],
 				[
 						'option'      => 'flwgb_user_settings_page',
-						'title'       => [
-								"text"    => "User Settings Page",
-								"context" => "user_settings_page"
-						],
-						'description' => [
-								"text"    => "Select a page if you selected 'Yes' in the 'Enable user settings' setting",
-								"context" => "user_settings_page_description"
-						]
+						"title"    => _x( "User Settings Page", "user_settings_page", "flwgb" ),
+						"description"    => _x( "Select a page if you selected 'Yes' in the 'Enable user settings' setting", "user_settings_page_description", "flwgb" ),
 				],
 				[
 						'option' => 'flwgb_terms_and_conditions_page',
-						'title'  => [
-								"text"    => "Terms and Conditions Page",
-								"context" => "terms_and_conditions_page"
-						]
+						"title"    => _x( "Terms and Conditions Page", "terms_and_conditions_page", "flwgb" ),
 				],
 				[
 						'option' => 'flwgb_privacy_policy_page',
-						'title'  => [
-								"text"    => "Privacy Policy Page",
-								"context" => "privacy_policy_page"
-						]
+						"title"    => _x( "Privacy Policy Page", "privacy_policy_page", "flwgb" ),
 				]
 		];
 
@@ -193,11 +157,11 @@ $pages = get_pages();
 				<th scope="row">
 
 					<label for="<?php echo $select['option']; ?>">
-						<?php echo esc_html_x( $select['title']['text'], $select['title']['context'], "flwgb" ); ?>
+						<?php echo esc_html( $select['title'] ); ?>
 					</label>
 
 					<p class="flwgb-admin-settings-description">
-						<?php echo esc_html_x( $select['description']['text'], $select['description']['context'], "flwgb" ); ?>
+						<?php echo esc_html( $select['description']); ?>
 					</p>
 
 				</th>

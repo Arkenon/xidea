@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frontend Login with Gutenberg Blocks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-16 13:11+0000\n"
+"POT-Creation-Date: 2023-08-17 08:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -15,6 +15,17 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.4; wp-6.3\n"
 "X-Domain: flwgb"
+
+#: admin/partials/general-settings.php:134
+msgctxt "activation_page"
+msgid "User Activation Page"
+msgstr ""
+
+#: admin/partials/general-settings.php:135
+msgctxt "activation_page_description"
+msgid ""
+"Select a page if you selected 'Yes' in the 'Enable user activation' setting"
+msgstr ""
 
 #: admin/partials/options-page.php:40
 msgctxt "admin_general_settings"
@@ -202,6 +213,16 @@ msgctxt "loading_text"
 msgid "Loading..."
 msgstr ""
 
+#: admin/partials/general-settings.php:116
+msgctxt "login_page"
+msgid "Login Page"
+msgstr ""
+
+#: admin/partials/general-settings.php:117
+msgctxt "login_page_description"
+msgid "Select a page if created a login page."
+msgstr ""
+
 #: inc/Login.php:148
 msgctxt "login_successful"
 msgid "You have successfully logged in..."
@@ -215,6 +236,11 @@ msgstr ""
 #: public/partials/login/already-logged-in.php:22
 msgctxt "logout_text"
 msgid "Logout"
+msgstr ""
+
+#: admin/partials/general-settings.php:126
+msgctxt "lost_password_page"
+msgid "Lost (Reset) Password Page"
 msgstr ""
 
 #: public/partials/reset-password/reset-in-progress.php:50
@@ -281,6 +307,22 @@ msgctxt "password_placeholder_text"
 msgid "Enter your password"
 msgstr ""
 
+#: admin/partials/general-settings.php:148
+msgctxt "privacy_policy_page"
+msgid "Privacy Policy Page"
+msgstr ""
+
+#: admin/partials/general-settings.php:121
+msgctxt "redirect_page_after_login"
+msgid "Redirection Page After Login"
+msgstr ""
+
+#: admin/partials/general-settings.php:122
+msgctxt "redirect_page_after_login_description"
+msgid ""
+"Select a page if you want to redirect users to a specific page after login."
+msgstr ""
+
 #: public/partials/login/login-form.php:92
 #: public/partials/register/register-form.php:122
 msgctxt "register_button_text"
@@ -345,6 +387,11 @@ msgid ""
 "link sent your e-mail."
 msgstr ""
 
+#: admin/partials/general-settings.php:130
+msgctxt "registration_page"
+msgid "Registration Page"
+msgstr ""
+
 #: public/partials/login/login-form.php:69
 msgctxt "remember_me_text"
 msgid "Remember me"
@@ -399,7 +446,7 @@ msgstr ""
 #: admin/partials/general-settings.php:44
 #: admin/partials/general-settings.php:69
 #: admin/partials/general-settings.php:94
-#: admin/partials/general-settings.php:208
+#: admin/partials/general-settings.php:172
 #: admin/partials/limit-login-settings.php:40
 msgctxt "select_text"
 msgid "Please select..."
@@ -420,6 +467,11 @@ msgstr ""
 #: public/partials/reset-password/reset-in-progress.php:72
 msgctxt "submit_reset_password_button_text"
 msgid "Change Password"
+msgstr ""
+
+#: admin/partials/general-settings.php:144
+msgctxt "terms_and_conditions_page"
+msgid "Terms and Conditions Page"
 msgstr ""
 
 #: public/partials/user-settings/user-settings-form.php:227
@@ -467,6 +519,17 @@ msgctxt "user_not_activated"
 msgid ""
 "Please activate your account. We sent you an email. Click the activation "
 "link in the email."
+msgstr ""
+
+#: admin/partials/general-settings.php:139
+msgctxt "user_settings_page"
+msgid "User Settings Page"
+msgstr ""
+
+#: admin/partials/general-settings.php:140
+msgctxt "user_settings_page_description"
+msgid ""
+"Select a page if you selected 'Yes' in the 'Enable user settings' setting"
 msgstr ""
 
 #: public/partials/user-settings/user-settings-form.php:121

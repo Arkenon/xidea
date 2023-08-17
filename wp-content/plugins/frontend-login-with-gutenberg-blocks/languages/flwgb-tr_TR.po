@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Frontend Login with Gutenberg Blocks\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-16 12:57+0000\n"
-"PO-Revision-Date: 2023-08-16 13:29+0000\n"
+"PO-Revision-Date: 2023-08-17 08:39+0000\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -14,6 +14,19 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.6.4; wp-6.3\n"
 "X-Domain: flwgb"
+
+#: admin/partials/general-settings.php:134
+msgctxt "activation_page"
+msgid "User Activation Page"
+msgstr "Kullanıcı Aktivasyonu Sayfası"
+
+#: admin/partials/general-settings.php:135
+msgctxt "activation_page_description"
+msgid ""
+"Select a page if you selected 'Yes' in the 'Enable user activation' setting"
+msgstr ""
+"'Kullanıcı aktivasyonunu etkinleştir' ayarında 'Evet'i seçtiyseniz bir sayfa "
+"seçin"
 
 #: admin/partials/options-page.php:40
 msgctxt "admin_general_settings"
@@ -147,7 +160,7 @@ msgid ""
 "select a User Settings page below)"
 msgstr ""
 "Eğer bir kullanıcı ayarlar sayfası göstermek istiyorsanız, 'Evet'i seçin. "
-"(Aşağıdaki bir Kullanıcı Ayarları sayfası seçmeyi unutmayın)"
+"(Aşağıdan bir Kullanıcı Ayarları sayfası seçmeyi unutmayın)"
 
 #: public/partials/login/already-logged-in.php:9
 msgctxt "hello_text"
@@ -211,6 +224,16 @@ msgctxt "loading_text"
 msgid "Loading..."
 msgstr "Yükleniyor..."
 
+#: admin/partials/general-settings.php:116
+msgctxt "login_page"
+msgid "Login Page"
+msgstr "Giriş Sayfası"
+
+#: admin/partials/general-settings.php:117
+msgctxt "login_page_description"
+msgid "Select a page if created a login page."
+msgstr "Eğer bir giriş sayfası oluşturduysanız buradan seçiniz."
+
 #: inc/Login.php:148
 msgctxt "login_successful"
 msgid "You have successfully logged in..."
@@ -225,6 +248,11 @@ msgstr "Giriş Yap"
 msgctxt "logout_text"
 msgid "Logout"
 msgstr "Çıkış Yap"
+
+#: admin/partials/general-settings.php:126
+msgctxt "lost_password_page"
+msgid "Lost (Reset) Password Page"
+msgstr "Şifremi Unuttum Sayfası"
 
 #: public/partials/reset-password/reset-in-progress.php:50
 #: public/partials/user-settings/user-settings-form.php:202
@@ -289,6 +317,24 @@ msgstr "Şifreleriniz eşleşmiyor"
 msgctxt "password_placeholder_text"
 msgid "Enter your password"
 msgstr "Şifrenizi giriniz"
+
+#: admin/partials/general-settings.php:148
+msgctxt "privacy_policy_page"
+msgid "Privacy Policy Page"
+msgstr "Gizlilik Politikası Sayfası"
+
+#: admin/partials/general-settings.php:121
+msgctxt "redirect_page_after_login"
+msgid "Redirection Page After Login"
+msgstr "Giriş Sonrası Yönlendirme Sayfası"
+
+#: admin/partials/general-settings.php:122
+msgctxt "redirect_page_after_login_description"
+msgid ""
+"Select a page if you want to redirect users to a specific page after login."
+msgstr ""
+"Oturum açtıktan sonra kullanıcıları belirli bir sayfaya yönlendirmek "
+"istiyorsanız bir sayfa seçin."
 
 #: public/partials/login/login-form.php:92
 #: public/partials/register/register-form.php:122
@@ -361,6 +407,11 @@ msgstr ""
 "Başarıyla kaydoldunuz. Lütfen e-postanıza gönderilen üyelik aktivasyon "
 "linkine tıklayınız."
 
+#: admin/partials/general-settings.php:130
+msgctxt "registration_page"
+msgid "Registration Page"
+msgstr "Kayıt Ol Sayfası"
+
 #: public/partials/login/login-form.php:69
 msgctxt "remember_me_text"
 msgid "Remember me"
@@ -421,7 +472,7 @@ msgstr "Şifre Sıfırlama İsteği"
 #: admin/partials/general-settings.php:44
 #: admin/partials/general-settings.php:69
 #: admin/partials/general-settings.php:94
-#: admin/partials/general-settings.php:208
+#: admin/partials/general-settings.php:172
 #: admin/partials/limit-login-settings.php:40
 msgctxt "select_text"
 msgid "Please select..."
@@ -445,6 +496,11 @@ msgstr ""
 msgctxt "submit_reset_password_button_text"
 msgid "Change Password"
 msgstr "Şifreyi Değiştir"
+
+#: admin/partials/general-settings.php:144
+msgctxt "terms_and_conditions_page"
+msgid "Terms and Conditions Page"
+msgstr "Şartlar ve Koşullar Sayfası"
 
 #: public/partials/user-settings/user-settings-form.php:227
 msgctxt "update_user_button_text"
@@ -494,6 +550,19 @@ msgid ""
 msgstr ""
 "Lütfen hesabınızı aktif edin. Size bir e-posta gönderdik. E-postadaki "
 "aktivasyon bağlantısını tıklayın."
+
+#: admin/partials/general-settings.php:139
+msgctxt "user_settings_page"
+msgid "User Settings Page"
+msgstr "Kullanıcı Ayarları Sayfası"
+
+#: admin/partials/general-settings.php:140
+msgctxt "user_settings_page_description"
+msgid ""
+"Select a page if you selected 'Yes' in the 'Enable user settings' setting"
+msgstr ""
+"\"Kullanıcı ayarlarını etkinleştir\" ayarında \"Evet\"i seçtiyseniz bir "
+"sayfa seçin"
 
 #: public/partials/user-settings/user-settings-form.php:121
 msgctxt "user_website_placeholder_text"
