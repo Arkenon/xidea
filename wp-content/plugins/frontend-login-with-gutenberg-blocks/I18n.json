@@ -260,6 +260,10 @@
 	"text": "You have already logged in.",
 	"context": "already_logged_in_message"
   },
+  "already_signed_in_message": {
+	"text": "Already signed up?",
+	"context": "already_signed_in_message"
+  },
   "remember_me_text": {
 	"text": "Remember me",
 	"context": "remember_me_text"

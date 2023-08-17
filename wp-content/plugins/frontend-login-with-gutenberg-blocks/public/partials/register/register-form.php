@@ -1,5 +1,7 @@
 <?php
 
+use FLWGB\Login;
+
 if( is_user_logged_in()){
 
 	$view = '<div style="text-align: center;">'.esc_html_x( "This form is only shown to users who are not logged in.", "alert_for_non_logged_in_users", "flwgb" ).'</div>';
@@ -7,6 +9,8 @@ if( is_user_logged_in()){
 
 }
 
+$login = new Login();
+$login_url = $login->get_login_url();
 
 $input_style = 'border-radius:' . $form_attributes['inputBorderRadius'] . 'px';
 $text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];
@@ -124,5 +128,11 @@ $view .= '<div class="flwgb-form-row">
 					</div>
 					<div id="flwgb-register-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( "Loading...", "loading_text", "flwgb" ) . '</div>';
 $view .= '</form>
-			<div id="flwgb-register-form-result"></div>
+			<div id="flwgb-register-form-result"></div>';
+			$view .= '<div style="text-align:center;">
+						'. esc_html_x( "Already signed up? ", "already_signed_in_message", "flwgb" ).'
+						<a style="text-decoration:none;" href="' . esc_url( $login_url ) . '">
+						    ' . esc_html_x( "Login", "login_text", "flwgb" ) . '
+						</a>
+					 </div>
     </div>';

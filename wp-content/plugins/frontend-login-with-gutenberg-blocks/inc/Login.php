@@ -255,10 +255,9 @@ class Login {
 	 */
 	public function redirect_login_admin_pages() {
 
-		if ( get_option( 'flwgb_redirect_from_wp_login_admin' ) === 'yes' && ! is_user_logged_in() &&
-		     ! defined( 'DOING_AJAX' ) ) {
+		if ( get_option( 'flwgb_redirect_from_wp_login_admin' ) === 'yes' && ! is_user_logged_in() && ! defined( 'DOING_AJAX' ) ) {
 
-			$login_url = ! empty( get_option( 'flwgb_redirect_after_login' ) ) ? site_url( get_option( 'flwgb_login_page' ) ) : home_url();
+			$login_url = $this->get_login_url();
 			$url = isset( $_REQUEST['redirect_to'] ) ? "wp-login.php" :basename($_SERVER['REQUEST_URI']);
 
 			if( $url  == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET')  {
@@ -269,5 +268,18 @@ class Login {
 		}
 
 	}
+
+
+	/**
+	 * Return the url of login page
+	 *
+	 * @since 1.0.0
+	 */
+	public function get_login_url(){
+
+		return ! empty( get_option( 'flwgb_redirect_after_login' ) ) ? site_url( get_option( 'flwgb_login_page' ) ) : home_url();
+
+	}
+
 
 }

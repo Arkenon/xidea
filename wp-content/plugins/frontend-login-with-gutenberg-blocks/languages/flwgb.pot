@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Frontend Login with Gutenberg Blocks\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-17 08:34+0000\n"
+"POT-Creation-Date: 2023-08-17 13:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -42,10 +42,15 @@ msgctxt "alert_for_logged_in_users"
 msgid "This form is only shown to logged in users..."
 msgstr ""
 
-#: public/partials/register/register-form.php:5
+#: public/partials/register/register-form.php:7
 #: public/partials/reset-password/reset-password-form.php:7
 msgctxt "alert_for_non_logged_in_users"
 msgid "This form is only shown to users who are not logged in."
+msgstr ""
+
+#: public/partials/register/register-form.php:133
+msgctxt "already_signed_in_message"
+msgid "Already signed up? "
 msgstr ""
 
 #: public/partials/user-settings/user-settings-form.php:36
@@ -79,7 +84,7 @@ msgid ""
 "blocks. Easily customize forms and add to your pages."
 msgstr ""
 
-#: public/partials/register/register-form.php:51
+#: public/partials/register/register-form.php:55
 #: public/partials/reset-password/reset-request.php:34
 #: public/partials/user-settings/user-settings-form.php:90
 msgctxt "email_input_text"
@@ -96,7 +101,7 @@ msgctxt "email_or_username_placeholder_text"
 msgid "Enter your username or e-mail"
 msgstr ""
 
-#: public/partials/register/register-form.php:59
+#: public/partials/register/register-form.php:63
 #: public/partials/reset-password/reset-request.php:41
 #: public/partials/user-settings/user-settings-form.php:98
 msgctxt "email_placeholder_text"
@@ -177,14 +182,14 @@ msgid "https://xideathemes.com/frontend-login-with-gutenberg-blocks"
 msgstr ""
 
 #. %1$s terms and cond. url %2$s privacy policy url
-#: public/partials/register/register-form.php:110
+#: public/partials/register/register-form.php:114
 #, php-format
 msgid ""
 "I have read and accept <a href=\"%1$s\" target=\"_blank\">terms and "
 "conditions</a> and <a href=\"%2$s\" target=\"_blank\">privacy policy</a>"
 msgstr ""
 
-#: inc/Login.php:163
+#: inc/Login.php:165
 msgctxt "invalid_username_or_pass"
 msgid "Invalid username or password."
 msgstr ""
@@ -205,7 +210,7 @@ msgid "Limit Login Attempts"
 msgstr ""
 
 #: public/partials/login/login-form.php:83
-#: public/partials/register/register-form.php:125
+#: public/partials/register/register-form.php:129
 #: public/partials/reset-password/reset-in-progress.php:75
 #: public/partials/reset-password/reset-request.php:59
 #: public/partials/user-settings/user-settings-form.php:230
@@ -223,12 +228,13 @@ msgctxt "login_page_description"
 msgid "Select a page if created a login page."
 msgstr ""
 
-#: inc/Login.php:148
+#: inc/Login.php:150
 msgctxt "login_successful"
 msgid "You have successfully logged in..."
 msgstr ""
 
 #: public/partials/login/login-form.php:79
+#: public/partials/register/register-form.php:135
 msgctxt "login_text"
 msgid "Login"
 msgstr ""
@@ -275,12 +281,12 @@ msgctxt "no_text"
 msgid "No"
 msgstr ""
 
-#: public/partials/register/register-form.php:89
+#: public/partials/register/register-form.php:93
 msgctxt "password_again_input_text"
 msgid "Password Again"
 msgstr ""
 
-#: public/partials/register/register-form.php:97
+#: public/partials/register/register-form.php:101
 msgctxt "password_again_placeholder_text"
 msgid "Enter your password again"
 msgstr ""
@@ -291,7 +297,7 @@ msgid "Your password has been changed. Please sign in..."
 msgstr ""
 
 #: public/partials/login/login-form.php:53
-#: public/partials/register/register-form.php:70
+#: public/partials/register/register-form.php:74
 msgctxt "password_input_text"
 msgid "Password"
 msgstr ""
@@ -302,7 +308,7 @@ msgid "Your passwords do not match"
 msgstr ""
 
 #: public/partials/login/login-form.php:60
-#: public/partials/register/register-form.php:78
+#: public/partials/register/register-form.php:82
 msgctxt "password_placeholder_text"
 msgid "Enter your password"
 msgstr ""
@@ -324,7 +330,7 @@ msgid ""
 msgstr ""
 
 #: public/partials/login/login-form.php:92
-#: public/partials/register/register-form.php:122
+#: public/partials/register/register-form.php:126
 msgctxt "register_button_text"
 msgid "Register"
 msgstr ""
@@ -514,7 +520,7 @@ msgctxt "user_last_name_text"
 msgid "Last Name (optional)"
 msgstr ""
 
-#: inc/Login.php:118
+#: inc/Login.php:120
 msgctxt "user_not_activated"
 msgid ""
 "Please activate your account. We sent you an email. Click the activation "
@@ -547,12 +553,12 @@ msgctxt "username_exist_error"
 msgid "This username already exist."
 msgstr ""
 
-#: public/partials/register/register-form.php:32
+#: public/partials/register/register-form.php:36
 msgctxt "username_input_text"
 msgid "Username"
 msgstr ""
 
-#: public/partials/register/register-form.php:40
+#: public/partials/register/register-form.php:44
 msgctxt "username_placeholder_text"
 msgid "Enter your username"
 msgstr ""
@@ -583,7 +589,7 @@ msgid "Yes"
 msgstr ""
 
 #. %1$s duration limit %2$s duration type (second or minute)
-#: inc/Login.php:244
+#: inc/Login.php:246
 #, php-format
 msgid ""
 "You have made too many unsuccessful login attempts. Please wait %1$s %2$s"
