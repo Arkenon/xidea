@@ -65,10 +65,7 @@ class LostPassword {
 			'reset_link' => $reset_link
 		];
 
-		Helper::using( 'inc/Mail.php' );
 		$mail = new Mail();
-
-		$template = "Hello {{username}}, <br> You can change your password from the link below <br> {{reset_link}} <br> Thanks for your attention.";
 
 		$send_reset_password_email = $mail->send_mail( 'flwgb_reset_request_mail_to_user', 'reset_password_request_mail_to_user_template', $params, _x( 'Reset Password Request', 'reset_request_mail_title', 'flwgb' ) );
 
@@ -130,7 +127,6 @@ class LostPassword {
 
 				delete_user_meta( intval( Helper::post( 'userid' ) ), 'flwgb_lost_password_key' );
 
-				Helper::using( 'inc/Mail.php' );
 				$mail = new Mail();
 
 				$mail->send_mail( 'flwgb_reset_password_mail_to_user', 'reset_password_mail_to_user_template', $params, _x( 'Your Password Changed', 'reset_password_mail_title', 'flwgb' ));

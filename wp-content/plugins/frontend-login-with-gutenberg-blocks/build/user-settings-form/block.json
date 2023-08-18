@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "frontend-login-with-gutenberg-blocks/register-form",
+  "name": "frontend-login-with-gutenberg-blocks/user-settings-form",
   "version": "1.0.0",
-  "title": "Register Form",
+  "title": "User Settings Form",
   "category": "theme",
-  "icon": "format-aside",
-  "description": "Display register form",
+  "icon": "list-view",
+  "description": "Display user settings form",
   "attributes": {
     "showLabels": {
       "type": "boolean",
@@ -15,10 +15,6 @@
     "showPlaceholders": {
       "type": "boolean",
       "default": false
-    },
-    "showTermsAndPrivacy": {
-      "type": "boolean",
-      "default": true
     },
     "textColor": {
       "type": "string",
@@ -60,7 +56,7 @@
   "supports": {
     "html": false
   },
-  "textdomain": "register-form",
+  "textdomain": "user-settings-form",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"

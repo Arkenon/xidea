@@ -1,9 +1,13 @@
 <?php
 
 use FLWGB\Helper;
+use FLWGB\Login;
 use FLWGB\UserActivation;
 
 Helper::using('inc/UserActivation.php');
+
+$login = new Login();
+$login_url = $login->get_login_url();
 
 $activation = new UserActivation();
 
@@ -29,4 +33,7 @@ if(!empty($activation_code)){
 
 $view = '<div style="text-align: center">';
 $view .= '<p style="color:' . $color . '">' . $activation_result['message'] . '</p>';
+$view .= '<a style="text-decoration:none;" href="' . esc_url( $login_url ) . '">
+				' . esc_html_x( "Login", "login_text", "flwgb" ) . '
+		  </a>';
 $view .= '</div>';

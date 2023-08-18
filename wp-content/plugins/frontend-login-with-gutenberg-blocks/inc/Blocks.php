@@ -76,8 +76,6 @@ class Blocks {
 	 */
 	public function user_settings_render_callback(array $block_attributes): string {
 
-		Helper::using('inc/UserSettings.php');
-
 		$login = new UserSettings();
 
 		return $login->user_settings_form($block_attributes);
@@ -92,8 +90,6 @@ class Blocks {
 	 * @since    1.0.0
 	 */
 	public function login_form_render_callback(array $block_attributes): string {
-
-		Helper::using('inc/Login.php');
 
 		$login = new Login();
 
@@ -111,8 +107,6 @@ class Blocks {
 	 */
 	public function register_form_render_callback(array $block_attributes): string {
 
-		Helper::using('inc/Register.php');
-
 		$register = new Register();
 
 		return $register->register_form($block_attributes);
@@ -127,8 +121,6 @@ class Blocks {
 	 * @since    1.0.0
 	 */
 	public function reset_password_form_render_callback(array $block_attributes): string {
-
-		Helper::using('inc/LostPassword.php');
 
 		$lost_password = new LostPassword();
 
@@ -159,8 +151,6 @@ class Blocks {
 	 * @since    1.0.0
 	 */
 	public function welcome_card_render_callback(array $block_attributes): string {
-
-		Helper::using('inc/Login.php');
 
 		$lost_password = new Login();
 

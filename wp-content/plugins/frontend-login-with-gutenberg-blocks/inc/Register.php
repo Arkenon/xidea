@@ -134,7 +134,6 @@ class Register {
 
 			}
 
-			Helper::using( 'inc/Mail.php' );
 			$mail = new Mail();
 
 			if ( get_option( "flwgb_has_activation" ) ) {

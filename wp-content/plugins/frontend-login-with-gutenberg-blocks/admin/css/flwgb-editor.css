@@ -1,3 +1,8 @@
+/*
+ * General css for block editor
+*/
+
+
 .flwgb-input-control, .flwgb-textarea-control {
 	width: 100%!important;
 	margin-bottom: 10px!important;
@@ -54,10 +59,6 @@
 	align-items: center!important;
 }
 
-.flwgb-input-label{
-
-}
-
 .flwgb-input-group{
 	position: relative!important;
 	display: flex!important;
@@ -66,8 +67,3 @@
 	width: 100%!important;
 }
 
-
-
-.flwgb-form-row{
-
-}

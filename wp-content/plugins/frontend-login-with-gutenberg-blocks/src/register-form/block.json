@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "frontend-login-with-gutenberg-blocks/register-form",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "title": "Register Form",
   "category": "theme",
   "icon": "format-aside",

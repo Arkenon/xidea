@@ -93,7 +93,7 @@ class Login {
 		$credentials['user_password'] = Helper::post( 'flwgb-password' ) ?? '';
 		$credentials['remember']      = Helper::post( 'flwgb-rememberme' ) === 'on' ? true : false;
 
-		$user = wp_signon( $credentials, true  );
+		$user = wp_signon( $credentials, is_ssl() );
 
 
 		if ( is_wp_error( $user ) ) {
@@ -258,26 +258,28 @@ class Login {
 		if ( get_option( 'flwgb_redirect_from_wp_login_admin' ) === 'yes' && ! is_user_logged_in() && ! defined( 'DOING_AJAX' ) ) {
 
 			$login_url = $this->get_login_url();
-			$url = isset( $_REQUEST['redirect_to'] ) ? "wp-login.php" :basename($_SERVER['REQUEST_URI']);
+			$url       = isset( $_REQUEST['redirect_to'] ) ? "wp-login.php" : basename( $_SERVER['REQUEST_URI'] );
 
-			if( $url  == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET')  {
+			if ( $url == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET' ) {
+
 				wp_redirect( $login_url );
 				exit;
+
 			}
 
 		}
 
 	}
 
-
 	/**
 	 * Return the url of login page
 	 *
 	 * @since 1.0.0
+	 * @return string
 	 */
-	public function get_login_url(){
+	public function get_login_url(): string {
 
-		return ! empty( get_option( 'flwgb_redirect_after_login' ) ) ? site_url( get_option( 'flwgb_login_page' ) ) : home_url();
+		return get_option( 'flwgb_login_page' ) ? site_url(get_option( 'flwgb_login_page' )): home_url();
 
 	}
 
