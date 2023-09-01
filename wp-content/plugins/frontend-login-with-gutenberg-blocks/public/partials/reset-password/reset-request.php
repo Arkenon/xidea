@@ -1,6 +1,6 @@
 <?php
 
-$input_style = 'border-radius:' . $form_attributes[''] . 'px';
+$input_style = 'border-radius:' . $form_attributes['inputBorderRadius'] . 'px';
 $text_style  = 'color:' . $form_attributes['textColor'] . '; font-weight:' . $form_attributes['textFontWeight'];
 
 $button_border_color = array_key_exists( 'color', $form_attributes['buttonBorder'] ) ? 'border-color: ' . $form_attributes['buttonBorder']['color'] . ';' : "";
@@ -17,7 +17,7 @@ $button_style = 'color:' . $form_attributes['buttonTextColor'] . '; ' .
 
 $desc = $form_attributes['description'] ?: _x( "Please enter your e-mail address. We will send you an e-mail to reset your password.", "send_reset_request_description", "flwgb" );
 
-$view = '<div>
+$view = '<div '.get_block_wrapper_attributes().'>
 				<form name="flwgb-reset-pass-request-form" id="flwgb-reset-pass-request-form" method="post">';
 
 if ( $form_attributes['showDescription'] ) {

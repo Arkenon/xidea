@@ -26,8 +26,8 @@ $button_style = 'color:' . $form_attributes['buttonTextColor'] . '; ' .
                 $button_border_width .
                 'border-radius: ' . $form_attributes['buttonBorderRadius'] . 'px;' .
                 'font-weight: ' . $form_attributes['buttonTextFontWeight'];
-
-$view = '<form name="flwgb-register-form" id="flwgb-register-form" method="post">
+$view = '<div '.get_block_wrapper_attributes().'>';
+$view .= '<form name="flwgb-register-form" id="flwgb-register-form" method="post">
             <div class="flwgb-form-row">
                <div class="flwgb-input-group">';
 if ( $form_attributes['showLabels'] ) {
@@ -135,4 +135,5 @@ $view .= '</form>
 						    ' . esc_html_x( "Login", "login_text", "flwgb" ) . '
 						</a>
 					 </div>
-    </div>';
+    </div>
+</div>';

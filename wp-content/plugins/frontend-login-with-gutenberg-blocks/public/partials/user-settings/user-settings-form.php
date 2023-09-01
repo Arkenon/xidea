@@ -29,8 +29,8 @@ $button_style = 'color:'. $form_attributes['buttonTextColor'].'; '.
                 $button_border_width .
                 'border-radius: '. $form_attributes['buttonBorderRadius'].'px;'.
                 'font-weight: '. $form_attributes['buttonTextFontWeight'];
-
-$view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" method="post">
+$view = '<div '.get_block_wrapper_attributes().'>';
+$view .= '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" method="post">
 			<div style="display: flex; flex-direction: column; margin-bottom: 50px; justify-content: center; align-items: center;">
 				<img src="'.get_avatar_url($ID).'" alt="user avatar" style="max-width: 100%; height: auto; border-radius: 100%;">
 				<a style="font-size:12px;" target="_blank" href="'.esc_url_raw('https://en.gravatar.com/').'">'.esc_html_x('You can change your profile picture on Gravatar.','change_avatar_description','flwgb').'</a>
@@ -230,4 +230,4 @@ $view = '<form name="flwgb-user-settings-form" id="flwgb-user-settings-form" met
 						<div id="flwgb-user-settings-loading" class="flwgb-loading flwgb-hide">' . esc_html_x( "Loading...", "loading_text", "flwgb" ) . '</div>';
 		$view .= '</form>
 	<div id="flwgb-user-settings-form-result"></div>
-</div>';
+</div></div>';

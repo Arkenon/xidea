@@ -24,7 +24,7 @@ if ( is_user_logged_in() ) {
 	                'border-radius: ' . $form_attributes['buttonBorderRadius'] . 'px;' .
 	                'font-weight: ' . $form_attributes['buttonTextFontWeight'];
 
-	$view = '<div>
+	$view = '<div '.get_block_wrapper_attributes().'>
 				<form name="flwgb-login-form" id="flwgb-login-form" method="post">';
 
 	$view .= '<div class="flwgb-form-row">

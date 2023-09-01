@@ -31,7 +31,7 @@ if(!empty($activation_code)){
 
 
 
-$view = '<div style="text-align: center">';
+$view = '<div style="text-align: center" '.get_block_wrapper_attributes().'>';
 $view .= '<p style="color:' . $color . '">' . $activation_result['message'] . '</p>';
 $view .= '<a style="text-decoration:none;" href="' . esc_url( $login_url ) . '">
 				' . esc_html_x( "Login", "login_text", "flwgb" ) . '

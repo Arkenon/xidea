@@ -18,7 +18,7 @@ $button_style = 'color:' . $form_attributes['buttonTextColor'] . '; ' .
                 'font-weight: ' . $form_attributes['buttonTextFontWeight'];
 
 
-$view = '<div>
+$view = '<div '.get_block_wrapper_attributes().'>
 			<form name="flwgb-reset-pass-form" id="flwgb-reset-pass-form" method="post">';
 
 			$view .= '<div class="flwgb-form-row">
