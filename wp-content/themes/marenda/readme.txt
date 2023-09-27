@@ -12,6 +12,9 @@ This is a very useful and modern theme from Xidea Themes. Marenda is a block the
 
 == Changelog ==
 
+= 1.1.0 =
+* Recommended a new plugin (Gutenberg Block for Slick Slider)
+
 = 1.0.9 =
 * elements.css added
 

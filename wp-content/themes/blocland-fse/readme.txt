@@ -12,6 +12,9 @@ Blocland FSE is a block theme developed with the Gutenberg Editor. It is the cla
 
 == Changelog ==
 
+= 1.1.0 =
+* Recommended a new plugin (Gutenberg Block for Slick Slider)
+
 = 1.0.9 =
 * elements.css added
 

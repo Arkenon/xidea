@@ -28,6 +28,9 @@ Yes, you can. The vision of Full Site Editing is to provide a collection of feat
 
 == Changelog ==
 
+= 1.0.8 =
+* Recommended a new plugin (Gutenberg Block for Slick Slider)
+
 = 1.0.7 =
 * elements.css added
 

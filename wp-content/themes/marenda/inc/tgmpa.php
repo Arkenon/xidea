@@ -63,6 +63,11 @@ function marenda_register_required_plugins() {
 			'name'      => 'The Icon Block',
 			'slug'      => 'icon-block',
 			'required'  => false,
+		),
+		array(
+			'name'      => 'Gutenberg Block for Slick Slider',
+			'slug'      => 'gutenberg-block-for-slick-slider',
+			'required'  => false,
 		)
 	);
 

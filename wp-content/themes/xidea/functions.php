@@ -96,3 +96,6 @@ if ( ! function_exists( 'xidea_editor_styles' ) ) :
 	add_action( 'pre_get_posts', 'xidea_editor_styles' );
 
 endif;
+
+// Add TGMPA
+require get_template_directory() . '/inc/tgmpa.php';
